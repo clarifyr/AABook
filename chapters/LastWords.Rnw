@@ -1,0 +1,16 @@
+% !Rnw root = AABase.Rnw
+
+\chapter{Some Last Words}
+
+\begin{flushright}
+
+\textbf{\texttt{Torture the data, and it will confess to anything.}}
+
+\emph{-- Ronald Coase, Economics Nobel Laureate}
+
+\end{flushright}
+
+\vspace{12pt}
+
+
+\chapterendsymbol

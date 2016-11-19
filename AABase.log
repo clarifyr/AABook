@@ -1,0 +1,3699 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9) (preloaded format=pdflatex 2016.5.29)  25 OCT 2016 09:46
+entering extended mode
+**./AABase.tex
+(AABase.tex
+LaTeX2e <2016/03/31>
+Babel <3.9r> and hyphenation patterns for 75 language(s) loaded.
+(C:\Users\sanjeev\AppData\Roaming\MiKTeX\2.9\tex\latex\memoir\memoir.cls
+Document Class: memoir 2016/05/16 v3.7f configurable book, report, article docu
+ment class
+\onelineskip=\skip41
+\lxvchars=\skip42
+\xlvchars=\skip43
+\@memcnta=\count79
+\c@@memmarkcntra=\count80
+\l@nohyphenation=\language75
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.sty"
+Package: ifpdf 2016/05/14 v3.1 Provides the ifpdf switch
+)
+(C:\Users\sanjeev\AppData\Roaming\MiKTeX\2.9\tex\latex\ifetex\ifetex.sty
+Package: ifetex 2011/12/15 v1.2 ifetex
+
+(C:\Users\sanjeev\AppData\Roaming\MiKTeX\2.9\tex\plain\ifetex\ifetex.tex))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\ifxetex\ifxetex.sty"
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ifluatex.sty"
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+\stockheight=\skip44
+\stockwidth=\skip45
+\trimtop=\skip46
+\trimedge=\skip47
+
+(C:\Users\sanjeev\AppData\Roaming\MiKTeX\2.9\tex\latex\memoir\mem11.clo
+File: mem11.clo 2008/01/30 v0.3 memoir class 11pt size option
+)
+\binding=\skip48
+\spinemargin=\skip49
+\foremargin=\skip50
+\uppermargin=\skip51
+\lowermargin=\skip52
+\headdrop=\skip53
+\normalrulethickness=\skip54
+\mem@maxheadheight=\skip55
+\mem@maxfootheight=\skip56
+\headwidth=\skip57
+\c@storedpagenumber=\count81
+\memPD=\dimen102
+\m@mabparskip=\skip58
+\thanksmarkwidth=\skip59
+\thanksmarksep=\skip60
+\droptitle=\skip61
+\c@book=\count82
+\c@part=\count83
+\c@chapter=\count84
+\c@section=\count85
+\c@subsection=\count86
+\c@subsubsection=\count87
+\c@paragraph=\count88
+\c@subparagraph=\count89
+\beforechapskip=\skip62
+\midchapskip=\skip63
+\afterchapskip=\skip64
+\chapindent=\skip65
+\bottomsectionskip=\skip66
+\secindent=\skip67
+\beforesecskip=\skip68
+\aftersecskip=\skip69
+\subsecindent=\skip70
+\beforesubsecskip=\skip71
+\aftersubsecskip=\skip72
+\subsubsecindent=\skip73
+\beforesubsubsecskip=\skip74
+\aftersubsubsecskip=\skip75
+\paraindent=\skip76
+\beforeparaskip=\skip77
+\afterparaskip=\skip78
+\subparaindent=\skip79
+\beforesubparaskip=\skip80
+\aftersubparaskip=\skip81
+\pfbreakskip=\skip82
+\c@@ppsavesec=\count90
+\c@@ppsaveapp=\count91
+\ragrparindent=\dimen103
+\everylistparindent=\dimen104
+\parsepi=\skip83
+\topsepi=\skip84
+\itemsepi=\skip85
+\parsepii=\skip86
+\topsepii=\skip87
+\topsepiii=\skip88
+\itemsepii=\skip89
+\itemsepiii=\skip90
+\partopsepii=\skip91
+\partopsepiii=\skip92
+\m@msavetopsep=\skip93
+\m@msavepartopsep=\skip94
+\@enLab=\toks14
+\abstitleskip=\skip95
+\absleftindent=\skip96
+\abs@leftindent=\dimen105
+\absrightindent=\skip97
+\absparindent=\skip98
+\absparsep=\skip99
+\c@vslineno=\count92
+\c@poemline=\count93
+\c@modulo@vs=\count94
+\c@memfvsline=\count95
+\vleftskip=\skip100
+\vrightskip=\skip101
+\stanzaskip=\skip102
+\versewidth=\skip103
+\vgap=\skip104
+\vindent=\skip105
+\vleftmargin=\dimen106
+\c@verse=\count96
+\c@chrsinstr=\count97
+\beforepoemtitleskip=\skip106
+\afterpoemtitleskip=\skip107
+\c@poem=\count98
+\beforePoemTitleskip=\skip108
+\midPoemTitleskip=\skip109
+\afterPoemTitleskip=\skip110
+\col@sep=\dimen107
+\extrarowheight=\dimen108
+\NC@list=\toks15
+\extratabsurround=\skip111
+\backup@length=\skip112
+\TX@col@width=\dimen109
+\TX@old@table=\dimen110
+\TX@old@col=\dimen111
+\TX@target=\dimen112
+\TX@delta=\dimen113
+\TX@cols=\count99
+\TX@ftn=\toks16
+\heavyrulewidth=\dimen114
+\lightrulewidth=\dimen115
+\cmidrulewidth=\dimen116
+\belowrulesep=\dimen117
+\belowbottomsep=\dimen118
+\aboverulesep=\dimen119
+\abovetopsep=\dimen120
+\cmidrulesep=\dimen121
+\cmidrulekern=\dimen122
+\defaultaddspace=\dimen123
+\@cmidla=\count100
+\@cmidlb=\count101
+\@aboverulesep=\dimen124
+\@belowrulesep=\dimen125
+\@thisruleclass=\count102
+\@lastruleclass=\count103
+\@thisrulewidth=\dimen126
+\ctableftskip=\skip113
+\ctabrightskip=\skip114
+\abovecolumnspenalty=\count104
+\@linestogo=\count105
+\@cellstogo=\count106
+\@cellsincolumn=\count107
+\crtok=\toks17
+\@mincolumnwidth=\dimen127
+\c@newflo@tctr=\count108
+\mem@margin@floatbox=\box26
+\@contcwidth=\skip115
+\@contindw=\skip116
+\abovecaptionskip=\skip117
+\belowcaptionskip=\skip118
+\subfloattopskip=\skip119
+\subfloatcapskip=\skip120
+\subfloatcaptopadj=\skip121
+\subfloatbottomskip=\skip122
+\subfloatlabelskip=\skip123
+\subfloatcapmargin=\dimen128
+\c@@contsubnum=\count109
+\m@mscap@capbox=\box27
+\m@mscap@fbox=\box28
+\sidecapsep=\dimen129
+\sidecapwidth=\dimen130
+\m@m@tempdima=\dimen131
+\m@mscapraise=\dimen132
+\sidecapraise=\dimen133
+\m@mscapmainwidth=\dimen134
+\m@mscaplkern=\dimen135
+\beforeepigraphskip=\skip124
+\afterepigraphskip=\skip125
+\epigraphwidth=\skip126
+\epigraphrule=\skip127
+LaTeX Info: Redefining \em on input line 7551.
+LaTeX Info: Redefining \emph on input line 7559.
+\tocentryskip=\skip128
+\tocbaseline=\skip129
+\cftparskip=\skip130
+\cftbeforebookskip=\skip131
+\cftbookindent=\dimen136
+\cftbooknumwidth=\dimen137
+\cftbeforepartskip=\skip132
+\cftpartindent=\skip133
+\cftpartnumwidth=\skip134
+\cftbeforechapterskip=\skip135
+\cftchapterindent=\skip136
+\cftchapternumwidth=\skip137
+\cftbeforesectionskip=\skip138
+\cftsectionindent=\skip139
+\cftsectionnumwidth=\skip140
+\cftbeforesubsectionskip=\skip141
+\cftsubsectionindent=\skip142
+\cftsubsectionnumwidth=\skip143
+\cftbeforesubsubsectionskip=\skip144
+\cftsubsubsectionindent=\skip145
+\cftsubsubsectionnumwidth=\skip146
+\cftbeforeparagraphskip=\skip147
+\cftparagraphindent=\skip148
+\cftparagraphnumwidth=\skip149
+\cftbeforesubparagraphskip=\skip150
+\cftsubparagraphindent=\skip151
+\cftsubparagraphnumwidth=\skip152
+\prechapterprecisshift=\dimen138
+\c@maxsecnumdepth=\count110
+\bibindent=\dimen139
+\bibitemsep=\skip153
+\indexcolsep=\skip154
+\indexrule=\skip155
+\indexmarkstyle=\toks18
+\@indexbox=\insert199
+\glossarycolsep=\dimen140
+\glossaryrule=\dimen141
+\sideparvshift=\skip156
+\sideins=\insert198
+\sidebartopsep=\skip157
+\sidebarhsep=\skip158
+\sidebarvsep=\skip159
+\sidebarwidth=\skip160
+\footmarkwidth=\skip161
+\footmarksep=\skip162
+\footparindent=\skip163
+\footinsdim=\skip164
+\footinsv@r=\insert197
+\@mpfootinsv@r=\insert196
+\m@m@k=\count111
+\m@m@h=\dimen142
+\m@mipn@skip=\skip165
+\sidefootins=\insert195
+\sidefootadjust=\skip166
+\sidefootheight=\skip167
+\sidefoothsep=\skip168
+\sidefootvsep=\skip169
+\sidefootwidth=\skip170
+\m@mdownsf=\skip171
+\c@sidefootnote=\count112
+\sidefootmarkwidth=\skip172
+\sidefootmarksep=\skip173
+\sidefootparindent=\skip174
+\c@pagenote=\count113
+\c@pagenoteshadow=\count114
+\mem@pn@lastkern=\skip175
+\every@verbatim=\toks19
+\afterevery@verbatim=\toks20
+\verbatim@line=\toks21
+\tab@position=\count115
+\verbatim@in@stream=\read1
+\verbatimindent=\skip176
+\verbatim@out=\write3
+\bvboxsep=\skip177
+\c@memfbvline=\count116
+\c@bvlinectr=\count117
+\bvnumlength=\skip178
+\fb@frw=\dimen143
+\fb@frh=\dimen144
+\FrameRule=\dimen145
+\FrameSep=\dimen146
+\c@cp@cntr=\count118
+LaTeX Info: Redefining \: on input line 12068.
+LaTeX Info: Redefining \! on input line 12070.
+\c@ism@mctr=\count119
+\c@xsm@mctr=\count120
+\c@csm@mctr=\count121
+\c@ksm@mctr=\count122
+\c@xksm@mctr=\count123
+\c@cksm@mctr=\count124
+\c@msm@mctr=\count125
+\c@xmsm@mctr=\count126
+\c@cmsm@mctr=\count127
+\c@bsm@mctr=\count128
+\c@workm@mctr=\count129
+\c@sheetsequence=\count130
+\c@lastsheet=\count131
+\c@lastpage=\count132
+\c@figure=\count133
+\c@lofdepth=\count134
+\cftbeforefigureskip=\skip179
+\cftfigureindent=\skip180
+\cftfigurenumwidth=\skip181
+\c@table=\count135
+\c@lotdepth=\count136
+\cftbeforetableskip=\skip182
+\cfttableindent=\skip183
+\cfttablenumwidth=\skip184
+Package abstract [2008/07/23] emulated by memoir.
+Package appendix [2008/07/23] emulated by memoir.
+Package array [2008/09/09] emulated by memoir.
+Package booktabs [2016/05/16] emulated by memoir.
+Package ccaption [2008/07/23] emulated by memoir.
+Package changepage [2008/07/23] emulated by memoir.
+Package chngcntr [2008/07/23] emulated by memoir.
+Package chngpage [2008/07/23] emulated by memoir.
+Package crop emulated by memoir.
+Package dcolumn [2008/07/23] emulated by memoir.
+Package delarray [2008/07/23] emulated by memoir.
+Package enumerate [2008/07/23] emulated by memoir.
+Package epigraph [2008/07/23] emulated by memoir.
+Package ifmtarg [2008/07/23] emulated by memoir.
+Package index [2008/07/23] emulated by memoir.
+Package makeidx [2008/07/23] emulated by memoir.
+Package moreverb [2008/07/23] emulated by memoir.
+Package mparhack [2008/07/23] emulated by memoir.
+Package needspace [2008/07/23] emulated by memoir.
+Package newfile [2008/07/23] emulated by memoir.
+Package nextpage [2008/07/23] emulated by memoir.
+Package pagenote [2008/07/23] emulated by memoir.
+Package parskip [2008/07/23] emulated by memoir.
+Package patchcmd [2008/07/23] emulated by memoir.
+Package setspace [2008/07/23] emulated by memoir.
+Package shortvrb [2008/07/23] emulated by memoir.
+Package showidx [2008/07/23] emulated by memoir.
+Package tabularx [2008/07/23] emulated by memoir.
+Package titleref [2008/07/23] emulated by memoir.
+Package titling [2008/07/23] emulated by memoir.
+Package tocbibind [2008/07/23] emulated by memoir.
+Package tocloft [2008/07/23] emulated by memoir.
+Package tocvsec2 [2008/07/23] emulated by memoir.
+Package verbatim [2008/07/23] emulated by memoir.
+Package verse [2008/07/23] emulated by memoir.
+
+(C:\Users\sanjeev\AppData\Roaming\MiKTeX\2.9\tex\latex\memoir\mempatch.sty
+Package: mempatch 2009/07/24 v6.0f Patches for memoir class v1.6180339
+))
+(knitr.sty ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
+Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks22
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
+Package: graphics 2016/05/09 v1.0r Standard LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\trig.sty"
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
+File: graphics.cfg 2016/01/02 v1.10 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 96.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count137
+))
+\Gin@req@height=\dimen147
+\Gin@req@width=\dimen148
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\color.sty"
+Package: color 2016/05/09 v1.1c Standard LaTeX Color (DPC)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\color.cfg"
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package color Info: Driver file: pdftex.def on input line 144.
+)
+(C:\Users\sanjeev\AppData\Roaming\MiKTeX\2.9\tex\latex\framed\framed.sty
+Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
+\OuterFrameSep=\skip185
+\fb@frw=\dimen149
+\fb@frh=\dimen150
+))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\alltt.sty"
+Package: alltt 1997/06/16 v2.0g defines alltt environment
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\geometry\geometry.sty"
+Package: geometry 2010/09/12 v5.6 Page Geometry
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ifvtex.sty"
+Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+)
+\Gm@cnth=\count138
+\Gm@cntv=\count139
+\c@Gm@tempcnt=\count140
+\Gm@bindingoffset=\dimen151
+\Gm@wd@mp=\dimen152
+\Gm@odd@mp=\dimen153
+\Gm@even@mp=\dimen154
+\Gm@layoutwidth=\dimen155
+\Gm@layoutheight=\dimen156
+\Gm@layouthoffset=\dimen157
+\Gm@layoutvoffset=\dimen158
+\Gm@dimlist=\toks23
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\geometry\geometry.cfg"))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\fontenc.sty"
+Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\t1enc.def"
+File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
+))
+(C:\Users\sanjeev\AppData\Roaming\MiKTeX\2.9\tex\latex\titlesec\titlesec.sty
+Package: titlesec 2016/03/21 v2.10.2 Sectioning titles
+\ttl@box=\box29
+\beforetitleunit=\skip186
+\aftertitleunit=\skip187
+\ttl@plus=\dimen159
+\ttl@minus=\dimen160
+\ttl@toksa=\toks24
+\titlewidth=\dimen161
+\titlewidthlast=\dimen162
+\titlewidthfirst=\dimen163
+)
+(C:\Users\sanjeev\AppData\Roaming\MiKTeX\2.9\tex\latex\xcolor\xcolor.sty
+Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\color.cfg"
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+LaTeX Info: Redefining \color on input line 709.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
+Package xcolor Info: Model `RGB' extended on input line 1364.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
+)
+(C:\Users\sanjeev\AppData\Roaming\MiKTeX\2.9\tex\latex\cancel\cancel.sty
+Package: cancel 2013/04/12 v2.2 Cancel math terms
+)
+(C:\Users\sanjeev\AppData\Roaming\MiKTeX\2.9\tex\latex\fourier\fourier-orns.sty
+Package: fourier-orns 2004/01/30 1.1 fourier-ornaments package
+) (C:\Users\sanjeev\AppData\Roaming\MiKTeX\2.9\tex\latex\natbib\natbib.sty
+Package: natbib 2010/09/13 8.31b (PWD, AO)
+\bibhang=\skip188
+\bibsep=\skip189
+LaTeX Info: Redefining \cite on input line 694.
+\c@NAT@ctr=\count141
+)
+\AABase@idxfile=\write4
+\openout4 = `AABase.idx'.
+
+
+Writing index file AABase.idx 
+(C:\Users\sanjeev\AppData\Roaming\MiKTeX\2.9\tex\latex\idxlayout\idxlayout.sty
+Package: idxlayout 2012/03/30 v0.4d Configurable index layout
+
+(C:\Users\sanjeev\AppData\Roaming\MiKTeX\2.9\tex\latex\etoolbox\etoolbox.sty
+Package: etoolbox 2015/08/02 v2.2a e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count142
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.sty"
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\kvsetkeys.sty"
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\etexcmds.sty"
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\multicol.sty"
+Package: multicol 2016/04/07 v1.8p multicolumn formatting (FMi)
+\c@tracingmulticols=\count143
+\mult@box=\box30
+\multicol@leftmargin=\dimen164
+\c@unbalance=\count144
+\c@collectmore=\count145
+\doublecol@number=\count146
+\multicoltolerance=\count147
+\multicolpretolerance=\count148
+\full@width=\dimen165
+\page@free=\dimen166
+\premulticols=\dimen167
+\postmulticols=\dimen168
+\multicolsep=\skip190
+\multicolbaselineskip=\skip191
+\partial@page=\box31
+\last@line=\box32
+\maxbalancingoverflow=\dimen169
+\mult@rightbox=\box33
+\mult@grightbox=\box34
+\mult@gfirstbox=\box35
+\mult@firstbox=\box36
+\@tempa=\box37
+\@tempa=\box38
+\@tempa=\box39
+\@tempa=\box40
+\@tempa=\box41
+\@tempa=\box42
+\@tempa=\box43
+\@tempa=\box44
+\@tempa=\box45
+\@tempa=\box46
+\@tempa=\box47
+\@tempa=\box48
+\@tempa=\box49
+\@tempa=\box50
+\@tempa=\box51
+\@tempa=\box52
+\@tempa=\box53
+\c@columnbadness=\count149
+\c@finalcolumnbadness=\count150
+\last@try=\dimen170
+\multicolovershoot=\dimen171
+\multicolundershoot=\dimen172
+\mult@nat@firstbox=\box54
+\colbreak@box=\box55
+\mc@col@check@num=\count151
+)
+\c@idxcols=\count152
+\ila@indentunit=\skip192
+\ila@initsep=\skip193
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\hyperref.sty"
+Package: hyperref 2016/05/05 v6.83n Hypertext links for LaTeX
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\hobsub-hyperref.sty"
+Package: hobsub-hyperref 2016/05/16 v1.14 Bundle oberdiek, subset hyperref (HO)
+
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\hobsub-generic.sty"
+Package: hobsub-generic 2016/05/16 v1.14 Bundle oberdiek, subset generic (HO)
+Package: hobsub 2016/05/16 v1.14 Construct package bundles (HO)
+Package hobsub Info: Skipping package `infwarerr' (already loaded).
+Package hobsub Info: Skipping package `ltxcmds' (already loaded).
+Package hobsub Info: Skipping package `ifluatex' (already loaded).
+Package hobsub Info: Skipping package `ifvtex' (already loaded).
+Package: intcalc 2016/05/16 v1.2 Expandable calculations with integers (HO)
+Package hobsub Info: Skipping package `ifpdf' (already loaded).
+Package hobsub Info: Skipping package `etexcmds' (already loaded).
+Package hobsub Info: Skipping package `kvsetkeys' (already loaded).
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+Package: pdftexcmds 2016/05/10 v0.21 Utility functions of pdfTeX for LuaTeX (HO
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+Package: pdfescape 2016/05/16 v1.14 Implements pdfTeX's escape features (HO)
+Package: bigintcalc 2016/05/16 v1.4 Expandable calculations on big integers (HO
+)
+Package: bitset 2016/05/16 v1.2 Handle bit-vector datatype (HO)
+Package: uniquecounter 2016/05/16 v1.3 Provide unlimited unique counter (HO)
+)
+Package hobsub Info: Skipping package `hobsub' (already loaded).
+Package: letltxmacro 2016/05/16 v1.5 Let assignment for LaTeX macros (HO)
+Package: hopatch 2016/05/16 v1.3 Wrapper for package hooks (HO)
+Package: xcolor-patch 2016/05/16 xcolor patch
+Package: atveryend 2016/05/16 v1.9 Hooks at the very end of document (HO)
+Package: atbegshi 2016/05/16 v1.17 At begin shipout hook (HO)
+Package: refcount 2016/05/16 v3.5 Data extraction from label references (HO)
+Package: hycolor 2016/05/16 v1.8 Color options for hyperref/bookmark (HO)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\auxhook.sty"
+Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
+)
+\@linkdim=\dimen173
+\Hy@linkcounter=\count153
+\Hy@pagecounter=\count154
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\pd1enc.def"
+File: pd1enc.def 2016/05/05 v6.83n Hyperref: PDFDocEncoding definition (HO)
+)
+\Hy@SavedSpaceFactor=\count155
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\hyperref.cfg"
+File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
+)
+Package hyperref Info: Option `unicode' set `true' on input line 4322.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\puenc.def"
+File: puenc.def 2016/05/05 v6.83n Hyperref: PDF Unicode definition (HO)
+)
+Package hyperref Info: Hyper figures OFF on input line 4446.
+Package hyperref Info: Link nesting OFF on input line 4451.
+Package hyperref Info: Hyper index ON on input line 4454.
+Package hyperref Info: Plain pages OFF on input line 4461.
+Package hyperref Info: Backreferencing OFF on input line 4466.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4691.
+\c@Hy@tempcnt=\count156
+
+(C:\Users\sanjeev\AppData\Roaming\MiKTeX\2.9\tex\latex\url\url.sty
+\Urlmuskip=\muskip10
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 5044.
+\XeTeXLinkMargin=\dimen174
+\Fld@menulength=\count157
+\Field@Width=\dimen175
+\Fld@charsize=\dimen176
+Package hyperref Info: Hyper figures OFF on input line 6298.
+Package hyperref Info: Link nesting OFF on input line 6303.
+Package hyperref Info: Hyper index ON on input line 6306.
+Package hyperref Info: backreferencing OFF on input line 6313.
+Package hyperref Info: Link coloring OFF on input line 6318.
+Package hyperref Info: Link coloring with OCG OFF on input line 6323.
+Package hyperref Info: PDF/A mode OFF on input line 6328.
+LaTeX Info: Redefining \ref on input line 6368.
+LaTeX Info: Redefining \pageref on input line 6372.
+\Hy@abspage=\count158
+\c@Item=\count159
+\c@Hfootnote=\count160
+)
+(C:\Users\sanjeev\AppData\Roaming\MiKTeX\2.9\tex\latex\memoir\memhfixc.sty
+Package: memhfixc 2013/05/30 v1.17 nameref/hyperref package fixes for memoir cl
+ass
+\c@memhycontfloat=\count161
+\c@Hpagenote=\count162
+)
+
+Package hyperref Message: Driver: hpdftex.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\hpdftex.def"
+File: hpdftex.def 2016/05/05 v6.83n Hyperref driver for pdfTeX
+\Fld@listcount=\count163
+\c@bookmark@seq@number=\count164
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\rerunfilecheck.sty"
+Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+82.
+)
+\Hy@SectionHShift=\skip194
+)
+(C:\Users\sanjeev\AppData\Roaming\MiKTeX\2.9\tex\latex\enumitem\enumitem.sty
+Package: enumitem 2011/09/28 v3.5.2 Customized lists
+\labelindent=\skip256
+\enit@outerparindent=\dimen177
+\enit@toks=\toks25
+\enit@inbox=\box56
+\enitdp@description=\count165
+)
+(C:\Users\sanjeev\AppData\Roaming\MiKTeX\2.9\tex\latex\marginfix\marginfix.sty
+Package: marginfix 2013/09/08 v1.1 Fix Margin Paragraphs
+\Mfx@inject@insert=\insert252
+\Mfx@marginbox=\box57
+\Mfx@marginpos@min=\dimen178
+\Mfx@marginpos@max=\dimen179
+\Mfx@marginspace=\dimen180
+\Mfx@marginheight=\dimen181
+\Mfx@piece@content=\box58
+\Mfx@piece@count=\count166
+\Mfx@mparshift=\dimen182
+\marginheightadjustment=\dimen183
+\marginposadjustment=\dimen184
+\Mfx@strutheight=\dimen185
+)
+\drop=\skip257
+(C:\Users\sanjeev\AppData\Roaming\MiKTeX\2.9\tex\latex\upquote\upquote.sty
+Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verba
+tim
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\textcomp.sty"
+Package: textcomp 2005/09/27 v1.99g Standard LaTeX package
+Package textcomp Info: Sub-encoding information:
+(textcomp)               5 = only ISO-Adobe without \textcurrency
+(textcomp)               4 = 5 + \texteuro
+(textcomp)               3 = 4 + \textohm
+(textcomp)               2 = 3 + \textestimated + \textcurrency
+(textcomp)               1 = TS1 - \textcircled - \t
+(textcomp)               0 = TS1 (full)
+(textcomp)             Font families with sub-encoding setting implement
+(textcomp)             only a restricted character set as indicated.
+(textcomp)             Family '?' is the default used for unknown fonts.
+(textcomp)             See the documentation for details.
+Package textcomp Info: Setting ? sub-encoding to TS1/1 on input line 79.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ts1enc.def"
+File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
+)
+LaTeX Info: Redefining \oldstylenums on input line 334.
+Package textcomp Info: Setting cmr sub-encoding to TS1/0 on input line 349.
+Package textcomp Info: Setting cmss sub-encoding to TS1/0 on input line 350.
+Package textcomp Info: Setting cmtt sub-encoding to TS1/0 on input line 351.
+Package textcomp Info: Setting cmvtt sub-encoding to TS1/0 on input line 352.
+Package textcomp Info: Setting cmbr sub-encoding to TS1/0 on input line 353.
+Package textcomp Info: Setting cmtl sub-encoding to TS1/0 on input line 354.
+Package textcomp Info: Setting ccr sub-encoding to TS1/0 on input line 355.
+Package textcomp Info: Setting ptm sub-encoding to TS1/4 on input line 356.
+Package textcomp Info: Setting pcr sub-encoding to TS1/4 on input line 357.
+Package textcomp Info: Setting phv sub-encoding to TS1/4 on input line 358.
+Package textcomp Info: Setting ppl sub-encoding to TS1/3 on input line 359.
+Package textcomp Info: Setting pag sub-encoding to TS1/4 on input line 360.
+Package textcomp Info: Setting pbk sub-encoding to TS1/4 on input line 361.
+Package textcomp Info: Setting pnc sub-encoding to TS1/4 on input line 362.
+Package textcomp Info: Setting pzc sub-encoding to TS1/4 on input line 363.
+Package textcomp Info: Setting bch sub-encoding to TS1/4 on input line 364.
+Package textcomp Info: Setting put sub-encoding to TS1/5 on input line 365.
+Package textcomp Info: Setting uag sub-encoding to TS1/5 on input line 366.
+Package textcomp Info: Setting ugq sub-encoding to TS1/5 on input line 367.
+Package textcomp Info: Setting ul8 sub-encoding to TS1/4 on input line 368.
+Package textcomp Info: Setting ul9 sub-encoding to TS1/4 on input line 369.
+Package textcomp Info: Setting augie sub-encoding to TS1/5 on input line 370.
+Package textcomp Info: Setting dayrom sub-encoding to TS1/3 on input line 371.
+Package textcomp Info: Setting dayroms sub-encoding to TS1/3 on input line 372.
+
+Package textcomp Info: Setting pxr sub-encoding to TS1/0 on input line 373.
+Package textcomp Info: Setting pxss sub-encoding to TS1/0 on input line 374.
+Package textcomp Info: Setting pxtt sub-encoding to TS1/0 on input line 375.
+Package textcomp Info: Setting txr sub-encoding to TS1/0 on input line 376.
+Package textcomp Info: Setting txss sub-encoding to TS1/0 on input line 377.
+Package textcomp Info: Setting txtt sub-encoding to TS1/0 on input line 378.
+Package textcomp Info: Setting lmr sub-encoding to TS1/0 on input line 379.
+Package textcomp Info: Setting lmdh sub-encoding to TS1/0 on input line 380.
+Package textcomp Info: Setting lmss sub-encoding to TS1/0 on input line 381.
+Package textcomp Info: Setting lmssq sub-encoding to TS1/0 on input line 382.
+Package textcomp Info: Setting lmvtt sub-encoding to TS1/0 on input line 383.
+Package textcomp Info: Setting lmtt sub-encoding to TS1/0 on input line 384.
+Package textcomp Info: Setting qhv sub-encoding to TS1/0 on input line 385.
+Package textcomp Info: Setting qag sub-encoding to TS1/0 on input line 386.
+Package textcomp Info: Setting qbk sub-encoding to TS1/0 on input line 387.
+Package textcomp Info: Setting qcr sub-encoding to TS1/0 on input line 388.
+Package textcomp Info: Setting qcs sub-encoding to TS1/0 on input line 389.
+Package textcomp Info: Setting qpl sub-encoding to TS1/0 on input line 390.
+Package textcomp Info: Setting qtm sub-encoding to TS1/0 on input line 391.
+Package textcomp Info: Setting qzc sub-encoding to TS1/0 on input line 392.
+Package textcomp Info: Setting qhvc sub-encoding to TS1/0 on input line 393.
+Package textcomp Info: Setting futs sub-encoding to TS1/4 on input line 394.
+Package textcomp Info: Setting futx sub-encoding to TS1/4 on input line 395.
+Package textcomp Info: Setting futj sub-encoding to TS1/4 on input line 396.
+Package textcomp Info: Setting hlh sub-encoding to TS1/3 on input line 397.
+Package textcomp Info: Setting hls sub-encoding to TS1/3 on input line 398.
+Package textcomp Info: Setting hlst sub-encoding to TS1/3 on input line 399.
+Package textcomp Info: Setting hlct sub-encoding to TS1/5 on input line 400.
+Package textcomp Info: Setting hlx sub-encoding to TS1/5 on input line 401.
+Package textcomp Info: Setting hlce sub-encoding to TS1/5 on input line 402.
+Package textcomp Info: Setting hlcn sub-encoding to TS1/5 on input line 403.
+Package textcomp Info: Setting hlcw sub-encoding to TS1/5 on input line 404.
+Package textcomp Info: Setting hlcf sub-encoding to TS1/5 on input line 405.
+Package textcomp Info: Setting pplx sub-encoding to TS1/3 on input line 406.
+Package textcomp Info: Setting pplj sub-encoding to TS1/3 on input line 407.
+Package textcomp Info: Setting ptmx sub-encoding to TS1/4 on input line 408.
+Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 409.
+))
+(C:\Users\sanjeev\AppData\Roaming\MiKTeX\2.9\tex\latex\ms\ragged2e.sty
+Package: ragged2e 2009/05/21 v2.1 ragged2e Package (MS)
+
+(C:\Users\sanjeev\AppData\Roaming\MiKTeX\2.9\tex\latex\ms\everysel.sty
+Package: everysel 2011/10/28 v1.2 EverySelectfont Package (MS)
+)
+\CenteringLeftskip=\skip258
+\RaggedLeftLeftskip=\skip259
+\RaggedRightLeftskip=\skip260
+\CenteringRightskip=\skip261
+\RaggedLeftRightskip=\skip262
+\RaggedRightRightskip=\skip263
+\CenteringParfillskip=\skip264
+\RaggedLeftParfillskip=\skip265
+\RaggedRightParfillskip=\skip266
+\JustifyingParfillskip=\skip267
+\CenteringParindent=\skip268
+\RaggedLeftParindent=\skip269
+\RaggedRightParindent=\skip270
+\JustifyingParindent=\skip271
+)
+(AABase.aux)
+\openout1 = `AABase.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 115.
+LaTeX Font Info:    ... okay on input line 115.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 115.
+LaTeX Font Info:    ... okay on input line 115.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 115.
+LaTeX Font Info:    ... okay on input line 115.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 115.
+LaTeX Font Info:    ... okay on input line 115.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 115.
+LaTeX Font Info:    ... okay on input line 115.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 115.
+LaTeX Font Info:    ... okay on input line 115.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 115.
+LaTeX Font Info:    ... okay on input line 115.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 115.
+LaTeX Font Info:    ... okay on input line 115.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 115.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 115.
+
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
+File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    ... okay on input line 115.
+
+(C:\Users\sanjeev\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count167
+\scratchdimen=\dimen186
+\scratchbox=\box59
+\nofMPsegments=\count168
+\nofMParguments=\count169
+\everyMPshowfont=\toks26
+\MPscratchCnt=\count170
+\MPscratchDim=\dimen187
+\MPnumerator=\count171
+\makeMPintoPDFobject=\count172
+\everyMPtoPDFconversion=\toks27
+) ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-base.sty"
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\grfext.sty"
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+)
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 456.
+)
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: letterpaper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: twoside 
+* h-part:(L,W,R)=(72.26999pt, 361.35002pt, 180.67499pt)
+* v-part:(T,H,B)=(72.26999pt, 650.43001pt, 72.26999pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=361.35002pt
+* \textheight=650.43001pt
+* \oddsidemargin=0.0pt
+* \evensidemargin=108.405pt
+* \topmargin=-33.4738pt
+* \headheight=13.6pt
+* \headsep=19.8738pt
+* \topskip=11.0pt
+* \footskip=27.46295pt
+* \marginparwidth=111.0pt
+* \marginparsep=7.22743pt
+* \columnsep=10.0pt
+* \skip\footins=12.0pt plus 4.0pt minus 4.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidetrue
+* \@mparswitchtrue
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+\AtBeginShipoutBox=\box60
+Package hyperref Info: Link coloring OFF on input line 115.
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
+Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty"
+Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
+)
+\c@section@level=\count173
+)
+Redoing nameref's sectioning
+Redoing nameref's label
+LaTeX Info: Redefining \nameref on input line 115.
+LaTeX Info: Redefining \ref on input line 115.
+LaTeX Info: Redefining \pageref on input line 115.
+LaTeX Info: Redefining \nameref on input line 115.
+(AABase.out) (AABase.out)
+\@outlinefile=\write5
+\openout5 = `AABase.out'.
+
+ ABD: EverySelectfont initializing macros
+LaTeX Info: Redefining \selectfont on input line 115.
+
+! Undefined control sequence.
+l.116 \SweaveOpts
+                 {concordance=TRUE}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 126--126
+
+ []
+
+[1
+
+{C:/Users/sanjeev/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+[2]
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 132.
+
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\t1cmtt.fd"
+File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+) [1
+
+
+] [2
+
+]
+(AABase.toc
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <10.95> on input line 1.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 1.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 1.
+
+Overfull \hbox (0.15294pt too wide) detected at line 6
+ \T1/cmr/bx/n/10.95 xiii
+ []
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 13.
+
+Overfull \hbox (1.88837pt too wide) detected at line 118
+ \T1/cmr/bx/n/10.95 101
+ []
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.i}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.119 ...eighbors Classification}{103}{chapter.12}
+                                                   [1]
+Overfull \hbox (1.88837pt too wide) detected at line 119
+ \T1/cmr/bx/n/10.95 103
+ []
+
+
+Overfull \hbox (1.88837pt too wide) detected at line 131
+ \T1/cmr/bx/n/10.95 111
+ []
+
+
+Overfull \hbox (1.88837pt too wide) detected at line 132
+ \T1/cmr/bx/n/10.95 113
+ []
+
+
+Overfull \hbox (1.88837pt too wide) detected at line 133
+ \T1/cmr/bx/n/10.95 115
+ []
+
+
+Overfull \hbox (1.88837pt too wide) detected at line 134
+ \T1/cmr/bx/n/10.95 117
+ []
+
+
+Overfull \hbox (1.88837pt too wide) detected at line 135
+ \T1/cmr/bx/n/10.95 119
+ []
+
+
+Overfull \hbox (1.88837pt too wide) detected at line 137
+ \T1/cmr/bx/n/10.95 123
+ []
+
+
+Overfull \hbox (1.88837pt too wide) detected at line 138
+ \T1/cmr/bx/n/10.95 125
+ []
+
+
+Overfull \hbox (1.88837pt too wide) detected at line 140
+ \T1/cmr/bx/n/10.95 129
+ []
+
+
+Overfull \hbox (1.88837pt too wide) detected at line 144
+ \T1/cmr/bx/n/10.95 131
+ []
+
+
+Overfull \hbox (1.88837pt too wide) detected at line 145
+ \T1/cmr/bx/n/10.95 137
+ []
+
+
+Overfull \hbox (1.88837pt too wide) detected at line 157
+ \T1/cmr/bx/n/10.95 143
+ []
+
+
+Overfull \hbox (1.88837pt too wide) detected at line 165
+ \T1/cmr/bx/n/10.95 145
+ []
+
+
+Overfull \hbox (1.88837pt too wide) detected at line 166
+ \T1/cmr/bx/n/10.95 147
+ []
+
+)pdfTeX warning (ext4): destination with the same identifier (name{page.ii}) ha
+s been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.141 \cleardoublepage
+                       [2] (AABase.toc
+Overfull \hbox (0.15294pt too wide) detected at line 6
+ \T1/cmr/bx/n/10.95 xiii
+ []
+
+[3
+
+]
+Overfull \hbox (1.88837pt too wide) detected at line 118
+ \T1/cmr/bx/n/10.95 101
+ []
+
+
+Overfull \hbox (1.88837pt too wide) detected at line 119
+ \T1/cmr/bx/n/10.95 103
+ []
+
+[4]
+Overfull \hbox (1.88837pt too wide) detected at line 131
+ \T1/cmr/bx/n/10.95 111
+ []
+
+
+Overfull \hbox (1.88837pt too wide) detected at line 132
+ \T1/cmr/bx/n/10.95 113
+ []
+
+
+Overfull \hbox (1.88837pt too wide) detected at line 133
+ \T1/cmr/bx/n/10.95 115
+ []
+
+
+Overfull \hbox (1.88837pt too wide) detected at line 134
+ \T1/cmr/bx/n/10.95 117
+ []
+
+
+Overfull \hbox (1.88837pt too wide) detected at line 135
+ \T1/cmr/bx/n/10.95 119
+ []
+
+
+Overfull \hbox (1.88837pt too wide) detected at line 137
+ \T1/cmr/bx/n/10.95 123
+ []
+
+
+Overfull \hbox (1.88837pt too wide) detected at line 138
+ \T1/cmr/bx/n/10.95 125
+ []
+
+
+Overfull \hbox (1.88837pt too wide) detected at line 140
+ \T1/cmr/bx/n/10.95 129
+ []
+
+
+Overfull \hbox (1.88837pt too wide) detected at line 144
+ \T1/cmr/bx/n/10.95 131
+ []
+
+
+Overfull \hbox (1.88837pt too wide) detected at line 145
+ \T1/cmr/bx/n/10.95 137
+ []
+
+
+Overfull \hbox (1.88837pt too wide) detected at line 157
+ \T1/cmr/bx/n/10.95 143
+ []
+
+[5]
+Overfull \hbox (1.88837pt too wide) detected at line 165
+ \T1/cmr/bx/n/10.95 145
+ []
+
+
+Overfull \hbox (1.88837pt too wide) detected at line 166
+ \T1/cmr/bx/n/10.95 147
+ []
+
+) [6] (AABase.lof
+Overfull \hbox (3.69435pt too wide) detected at line 1
+ \T1/cmr/m/n/10.95 xviii
+ []
+
+[7
+
+]) [8] [9
+
+] [10
+
+]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [11]
+LaTeX Font Info:    Try loading font information for U+futs on input line 195.
+
+(C:\Users\sanjeev\AppData\Roaming\MiKTeX\2.9\tex\latex\fourier\ufuts.fd
+File: ufuts.fd 2004/03/26 Fontinst v1.926 font definitions for U/futs.
+)
+[12]
+Underfull \hbox (badness 10000) in paragraph at lines 217--217
+[]\T1/cmtt/m/n/10 GPL License usually
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 217--217
+\T1/cmtt/m/n/10 require that the
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 217--217
+\T1/cmtt/m/n/10 product (in this
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 217--217
+\T1/cmtt/m/n/10 case, this book) be
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 217--217
+\T1/cmtt/m/n/10 made available free
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 217--217
+\T1/cmtt/m/n/10 or charge; and any
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 217--217
+\T1/cmtt/m/n/10 subsequent product
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 217--217
+\T1/cmtt/m/n/10 made using the GPL
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 217--217
+\T1/cmtt/m/n/10 Licensed product
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 217--217
+\T1/cmtt/m/n/10 must also be made
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 217--217
+\T1/cmtt/m/n/10 available free of
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 217--217
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 219--219
+[]\T1/cmtt/m/n/10 I plan to publish
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 219--219
+\T1/cmtt/m/n/10 these and other
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 219--219
+\T1/cmtt/m/n/10 details on
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 219--219
+\T1/cmtt/m/n/10 ateachr.com - but
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 219--219
+\T1/cmtt/m/n/10 as of this version
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 219--219
+\T1/cmtt/m/n/10 of the document, I
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 219--219
+\T1/cmtt/m/n/10 have not been able
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 219--219
+\T1/cmtt/m/n/10 to. I will revise
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 219--219
+\T1/cmtt/m/n/10 this note after I
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 219--219
+\T1/cmtt/m/n/10 have published the
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 219--219
+
+ []
+
+[13
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 223--223
+[]\T1/cmtt/m/n/10 I think the name is
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 223--223
+\T1/cmtt/m/n/10 clever. I was pretty
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 223--223
+\T1/cmtt/m/n/10 happy with myself
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 223--223
+\T1/cmtt/m/n/10 when I found out that
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 223--223
+\T1/cmtt/m/n/10 the clarifyR name was
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 223--223
+
+ []
+
+
+Package xcolor Warning: Incompatible color definition on input line 227.
+
+LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <10.95> not available
+(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 232.
+
+Underfull \hbox (badness 10000) in paragraph at lines 251--251
+[]\T1/cmtt/m/n/10 In my opinion, data
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 251--251
+\T1/cmtt/m/n/10 cleaning is the most
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 251--251
+\T1/cmtt/m/n/10 under-appreciated
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 251--251
+\T1/cmtt/m/n/10 part of data
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 251--251
+\T1/cmtt/m/n/10 analytics. It often
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 251--251
+\T1/cmtt/m/n/10 takes more time
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 251--251
+\T1/cmtt/m/n/10 and effort than the
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 251--251
+\T1/cmtt/m/n/10 actual analysis that
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 251--251
+
+ []
+
+
+Underfull \vbox (badness 2384) has occurred while \output is active []
+
+ [14]
+[15]
+
+Package xcolor Warning: Incompatible color definition on input line 284.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 301--301
+[][]\T1/cmtt/m/n/10 I would have liked
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 301--301
+\T1/cmtt/m/n/10 to make margin notes
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 301--301
+\T1/cmtt/m/n/10 green - but somehow
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 301--301
+\T1/cmtt/m/n/10 green color prints a
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 301--301
+\T1/cmtt/m/n/10 horribly toxic green
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 301--301
+\T1/cmtt/m/n/10 - so I am defaulting
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 301--301
+\T1/cmtt/m/n/10 to black until I can
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 301--301
+\T1/cmtt/m/n/10 find a way to print
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 301--301
+\T1/cmtt/m/n/10 a darker, pleasanter
+ []
+
+[16]
+Underfull \hbox (badness 10000) in paragraph at lines 303--303
+[]\T1/cmtt/m/n/10 This is a demo margin
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 303--303
+\T1/cmtt/m/n/10 note. You will
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 303--303
+\T1/cmtt/m/n/10 find helpful hints,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 303--303
+\T1/cmtt/m/n/10 debugging tips and
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 303--303
+\T1/cmtt/m/n/10 other thoughts and
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 303--303
+
+ []
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <14.4> on input line 305.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 305.
+<images/woodson.png, id=751, 301.125pt x 295.1025pt>
+File: images/woodson.png Graphic file (type png)
+ <use images/woodson.png>
+Package pdftex.def Info: images/woodson.png used on input line 312.
+(pdftex.def)             Requested size: 294.9856pt x 289.07999pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [17]
+[18 <./images/woodson.png (PNG copy)>]pdfTeX warning (ext4): destination with t
+he same identifier (name{page.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.337 \part{Getting Started}
+                             [1
+
+
+]pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.337 \part{Getting Started}
+                             [2]
+<images/NYTFrances.jpg, id=775, 437.83575pt x 481.19775pt>
+File: images/NYTFrances.jpg Graphic file (type jpg)
+
+<use images/NYTFrances.jpg>
+Package pdftex.def Info: images/NYTFrances.jpg used on input line 358.
+(pdftex.def)             Requested size: 328.79022pt x 361.34999pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 364--364
+[]\T1/cmtt/m/n/10 The popular notion
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 364--364
+\T1/cmtt/m/n/10 that Target knew that
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 364--364
+\T1/cmtt/m/n/10 the girl was pregnant
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 364--364
+\T1/cmtt/m/n/10 before even \T1/cmtt/m/it/10 she \T1/cmtt/m/n/10 did;
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 364--364
+\T1/cmtt/m/n/10 is not accurate.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 364--364
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 364--364
+[]\T1/cmtt/m/n/10 The terms Advanced
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 364--364
+\T1/cmtt/m/n/10 Analytics, Data
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 364--364
+\T1/cmtt/m/n/10 Analytics and
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 364--364
+\T1/cmtt/m/n/10 Business Analytics
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 364--364
+\T1/cmtt/m/n/10 are often used
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 364--364
+\T1/cmtt/m/n/10 interchangeably.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 364--364
+\T1/cmtt/m/n/10 We will consider them
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 364--364
+\T1/cmtt/m/n/10 synonymous in this
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 364--364
+
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [3
+
+]
+[4 <./images/NYTFrances.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 394--394
+[]\T1/cmtt/m/n/10 The movie Moneyball
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 394--394
+\T1/cmtt/m/n/10 is a good example of
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 394--394
+\T1/cmtt/m/n/10 transitioning from
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 394--394
+\T1/cmtt/m/n/10 an intuition/gut-feel
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 394--394
+\T1/cmtt/m/n/10 based decision making
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 394--394
+\T1/cmtt/m/n/10 to a data driven
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 394--394
+
+ []
+
+[5] <images/datascientist.png, id=811, 428.3202pt x 529.4982pt>
+File: images/datascientist.png Graphic file (type png)
+
+<use images/datascientist.png>
+Package pdftex.def Info: images/datascientist.png used on input line 418.
+(pdftex.def)             Requested size: 292.31265pt x 361.34999pt.
+ [6] [7 <./images/datascientist.png>] [8
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 445--445
+[]\T1/cmtt/m/n/10 R is a pretty awful
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 445--445
+\T1/cmtt/m/n/10 name for anything
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 445--445
+\T1/cmtt/m/n/10 - try googling "R"
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 445--445
+\T1/cmtt/m/n/10 and see how relevant
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 445--445
+\T1/cmtt/m/n/10 the search results
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 445--445
+\T1/cmtt/m/n/10 are! It is called R
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 445--445
+\T1/cmtt/m/n/10 after the first name
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 445--445
+\T1/cmtt/m/n/10 of the two authors
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 445--445
+\T1/cmtt/m/n/10 of R: Robert and
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 445--445
+\T1/cmtt/m/n/10 Ross. The name kinda
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 445--445
+\T1/cmtt/m/n/10 makes sense when
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 445--445
+\T1/cmtt/m/n/10 you consider that R
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 445--445
+\T1/cmtt/m/n/10 is based on another
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 445--445
+\T1/cmtt/m/n/10 programming language
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 445--445
+
+ []
+
+<images/rbase.png, id=832, 411.33675pt x 240.29774pt>
+File: images/rbase.png Graphic file (type png)
+ <use images/rbase.png>
+Package pdftex.def Info: images/rbase.png used on input line 456.
+(pdftex.def)             Requested size: 371.12857pt x 216.81pt.
+
+Overfull \hbox (9.77855pt too wide) in paragraph at lines 454--457
+ [] 
+ []
+
+
+Overfull \hbox (1.62326pt too wide) in paragraph at lines 462--464
+[]\T1/cmtt/m/n/10.95 https://www.rstudio.com/products/rstudio/download/\T1/cmr/
+m/n/10.95 . There again are
+ []
+
+[9] <images/rstudio.png, id=840, 686.565pt x 404.10976pt>
+File: images/rstudio.png Graphic file (type png)
+
+<use images/rstudio.png>
+Package pdftex.def Info: images/rstudio.png used on input line 468.
+(pdftex.def)             Requested size: 368.3615pt x 216.81pt.
+
+Overfull \hbox (7.01147pt too wide) in paragraph at lines 466--469
+ [] 
+ []
+
+[10 <./images/rbase.png> <./images/rstudio.png>]
+
+Package xcolor Warning: Incompatible color definition on input line 494.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [11]
+LaTeX Font Info:    Try loading font information for TS1+cmtt on input line 526
+.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ts1cmtt.fd"
+File: ts1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+) [12]
+Underfull \vbox (badness 6510) has occurred while \output is active []
+
+ [13]
+
+Package xcolor Warning: Incompatible color definition on input line 581.
+
+<figure/unnamed-chunk-6-1.pdf, id=865, 505.89pt x 361.35pt>
+File: figure/unnamed-chunk-6-1.pdf Graphic file (type pdf)
+
+<use figure/unnamed-chunk-6-1.pdf>
+Package pdftex.def Info: figure/unnamed-chunk-6-1.pdf used on input line 582.
+(pdftex.def)             Requested size: 361.35002pt x 258.10966pt.
+
+
+Package xcolor Warning: Incompatible color definition on input line 592.
+
+
+Package xcolor Warning: Incompatible color definition on input line 607.
+
+[14]
+
+Package xcolor Warning: Incompatible color definition on input line 628.
+
+[15 <./figure/unnamed-chunk-6-1.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 643--643
+[]\T1/cmtt/m/n/10 I am not going
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 643--643
+\T1/cmtt/m/n/10 to insult your
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 643--643
+\T1/cmtt/m/n/10 intelligence by
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 643--643
+\T1/cmtt/m/n/10 asking you to make
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 643--643
+\T1/cmtt/m/n/10 sure that you have
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 643--643
+\T1/cmtt/m/n/10 a live Internet
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 643--643
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 649--649
+[]\T1/cmtt/m/n/10 Last command
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 649--649
+\T1/cmtt/m/n/10 commented as
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 649--649
+\T1/cmtt/m/n/10 C:/Whatever does not
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 649--649
+\T1/cmtt/m/n/10 exist obviously - so
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 649--649
+\T1/cmtt/m/n/10 would have resulted
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 649--649
+
+ []
+
+
+Package xcolor Warning: Incompatible color definition on input line 651.
+
+[16] [17] [18
+
+]
+
+Package xcolor Warning: Incompatible color definition on input line 687.
+
+
+Package xcolor Warning: Incompatible color definition on input line 711.
+
+
+Overfull \hbox (21.81845pt too wide) in paragraph at lines 728--729
+[]\T1/cmr/m/n/10.95 Two arith-matic op-er-a-tors that many are not fa-mil-iar a
+re:  [][][][][][]
+ []
+
+
+Overfull \hbox (4.1518pt too wide) in paragraph at lines 728--729
+\T1/cmr/m/n/10.95 vides just the quo-tient for a di-vi-sion op-er-a-tion while 
+the \T1/cmtt/m/n/10.95 remainder operator\T1/cmr/m/n/10.95 :
+ []
+
+
+Package xcolor Warning: Incompatible color definition on input line 731.
+
+
+Overfull \hbox (19.6614pt too wide) in paragraph at lines 733--733
+[][]\T1/cmtt/m/n/10.95 10[] []%/%[] []3[] []\T1/cmtt/m/it/10.95 # Integer divis
+ion - only gives the quotient as the output[][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 747--747
+[]\T1/cmtt/m/n/10 Note the upper case
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 747--747
+\T1/cmtt/m/n/10 format for the two
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 747--747
+
+ []
+
+[19]
+
+Package xcolor Warning: Incompatible color definition on input line 754.
+
+
+Package xcolor Warning: Incompatible color definition on input line 767.
+
+
+Package xcolor Warning: Incompatible color definition on input line 798.
+
+[20]
+
+Package xcolor Warning: Incompatible color definition on input line 807.
+
+
+Package xcolor Warning: Incompatible color definition on input line 813.
+
+
+Package xcolor Warning: Incompatible color definition on input line 822.
+
+
+Package xcolor Warning: Incompatible color definition on input line 832.
+
+
+Package xcolor Warning: Incompatible color definition on input line 841.
+
+
+Package xcolor Warning: Incompatible color definition on input line 853.
+
+
+Package xcolor Warning: Incompatible color definition on input line 866.
+
+
+Package xcolor Warning: Incompatible color definition on input line 883.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [21]
+
+Package xcolor Warning: Incompatible color definition on input line 907.
+
+
+Package xcolor Warning: Incompatible color definition on input line 923.
+
+
+Package xcolor Warning: Incompatible color definition on input line 949.
+
+[22] [23] [24
+
+] [25] [26]
+
+Package xcolor Warning: Incompatible color definition on input line 986.
+
+
+Overfull \hbox (36.63652pt too wide) in paragraph at lines 988--988
+[][]\T1/cmtt/m/n/10.95 revenue[] []<-[] []100[] []\T1/cmtt/m/it/10.95 #Typical 
+way of creating a variable and assigning value[][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [27
+
+]
+
+Package xcolor Warning: Incompatible color definition on input line 1014.
+
+
+Overfull \hbox (25.31978pt too wide) in paragraph at lines 1016--1016
+[][]\T1/cmtt/m/n/10.95 day.name[] []<-[] []"Sunday"[] []\T1/cmtt/m/it/10.95 #As
+signs the string Sunday to variable day.name[][] 
+ []
+
+
+Package xcolor Warning: Incompatible color definition on input line 1024.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1040.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1064.
+
+[28]
+
+Package xcolor Warning: Incompatible color definition on input line 1074.
+
+
+Overfull \hbox (53.61163pt too wide) in paragraph at lines 1083--1083
+[][]\T1/cmtt/m/n/10.95 length[][](sleep.per.day)[] []\T1/cmtt/m/it/10.95 #Gets 
+the length (number of elements) of the vector[][] 
+ []
+
+
+Package xcolor Warning: Incompatible color definition on input line 1100.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1116.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1126.
+
+[29] [30
+
+] [31] [32
+
+] [33] [34
+
+] [35] [36]
+
+Package xcolor Warning: Incompatible color definition on input line 1230.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1238.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1246.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1262.
+
+
+Overfull \hbox (0.78572pt too wide) in paragraph at lines 1264--1264
+[][]\T1/cmtt/m/n/10.95 plot[][]([][]x[][]=dep_delay[dep_delay[] []<[] []400[][]
+],[] []y[][]=arr_delay[dep_delay[] []<[] []400[][]],[][] 
+ []
+
+<figure/unnamed-chunk-39-1.pdf, id=983, 505.89pt x 289.08pt>
+File: figure/unnamed-chunk-39-1.pdf Graphic file (type pdf)
+
+<use figure/unnamed-chunk-39-1.pdf>
+Package pdftex.def Info: figure/unnamed-chunk-39-1.pdf used on input line 1268.
+
+(pdftex.def)             Requested size: 361.35002pt x 206.48772pt.
+
+Overfull \hbox (25.31978pt too wide) in paragraph at lines 1270--1270
+[][]\T1/cmtt/m/it/10.95 # Focusing only on departure delay < 400 mins for more 
+readable plot[][] 
+ []
+
+[37
+
+]
+
+Package xcolor Warning: Incompatible color definition on input line 1287.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1296.
+
+
+Underfull \vbox (badness 1147) has occurred while \output is active []
+
+ [38 <./figure/unnamed-chunk-39-1.pdf>]
+
+Package xcolor Warning: Incompatible color definition on input line 1321.
+
+
+Overfull \hbox (0.78572pt too wide) in paragraph at lines 1323--1323
+[][]\T1/cmtt/m/n/10.95 plot[][]([][]x[][]=dep_delay[dep_delay[] []<[] []400[][]
+],[] []y[][]=arr_delay[dep_delay[] []<[] []400[][]],[][] 
+ []
+
+<figure/unnamed-chunk-42-1.pdf, id=1000, 505.89pt x 289.08pt>
+File: figure/unnamed-chunk-42-1.pdf Graphic file (type pdf)
+
+<use figure/unnamed-chunk-42-1.pdf>
+Package pdftex.def Info: figure/unnamed-chunk-42-1.pdf used on input line 1328.
+
+(pdftex.def)             Requested size: 361.35002pt x 206.48772pt.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1339.
+
+
+Overfull \hbox (6.44409pt too wide) in paragraph at lines 1357--1357
+[]\T1/cmtt/m/n/10.95 ## Signif. codes:  0 \TS1/cmtt/m/n/10.95 '\T1/cmtt/m/n/10.
+95 ***\TS1/cmtt/m/n/10.95 ' \T1/cmtt/m/n/10.95 0.001 \TS1/cmtt/m/n/10.95 '\T1/c
+mtt/m/n/10.95 **\TS1/cmtt/m/n/10.95 ' \T1/cmtt/m/n/10.95 0.01 \TS1/cmtt/m/n/10.
+95 '\T1/cmtt/m/n/10.95 *\TS1/cmtt/m/n/10.95 ' \T1/cmtt/m/n/10.95 0.05 \TS1/cmtt
+/m/n/10.95 '\T1/cmtt/m/n/10.95 .\TS1/cmtt/m/n/10.95 ' \T1/cmtt/m/n/10.95 0.1 \T
+S1/cmtt/m/n/10.95 ' ' \T1/cmtt/m/n/10.95 1[] 
+ []
+
+
+Overfull \hbox (0.78572pt too wide) in paragraph at lines 1362--1362
+[]\T1/cmtt/m/n/10.95 ## F-statistic: 1.382e+05 on 1 and 26396 DF,  p-value: < 2
+.2e-16[] 
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 1364
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [39 <./figure/unnamed-chunk-42-1.pdf>]
+
+Package xcolor Warning: Incompatible color definition on input line 1378.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1388.
+
+
+Overfull \hbox (6.44409pt too wide) in paragraph at lines 1408--1408
+[]\T1/cmtt/m/n/10.95 ## Signif. codes:  0 \TS1/cmtt/m/n/10.95 '\T1/cmtt/m/n/10.
+95 ***\TS1/cmtt/m/n/10.95 ' \T1/cmtt/m/n/10.95 0.001 \TS1/cmtt/m/n/10.95 '\T1/c
+mtt/m/n/10.95 **\TS1/cmtt/m/n/10.95 ' \T1/cmtt/m/n/10.95 0.01 \TS1/cmtt/m/n/10.
+95 '\T1/cmtt/m/n/10.95 *\TS1/cmtt/m/n/10.95 ' \T1/cmtt/m/n/10.95 0.05 \TS1/cmtt
+/m/n/10.95 '\T1/cmtt/m/n/10.95 .\TS1/cmtt/m/n/10.95 ' \T1/cmtt/m/n/10.95 0.1 \T
+S1/cmtt/m/n/10.95 ' ' \T1/cmtt/m/n/10.95 1[] 
+ []
+
+[40]
+
+Package xcolor Warning: Incompatible color definition on input line 1424.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [41]
+
+Package xcolor Warning: Incompatible color definition on input line 1469.
+
+
+Overfull \hbox (6.44409pt too wide) in paragraph at lines 1472--1472
+[][]\T1/cmtt/m/n/10.95 hist[][]([][]x[] []=[] []residuals[][](bpmodel),[] []xla
+b[] []=[] []"Value of residual"[][],[] []main[][]=[][]""[][])[][] 
+ []
+
+<figure/unnamed-chunk-47-1.pdf, id=1022, 505.89pt x 505.89pt>
+File: figure/unnamed-chunk-47-1.pdf Graphic file (type pdf)
+
+<use figure/unnamed-chunk-47-1.pdf>
+Package pdftex.def Info: figure/unnamed-chunk-47-1.pdf used on input line 1478.
+
+(pdftex.def)             Requested size: 361.35002pt x 361.35352pt.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1489.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1515.
+
+<figure/unnamed-chunk-50-1.pdf, id=1024, 505.89pt x 505.89pt>
+File: figure/unnamed-chunk-50-1.pdf Graphic file (type pdf)
+
+<use figure/unnamed-chunk-50-1.pdf>
+Package pdftex.def Info: figure/unnamed-chunk-50-1.pdf used on input line 1520.
+
+(pdftex.def)             Requested size: 361.35002pt x 361.35352pt.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1537.
+
+[42] [43 <./figure/unnamed-chunk-47-1.pdf>] [44 <./figure/unnamed-chunk-50-1.pd
+f>]
+Overfull \hbox (6.44409pt too wide) in paragraph at lines 1557--1557
+[]\T1/cmtt/m/n/10.95 ## Signif. codes:  0 \TS1/cmtt/m/n/10.95 '\T1/cmtt/m/n/10.
+95 ***\TS1/cmtt/m/n/10.95 ' \T1/cmtt/m/n/10.95 0.001 \TS1/cmtt/m/n/10.95 '\T1/c
+mtt/m/n/10.95 **\TS1/cmtt/m/n/10.95 ' \T1/cmtt/m/n/10.95 0.01 \TS1/cmtt/m/n/10.
+95 '\T1/cmtt/m/n/10.95 *\TS1/cmtt/m/n/10.95 ' \T1/cmtt/m/n/10.95 0.05 \TS1/cmtt
+/m/n/10.95 '\T1/cmtt/m/n/10.95 .\TS1/cmtt/m/n/10.95 ' \T1/cmtt/m/n/10.95 0.1 \T
+S1/cmtt/m/n/10.95 ' ' \T1/cmtt/m/n/10.95 1[] 
+ []
+
+
+Package xcolor Warning: Incompatible color definition on input line 1576.
+
+<figure/unnamed-chunk-52-1.pdf, id=1050, 505.89pt x 289.08pt>
+File: figure/unnamed-chunk-52-1.pdf Graphic file (type pdf)
+
+<use figure/unnamed-chunk-52-1.pdf>
+Package pdftex.def Info: figure/unnamed-chunk-52-1.pdf used on input line 1581.
+
+(pdftex.def)             Requested size: 361.35002pt x 206.48772pt.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1594.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [45]
+
+Package xcolor Warning: Incompatible color definition on input line 1615.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1633.
+
+
+Overfull \hbox (6.44409pt too wide) in paragraph at lines 1643--1643
+[]\T1/cmtt/m/n/10.95 ## alternative hypothesis: true autocorrelation is greater
+ than 0[] 
+ []
+
+[46 <./figure/unnamed-chunk-52-1.pdf>]
+
+Package xcolor Warning: Incompatible color definition on input line 1655.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1675.
+
+
+Overfull \hbox (57.36943pt too wide) in paragraph at lines 1681--1681
+[]\T1/cmtt/m/n/10.95 ##           1           2           3           4        
+   5           6 
+ []
+
+
+Overfull \hbox (57.36943pt too wide) in paragraph at lines 1682--1682
+[]\T1/cmtt/m/n/10.95 ## -0.05685922 -0.01827616 -0.02433017 -0.04307776  0.0265
+6855  0.01340052[] 
+ []
+
+
+Package xcolor Warning: Incompatible color definition on input line 1689.
+
+
+Overfull \hbox (17.76083pt too wide) in paragraph at lines 1695--1695
+[]\T1/cmtt/m/n/10.95 ##            1            2            3            4    
+        5 
+ []
+
+
+Overfull \hbox (17.76083pt too wide) in paragraph at lines 1696--1696
+[]\T1/cmtt/m/n/10.95 ## 1.081293e-03 1.118300e-04 1.981837e-04 6.209621e-04 2.3
+62273e-04[] 
+ []
+
+
+Package xcolor Warning: Incompatible color definition on input line 1706.
+
+[47]
+
+Package xcolor Warning: Incompatible color definition on input line 1723.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1742.
+
+<figure/unnamed-chunk-62-1.pdf, id=1075, 505.89pt x 289.08pt>
+File: figure/unnamed-chunk-62-1.pdf Graphic file (type pdf)
+
+<use figure/unnamed-chunk-62-1.pdf>
+Package pdftex.def Info: figure/unnamed-chunk-62-1.pdf used on input line 1748.
+
+(pdftex.def)             Requested size: 361.35002pt x 206.48772pt.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1758.
+
+
+Overfull \hbox (6.44409pt too wide) in paragraph at lines 1778--1778
+[]\T1/cmtt/m/n/10.95 ## Signif. codes:  0 \TS1/cmtt/m/n/10.95 '\T1/cmtt/m/n/10.
+95 ***\TS1/cmtt/m/n/10.95 ' \T1/cmtt/m/n/10.95 0.001 \TS1/cmtt/m/n/10.95 '\T1/c
+mtt/m/n/10.95 **\TS1/cmtt/m/n/10.95 ' \T1/cmtt/m/n/10.95 0.01 \TS1/cmtt/m/n/10.
+95 '\T1/cmtt/m/n/10.95 *\TS1/cmtt/m/n/10.95 ' \T1/cmtt/m/n/10.95 0.05 \TS1/cmtt
+/m/n/10.95 '\T1/cmtt/m/n/10.95 .\TS1/cmtt/m/n/10.95 ' \T1/cmtt/m/n/10.95 0.1 \T
+S1/cmtt/m/n/10.95 ' ' \T1/cmtt/m/n/10.95 1[] 
+ []
+
+[48]
+
+Package xcolor Warning: Incompatible color definition on input line 1793.
+
+<figure/unnamed-chunk-64-1.pdf, id=1082, 505.89pt x 289.08pt>
+File: figure/unnamed-chunk-64-1.pdf Graphic file (type pdf)
+
+<use figure/unnamed-chunk-64-1.pdf>
+Package pdftex.def Info: figure/unnamed-chunk-64-1.pdf used on input line 1799.
+
+(pdftex.def)             Requested size: 361.35002pt x 206.48772pt.
+ [49 <./figure/unnamed-chunk-62-1.pdf>]
+
+Package xcolor Warning: Incompatible color definition on input line 1814.
+
+
+Overfull \hbox (6.44409pt too wide) in paragraph at lines 1835--1835
+[]\T1/cmtt/m/n/10.95 ## Signif. codes:  0 \TS1/cmtt/m/n/10.95 '\T1/cmtt/m/n/10.
+95 ***\TS1/cmtt/m/n/10.95 ' \T1/cmtt/m/n/10.95 0.001 \TS1/cmtt/m/n/10.95 '\T1/c
+mtt/m/n/10.95 **\TS1/cmtt/m/n/10.95 ' \T1/cmtt/m/n/10.95 0.01 \TS1/cmtt/m/n/10.
+95 '\T1/cmtt/m/n/10.95 *\TS1/cmtt/m/n/10.95 ' \T1/cmtt/m/n/10.95 0.05 \TS1/cmtt
+/m/n/10.95 '\T1/cmtt/m/n/10.95 .\TS1/cmtt/m/n/10.95 ' \T1/cmtt/m/n/10.95 0.1 \T
+S1/cmtt/m/n/10.95 ' ' \T1/cmtt/m/n/10.95 1[] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [50 <./figure/unnamed-chunk-64-1.pdf>]
+
+Package xcolor Warning: Incompatible color definition on input line 1852.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1866.
+
+
+Overfull \hbox (6.44409pt too wide) in paragraph at lines 1886--1886
+[]\T1/cmtt/m/n/10.95 ## Signif. codes:  0 \TS1/cmtt/m/n/10.95 '\T1/cmtt/m/n/10.
+95 ***\TS1/cmtt/m/n/10.95 ' \T1/cmtt/m/n/10.95 0.001 \TS1/cmtt/m/n/10.95 '\T1/c
+mtt/m/n/10.95 **\TS1/cmtt/m/n/10.95 ' \T1/cmtt/m/n/10.95 0.01 \TS1/cmtt/m/n/10.
+95 '\T1/cmtt/m/n/10.95 *\TS1/cmtt/m/n/10.95 ' \T1/cmtt/m/n/10.95 0.05 \TS1/cmtt
+/m/n/10.95 '\T1/cmtt/m/n/10.95 .\TS1/cmtt/m/n/10.95 ' \T1/cmtt/m/n/10.95 0.1 \T
+S1/cmtt/m/n/10.95 ' ' \T1/cmtt/m/n/10.95 1[] 
+ []
+
+[51]
+
+Package xcolor Warning: Incompatible color definition on input line 1901.
+
+
+Overfull \hbox (6.44409pt too wide) in paragraph at lines 1904--1904
+[][]\T1/cmtt/m/n/10.95 treestall[[[][]"yes"[][]]][][]$[][]fit[] []<-[] []predic
+t[][](treesdummy, treestall[[[][]"yes"[][]]])[][] 
+ []
+
+<figure/unnamed-chunk-68-1.pdf, id=1110, 505.89pt x 289.08pt>
+File: figure/unnamed-chunk-68-1.pdf Graphic file (type pdf)
+
+<use figure/unnamed-chunk-68-1.pdf>
+Package pdftex.def Info: figure/unnamed-chunk-68-1.pdf used on input line 1913.
+
+(pdftex.def)             Requested size: 361.35002pt x 206.48772pt.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1926.
+
+[52 <./figure/unnamed-chunk-68-1.pdf>]
+Overfull \hbox (23.4192pt too wide) in paragraph at lines 1928--1928
+[][]\T1/cmtt/m/n/10.95 treeslog[] []<-[] []lm[][]([][]log[][](Volume)[] []~[] [
+]log[][](Girth)[] []+[] []log[][](Height),[] []data[] []= trees)[][] 
+ []
+
+
+Overfull \hbox (29.07758pt too wide) in paragraph at lines 1934--1934
+[]\T1/cmtt/m/n/10.95 ## lm(formula = log(Volume) ~ log(Girth) + log(Height), da
+ta = trees)[] 
+ []
+
+
+Overfull \hbox (6.44409pt too wide) in paragraph at lines 1946--1946
+[]\T1/cmtt/m/n/10.95 ## Signif. codes:  0 \TS1/cmtt/m/n/10.95 '\T1/cmtt/m/n/10.
+95 ***\TS1/cmtt/m/n/10.95 ' \T1/cmtt/m/n/10.95 0.001 \TS1/cmtt/m/n/10.95 '\T1/c
+mtt/m/n/10.95 **\TS1/cmtt/m/n/10.95 ' \T1/cmtt/m/n/10.95 0.01 \TS1/cmtt/m/n/10.
+95 '\T1/cmtt/m/n/10.95 *\TS1/cmtt/m/n/10.95 ' \T1/cmtt/m/n/10.95 0.05 \TS1/cmtt
+/m/n/10.95 '\T1/cmtt/m/n/10.95 .\TS1/cmtt/m/n/10.95 ' \T1/cmtt/m/n/10.95 0.1 \T
+S1/cmtt/m/n/10.95 ' ' \T1/cmtt/m/n/10.95 1[] 
+ []
+
+
+Underfull \hbox (badness 1005) in paragraph at lines 1959--1959
+[]\T1/cmr/bx/n/10 step\T1/cmr/m/n/10 : step-wise method
+ []
+
+
+Package xcolor Warning: Incompatible color definition on input line 1967.
+
+[53]
+Overfull \hbox (29.07758pt too wide) in paragraph at lines 1981--1981
+[]\T1/cmtt/m/n/10.95 ## lm(formula = log(Volume) ~ log(Girth) + log(Height), da
+ta = trees)[] 
+ []
+
+
+Package xcolor Warning: Incompatible color definition on input line 1995.
+
+
+Overfull \hbox (47.95326pt too wide) in paragraph at lines 1997--1997
+[][]\T1/cmtt/m/n/10.95 emptymodel[] []<-[] []lm[][]([][]log[][](Volume)[] []~[]
+ []1[][],[] []data[][]=trees)[] []\T1/cmtt/m/it/10.95 #Start with an empty mode
+l[][] 
+ []
+
+
+Overfull \hbox (29.07758pt too wide) in paragraph at lines 2021--2021
+[]\T1/cmtt/m/n/10.95 ## lm(formula = log(Volume) ~ log(Girth) + log(Height), da
+ta = trees)[] 
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 2027
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [54]
+
+Package xcolor Warning: Incompatible color definition on input line 2037.
+
+
+Package xcolor Warning: Incompatible color definition on input line 2051.
+
+
+Package xcolor Warning: Incompatible color definition on input line 2065.
+
+
+Overfull \hbox (6.44409pt too wide) in paragraph at lines 2074--2074
+[]\T1/cmtt/m/n/10.95 ## Model 2: log(Volume) ~ log(Girth) + log(Height) + trees
+$random[] 
+ []
+
+
+Overfull \hbox (6.44409pt too wide) in paragraph at lines 2079--2079
+[]\T1/cmtt/m/n/10.95 ## Signif. codes:  0 \TS1/cmtt/m/n/10.95 '\T1/cmtt/m/n/10.
+95 ***\TS1/cmtt/m/n/10.95 ' \T1/cmtt/m/n/10.95 0.001 \TS1/cmtt/m/n/10.95 '\T1/c
+mtt/m/n/10.95 **\TS1/cmtt/m/n/10.95 ' \T1/cmtt/m/n/10.95 0.01 \TS1/cmtt/m/n/10.
+95 '\T1/cmtt/m/n/10.95 *\TS1/cmtt/m/n/10.95 ' \T1/cmtt/m/n/10.95 0.05 \TS1/cmtt
+/m/n/10.95 '\T1/cmtt/m/n/10.95 .\TS1/cmtt/m/n/10.95 ' \T1/cmtt/m/n/10.95 0.1 \T
+S1/cmtt/m/n/10.95 ' ' \T1/cmtt/m/n/10.95 1[] 
+ []
+
+[55] [56]
+
+Package xcolor Warning: Incompatible color definition on input line 2129.
+
+<figure/unnamed-chunk-75-1.pdf, id=1143, 505.89pt x 289.08pt>
+File: figure/unnamed-chunk-75-1.pdf Graphic file (type pdf)
+
+<use figure/unnamed-chunk-75-1.pdf>
+Package pdftex.def Info: figure/unnamed-chunk-75-1.pdf used on input line 2136.
+
+(pdftex.def)             Requested size: 361.35002pt x 206.48772pt.
+
+
+Package xcolor Warning: Incompatible color definition on input line 2146.
+
+
+Package xcolor Warning: Incompatible color definition on input line 2161.
+
+
+Underfull \vbox (badness 1117) has occurred while \output is active []
+
+ [57
+
+]
+Overfull \hbox (6.44409pt too wide) in paragraph at lines 2187--2187
+[]\T1/cmtt/m/n/10.95 ## Signif. codes:  0 \TS1/cmtt/m/n/10.95 '\T1/cmtt/m/n/10.
+95 ***\TS1/cmtt/m/n/10.95 ' \T1/cmtt/m/n/10.95 0.001 \TS1/cmtt/m/n/10.95 '\T1/c
+mtt/m/n/10.95 **\TS1/cmtt/m/n/10.95 ' \T1/cmtt/m/n/10.95 0.01 \TS1/cmtt/m/n/10.
+95 '\T1/cmtt/m/n/10.95 *\TS1/cmtt/m/n/10.95 ' \T1/cmtt/m/n/10.95 0.05 \TS1/cmtt
+/m/n/10.95 '\T1/cmtt/m/n/10.95 .\TS1/cmtt/m/n/10.95 ' \T1/cmtt/m/n/10.95 0.1 \T
+S1/cmtt/m/n/10.95 ' ' \T1/cmtt/m/n/10.95 1[] 
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 2197
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [58 <./figure/unnamed-chunk-75-1.pdf>]
+
+Package xcolor Warning: Incompatible color definition on input line 2206.
+
+
+Package xcolor Warning: Incompatible color definition on input line 2224.
+
+
+Underfull \vbox (badness 10000) detected at line 2237
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [59]
+
+Package xcolor Warning: Incompatible color definition on input line 2242.
+
+
+Overfull \hbox (57.36943pt too wide) in paragraph at lines 2247--2247
+[]\T1/cmtt/m/n/10.95 ## (Intercept)         gre         gpa       rank2       r
+ank3       rank4 
+ []
+
+
+Overfull \hbox (57.36943pt too wide) in paragraph at lines 2248--2248
+[]\T1/cmtt/m/n/10.95 ##   0.0185001   1.0022670   2.2345448   0.5089310   0.261
+7923   0.2119375[] 
+ []
+
+
+Package xcolor Warning: Incompatible color definition on input line 2272.
+
+<figure/unnamed-chunk-81-1.pdf, id=1163, 505.89pt x 289.08pt>
+File: figure/unnamed-chunk-81-1.pdf Graphic file (type pdf)
+
+<use figure/unnamed-chunk-81-1.pdf>
+Package pdftex.def Info: figure/unnamed-chunk-81-1.pdf used on input line 2280.
+
+(pdftex.def)             Requested size: 361.35002pt x 206.48772pt.
+
+
+Package xcolor Warning: Incompatible color definition on input line 2290.
+
+
+Overfull \hbox (0.78572pt too wide) in paragraph at lines 2292--2292
+[][]\T1/cmtt/m/n/10.95 probit.model[] []<-[] []glm[][](admit[] []~[] []gre[] []
++[] []gpa[] []+[] []rank,[] []data[] []= admit.data,[][] 
+ []
+
+
+Overfull \hbox (80.00291pt too wide) in paragraph at lines 2299--2299
+[]\T1/cmtt/m/n/10.95 ## glm(formula = admit ~ gre + gpa + rank, family = binomi
+al(link = "probit"),[] 
+ []
+
+
+Overfull \hbox (6.44409pt too wide) in paragraph at lines 2315--2315
+[]\T1/cmtt/m/n/10.95 ## Signif. codes:  0 \TS1/cmtt/m/n/10.95 '\T1/cmtt/m/n/10.
+95 ***\TS1/cmtt/m/n/10.95 ' \T1/cmtt/m/n/10.95 0.001 \TS1/cmtt/m/n/10.95 '\T1/c
+mtt/m/n/10.95 **\TS1/cmtt/m/n/10.95 ' \T1/cmtt/m/n/10.95 0.01 \TS1/cmtt/m/n/10.
+95 '\T1/cmtt/m/n/10.95 *\TS1/cmtt/m/n/10.95 ' \T1/cmtt/m/n/10.95 0.05 \TS1/cmtt
+/m/n/10.95 '\T1/cmtt/m/n/10.95 .\TS1/cmtt/m/n/10.95 ' \T1/cmtt/m/n/10.95 0.1 \T
+S1/cmtt/m/n/10.95 ' ' \T1/cmtt/m/n/10.95 1[] 
+ []
+
+[60]
+
+Package xcolor Warning: Incompatible color definition on input line 2330.
+
+[61 <./figure/unnamed-chunk-81-1.pdf>] [62]
+
+Package xcolor Warning: Incompatible color definition on input line 2375.
+
+[63]
+
+Package xcolor Warning: Incompatible color definition on input line 2402.
+
+
+Overfull \hbox (51.71106pt too wide) in paragraph at lines 2408--2408
+[]\T1/cmtt/m/n/10.95 ##   week arrest fin age race wexp mar paro prio educ emp1
+ emp2 emp3 emp4 
+ []
+
+
+Overfull \hbox (51.71106pt too wide) in paragraph at lines 2409--2409
+[]\T1/cmtt/m/n/10.95 ## 1   20      1   0  27    1    0   0    1    3    3    0
+    0    0    0[] 
+ []
+
+
+Overfull \hbox (51.71106pt too wide) in paragraph at lines 2410--2410
+[]\T1/cmtt/m/n/10.95 ## 2   17      1   0  18    1    0   0    1    8    4    0
+    0    0    0[] 
+ []
+
+
+Overfull \hbox (51.71106pt too wide) in paragraph at lines 2411--2411
+[]\T1/cmtt/m/n/10.95 ## 3   25      1   0  19    0    1   0    1   13    3    0
+    0    0    0[] 
+ []
+
+
+Overfull \hbox (51.71106pt too wide) in paragraph at lines 2412--2412
+[]\T1/cmtt/m/n/10.95 ## 4   52      0   1  23    1    1   1    1    1    5    0
+    0    0    0[] 
+ []
+
+
+Overfull \hbox (51.71106pt too wide) in paragraph at lines 2413--2413
+[]\T1/cmtt/m/n/10.95 ## 5   52      0   0  19    0    1   0    1    3    3    0
+    0    0    0[] 
+ []
+
+
+Package xcolor Warning: Incompatible color definition on input line 2428.
+
+[64]
+
+Package xcolor Warning: Incompatible color definition on input line 2450.
+
+
+Package xcolor Warning: Incompatible color definition on input line 2459.
+
+
+Overfull \hbox (6.44409pt too wide) in paragraph at lines 2482--2482
+[]\T1/cmtt/m/n/10.95 ## Signif. codes:  0 \TS1/cmtt/m/n/10.95 '\T1/cmtt/m/n/10.
+95 ***\TS1/cmtt/m/n/10.95 ' \T1/cmtt/m/n/10.95 0.001 \TS1/cmtt/m/n/10.95 '\T1/c
+mtt/m/n/10.95 **\TS1/cmtt/m/n/10.95 ' \T1/cmtt/m/n/10.95 0.01 \TS1/cmtt/m/n/10.
+95 '\T1/cmtt/m/n/10.95 *\TS1/cmtt/m/n/10.95 ' \T1/cmtt/m/n/10.95 0.05 \TS1/cmtt
+/m/n/10.95 '\T1/cmtt/m/n/10.95 .\TS1/cmtt/m/n/10.95 ' \T1/cmtt/m/n/10.95 0.1 \T
+S1/cmtt/m/n/10.95 ' ' \T1/cmtt/m/n/10.95 1[] 
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 2500
+ []
+
+
+Overfull \vbox (0.24258pt too high) detected at line 2500
+ []
+
+[65]
+
+Package xcolor Warning: Incompatible color definition on input line 2514.
+
+<figure/unnamed-chunk-90-1.pdf, id=1200, 505.89pt x 289.08pt>
+File: figure/unnamed-chunk-90-1.pdf Graphic file (type pdf)
+
+<use figure/unnamed-chunk-90-1.pdf>
+Package pdftex.def Info: figure/unnamed-chunk-90-1.pdf used on input line 2521.
+
+(pdftex.def)             Requested size: 361.35002pt x 206.48772pt.
+ [66]
+
+Package xcolor Warning: Incompatible color definition on input line 2534.
+
+
+Overfull \hbox (12.10246pt too wide) in paragraph at lines 2537--2537
+[][]\T1/cmtt/m/n/10.95 rossi.long[] []<-[] []reshape[][]([][]data[] []= rossi,[
+] []varying[] []=[] []paste0[][]([][]"emp"[][],[] []1[][]:[][]52[][]),[][] 
+ []
+
+
+Overfull \hbox (6.44409pt too wide) in paragraph at lines 2539--2539
+[]                      []\T1/cmtt/m/n/10.95 idvar[] []=[] []"id"[][],[] []dire
+ction[] []=[] []"long"[][],[] []sep[] []=[] []""[][])[][] 
+ []
+
+
+Overfull \hbox (46.05269pt too wide) in paragraph at lines 2550--2550
+[]\T1/cmtt/m/n/10.95 ##     week arrest fin age race wexp mar paro prio educ ti
+me employed id 
+ []
+
+
+Overfull \hbox (46.05269pt too wide) in paragraph at lines 2551--2551
+[]\T1/cmtt/m/n/10.95 ## 1.1   20      1   0  27    1    0   0    1    3    3   
+ 1        0  1[] 
+ []
+
+
+Overfull \hbox (46.05269pt too wide) in paragraph at lines 2552--2552
+[]\T1/cmtt/m/n/10.95 ## 1.2   20      1   0  27    1    0   0    1    3    3   
+ 2        0  1[] 
+ []
+
+
+Overfull \hbox (46.05269pt too wide) in paragraph at lines 2553--2553
+[]\T1/cmtt/m/n/10.95 ## 1.3   20      1   0  27    1    0   0    1    3    3   
+ 3        0  1[] 
+ []
+
+
+Overfull \hbox (46.05269pt too wide) in paragraph at lines 2554--2554
+[]\T1/cmtt/m/n/10.95 ## 1.4   20      1   0  27    1    0   0    1    3    3   
+ 4        0  1[] 
+ []
+
+
+Overfull \hbox (46.05269pt too wide) in paragraph at lines 2555--2555
+[]\T1/cmtt/m/n/10.95 ## 1.5   20      1   0  27    1    0   0    1    3    3   
+ 5        0  1[] 
+ []
+
+
+Overfull \hbox (46.05269pt too wide) in paragraph at lines 2556--2556
+[]\T1/cmtt/m/n/10.95 ## 1.6   20      1   0  27    1    0   0    1    3    3   
+ 6        0  1[] 
+ []
+
+
+Package xcolor Warning: Incompatible color definition on input line 2563.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [67 <./figure/unnamed-chunk-90-1.pdf>]
+Overfull \hbox (74.34454pt too wide) in paragraph at lines 2569--2569
+[]  []\T1/cmtt/m/n/10.95 .data[] []= rossi.long,[] [].variables[] []=[] []c[][]
+([][]"id"[][]),[] [].drop[] []=[] []TRUE[][],[] [].fun[] []=[] []function[][]([
+][]DF[][])[][] 
+ []
+
+
+Overfull \hbox (46.05269pt too wide) in paragraph at lines 2578--2578
+[][]\T1/cmtt/m/n/10.95 rossi.long[rossi.long[][]$[][]id[] []==[] []2[][],[] []c
+[][]([][]"id"[][],[][]"start"[][],[][]"stop"[][],[][]"event"[][],[][]"employed"
+[][],[][] 
+ []
+
+
+Package xcolor Warning: Incompatible color definition on input line 2609.
+
+
+Overfull \hbox (0.78572pt too wide) in paragraph at lines 2618--2618
+[]\T1/cmtt/m/n/10.95 ## coxph(formula = Surv(start, stop, event) ~ fin + age + 
+race +[] 
+ []
+
+
+Overfull \hbox (6.44409pt too wide) in paragraph at lines 2633--2633
+[]\T1/cmtt/m/n/10.95 ## Signif. codes:  0 \TS1/cmtt/m/n/10.95 '\T1/cmtt/m/n/10.
+95 ***\TS1/cmtt/m/n/10.95 ' \T1/cmtt/m/n/10.95 0.001 \TS1/cmtt/m/n/10.95 '\T1/c
+mtt/m/n/10.95 **\TS1/cmtt/m/n/10.95 ' \T1/cmtt/m/n/10.95 0.01 \TS1/cmtt/m/n/10.
+95 '\T1/cmtt/m/n/10.95 *\TS1/cmtt/m/n/10.95 ' \T1/cmtt/m/n/10.95 0.05 \TS1/cmtt
+/m/n/10.95 '\T1/cmtt/m/n/10.95 .\TS1/cmtt/m/n/10.95 ' \T1/cmtt/m/n/10.95 0.1 \T
+S1/cmtt/m/n/10.95 ' ' \T1/cmtt/m/n/10.95 1[] 
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 2651
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [68]
+
+Package xcolor Warning: Incompatible color definition on input line 2657.
+
+
+Overfull \hbox (0.78572pt too wide) in paragraph at lines 2666--2666
+[]\T1/cmtt/m/n/10.95 ## coxph(formula = Surv(start, stop, event) ~ fin + age + 
+race +[] 
+ []
+
+
+Overfull \hbox (17.76083pt too wide) in paragraph at lines 2667--2667
+[]\T1/cmtt/m/n/10.95 ##     wexp + mar + paro + prio + employed.lag1, data = ro
+ssi.long)[] 
+ []
+
+
+Overfull \hbox (0.78572pt too wide) in paragraph at lines 2680--2680
+[]\T1/cmtt/m/n/10.95 ## employed.lag1 -0.78689   0.45526  0.21808 -3.608 0.0003
+08 ***[] 
+ []
+
+
+Overfull \hbox (6.44409pt too wide) in paragraph at lines 2682--2682
+[]\T1/cmtt/m/n/10.95 ## Signif. codes:  0 \TS1/cmtt/m/n/10.95 '\T1/cmtt/m/n/10.
+95 ***\TS1/cmtt/m/n/10.95 ' \T1/cmtt/m/n/10.95 0.001 \TS1/cmtt/m/n/10.95 '\T1/c
+mtt/m/n/10.95 **\TS1/cmtt/m/n/10.95 ' \T1/cmtt/m/n/10.95 0.01 \TS1/cmtt/m/n/10.
+95 '\T1/cmtt/m/n/10.95 *\TS1/cmtt/m/n/10.95 ' \T1/cmtt/m/n/10.95 0.05 \TS1/cmtt
+/m/n/10.95 '\T1/cmtt/m/n/10.95 .\TS1/cmtt/m/n/10.95 ' \T1/cmtt/m/n/10.95 0.1 \T
+S1/cmtt/m/n/10.95 ' ' \T1/cmtt/m/n/10.95 1[] 
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 2700
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [69]
+
+Package xcolor Warning: Incompatible color definition on input line 2709.
+
+
+Overfull \hbox (40.39432pt too wide) in paragraph at lines 2717--2717
+[]\T1/cmtt/m/n/10.95 ## coxph(formula = Surv(week, arrest) ~ fin + age + prio, 
+data = rossi)[] 
+ []
+
+[70]
+
+Package xcolor Warning: Incompatible color definition on input line 2736.
+
+
+Package xcolor Warning: Incompatible color definition on input line 2755.
+
+<figure/unnamed-chunk-97-1.pdf, id=1230, 505.89pt x 505.89pt>
+File: figure/unnamed-chunk-97-1.pdf Graphic file (type pdf)
+
+<use figure/unnamed-chunk-97-1.pdf>
+Package pdftex.def Info: figure/unnamed-chunk-97-1.pdf used on input line 2760.
+
+(pdftex.def)             Requested size: 361.35002pt x 361.35352pt.
+
+
+Package xcolor Warning: Incompatible color definition on input line 2772.
+
+
+Overfull \hbox (0.78572pt too wide) in paragraph at lines 2780--2780
+[]\T1/cmtt/m/n/10.95 ## coxph(formula = Surv(start, stop, event) ~ fin + age + 
+prio +[] 
+ []
+
+[71]
+
+Package xcolor Warning: Incompatible color definition on input line 2798.
+
+
+Underfull \vbox (badness 10000) detected at line 2810
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [72 <./figure/unnamed-chunk-97-1.pdf>]
+
+Package xcolor Warning: Incompatible color definition on input line 2822.
+
+
+Overfull \hbox (0.78572pt too wide) in paragraph at lines 2824--2824
+[][]\T1/cmtt/m/n/10.95 dfbeta[] []<-[] []residuals[][](mod.small,[] []type[][]=
+[][]"dfbeta"[][]);[] []par[][]([][]mfrow[][]=[][]c[][]([][]2[][],[][]2[][]))[][
+] 
+ []
+
+<figure/unnamed-chunk-100-1.pdf, id=1246, 505.89pt x 505.89pt>
+File: figure/unnamed-chunk-100-1.pdf Graphic file (type pdf)
+
+<use figure/unnamed-chunk-100-1.pdf>
+Package pdftex.def Info: figure/unnamed-chunk-100-1.pdf used on input line 2831
+.
+(pdftex.def)             Requested size: 361.35002pt x 361.35352pt.
+ [73] [74 <./figure/unnamed-chunk-100-1.pdf>]
+
+Package xcolor Warning: Incompatible color definition on input line 2872.
+
+
+Overfull \hbox (2.6863pt too wide) in paragraph at lines 2874--2874
+[][]\T1/cmtt/m/it/10.95 #Number of International Passenger bookings (in \TS1/cm
+tt/m/it/10.95 '\T1/cmtt/m/it/10.95 000s) for PanAm[][] 
+ []
+
+
+Package xcolor Warning: Incompatible color definition on input line 2890.
+
+<figure/unnamed-chunk-102-1.pdf, id=1262, 505.89pt x 289.08pt>
+File: figure/unnamed-chunk-102-1.pdf Graphic file (type pdf)
+
+<use figure/unnamed-chunk-102-1.pdf>
+Package pdftex.def Info: figure/unnamed-chunk-102-1.pdf used on input line 2896
+.
+(pdftex.def)             Requested size: 361.35002pt x 206.48772pt.
+
+
+Package xcolor Warning: Incompatible color definition on input line 2910.
+
+
+Overfull \hbox (0.78572pt too wide) in paragraph at lines 2913--2913
+[][]\T1/cmtt/m/n/10.95 plot[][](lynx,[] []ylab[][]=[][]"Number of Lynx Trapped"
+[][],[] []main[][]=[][]"Lynx Trappings"[][])[][] 
+ []
+
+<figure/unnamed-chunk-103-1.pdf, id=1263, 505.89pt x 289.08pt>
+File: figure/unnamed-chunk-103-1.pdf Graphic file (type pdf)
+
+<use figure/unnamed-chunk-103-1.pdf>
+Package pdftex.def Info: figure/unnamed-chunk-103-1.pdf used on input line 2916
+.
+(pdftex.def)             Requested size: 361.35002pt x 206.48772pt.
+
+
+Package xcolor Warning: Incompatible color definition on input line 2930.
+
+<figure/unnamed-chunk-104-1.pdf, id=1264, 505.89pt x 289.08pt>
+File: figure/unnamed-chunk-104-1.pdf Graphic file (type pdf)
+
+<use figure/unnamed-chunk-104-1.pdf>
+Package pdftex.def Info: figure/unnamed-chunk-104-1.pdf used on input line 2936
+.
+(pdftex.def)             Requested size: 361.35002pt x 206.48772pt.
+
+<figure/unnamed-chunk-104-2.pdf, id=1265, 505.89pt x 289.08pt>
+File: figure/unnamed-chunk-104-2.pdf Graphic file (type pdf)
+
+<use figure/unnamed-chunk-104-2.pdf>
+Package pdftex.def Info: figure/unnamed-chunk-104-2.pdf used on input line 2942
+.
+(pdftex.def)             Requested size: 361.35002pt x 206.48772pt.
+
+
+Package xcolor Warning: Incompatible color definition on input line 2967.
+
+[75
+
+] [76 <./figure/unnamed-chunk-102-1.pdf> <./figure/unnamed-chunk-103-1.pdf>] [7
+7 <./figure/unnamed-chunk-104-1.pdf> <./figure/unnamed-chunk-104-2.pdf>]
+
+Package xcolor Warning: Incompatible color definition on input line 2994.
+
+
+Package xcolor Warning: Incompatible color definition on input line 3024.
+
+<figure/unnamed-chunk-107-1.pdf, id=1303, 505.89pt x 289.08pt>
+File: figure/unnamed-chunk-107-1.pdf Graphic file (type pdf)
+
+<use figure/unnamed-chunk-107-1.pdf>
+Package pdftex.def Info: figure/unnamed-chunk-107-1.pdf used on input line 3029
+.
+(pdftex.def)             Requested size: 361.35002pt x 206.48772pt.
+
+<figure/unnamed-chunk-107-2.pdf, id=1304, 505.89pt x 289.08pt>
+File: figure/unnamed-chunk-107-2.pdf Graphic file (type pdf)
+
+<use figure/unnamed-chunk-107-2.pdf>
+Package pdftex.def Info: figure/unnamed-chunk-107-2.pdf used on input line 3035
+.
+(pdftex.def)             Requested size: 361.35002pt x 206.48772pt.
+
+
+Package xcolor Warning: Incompatible color definition on input line 3049.
+
+<figure/unnamed-chunk-108-1.pdf, id=1305, 505.89pt x 289.08pt>
+File: figure/unnamed-chunk-108-1.pdf Graphic file (type pdf)
+
+<use figure/unnamed-chunk-108-1.pdf>
+Package pdftex.def Info: figure/unnamed-chunk-108-1.pdf used on input line 3055
+.
+(pdftex.def)             Requested size: 361.35002pt x 206.48772pt.
+
+
+Package xcolor Warning: Incompatible color definition on input line 3069.
+
+<figure/unnamed-chunk-109-1.pdf, id=1306, 505.89pt x 289.08pt>
+File: figure/unnamed-chunk-109-1.pdf Graphic file (type pdf)
+
+<use figure/unnamed-chunk-109-1.pdf>
+Package pdftex.def Info: figure/unnamed-chunk-109-1.pdf used on input line 3075
+.
+(pdftex.def)             Requested size: 361.35002pt x 206.48772pt.
+
+
+Package xcolor Warning: Incompatible color definition on input line 3087.
+
+
+Overfull \hbox (102.6364pt too wide) in paragraph at lines 3089--3089
+[][]\T1/cmtt/m/n/10.95 wave[] []<-[] []ts[][]([][]read.table[][]([][]"http://st
+aff.elena.aut.ac.nz/Paul-Cowpertwait/ts/wave.dat"[][],[][] 
+ []
+
+
+Package xcolor Warning: Incompatible color definition on input line 3094.
+
+
+Package xcolor Warning: Incompatible color definition on input line 3096.
+
+
+Package xcolor Warning: Incompatible color definition on input line 3101.
+
+
+Package xcolor Warning: Incompatible color definition on input line 3114.
+
+
+Package xcolor Warning: Incompatible color definition on input line 3120.
+
+<figure/unnamed-chunk-111-1.pdf, id=1307, 505.89pt x 289.08pt>
+File: figure/unnamed-chunk-111-1.pdf Graphic file (type pdf)
+
+<use figure/unnamed-chunk-111-1.pdf>
+Package pdftex.def Info: figure/unnamed-chunk-111-1.pdf used on input line 3124
+.
+(pdftex.def)             Requested size: 361.35002pt x 206.48772pt.
+
+
+Package xcolor Warning: Incompatible color definition on input line 3140.
+
+
+Package xcolor Warning: Incompatible color definition on input line 3146.
+
+
+Package xcolor Warning: Incompatible color definition on input line 3157.
+
+
+Package xcolor Warning: Incompatible color definition on input line 3163.
+
+
+Package xcolor Warning: Incompatible color definition on input line 3176.
+
+
+Overfull \hbox (51.71106pt too wide) in paragraph at lines 3187--3187
+[]\T1/cmtt/m/n/10.95 ##       1        2        3        4        5        6   
+     7        8[] 
+ []
+
+
+Overfull \hbox (51.71106pt too wide) in paragraph at lines 3188--3188
+[]\T1/cmtt/m/n/10.95 ##  0.3353  -0.1868  -0.0024   0.0571  -0.1554  -0.0208   
+0.0914  -0.0658[] 
+ []
+
+
+Overfull \hbox (74.34454pt too wide) in paragraph at lines 3199--3199
+[]\T1/cmtt/m/n/10.95 ##            Jan       Feb       Mar       Apr       May 
+      Jun       Jul[] 
+ []
+
+
+Overfull \hbox (74.34454pt too wide) in paragraph at lines 3200--3200
+[]\T1/cmtt/m/n/10.95 ## 2008                                         1.8827277 
+1.7209182 1.7715016[] 
+ []
+
+
+Overfull \hbox (74.34454pt too wide) in paragraph at lines 3207--3207
+[]\T1/cmtt/m/n/10.95 ##            Jan       Feb       Mar       Apr       May 
+      Jun       Jul[] 
+ []
+
+
+Overfull \hbox (74.34454pt too wide) in paragraph at lines 3208--3208
+[]\T1/cmtt/m/n/10.95 ## 2008                                         0.2276439 
+0.2400967 0.2406938[] 
+ []
+
+
+Overfull \hbox (51.71106pt too wide) in paragraph at lines 3215--3215
+[][]\T1/cmtt/m/n/10.95 ts.plot[][](turkey.price.ts,[] []predict[][](armodel,[] 
+[]n.ahead[] []=[] []24[][])[][]$[][]pred,[] []lty[][]=[][]c[][]([][]1[][]:[][]2
+[][]))[][] 
+ []
+
+<figure/unnamed-chunk-114-1.pdf, id=1308, 505.89pt x 289.08pt>
+File: figure/unnamed-chunk-114-1.pdf Graphic file (type pdf)
+
+<use figure/unnamed-chunk-114-1.pdf>
+Package pdftex.def Info: figure/unnamed-chunk-114-1.pdf used on input line 3218
+.
+(pdftex.def)             Requested size: 361.35002pt x 206.48772pt.
+
+
+LaTeX Warning: Float too large for page by 16.89293pt on input line 3224.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [78]
+[79 <./figure/unnamed-chunk-107-1.pdf> <./figure/unnamed-chunk-107-2.pdf>]
+[80 <./figure/unnamed-chunk-108-1.pdf> <./figure/unnamed-chunk-109-1.pdf>]
+[81 <./figure/unnamed-chunk-111-1.pdf>]
+
+Package xcolor Warning: Incompatible color definition on input line 3232.
+
+
+Overfull \hbox (0.78572pt too wide) in paragraph at lines 3251--3251
+[]                                 []\T1/cmtt/m/n/10.95 n.ahead[] []=[] []24[][
+])[][]$[][]pred,[] []lty[][]=[][]c[][]([][]1[][]:[][]2[][]))[][] 
+ []
+
+<figure/unnamed-chunk-115-1.pdf, id=1356, 505.89pt x 289.08pt>
+File: figure/unnamed-chunk-115-1.pdf Graphic file (type pdf)
+
+<use figure/unnamed-chunk-115-1.pdf>
+Package pdftex.def Info: figure/unnamed-chunk-115-1.pdf used on input line 3254
+.
+(pdftex.def)             Requested size: 361.35002pt x 206.48772pt.
+
+
+Package xcolor Warning: Incompatible color definition on input line 3289.
+
+
+Overfull \hbox (63.0278pt too wide) in paragraph at lines 3291--3291
+[][]\T1/cmtt/m/n/10.95 skirts[] []<-[] []scan[][]([][]"http://robjhyndman.com/t
+sdldata/roberts/skirts.dat"[][],[][]skip[][]=[][]5[][])[][] 
+ []
+
+<figure/unnamed-chunk-116-1.pdf, id=1357, 505.89pt x 289.08pt>
+File: figure/unnamed-chunk-116-1.pdf Graphic file (type pdf)
+
+<use figure/unnamed-chunk-116-1.pdf>
+Package pdftex.def Info: figure/unnamed-chunk-116-1.pdf used on input line 3296
+.
+(pdftex.def)             Requested size: 361.35002pt x 206.48772pt.
+
+
+Package xcolor Warning: Incompatible color definition on input line 3310.
+
+<figure/unnamed-chunk-117-1.pdf, id=1358, 505.89pt x 289.08pt>
+File: figure/unnamed-chunk-117-1.pdf Graphic file (type pdf)
+
+<use figure/unnamed-chunk-117-1.pdf>
+Package pdftex.def Info: figure/unnamed-chunk-117-1.pdf used on input line 3316
+.
+(pdftex.def)             Requested size: 361.35002pt x 206.48772pt.
+
+
+Package xcolor Warning: Incompatible color definition on input line 3330.
+
+<figure/unnamed-chunk-118-1.pdf, id=1359, 505.89pt x 289.08pt>
+File: figure/unnamed-chunk-118-1.pdf Graphic file (type pdf)
+
+<use figure/unnamed-chunk-118-1.pdf>
+Package pdftex.def Info: figure/unnamed-chunk-118-1.pdf used on input line 3336
+.
+(pdftex.def)             Requested size: 361.35002pt x 206.48772pt.
+
+
+Package xcolor Warning: Incompatible color definition on input line 3352.
+
+
+Overfull \hbox (34.73595pt too wide) in paragraph at lines 3354--3354
+[][]\T1/cmtt/m/n/10.95 kings[] []<-[] []scan[][]([][]"http://robjhyndman.com/ts
+dldata/misc/kings.dat"[][],[][]skip[][]=[][]3[][])[][] 
+ []
+
+<figure/unnamed-chunk-119-1.pdf, id=1360, 505.89pt x 289.08pt>
+File: figure/unnamed-chunk-119-1.pdf Graphic file (type pdf)
+
+<use figure/unnamed-chunk-119-1.pdf>
+Package pdftex.def Info: figure/unnamed-chunk-119-1.pdf used on input line 3359
+.
+(pdftex.def)             Requested size: 361.35002pt x 206.48772pt.
+
+
+Package xcolor Warning: Incompatible color definition on input line 3373.
+
+<figure/unnamed-chunk-120-1.pdf, id=1361, 505.89pt x 289.08pt>
+File: figure/unnamed-chunk-120-1.pdf Graphic file (type pdf)
+
+<use figure/unnamed-chunk-120-1.pdf>
+Package pdftex.def Info: figure/unnamed-chunk-120-1.pdf used on input line 3379
+.
+(pdftex.def)             Requested size: 361.35002pt x 206.48772pt.
+
+Underfull \vbox (badness 5274) has occurred while \output is active []
+
+ [82]
+[83 <./figure/unnamed-chunk-114-1.pdf>]
+
+Package xcolor Warning: Incompatible color definition on input line 3397.
+
+<figure/unnamed-chunk-121-1.pdf, id=1376, 505.89pt x 289.08pt>
+File: figure/unnamed-chunk-121-1.pdf Graphic file (type pdf)
+
+<use figure/unnamed-chunk-121-1.pdf>
+Package pdftex.def Info: figure/unnamed-chunk-121-1.pdf used on input line 3402
+.
+(pdftex.def)             Requested size: 361.35002pt x 206.48772pt.
+
+Overfull \hbox (8.34467pt too wide) in paragraph at lines 3404--3404
+[][]\T1/cmtt/m/n/10.95 acf[][](kingtimeseriesdiff1,[] []plot[][]=[][]FALSE[][])
+[] []\T1/cmtt/m/it/10.95 #Get the data, not the chart[][] 
+ []
+
+
+Overfull \hbox (46.05269pt too wide) in paragraph at lines 3410--3410
+[]\T1/cmtt/m/n/10.95 ##      0      1      2      3      4      5      6      7
+      8      9[] 
+ []
+
+
+Overfull \hbox (46.05269pt too wide) in paragraph at lines 3411--3411
+[]\T1/cmtt/m/n/10.95 ##  1.000 -0.360 -0.162 -0.050  0.227 -0.042 -0.181  0.095
+  0.064 -0.116[] 
+ []
+
+
+Package xcolor Warning: Incompatible color definition on input line 3430.
+
+
+Overfull \hbox (74.34454pt too wide) in paragraph at lines 3432--3432
+[][]\T1/cmtt/m/n/10.95 volcanodust[] []<-[] []scan[][]([][]"http://robjhyndman.
+com/tsdldata/annual/dvi.dat"[][],[] []skip[][]=[][]1[][])[][] 
+ []
+
+<figure/unnamed-chunk-122-1.pdf, id=1377, 505.89pt x 289.08pt>
+File: figure/unnamed-chunk-122-1.pdf Graphic file (type pdf)
+
+<use figure/unnamed-chunk-122-1.pdf>
+Package pdftex.def Info: figure/unnamed-chunk-122-1.pdf used on input line 3437
+.
+(pdftex.def)             Requested size: 361.35002pt x 206.48772pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [84 <./figure/unnamed-chunk-115-1.pdf>] [85 <./figure/unnamed-chunk-116-1.pdf>
+ <./figure/unnamed-chunk-117-1.pdf>] [86 <./figure/unnamed-chunk-118-1.pdf> <./
+figure/unnamed-chunk-119-1.pdf>]
+
+Package xcolor Warning: Incompatible color definition on input line 3451.
+
+<figure/unnamed-chunk-123-1.pdf, id=1416, 505.89pt x 289.08pt>
+File: figure/unnamed-chunk-123-1.pdf Graphic file (type pdf)
+
+<use figure/unnamed-chunk-123-1.pdf>
+Package pdftex.def Info: figure/unnamed-chunk-123-1.pdf used on input line 3456
+.
+(pdftex.def)             Requested size: 361.35002pt x 206.48772pt.
+
+Overfull \hbox (46.05269pt too wide) in paragraph at lines 3464--3464
+[]\T1/cmtt/m/n/10.95 ##      0      1      2      3      4      5      6      7
+      8      9[] 
+ []
+
+
+Overfull \hbox (46.05269pt too wide) in paragraph at lines 3465--3465
+[]\T1/cmtt/m/n/10.95 ##  1.000  0.666  0.374  0.162  0.046  0.017 -0.007  0.016
+  0.021  0.006[] 
+ []
+
+
+Overfull \hbox (46.05269pt too wide) in paragraph at lines 3466--3466
+[]\T1/cmtt/m/n/10.95 ##     10     11     12     13     14     15     16     17
+     18     19[] 
+ []
+
+
+Overfull \hbox (46.05269pt too wide) in paragraph at lines 3467--3467
+[]\T1/cmtt/m/n/10.95 ##  0.010  0.004  0.024  0.075  0.082  0.064  0.039  0.005
+  0.028  0.108[] 
+ []
+
+
+Package xcolor Warning: Incompatible color definition on input line 3492.
+
+<figure/unnamed-chunk-124-1.pdf, id=1417, 505.89pt x 289.08pt>
+File: figure/unnamed-chunk-124-1.pdf Graphic file (type pdf)
+
+<use figure/unnamed-chunk-124-1.pdf>
+Package pdftex.def Info: figure/unnamed-chunk-124-1.pdf used on input line 3497
+.
+(pdftex.def)             Requested size: 361.35002pt x 206.48772pt.
+
+Overfull \hbox (14.00304pt too wide) in paragraph at lines 3499--3499
+[][]\T1/cmtt/m/n/10.95 pacf[][](kingtimeseriesdiff1,[] []plot[][]=[][]FALSE[][]
+)[] []\T1/cmtt/m/it/10.95 #Get the data, not the chart[][] 
+ []
+
+
+Overfull \hbox (17.76083pt too wide) in paragraph at lines 3503--3503
+[]\T1/cmtt/m/n/10.95 ## Partial autocorrelations of series \TS1/cmtt/m/n/10.95 
+'\T1/cmtt/m/n/10.95 kingtimeseriesdiff1\TS1/cmtt/m/n/10.95 '\T1/cmtt/m/n/10.95 
+, by lag[] 
+ []
+
+
+Overfull \hbox (46.05269pt too wide) in paragraph at lines 3505--3505
+[]\T1/cmtt/m/n/10.95 ##      1      2      3      4      5      6      7      8
+      9     10[] 
+ []
+
+
+Overfull \hbox (46.05269pt too wide) in paragraph at lines 3506--3506
+[]\T1/cmtt/m/n/10.95 ## -0.360 -0.335 -0.321  0.005  0.025 -0.144 -0.022 -0.007
+ -0.143 -0.167[] 
+ []
+
+
+Overfull \hbox (1.08943pt too wide) in paragraph at lines 3517--3518
+[]\T1/cmr/m/n/10.95 We can see that the first three lag val-ues have sig-nif-i-
+cant auto-correlations.
+ []
+
+
+Package xcolor Warning: Incompatible color definition on input line 3525.
+
+<figure/unnamed-chunk-125-1.pdf, id=1418, 505.89pt x 289.08pt>
+File: figure/unnamed-chunk-125-1.pdf Graphic file (type pdf)
+
+<use figure/unnamed-chunk-125-1.pdf>
+Package pdftex.def Info: figure/unnamed-chunk-125-1.pdf used on input line 3530
+.
+(pdftex.def)             Requested size: 361.35002pt x 206.48772pt.
+
+Overfull \hbox (6.44409pt too wide) in paragraph at lines 3536--3536
+[]\T1/cmtt/m/n/10.95 ## Partial autocorrelations of series \TS1/cmtt/m/n/10.95 
+'\T1/cmtt/m/n/10.95 volcanodustseries\TS1/cmtt/m/n/10.95 '\T1/cmtt/m/n/10.95 , 
+by lag[] 
+ []
+
+
+Overfull \hbox (46.05269pt too wide) in paragraph at lines 3538--3538
+[]\T1/cmtt/m/n/10.95 ##      1      2      3      4      5      6      7      8
+      9     10[] 
+ []
+
+
+Overfull \hbox (46.05269pt too wide) in paragraph at lines 3539--3539
+[]\T1/cmtt/m/n/10.95 ##  0.666 -0.126 -0.064 -0.005  0.040 -0.039  0.058 -0.016
+ -0.025  0.028[] 
+ []
+
+
+Overfull \hbox (46.05269pt too wide) in paragraph at lines 3540--3540
+[]\T1/cmtt/m/n/10.95 ##     11     12     13     14     15     16     17     18
+     19     20[] 
+ []
+
+
+Overfull \hbox (46.05269pt too wide) in paragraph at lines 3541--3541
+[]\T1/cmtt/m/n/10.95 ## -0.008  0.036  0.082 -0.025 -0.014  0.008 -0.025  0.073
+  0.131  0.063[] 
+ []
+
+[87 <./figure/unnamed-chunk-120-1.pdf>] [88 <./figure/unnamed-chunk-121-1.pdf>]
+[89 <./figure/unnamed-chunk-122-1.pdf>]
+
+Package xcolor Warning: Incompatible color definition on input line 3571.
+
+
+Overfull \hbox (40.39432pt too wide) in paragraph at lines 3587--3587
+[]\T1/cmtt/m/n/10.95 ## sigma^2 estimated as 230.4:  log likelihood = -170.06, 
+ aic = 344.13[] 
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 3589
+ []
+
+
+Underfull \vbox (badness 1472) has occurred while \output is active []
+
+ [90 <./figure/unnamed-chunk-123-1.pdf>]
+
+Package xcolor Warning: Incompatible color definition on input line 3595.
+
+
+Overfull \hbox (29.07758pt too wide) in paragraph at lines 3598--3598
+[][]\T1/cmtt/m/n/10.95 kingstimeseriesforecasts[] []<-[] []forecast.Arima[][](k
+ingstimeseriesarima,[] []h[][]=[][]5[][])[][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [91 <./figure/unnamed-chunk-124-1.pdf>]
+
+Package xcolor Warning: Incompatible color definition on input line 3620.
+
+<figure/unnamed-chunk-128-1.pdf, id=1470, 505.89pt x 289.08pt>
+File: figure/unnamed-chunk-128-1.pdf Graphic file (type pdf)
+
+<use figure/unnamed-chunk-128-1.pdf>
+Package pdftex.def Info: figure/unnamed-chunk-128-1.pdf used on input line 3625
+.
+(pdftex.def)             Requested size: 361.35002pt x 206.48772pt.
+
+
+Package xcolor Warning: Incompatible color definition on input line 3643.
+
+<figure/unnamed-chunk-129-1.pdf, id=1471, 505.89pt x 289.08pt>
+File: figure/unnamed-chunk-129-1.pdf Graphic file (type pdf)
+
+<use figure/unnamed-chunk-129-1.pdf>
+Package pdftex.def Info: figure/unnamed-chunk-129-1.pdf used on input line 3648
+.
+(pdftex.def)             Requested size: 361.35002pt x 206.48772pt.
+
+Overfull \hbox (34.73595pt too wide) in paragraph at lines 3650--3650
+[][]\T1/cmtt/m/n/10.95 Box.test[][](kingstimeseriesforecasts[][]$[][]residuals,
+[] []lag[][]=[][]20[][],[] []type[][]=[][]"Ljung-Box"[][])[][] 
+ []
+
+[92 <./figure/unnamed-chunk-125-1.pdf>] [93 <./figure/unnamed-chunk-128-1.pdf> 
+<./figure/unnamed-chunk-129-1.pdf>]
+
+Package xcolor Warning: Incompatible color definition on input line 3674.
+
+<figure/unnamed-chunk-130-1.pdf, id=1499, 505.89pt x 289.08pt>
+File: figure/unnamed-chunk-130-1.pdf Graphic file (type pdf)
+
+<use figure/unnamed-chunk-130-1.pdf>
+Package pdftex.def Info: figure/unnamed-chunk-130-1.pdf used on input line 3680
+.
+(pdftex.def)             Requested size: 361.35002pt x 206.48772pt.
+
+
+Package xcolor Warning: Incompatible color definition on input line 3696.
+
+[94 <./figure/unnamed-chunk-130-1.pdf>]
+
+Package xcolor Warning: Incompatible color definition on input line 3721.
+
+[95] [96
+
+] [97] [98
+
+] [99] [100] [101
+
+] [102
+
+]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [103]
+[104]
+
+Package xcolor Warning: Incompatible color definition on input line 3851.
+
+
+Package xcolor Warning: Incompatible color definition on input line 3863.
+
+
+Package xcolor Warning: Incompatible color definition on input line 3872.
+
+
+Package xcolor Warning: Incompatible color definition on input line 3898.
+
+
+Package xcolor Warning: Incompatible color definition on input line 3917.
+
+[105]
+Overfull \hbox (6.44409pt too wide) in paragraph at lines 3923--3923
+[][]\T1/cmtt/m/n/10.95 summary[][](wbcd_n[[][]c[][]([][]"radius_mean"[][],[] []
+"area_mean"[][],[] []"smoothness_mean"[][])])[][] 
+ []
+
+
+Package xcolor Warning: Incompatible color definition on input line 3943.
+
+
+Package xcolor Warning: Incompatible color definition on input line 3953.
+
+
+Package xcolor Warning: Incompatible color definition on input line 3965.
+
+
+Package xcolor Warning: Incompatible color definition on input line 3972.
+
+
+Package xcolor Warning: Incompatible color definition on input line 3978.
+
+
+Package xcolor Warning: Incompatible color definition on input line 3990.
+
+[106]
+
+Package xcolor Warning: Incompatible color definition on input line 3997.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [107]
+
+Package xcolor Warning: Incompatible color definition on input line 4044.
+
+
+Package xcolor Warning: Incompatible color definition on input line 4053.
+
+
+Package xcolor Warning: Incompatible color definition on input line 4062.
+
+
+Package xcolor Warning: Incompatible color definition on input line 4072.
+
+[108] [109] [110
+
+] [111] [112
+
+] [113] [114
+
+] [115] [116
+
+] [117] [118
+
+] [119]
+[120
+
+] [121] [122] [123
+
+] [124
+
+] [125] [126
+
+] [127] [128] [129
+
+] [130
+
+]
+
+Package xcolor Warning: Incompatible color definition on input line 4313.
+
+
+Package xcolor Warning: Incompatible color definition on input line 4326.
+
+
+Package xcolor Warning: Incompatible color definition on input line 4336.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [131]
+
+Package xcolor Warning: Incompatible color definition on input line 4355.
+
+
+Overfull \hbox (63.0278pt too wide) in paragraph at lines 4360--4360
+[]\T1/cmtt/m/n/10.95 ##   X year month day dep_time dep_delay arr_time arr_dela
+y carrier tailnum 
+ []
+
+
+Overfull \hbox (63.0278pt too wide) in paragraph at lines 4361--4361
+[]\T1/cmtt/m/n/10.95 ## 1 1 2013     1   1      517         2      830        1
+1      UA  N14228[] 
+ []
+
+
+Overfull \hbox (63.0278pt too wide) in paragraph at lines 4362--4362
+[]\T1/cmtt/m/n/10.95 ## 2 2 2013     1   1      533         4      850        2
+0      UA  N24211[] 
+ []
+
+
+Overfull \hbox (63.0278pt too wide) in paragraph at lines 4363--4363
+[]\T1/cmtt/m/n/10.95 ## 3 3 2013     1   1      542         2      923        3
+3      AA  N619AA[] 
+ []
+
+
+Overfull \hbox (63.0278pt too wide) in paragraph at lines 4364--4364
+[]\T1/cmtt/m/n/10.95 ## 4 4 2013     1   1      544        -1     1004       -1
+8      B6  N804JB[] 
+ []
+
+
+Overfull \hbox (63.0278pt too wide) in paragraph at lines 4365--4365
+[]\T1/cmtt/m/n/10.95 ## 5 5 2013     1   1      554        -6      812       -2
+5      DL  N668DN[] 
+ []
+
+
+Overfull \hbox (63.0278pt too wide) in paragraph at lines 4366--4366
+[]\T1/cmtt/m/n/10.95 ## 6 6 2013     1   1      554        -4      740        1
+2      UA  N39463[] 
+ []
+
+
+Package xcolor Warning: Incompatible color definition on input line 4383.
+
+
+Package xcolor Warning: Incompatible color definition on input line 4397.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [132]
+
+Package xcolor Warning: Incompatible color definition on input line 4412.
+
+
+Overfull \hbox (51.71106pt too wide) in paragraph at lines 4414--4414
+[][]\T1/cmtt/m/n/10.95 median[][](nycdata[][]$[][]arr_delay,[] []na.rm[][]=[][]
+TRUE[][]);[] []IQR[][](nycdata[][]$[][]arr_delay,[] []na.rm[][]=[][]TRUE[][])[]
+[] 
+ []
+
+
+Package xcolor Warning: Incompatible color definition on input line 4427.
+
+<figure/unnamed-chunk-154-1.pdf, id=1679, 505.89pt x 289.08pt>
+File: figure/unnamed-chunk-154-1.pdf Graphic file (type pdf)
+
+<use figure/unnamed-chunk-154-1.pdf>
+Package pdftex.def Info: figure/unnamed-chunk-154-1.pdf used on input line 4432
+.
+(pdftex.def)             Requested size: 361.35002pt x 206.48772pt.
+
+
+Package xcolor Warning: Incompatible color definition on input line 4445.
+
+
+Overfull \hbox (57.36943pt too wide) in paragraph at lines 4452--4452
+[]\T1/cmtt/m/n/10.95 ##          9E          AA          AS          B6        
+  DL          EV 
+ []
+
+
+Overfull \hbox (57.36943pt too wide) in paragraph at lines 4453--4453
+[]\T1/cmtt/m/n/10.95 ##  10.2074324   0.9823789   8.9677419   4.7171992  -4.404
+6512  25.1601917[] 
+ []
+
+
+Overfull \hbox (57.36943pt too wide) in paragraph at lines 4454--4454
+[]\T1/cmtt/m/n/10.95 ##          F9          FL          HA          MQ        
+  OO          UA[] 
+ []
+
+
+Overfull \hbox (57.36943pt too wide) in paragraph at lines 4455--4455
+[]\T1/cmtt/m/n/10.95 ##  21.8305085   3.3179012  27.4838710   7.8837948 107.000
+0000   3.1755991[] 
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 4459
+ []
+
+[133 <./figure/unnamed-chunk-154-1.pdf>]
+
+Package xcolor Warning: Incompatible color definition on input line 4470.
+
+
+Overfull \hbox (72.26997pt too wide) in paragraph at lines 4468--4470
+ [][] 
+ []
+
+<figure/unnamed-chunk-156-1.pdf, id=1692, 505.89pt x 289.08pt>
+File: figure/unnamed-chunk-156-1.pdf Graphic file (type pdf)
+
+<use figure/unnamed-chunk-156-1.pdf>
+Package pdftex.def Info: figure/unnamed-chunk-156-1.pdf used on input line 4475
+.
+(pdftex.def)             Requested size: 361.35002pt x 206.48772pt.
+
+Overfull \hbox (72.26997pt too wide) in paragraph at lines 4480--4481
+ [][] 
+ []
+
+
+Package xcolor Warning: Incompatible color definition on input line 4486.
+
+[134 <./figure/unnamed-chunk-156-1.pdf>]
+
+Package xcolor Warning: Incompatible color definition on input line 4497.
+
+
+Package xcolor Warning: Incompatible color definition on input line 4507.
+
+[135] [136
+
+]
+Overfull \hbox (9.49977pt too wide) in paragraph at lines 4544--4545
+[]\T1/cmr/m/n/10.95 Instructor In-for-ma-tion: Dr. San-jeev Ku-mar, R3443, sank
+um@umich.edu,
+ []
+
+[137] [138]
+Overfull \hbox (3.7165pt too wide) in paragraph at lines 4583--4584
+[]\T1/cmr/m/n/10.95 Course grad-ing will fol-low the usual Ross grad-ing curve 
+for elec-tive courses.
+ []
+
+
+Overfull \hbox (14.50192pt too wide) in paragraph at lines 4620--4623
+[]\T1/cmr/m/n/10.95 : Re-gres-sion Di-ag-nos-tics, In-ter-ac-tion ef-fects, Dum
+my
+ []
+
+[139]
+Overfull \hbox (13.11644pt too wide) in paragraph at lines 4659--4661
+[]\T1/cmr/m/n/10.95 : De-ci-sion Trees, Bag-ging, Boost-ing, Ran-dom Forests
+ []
+
+[140]
+Overfull \hbox (9.48888pt too wide) in paragraph at lines 4712--4713
+[]\T1/cmr/m/n/10.95 The clar-i-fyR pack-age that in-cludes all course ma-te-ri-
+als in-clud-ing datasets,
+ []
+
+[141] [142] [143
+
+] [144
+
+]
+*geometry* verbose mode - [ newgeometry ] result:
+* driver: pdftex
+* paper: letterpaper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: twoside 
+* h-part:(L,W,R)=(72.26999pt, 469.75502pt, 72.26999pt)
+* v-part:(T,H,B)=(72.26999pt, 650.43001pt, 72.26999pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=469.75502pt
+* \textheight=650.43001pt
+* \oddsidemargin=0.0pt
+* \evensidemargin=0.0pt
+* \topmargin=-33.4738pt
+* \headheight=13.6pt
+* \headsep=19.8738pt
+* \topskip=11.0pt
+* \footskip=27.46295pt
+* \marginparwidth=111.0pt
+* \marginparsep=7.22743pt
+* \columnsep=10.0pt
+* \skip\footins=12.0pt plus 4.0pt minus 4.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidetrue
+* \@mparswitchtrue
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+ (AABase.bbl
+Underfull \hbox (badness 7649) in paragraph at lines 22--29
+\T1/cmr/m/n/10.95 sor sug-gests.  []$\T1/cmtt/m/n/10.95 http : / / www . indepe
+ndent . co . uk / life-[]style / gadgets-[]and-[]tech / news /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 22--29
+\T1/cmtt/m/n/10.95 facebook-[]using-[]people-[]s-[]phones-[]to-[]listen-[]in-[]
+on-[]what-[]they-[]re-[]saying-[]claims /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--43
+[]\T1/cmr/m/n/10.95 Kashmir Hill.  How tar-get fig-ured out a teen girl was pre
+g-nant be-fore
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--43
+\T1/cmr/m/n/10.95 her fa-ther did.  []$\T1/cmtt/m/n/10.95 http : / / www . forb
+es . com / sites / kashmirhill / 2012 / 02 / 16 /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--43
+\T1/cmtt/m/n/10.95 how-[]target-[]figured-[]out-[]a-[]teen-[]girl-[]was-[]pregn
+ant-[]before-[]her-[]father-[]did/$[]\T1/cmr/m/n/10.95 , 2012.
+ []
+
+) [145
+
+
+] [146
+
+] (AABase.ind
+Underfull \hbox (badness 10000) in paragraph at lines 7--8
+[]| \T1/cmr/m/n/10.95 Arith-matic Op-er-a-tor
+ []
+
+
+Underfull \hbox (badness 5105) in paragraph at lines 8--9
+[]| \T1/cmr/m/n/10.95 Arith-matic Op-er-a-tors,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 9--10
+[]| \T1/cmr/m/n/10.95 As-sign-ment Op-er-a-tor,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 72--73
+[]| \T1/cmr/m/n/10.95 in-stall.packages, []xiv[],
+ []
+
+) [147
+
+]
+\tf@toc=\write6
+\openout6 = `AABase.toc'.
+
+\tf@lof=\write7
+\openout7 = `AABase.lof'.
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 4789.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 4789.
+ (AABase.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 4789.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 4789.
+
+Package rerunfilecheck Info: File `AABase.out' has not changed.
+(rerunfilecheck)             Checksum: 6E446EDFA545D38D7B81140C4CA57AEC;17743.
+ ) 
+Here is how much of TeX's memory you used:
+ 15726 strings out of 493335
+ 223447 string characters out of 3136674
+ 357791 words of memory out of 3000000
+ 18617 multiletter control sequences out of 15000+200000
+ 23795 words of font info for 57 fonts, out of 3000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 40i,12n,35p,1153b,531s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\sanjeev\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi60
+0\ecti0800.pk> <C:\Users\sanjeev\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknap
+pen\ec\dpi600\tcrm1095.pk> <C:\Users\sanjeev\AppData\Local\MiKTeX\2.9\fonts\pk\
+ljfour\jknappen\ec\dpi600\ecrm1000.pk> <C:\Users\sanjeev\AppData\Local\MiKTeX\2
+.9\fonts\pk\ljfour\jknappen\ec\dpi600\tcit1095.pk> <C:\Users\sanjeev\AppData\Lo
+cal\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\tctt1095.pk> <C:\Users\sanjee
+v\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\eccc1095.pk> <C:\
+Users\sanjeev\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecit1
+000.pk> <C:\Users\sanjeev\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\
+dpi600\ecbx2074.pk> <C:\Users\sanjeev\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\
+jknappen\ec\dpi600\ecbx1000.pk> <C:\Users\sanjeev\AppData\Local\MiKTeX\2.9\font
+s\pk\ljfour\jknappen\ec\dpi600\ecit1095.pk> <C:\Users\sanjeev\AppData\Local\MiK
+TeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0800.pk> <C:\Users\sanjeev\AppDa
+ta\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1095.pk> <C:\Users\s
+anjeev\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1440.pk>
+ <C:\Users\sanjeev\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\
+ectt1000.pk> <C:\Users\sanjeev\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappe
+n\ec\dpi600\ecbx1200.pk> <C:\Users\sanjeev\AppData\Local\MiKTeX\2.9\fonts\pk\lj
+four\jknappen\ec\dpi600\ecbx1095.pk> <C:\Users\sanjeev\AppData\Local\MiKTeX\2.9
+\fonts\pk\ljfour\jknappen\ec\dpi600\ectt1095.pk> <C:\Users\sanjeev\AppData\Loca
+l\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1440.pk> <C:\Users\sanjeev\
+AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1440.pk> <C:\Us
+ers\sanjeev\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx248
+8.pk> <C:\Users\sanjeev\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dp
+i600\ecrm1095.pk><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts
+/cm/cmex10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/c
+m/cmmi10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
+cmmi6.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmm
+i8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.
+pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb>
+<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/
+Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Pr
+ogram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users
+/sanjeev/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/fourier/fourier-orns.pfb
+>
+Output written on AABase.pdf (169 pages, 5004771 bytes).
+PDF statistics:
+ 2822 PDF objects out of 2984 (max. 8388607)
+ 412 named destinations out of 1000 (max. 500000)
+ 1042 words of extra memory for PDF output out of 10000 (max. 10000000)
+

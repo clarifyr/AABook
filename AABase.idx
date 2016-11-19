@@ -1,0 +1,98 @@
+\indexentry{Packages!Sweave|hyperpage}{xiii}
+\indexentry{Packages!knitr|hyperpage}{xiii}
+\indexentry{Packages!clarifyR|hyperpage}{xiv}
+\indexentry{Packages!devtools|hyperpage}{xiv}
+\indexentry{R Commands!install.packages|hyperpage}{xiv}
+\indexentry{R Commands!library|hyperpage}{xiv}
+\indexentry{R Commands!install\_github|hyperpage}{xiv}
+\indexentry{R Commands!print|hyperpage}{xvi}
+\indexentry{Key Concepts!Open Source|hyperpage}{xvii}
+\indexentry{Key Concepts!Advanced Analytics|hyperpage}{3}
+\indexentry{Key Concepts!Big Data|hyperpage}{3}
+\indexentry{Key Concepts!Big Data!Volume|hyperpage}{4}
+\indexentry{Key Concepts!Big Data!Velocity|hyperpage}{5}
+\indexentry{Key Concepts!Big Data!Variety|hyperpage}{5}
+\indexentry{R Commands!version|hyperpage}{15}
+\indexentry{Packages!installr|hyperpage}{15}
+\indexentry{R Commands!updateR|hyperpage}{15}
+\indexentry{R Commands!.libPaths|hyperpage}{16}
+\indexentry{R Commands!edit|hyperpage}{16}
+\indexentry{R Commands!fix|hyperpage}{16}
+\indexentry{R Commands!View|hyperpage}{17}
+\indexentry{Key Concepts!Arithmatic Operators|hyperpage}{19}
+\indexentry{Key Concepts!Arithmatic Operator Precedance|hyperpage}{19}
+\indexentry{Key Concepts!Integer Division|hyperpage}{19}
+\indexentry{Key Concepts!Remainder|hyperpage}{19}
+\indexentry{Key Concepts!Logical Operators|hyperpage}{20}
+\indexentry{Key Concepts!Functions|hyperpage}{20}
+\indexentry{R Commands!sqrt|hyperpage}{20}
+\indexentry{R Commands!round|hyperpage}{20}
+\indexentry{R Commands!system.time|hyperpage}{22}
+\indexentry{R Commands!version|hyperpage}{22}
+\indexentry{R Commands!installr|hyperpage}{22}
+\indexentry{Key Concepts!Variables|hyperpage}{27}
+\indexentry{R Commands!nchar|hyperpage}{28}
+\indexentry{Key Concepts!Vectors|hyperpage}{28}
+\indexentry{R Commands!c|hyperpage}{28}
+\indexentry{R Commands!edit|hyperpage}{29}
+\indexentry{R Commands!fix|hyperpage}{29}
+\indexentry{R Commands!length|hyperpage}{29}
+\indexentry{R Commands!cor|hyperpage}{37}
+\indexentry{R Commands!attach|hyperpage}{37}
+\indexentry{R Commands!plot|hyperpage}{37}
+\indexentry{Key Concepts!Residuals|hyperpage}{37}
+\indexentry{Key Concepts!Statistical Significance|hyperpage}{38}
+\indexentry{R Commands!lm|hyperpage}{38}
+\indexentry{R Commands!coef|hyperpage}{38}
+\indexentry{R Commands!confint|hyperpage}{38}
+\indexentry{R Commands!abline|hyperpage}{38}
+\indexentry{Key Concepts!R-Square|hyperpage}{39}
+\indexentry{R Commands!summary|hyperpage}{39}
+\indexentry{Key Concepts!p-value|hyperpage}{40}
+\indexentry{Key Concepts!Adjusted R-Square|hyperpage}{40}
+\indexentry{R Commands!shapiro.test|hyperpage}{42}
+\indexentry{R Commands!residualPlots|hyperpage}{42}
+\indexentry{Packages!car|hyperpage}{42}
+\indexentry{R Commands!bptest|hyperpage}{45}
+\indexentry{Packages!lmtest|hyperpage}{45}
+\indexentry{Key Concepts!Multicollinearity|hyperpage}{46}
+\indexentry{R Commands!vif|hyperpage}{46}
+\indexentry{R Commands!dfbetas|hyperpage}{47}
+\indexentry{R Commands!dffits|hyperpage}{47}
+\indexentry{R Commands!cooks.distance|hyperpage}{47}
+\indexentry{R Commands!outlierTest|hyperpage}{47}
+\indexentry{R Commands!influence.measure|hyperpage}{48}
+\indexentry{Key Concepts!Parsimony|hyperpage}{49}
+\indexentry{Key Concepts!Dummy Variable|hyperpage}{51}
+\indexentry{R Commands!step|hyperpage}{53}
+\indexentry{R Commands!anova|hyperpage}{53}
+\indexentry{Key Concepts!AIC|hyperpage}{53}
+\indexentry{R Commands!AIC|hyperpage}{55}
+\indexentry{R Commands!anova|hyperpage}{55}
+\indexentry{R Commands!glm|hyperpage}{57}
+\indexentry{Key Concepts!Cox Model|hyperpage}{63}
+\indexentry{Packages!OIsurv|hyperpage}{63}
+\indexentry{Packages!survival|hyperpage}{63}
+\indexentry{Packages!KMsurv|hyperpage}{63}
+\indexentry{R Commands!Surv|hyperpage}{64}
+\indexentry{R Commands!coxph|hyperpage}{65}
+\indexentry{R Commands!survfit|hyperpage}{66}
+\indexentry{Packages!plyr|hyperpage}{68}
+\indexentry{R Commands!cox.zph|hyperpage}{71}
+\indexentry{R Commands!getwd|hyperpage}{131}
+\indexentry{R Commands!setwd|hyperpage}{131}
+\indexentry{R Commands!read.csv|hyperpage}{131}
+\indexentry{Key Concepts!Assignment Operator|hyperpage}{131}
+\indexentry{R Commands!head|hyperpage}{132}
+\indexentry{R Commands!nrow|hyperpage}{132}
+\indexentry{R Commands!ncol|hyperpage}{132}
+\indexentry{R Commands!mean|hyperpage}{132}
+\indexentry{R Commands!median|hyperpage}{133}
+\indexentry{R Commands!IQR|hyperpage}{133}
+\indexentry{R Commands!hist|hyperpage}{133}
+\indexentry{R Commands!tapply|hyperpage}{134}
+\indexentry{R Commands!barplot|hyperpage}{134}
+\indexentry{Packages!dplyr|hyperpage}{134}
+\indexentry{R Commands!install.packages|hyperpage}{134}
+\indexentry{R Commands!library|hyperpage}{134}
+\indexentry{R Commands!mutate|hyperpage}{135}

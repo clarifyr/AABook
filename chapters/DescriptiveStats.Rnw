@@ -1,0 +1,19 @@
+% !Rnw root = AABase.Rnw
+
+\chapter{Descriptive Statistics}
+
+\begin{flushright}
+
+\textbf{\texttt{The average human has one breast and one testicle.}}
+
+\emph{-- Des MacHale}
+
+\end{flushright}
+
+\vspace{12pt}
+
+
+\section{Summary Statistics}
+
+
+\chapterendsymbol

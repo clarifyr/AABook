@@ -1,0 +1,166 @@
+\contentsline {chapter}{Brief Contents}{i}{section*.1}
+\contentsline {chapter}{Contents}{iii}{section*.2}
+\contentsline {chapter}{List of Figures}{vii}{section*.3}
+\contentsline {chapter}{Foreword}{ix}{chapter*.4}
+\contentsline {chapter}{Preface}{xi}{chapter*.5}
+\contentsline {chapter}{Introduction}{xiii}{chapter*.6}
+\contentsline {subsection}{Part I: Getting Started}{xiv}{subsection*.7}
+\contentsline {subsection}{Part II: Data Exploration and Visualization}{xv}{subsection*.8}
+\contentsline {subsection}{Part III: Traditional Statistical Modeling}{xv}{subsection*.9}
+\contentsline {subsection}{Part IV: Machine Learning and Predictive Analytics}{xv}{subsection*.10}
+\contentsline {subsection}{Part V: Putting It All Together}{xv}{subsection*.11}
+\contentsline {subsection}{Part V: Appendices, Bibliography and Index}{xvi}{subsection*.12}
+\contentsline {part}{\partnumberline {I}Getting Started}{1}{part.1}
+\contentsline {chapter}{\chapternumberline {1}Advanced Big Data Analytics}{3}{chapter.1}
+\contentsline {section}{\numberline {1.1}What is the Big Deal with Big Data?}{4}{section.1.1}
+\contentsline {subsection}{Volume}{4}{subsection*.14}
+\contentsline {subsection}{Velocity}{5}{subsection*.15}
+\contentsline {subsection}{Variety}{5}{subsection*.16}
+\contentsline {subsection}{Veracity}{5}{subsection*.17}
+\contentsline {section}{\numberline {1.2}Business Data Analytics}{5}{section.1.2}
+\contentsline {subsection}{Descriptive Analytics}{6}{subsection*.18}
+\contentsline {subsection}{Predictive Analytics}{6}{subsection*.19}
+\contentsline {subsection}{Prescriptive Anaytics}{6}{subsection*.20}
+\contentsline {section}{\numberline {1.3}Data Scientist}{6}{section.1.3}
+\contentsline {chapter}{\chapternumberline {2}Our Tools: R and RStudio}{9}{chapter.2}
+\contentsline {section}{\numberline {2.1}Introduction to R and RStudio}{9}{section.2.1}
+\contentsline {subsection}{Download and Install R and RStudio}{9}{subsection*.21}
+\contentsline {section}{\numberline {2.2}Useful Features of RStudio}{11}{section.2.2}
+\contentsline {section}{\numberline {2.3}Essential R Tips \& Tricks}{11}{section.2.3}
+\contentsline {subsection}{R is Case Specific and Space Neutral}{11}{subsection*.22}
+\contentsline {subsection}{Comments and Line Continuation}{11}{subsection*.23}
+\contentsline {subsection}{Naming Conventions}{12}{subsection*.24}
+\contentsline {section}{\numberline {2.4}RMarkdown (RMD) Files}{12}{section.2.4}
+\contentsline {section}{\numberline {2.5}Reproducibility of Data Analysis}{13}{section.2.5}
+\contentsline {section}{\numberline {2.6}Open Source Software}{13}{section.2.6}
+\contentsline {subsection}{Extensability of R}{14}{subsection*.25}
+\contentsline {subsection}{Usability of R}{14}{subsection*.26}
+\contentsline {subsection}{R Community's Sense of Humor}{14}{subsection*.27}
+\contentsline {section}{\numberline {2.7}Common Issues, Pitfalls, Bugs, Obstacles and Their Solutions}{15}{section.2.7}
+\contentsline {chapter}{\chapternumberline {3}Essential R Language Elements}{19}{chapter.3}
+\contentsline {subsection}{Basic Arithmatic and Logical Operators}{19}{subsection*.28}
+\contentsline {subsection}{Using Built-In Functions}{20}{subsection*.29}
+\contentsline {section}{\numberline {3.1}apply functions}{22}{section.3.1}
+\contentsline {section}{\numberline {3.2}If Statements}{22}{section.3.2}
+\contentsline {section}{\numberline {3.3}Loops}{22}{section.3.3}
+\contentsline {section}{\numberline {3.4}R Utilities}{22}{section.3.4}
+\contentsline {subsection}{Calculating Execution Time}{22}{subsection*.30}
+\contentsline {subsection}{Updating R Version}{22}{subsection*.31}
+\contentsline {part}{\partnumberline {II}Data Exploration and Visualization}{25}{part.2}
+\contentsline {chapter}{\chapternumberline {4}Essential Data Management}{27}{chapter.4}
+\contentsline {section}{\numberline {4.1}Variables}{27}{section.4.1}
+\contentsline {section}{\numberline {4.2}Variable Data Types}{28}{section.4.2}
+\contentsline {subsection}{String Data}{28}{subsection*.33}
+\contentsline {subsection}{Logical Data}{28}{subsection*.34}
+\contentsline {section}{\numberline {4.3}Vectors}{28}{section.4.3}
+\contentsline {section}{\numberline {4.4}Importing Data into R}{29}{section.4.4}
+\contentsline {section}{\numberline {4.5}Exporting Data from R}{29}{section.4.5}
+\contentsline {section}{\numberline {4.6}Cleaning and Manipulating Data}{29}{section.4.6}
+\contentsline {section}{\numberline {4.7}Using Random Numbers and Sampling}{29}{section.4.7}
+\contentsline {section}{\numberline {4.8}plyr and dplyr Packages}{29}{section.4.8}
+\contentsline {chapter}{\chapternumberline {5}Descriptive Statistics}{31}{chapter.5}
+\contentsline {section}{\numberline {5.1}Summary Statistics}{31}{section.5.1}
+\contentsline {chapter}{\chapternumberline {6}Data Visualization in R}{33}{chapter.6}
+\contentsline {section}{\numberline {6.1}R Graphics}{33}{section.6.1}
+\contentsline {section}{\numberline {6.2}ggplot2 Package}{33}{section.6.2}
+\contentsline {section}{\numberline {6.3}Data Dashboards - RShiny}{33}{section.6.3}
+\contentsline {section}{\numberline {6.4}Interactive Graphics}{33}{section.6.4}
+\contentsline {part}{\partnumberline {III}Traditional Statistical Modeling}{35}{part.3}
+\contentsline {chapter}{\chapternumberline {7}Linear Regression}{37}{chapter.7}
+\contentsline {section}{\numberline {7.1}Simple Linear Regression}{37}{section.7.1}
+\contentsline {subsection}{Multiple Regression}{40}{subsection*.36}
+\contentsline {subsection}{Prediction Based on Regression Model}{41}{subsection*.37}
+\contentsline {section}{\numberline {7.2}Regression Diagnostics}{42}{section.7.2}
+\contentsline {subsection}{Normality}{42}{subsection*.38}
+\contentsline {subsection}{Linearity}{42}{subsection*.39}
+\contentsline {subsection}{Homegeniety of Variance}{45}{subsection*.40}
+\contentsline {subsection}{Uncorrelated Predictors}{46}{subsection*.41}
+\contentsline {subsection}{Independent Residuals}{46}{subsection*.42}
+\contentsline {subsection}{Outliers}{47}{subsection*.43}
+\contentsline {section}{\numberline {7.3}Improving Regression Model}{48}{section.7.3}
+\contentsline {subsection}{Polynomial Regression}{48}{subsection*.44}
+\contentsline {subsection}{Interaction Between Predictors}{49}{subsection*.45}
+\contentsline {subsection}{Categorical Predictor Variables}{51}{subsection*.46}
+\contentsline {subsection}{Non-Linear Regression}{52}{subsection*.47}
+\contentsline {section}{\numberline {7.4}Model Selection}{53}{section.7.4}
+\contentsline {subsection}{Stepwise Regression}{53}{subsection*.48}
+\contentsline {subsection}{Model Comparison}{55}{subsection*.49}
+\contentsline {section}{\numberline {7.5}Conclusion and Word of Caution}{56}{section.7.5}
+\contentsline {subsection}{Linear Regression is NOT a Silver Bullet}{56}{subsection*.50}
+\contentsline {chapter}{\chapternumberline {8}Generalized Linear Models}{57}{chapter.8}
+\contentsline {section}{\numberline {8.1}Logistic Regression}{57}{section.8.1}
+\contentsline {section}{\numberline {8.2}Probit Model}{60}{section.8.2}
+\contentsline {section}{\numberline {8.3}Survival Analysis}{62}{section.8.3}
+\contentsline {subsection}{Survival Data}{62}{subsection*.51}
+\contentsline {subsection}{Hazard Rate}{62}{subsection*.52}
+\contentsline {subsection}{Survival Analysis in R}{63}{subsection*.53}
+\contentsline {subsection}{Time Dependent Covariates}{66}{subsection*.54}
+\contentsline {subsection}{Model Diagnostics for Cox Regression}{70}{subsection*.55}
+\contentsline {subsubsection}{Assumption of Proportional Hazards}{71}{subsubsection*.56}
+\contentsline {subsection}{Outliers}{73}{subsection*.57}
+\contentsline {subsection}{Acknowledgement}{73}{subsection*.58}
+\contentsline {chapter}{\chapternumberline {9}Time Series Analysis}{75}{chapter.9}
+\contentsline {section}{\numberline {9.1}Time Series Data}{75}{section.9.1}
+\contentsline {section}{\numberline {9.2}Time Series Classes}{75}{section.9.2}
+\contentsline {section}{\numberline {9.3}Decomposition of Time Series Data}{78}{section.9.3}
+\contentsline {section}{\numberline {9.4}AR Models, MA Models, ARIMA Models}{82}{section.9.4}
+\contentsline {section}{\numberline {9.5}ARIMA Models}{82}{section.9.5}
+\contentsline {section}{\numberline {9.6}ARIMA Model Parameters}{82}{section.9.6}
+\contentsline {subsection}{How to select the order of differencing}{82}{subsection*.59}
+\contentsline {subsection}{How to select MA parameter}{84}{subsection*.60}
+\contentsline {subsection}{How to select AR parameter}{87}{subsection*.61}
+\contentsline {subsection}{Combining AR and MA parameters}{88}{subsection*.62}
+\contentsline {section}{\numberline {9.7}Forecasting using ARIMA Model}{89}{section.9.7}
+\contentsline {section}{\numberline {9.8}ARIMA Forecast Diagonostics}{92}{section.9.8}
+\contentsline {subsubsection}{Easy Way - Auto-Arima}{94}{subsubsection*.63}
+\contentsline {chapter}{\chapternumberline {10}Principal Component and Factor Analysis}{97}{chapter.10}
+\contentsline {part}{\partnumberline {IV}Machine Learning and Predictive Analytics}{99}{part.4}
+\contentsline {chapter}{\chapternumberline {11}Introduction to Machine Learning Algorithms}{101}{chapter.11}
+\contentsline {chapter}{\chapternumberline {12}k-Nearest-Neighbors Classification}{103}{chapter.12}
+\contentsline {section}{\numberline {12.1}kNN Algorithm}{103}{section.12.1}
+\contentsline {section}{\numberline {12.2}Calculating Distance}{104}{section.12.2}
+\contentsline {section}{\numberline {12.3}Choosing An Appropriate k}{104}{section.12.3}
+\contentsline {section}{\numberline {12.4}Rescaling Data for kNN}{104}{section.12.4}
+\contentsline {section}{\numberline {12.5}Illustrated Example: Breast Cancer Diagnosis}{105}{section.12.5}
+\contentsline {subsection}{Rescaling the Data}{105}{subsection*.65}
+\contentsline {subsection}{Dividing Data Into Training and Testing Sets}{106}{subsection*.66}
+\contentsline {subsection}{Running the Model}{106}{subsection*.67}
+\contentsline {subsection}{Model Accuracy}{107}{subsection*.68}
+\contentsline {subsection}{Improving the Model with z-Scores}{108}{subsection*.69}
+\contentsline {subsection}{Trying Different k Values}{109}{subsection*.70}
+\contentsline {chapter}{\chapternumberline {13}k-Means Clustering}{111}{chapter.13}
+\contentsline {chapter}{\chapternumberline {14}Finding Patterns using Association Rules}{113}{chapter.14}
+\contentsline {chapter}{\chapternumberline {15}Classification using Support Vector Machines}{115}{chapter.15}
+\contentsline {chapter}{\chapternumberline {16}Deep Learning using Neural Networks}{117}{chapter.16}
+\contentsline {chapter}{\chapternumberline {17}Decision Trees and Random Forests}{119}{chapter.17}
+\contentsline {part}{\partnumberline {V}Putting It All Together}{121}{part.5}
+\contentsline {chapter}{\chapternumberline {18}Improving and Combining Models}{123}{chapter.18}
+\contentsline {chapter}{\chapternumberline {19}Some Last Words}{125}{chapter.19}
+\contentsline {part}{\partnumberline {VI}Appendices, Bibliography and Index}{127}{part.6}
+\contentsline {appendix}{\chapternumberline {A}Key References}{129}{appendix.A}
+\contentsline {section}{\numberline {A.1}Beginner Level Resources}{129}{section.A.1}
+\contentsline {section}{\numberline {A.2}Intermediate Level Resources}{129}{section.A.2}
+\contentsline {section}{\numberline {A.3}Advanced Resources}{129}{section.A.3}
+\contentsline {appendix}{\chapternumberline {B}Data Analysis Example}{131}{appendix.B}
+\contentsline {appendix}{\chapternumberline {C}Syllabus for TO414 Fall 2016}{137}{appendix.C}
+\contentsline {section}{\numberline {C.1}Course Description}{137}{section.C.1}
+\contentsline {section}{\numberline {C.2}Class Details}{137}{section.C.2}
+\contentsline {section}{\numberline {C.3}Course Materials}{138}{section.C.3}
+\contentsline {section}{\numberline {C.4}Course Grading}{138}{section.C.4}
+\contentsline {section}{\numberline {C.5}Class Schedule}{139}{section.C.5}
+\contentsline {subsection}{Module 1: Setting the Foundation}{139}{subsection*.73}
+\contentsline {subsection}{Module 2: Advanced Data Analytics - Traditional Statistical Methods}{139}{subsection*.74}
+\contentsline {subsection}{Module 3: Big Data Analytics - Machine Learning}{140}{subsection*.75}
+\contentsline {subsection}{Module 4: Review, Assessment and Presentation}{140}{subsection*.76}
+\contentsline {section}{\numberline {C.6}Class Policies}{140}{section.C.6}
+\contentsline {section}{\numberline {C.7}Frequently Asked Questions (FAQs)}{141}{section.C.7}
+\contentsline {appendix}{\chapternumberline {D}Syllabus for TO628 Winter-B 2017}{143}{appendix.D}
+\contentsline {section}{\numberline {D.1}Course Description}{143}{section.D.1}
+\contentsline {section}{\numberline {D.2}Course Details}{143}{section.D.2}
+\contentsline {section}{\numberline {D.3}Course Materials}{143}{section.D.3}
+\contentsline {section}{\numberline {D.4}Course Grading}{143}{section.D.4}
+\contentsline {section}{\numberline {D.5}Class Schedule}{143}{section.D.5}
+\contentsline {section}{\numberline {D.6}Class Policies}{143}{section.D.6}
+\contentsline {section}{\numberline {D.7}Frequently Asked Questions (FAQs)}{143}{section.D.7}
+\contentsline {chapter}{Bibliography}{145}{section*.78}
+\contentsline {chapter}{Index of R Commands, Packages and Key Concepts}{147}{appendix*.79}

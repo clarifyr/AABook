@@ -1,0 +1,85 @@
+\begin{thebibliography}{11}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Foundation(2007)]{TheGNUGe51:online}
+Free~Software Foundation.
+\newblock The gnu general public license v3.0 - gnu project - free software
+  foundation.
+\newblock \url{https://www.gnu.org/licenses/gpl-3.0.en.html}, 2007.
+\newblock (Accessed on 09/23/2016).
+
+\bibitem[Goossens et~al.(1993)Goossens, Mittelbach, and
+  Samarin]{latexcompanion}
+Michel Goossens, Frank Mittelbach, and Alexander Samarin.
+\newblock \emph{The \LaTeX\ Companion}.
+\newblock Addison-Wesley, Reading, Massachusetts, 1993.
+
+\bibitem[Griffin(2016)]{Facebook45:online}
+Andrew Griffin.
+\newblock Facebook is using smartphones to listen to what people say, professor
+  suggests.
+\newblock
+  \url{http://www.independent.co.uk/life-style/gadgets-and-tech/news/facebook-using-people-s-phones-to-listen-in-on-what-they-re-saying-claims/-professor-a7057526.html},
+  2016.
+\newblock (Accessed on 09/23/2016).
+
+\bibitem[Hays(2004)]{WhatT45:online}
+Constance~L. Hays.
+\newblock What wal-mart knows about customers' habits - the new york times, Nov
+  14 2004.
+
+\bibitem[Hill(2012)]{HowTarge71:online}
+Kashmir Hill.
+\newblock How target figured out a teen girl was pregnant before her father
+  did.
+\newblock
+  \url{http://www.forbes.com/sites/kashmirhill/2012/02/16/how-target-figured-out-a-teen-girl-was-pregnant-before-her-father-did/},
+  2012.
+\newblock (Accessed on 09/23/2016).
+
+\bibitem[Holtz(2014)]{8SkillsY88:online}
+Dave Holtz.
+\newblock 8 skills you need to be a data scientist | udacity.
+\newblock \url{http://blog.udacity.com/2014/11/data-science-job-skills.html},
+  2014.
+\newblock (Accessed on 09/23/2016).
+
+\bibitem[IBM({\natexlab{a}})]{IBMWhati26:online}
+IBM.
+\newblock Ibm - what is big data?
+\newblock
+  \url{https://www-01.ibm.com/software/data/bigdata/what-is-big-data.html},
+  {\natexlab{a}}.
+\newblock (Accessed on 09/23/2016).
+
+\bibitem[IBM({\natexlab{b}})]{Infograp69:online}
+IBM.
+\newblock Infographic: The four v's of big data | ibm big data \& analytics
+  hub.
+\newblock \url{http://www.ibmbigdatahub.com/infographic/four-vs-big-data},
+  {\natexlab{b}}.
+\newblock (Accessed on 09/23/2016).
+
+\bibitem[McAfee et~al.(2012)McAfee, Brynjolfsson, Davenport, Patil, and
+  Barton]{mcafee2012big}
+Andrew McAfee, Erik Brynjolfsson, Thomas~H Davenport, DJ~Patil, and Dominic
+  Barton.
+\newblock Big data: The management revolution.
+\newblock \emph{Harvard Bus Rev}, 90\penalty0 (10):\penalty0 61--67, 2012.
+
+\bibitem[Patil and Davenport(2012)]{patil2012data}
+TH~Patil and DJ~Davenport.
+\newblock Data scientist: The sexiest job of the 21st century.
+\newblock \emph{Harvard Business Review}, 2012.
+
+\bibitem[Wikibooks()]{LaTeXWik0:online}
+Wikibooks.
+\newblock Latex - wikibooks, open books for an open world.
+\newblock \url{https://en.wikibooks.org/wiki/LaTeX}.
+\newblock (Accessed on 09/23/2016).
+
+\end{thebibliography}

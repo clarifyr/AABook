@@ -1,0 +1,306 @@
+\documentclass[11pt, letterpaper, twoside]{memoir}
+\usepackage[top=1in, bottom=1in, left=1in, right=2.5in, marginparsep=0.1in]{geometry}
+\usepackage{setspace}
+\usepackage[T1]{fontenc}
+\usepackage{titlesec}  %needs recent version of »titlesec«
+\usepackage{xcolor}
+\usepackage{parskip}
+\usepackage{cancel}
+\usepackage{fourier-orns}
+\usepackage{natbib}
+\setcitestyle{numbers,open={[},close={]}}
+
+\setlength{\topsep}{0pt} %To ensure that R output is not too spaced out vertically
+\setlength{\parskip}{0pt}
+\setlength{\partopsep}{0pt}
+
+\usepackage{makeidx}
+\makeindex
+\renewcommand{\indexname}{Index of R Commands, Packages and Key Concepts}
+\usepackage[columns=3]{idxlayout}
+
+\usepackage[hidelinks, pdftex, unicode, pdfproducer={Latex with hyperref}, pdfcreator={pdflatex}]{hyperref}
+
+\usepackage{enumitem}
+\setlist{nolistsep}
+
+\usepackage{marginfix}
+
+\newcommand\rcommand[1]{
+\colorbox{yellow}{\texttt{\color{red} #1}}
+%\sidebar{\textbf{\color{red} #1 \\}}
+\index{R Commands!#1}
+}
+
+\newcommand\rpackage[1]{
+\colorbox{yellow}{\texttt{\color{blue}#1}}
+%\sidebar{\textbf{\color{blue} #1 \\}}
+\index{Packages!#1}
+}
+
+\newcommand\rconcept[1]{
+\colorbox{yellow}{\textbf{#1}}
+%\sidebar{\textbf{\color{black} #1 \\}}
+\index{Key Concepts!#1}
+}
+
+\newcommand\mnote[1]{
+\marginpar{\color{black} \texttt{\small #1 \\}}
+}
+
+\newcommand{\chapterendsymbol}{
+    \vspace{24pt}
+    \Huge
+    \hrulefill \hspace{0.1in} \floweroneleft\floweroneright \hspace{0.1in} \hrulefill
+    \normalsize
+    }
+
+% \newlength{\fancyvrbtopsep}
+% \newlength{\fancyvrbpartopsep}
+% \makeatletter
+% \FV@AddToHook{\FV@ListParameterHook}{\topsep=\fancyvrbtopsep\partopsep=\fancyvrbpartopsep}
+% \makeatother
+
+\copypagestyle{myruled}{ruled}% Copy plain page syle to chapter page style
+\makeoddfoot{myruled}% Adjust odd footer for chapter page style
+  {}% Left odd footer
+  {\thepage}% Center odd footer
+  {}% Right odd footer
+\makeevenfoot{myruled}
+  {}% Left odd footer
+  {\thepage}% Center odd footer
+  {}% Right odd footer
+
+\makeatletter
+\renewcommand\part{%
+  \if@openright
+    \cleardoublepage
+  \else
+    \clearpage
+  \fi
+  \thispagestyle{empty}
+  \null\vfil
+  \secdef\@part\@spart
+  }
+\makeatother  
+
+\newlength\drop
+\newcommand*{\titleGM}{%
+\thispagestyle{empty}
+\begingroup% Gentle Madness
+%%\drop = 0.1\textheight
+\vspace*{\baselineskip}
+\vfill
+\hbox{%
+\hspace*{0.2\textwidth}%
+\rule{2pt}{\dimexpr\textheight-28pt\relax}%
+\hspace*{0.05\textwidth}%
+\parbox[b]{0.75\textwidth}{
+\vbox{%
+\vspace{\drop}
+{\noindent\HUGE\bfseries Advanced Analytics\\[0.5\baselineskip]
+Using R}\\[2\baselineskip]
+{\Large\itshape Navigating Business Big Data with R}\\[2\baselineskip]
+{\Large Dr. Sanjeev Kumar} \\ [2\baselineskip]
+{Technology \& Operations, Ross School of Business \\ University of Michigan}\par
+\vspace{0.2\textheight}
+{\noindent This book is developed for Advanced Analytics classes at Ross School of Business, Univ. of Michigan. Material updated for Fall 2016 Semester}\\[\baselineskip]
+}% end of vbox
+}% end of parbox
+}% end of hbox
+\vfill
+\null
+\endgroup}
+
+
+\begin{document}
+\SweaveOpts{concordance=TRUE}
+%\SweaveOpts{concordance=TRUE}
+
+<<include=FALSE>>=
+library(knitr)
+opts_chunk$set(concordance=TRUE)
+opts_knit$set(self.contained=FALSE)
+#opts_chunk$set(tidy=TRUE)
+
+@
+
+
+<<echo=FALSE>>=
+library(knitr)
+opts_chunk$set(concordance=TRUE)
+#knit_hooks$set(document=function(x) gsub("```r\ninnerCode", "```{r innerCode}", x))
+@
+
+
+\pagestyle{empty}
+\titleGM
+
+
+\frontmatter
+\pagestyle{empty}
+\cleardoublepage
+\par\vspace*{.35\textheight}{\centering \texttt{dedicated to the one to whom I owe all} \par}
+
+
+\cleardoublepage
+\pagestyle{plain}
+\setcounter{page}{1}
+\setcounter{tocdepth}{0}
+\renewcommand\contentsname{Brief Contents}
+\tableofcontents
+\cleardoublepage
+\setcounter{tocdepth}{1}
+\renewcommand\contentsname{Contents}
+\tableofcontents
+\cleardoublepage
+\listoffigures
+
+
+<<'child-Foreword.Rnw', child='chapters/Foreword.Rnw'>>=
+@
+
+
+
+<<'child-Preface.Rnw', child='chapters/Preface.Rnw'>>=
+@
+
+
+
+<<'child-Intro.Rnw', child='chapters/Intro.Rnw'>>=
+@
+
+
+\mainmatter
+\pagestyle{myruled}
+
+
+\part{Getting Started}
+
+
+<<'child-AdvancedBigDataAnalytics.Rnw', child='chapters/AdvancedBigDataAnalytics.Rnw'>>=
+@
+
+
+
+<<'child-OurTools.Rnw', child='chapters/OurTools.Rnw'>>=
+@
+
+
+
+<<'child-EssentialRElements.Rnw', child='chapters/EssentialRElements.Rnw'>>=
+@
+
+
+\part{Data Exploration and Visualization}
+
+
+<<'child-EssentialDataManagement.Rnw', child='chapters/EssentialDataManagement.Rnw'>>=
+@
+
+
+
+<<'child-DescriptiveStats.Rnw', child='chapters/DescriptiveStats.Rnw'>>=
+@
+
+
+
+<<'child-DataVisualization.Rnw', child='chapters/DataVisualization.Rnw'>>=
+@
+
+
+\part{Traditional Statistical Modeling}
+
+
+<<'child-LinearRegression.Rnw', child='chapters/LinearRegression.Rnw'>>=
+@
+
+
+<<'child-GeneralizedLinearModels.Rnw', child='chapters/GeneralizedLinearModels.Rnw'>>=
+@
+
+
+<<'child-TimeSeries.Rnw', child='chapters/TimeSeries.Rnw'>>=
+@
+
+
+<<'child-PrinComp.Rnw', child='chapters/PrinComp.Rnw'>>=
+@
+
+
+\part{Machine Learning and Predictive Analytics}
+
+
+<<'child-IntroML.Rnw', child='chapters/IntroML.Rnw'>>=
+@
+
+
+<<'child-knn.Rnw', child='chapters/knn.Rnw'>>=
+@
+
+
+<<'child-kmeans.Rnw', child='chapters/kmeans.Rnw'>>=
+@
+
+
+<<'child-AssocRules.Rnw', child='chapters/AssocRules.Rnw'>>=
+@
+
+
+<<'child-SVM.Rnw', child='chapters/SVM.Rnw'>>=
+@
+
+
+<<'child-NeuralNet.Rnw', child='chapters/NeuralNet.Rnw'>>=
+@
+
+
+<<'child-decisiontrees.Rnw', child='chapters/decisiontrees.Rnw'>>=
+@
+
+
+\part{Putting It All Together}
+
+<<'child-ImproveModels.Rnw', child='chapters/ImproveModels.Rnw'>>=
+@
+
+
+<<'child-LastWords.Rnw', child='chapters/LastWords.Rnw'>>=
+@
+
+\part{Appendices, Bibliography and Index}
+
+\appendix
+
+
+<<'child-KeyRefs.Rnw', child='chapters/KeyRefs.Rnw'>>=
+@
+
+
+
+<<'child-DataExample.Rnw', child='chapters/DataExample.Rnw'>>=
+@
+
+
+<<'child-TO414.Rnw', child='chapters/TO414.Rnw'>>=
+@
+
+
+<<'child-TO628.Rnw', child='chapters/TO628.Rnw'>>=
+@
+
+
+\backmatter
+
+\newgeometry{top=1in, bottom=1in, left=1in, right=1in}
+
+\setlength{\bibsep}{5pt}
+\bibliographystyle{plainnat}
+\bibliography{chapters/AA}{}
+
+
+
+
+\cleardoublepage
+\printindex
+\end{document}

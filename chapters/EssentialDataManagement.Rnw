@@ -1,0 +1,115 @@
+% !Rnw root = AABase.Rnw
+
+\chapter{Essential Data Management}
+
+\begin{flushright}
+
+\textbf{\texttt{In God We Trust; All Others Must Bring Data}}
+
+\emph{-- Willian Edwards Deming}
+
+\end{flushright}
+
+\vspace{12pt}
+
+In this chapter we will look at how to store and work with diffrent types of data.
+
+\section{Variables}
+
+R keeps all data in \texttt{Variables}. \index{Key Concepts!Variables}Variables can be thought of as a space in computer's memory where R can store data. Once we have created a variable, we can then use the variable name to access, manipulate and work with the data kept in the variable. Variables are created using the Assignment Operator \texttt{<-}. The arrow indicates the direction of assignment. Operators also exist to do assignment in the opposite direction (\texttt{->}) and do the same operation as assignment operator but using the operator used by many other programming languages (\texttt{=}).
+
+<<cache=TRUE>>=
+revenue <- 100 #Typical way of creating a variable and assigning value
+# Above is the recommended approach
+revenue = 100 #Alternate way of doing same as above
+100 -> revenue #Reverse direction assignment
+revenue <- revenue + 300 #Performing calculations
+print(revenue) #Printing/showing the value inside the variable
+@
+
+The first three line of the code above should be read as the value 100 is assigned to the variable $revenue$. In the fourth line, we add 300 to the current value of variable $revenue$ and the resulting value (in this case 400) is then assigned to the variable $revenue$. So the value in the variable $revenue$ is now 400, which is shown as output in the last line.
+
+Variables can be used to perform all usual arithmetic operations. Arithmetic operations are conducted using \verb|Arithmetic Operators|. We have already used on such operator $+$ before. Other arithmetic operators include subtraction $-$, multiplication $*$, division \verb|/| and exponentiation \verb|^|.
+
+\section{Variable Data Types}
+
+Variables can store and work with many different types of data. We saw integer numerical data in the examples above. Other common data types include floating point numbers (fractional numbers), characters data (i.e. a single character), text data (called strings - as in string of charactersVariables can store text data (called \texttt{strings} as in string of characters) and logical data (true or false).
+
+\subsection{String Data}
+
+String data is written within quote marks (\texttt{" "}) to differentiate them from text that represent things like object names. An empty string (a text data with no characters) is usually represented by two quote marks with nothing within - like \texttt{""}.
+
+<<cache=TRUE>>=
+day.name <- "Sunday" #Assigns the string Sunday to variable day.name
+someday <- "" #Empty string assigned to variable someday
+@
+
+We can calculate the number of characters in a string using the \texttt{nchar()}\index{R Commands!nchar} function. 
+<<cache=TRUE>>=
+nchar(day.name); nchar(someday)
+@
+
+\subsection{Logical Data}
+
+Variablec can hold logical values using the two keywords \texttt{TRUE} and \texttt{FALSE}.  Logical values typically result from the use of logical operators such as the equality operator \texttt{==}. Note the two = signs there which differetiates it from the version of assignment operator we saw before.
+
+<<cache=TRUE>>=
+4 == 6 #Is 4 equal to 6, result FALSE
+someday == "Tuesday" #Again result shoukd be FALSE
+@
+
+Other similar logical operators include less than (\texttt{<}), greater than (\texttt{>}), less than or equal to (\texttt{<=}), greater than or equal to (\texttt{>=}) and lastly, not equal to (\texttt{!=}). There are additional logical operators that combine logical values: AND (\verb|&|), OR (\texttt{|}) and NOT (\texttt{!}).
+
+
+\section{Vectors}
+
+Variables store a single value. If you need to store multiple values then you need a \texttt{vector}\index{Key Concepts!Vectors}. Vectors can be created in the same was a variables are created, except that we need to assign multiple values to a vector. A handy function for combining multiple values in one vector is \texttt{c()} the \texttt{combine} function. \index{R Commands!c}
+
+<<cache=TRUE>>=
+sleep.per.day <- c(6, 4, 6, 8, 7, 9, 10)
+@
+
+The code above created a vector named $sleep.per.day$ with 7 \texttt{elements}. Vectors are very useful because R provides several easy ways to interact with different elements of a vector.
+
+<<cache=TRUE>>=
+sleep.per.day[2] #Gets the second element of the vector
+sleep.per.day[4] <- 3 #Changes 4th element of the vector to 3
+length(sleep.per.day) #Gets the length (number of elements) of the vector
+sleep.per.day + 2 #Adds 2 to *each* element of the vector 
+@
+
+Vectors are also useful for doing element-by-element calculations. For example, if we have another vector for number of hours of work for the week, we can calculate number of hours used for work and sleep as follows:
+
+<<cache=TRUE>>=
+work.per.day <- c(9, 11, 10, 8, 6, 3, 2) #Create new vector
+work.and.sleep <- sleep.per.day + work.per.day 
+#Added two vectors element by element
+print(work.and.sleep) #Show added values
+@
+
+It is easy to access data elements inside a vector. All elements are assigned an index number - unlike many programming languages, R starts counting with 1 rather than 0. 
+
+<<cache=TRUE>>=
+wed.hours <- work.per.day[3] #Extracts third element
+work.per.day[7] <- 6 #Changes 7th element of the vector
+@
+
+Functions \texttt{edit()}\index{R Commands!edit} and \texttt{fix}\index{R Commands!fix} can be used to edit existing vectors. Number of elements in a vector can be calculated using the \texttt{length()}\index{R Commands!length} function.
+<<cache=TRUE>>=
+length(work.per.day)
+@
+
+\section{Importing Data into R}
+
+
+\section{Exporting Data from R}
+
+\section{Cleaning and Manipulating Data}
+
+
+\section{Using Random Numbers and Sampling}
+
+
+\section{plyr and dplyr Packages}
+
+\chapterendsymbol

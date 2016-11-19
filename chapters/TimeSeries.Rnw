@@ -1,0 +1,516 @@
+% !Rnw root = AABase.Rnw
+
+\chapter{Time Series Analysis}
+
+\begin{flushright}
+
+\textbf{\texttt{In God We Trust; All Others Must Bring Data}}
+
+\emph{-- Willian Edwards Deming}
+
+\end{flushright}
+
+\vspace{12pt}
+
+\section{Time Series Data}
+
+Lets take a quick look at basic time series data.
+<<cache=TRUE>>=
+#Number of International Passenger bookings (in '000s) for PanAm
+data("AirPassengers") 
+class(AirPassengers)
+@
+
+\texttt{ts} stands for time series. Time series data needs to be stored in specially designed classes like ts. These classes lend themselves well to plotting.
+
+\begin{figure}
+\centering
+\rule{4in}{1pt}
+<<cache=TRUE, fig.height=4>>=
+plot(AirPassengers, ylab="Passengers", xlab="Years", 
+     main="Passenger Bookings")
+@
+\caption{Plot of Passenger Bookings}
+\label{Fig:passbook }
+\rule{4in}{1pt}
+\end{figure}
+
+Can you see the seasonality of the time series? A trend in the time series?
+
+\begin{figure}
+\centering
+\rule{4in}{1pt}
+<<cache=TRUE, fig.height=4>>=
+data("lynx") #Number of Lynx trappings
+plot(lynx, ylab="Number of Lynx Trapped", main="Lynx Trappings")
+@
+\caption{Plot of Lynx Trapped}
+\label{Fig:lynx}
+\rule{4in}{1pt}
+\end{figure}
+
+Can you see a pattern? Is there a deterministic periodicity or a random stocastic one?
+
+\begin{figure}
+\centering
+\rule{4in}{1pt}
+<<cache=TRUE, fig.height=4>>=
+data("lh") #LH levels every 10 mins
+plot(lh, ylab="LH Level", main="Luteinizing Hormone")
+plot(lh[1:47], lh[2:48], pch=20)
+title("Scatterplot with Lag 1")
+cor(lh[1:47], lh[2:48])
+@
+\caption{Plot of Luteinizing Hormone}
+\label{Fig:lute}
+\rule{4in}{1pt}
+\end{figure}
+
+Is there correlation between successive data points? Auto-Correlation?
+
+Much of Time Series Analysis is focused on \textbf{stationary time series} meaning that the probabilistic character of the time series does not change with time. Most commonly, we use a \emph{weak stationarity} definition which asks for a constant mean and variance and the dependency structure only depends on the lag.
+
+\section{Time Series Classes}
+
+\textbf{ts} is the most basic class. Other, more flexible, classes include \textbf{zoo} and \textbf{xts}.
+
+Managing dates in R is commonly done using \texttt{as.Date} function. Dates and times togethes can ve handled using \emph{chron}. For control over time zones, \textbf{POSIX} classes are recommended.
+
+<<cache=TRUE>>=
+#Default is yyyy-mm-dd
+as.Date("2016-02-29"); as.Date("2016/02/29") 
+as.Date("29.02.16", format="%d.%m.%y")
+as.Date("29. Feb, 2016", format="%d. %b, %Y")
+@
+
+Date values are stored as number of days passed since Jan 01, 1970. Earlier dates are assigned a negative value. We can extract various useful information from date values.
+
+<<cache=TRUE>>=
+mydat <- as.Date("2016-02-29")
+weekdays(mydat); months(mydat); quarters(mydat)
+currentdate <- Sys.Date() #Gives current date
+currentdate - mydat
+@
+
+\section{Decomposition of Time Series Data}
+
+As stationarity is an important pre-requisite for statistical analysis of time series data, it is often useful to \emph{decompose} a non-stattionary time series into a combination of trend, seasonality and a stationary time series process.
+
+A popular approah to decomposition of time series is \textbf{differencing}
+
+\begin{figure}
+\centering
+\rule{4in}{1pt}
+<<cache=TRUE, fig.height=4>>=
+data("co2"); plot(co2, main="CO2 Concentrations")
+sd.co2 <- diff(co2, lag = 12)
+plot(sd.co2, main="Differenced with Lag 12 months")
+@
+\caption{Plot of CO2 Concentrations}
+\label{Fig:CO2}
+\rule{4in}{1pt}
+\end{figure}
+
+We can use the convenient \texttt{decompose} function as well.
+
+\begin{figure}
+\centering
+\rule{4in}{1pt}
+<<cache=TRUE, fig.height=4>>=
+co2.dec <- decompose(co2)
+plot(co2.dec)
+@
+\caption{Decomposition of CO2 Time Series}
+\label{Fig:CO2Decom}
+\rule{4in}{1pt}
+\end{figure}
+
+An effective alternative function for decomposing is \texttt{stl} which uses local, weighted regression to reduce the impact of outliers.
+
+\begin{figure}
+\centering
+\rule{4in}{1pt}
+<<cache=TRUE, fig.height=4>>=
+co2.stl <- stl(co2, s.window = "periodic")
+plot(co2.stl, main="STL Decomposition")
+@
+\caption{STL Decomposition of CO2 Time Series}
+\label{Fig:STLCO2Decom}
+\rule{4in}{1pt}
+\end{figure}
+
+\begin{figure}
+\centering
+\rule{4in}{1pt}
+<<cache=TRUE, fig.height=4>>=
+wave <- ts(read.table("http://staff.elena.aut.ac.nz/Paul-Cowpertwait/ts/wave.dat", 
+                      header=TRUE))
+plot(window(wave, 1, 60), ylab="Height", main="Wave Tank Data")
+@
+\caption{Plot of Wave Height}
+\label{Fig:wave}
+\rule{4in}{1pt}
+\end{figure}
+
+It is a stationary series but shows strong cyclicity. Autocorrelations for various lag values can be computed using the \texttt{acf} function which creates the chart below known as the \textbf{Correlogram}.
+
+\begin{figure}
+\centering
+\rule{4in}{1pt}
+<<cache=TRUE, fig.height=4>>=
+acf(wave)
+acf(log(AirPassengers))
+@
+\caption{Correlogram of Wave and Passenger Data}
+\label{Fig:correlogram}
+\rule{4in}{1pt}
+\end{figure}
+
+Correlogram should only be created for stationary time series. When applied on a non-stationary time series, it can also be used for detecting trend and seasonality. The Air Passengers Correlogram clearly shows both a trend and a seasonality.
+
+We can generate partial autocorrelation for different lag values using the \texttt{pacf} function.
+
+\begin{figure}
+\centering
+\rule{4in}{1pt}
+<<cache=TRUE, fig.height=4>>=
+pacf(wave, main="Partial Autocorrelation of Wave Tank Data")
+@
+\caption{Partial Correlogram of Wave Data}
+\label{Fig:parcorrwave}
+\rule{4in}{1pt}
+\end{figure}
+
+The chart shows that the first two lag values are most prominent in their serial correlation. This implies that the time series would be best studied using an $AR(2)$ model.
+
+There are several tests for autocorrelation as well. A popular one is the Box-Pierce test.
+<<cache=TRUE>>=
+Box.test(wave)
+@
+
+As the output shows the p-value is less than 0.05, allowing us to reject the null hypothsis of no autocorrelation.
+
+\section{AR Models, MA Models, ARIMA Models}
+
+Lets first begin with the simples AR models.
+
+\begin{figure}
+\centering
+\rule{4in}{1pt}
+<<cache=TRUE, fig.height=4>>=
+library(nutshell); data(turkey.price.ts) #Get the data
+armodel <- ar(turkey.price.ts); armodel #Fit an AR model
+predict(armodel, n.ahead=12) #Predict future values, plot below
+ts.plot(turkey.price.ts, predict(armodel, n.ahead = 24)$pred, lty=c(1:2))
+@
+\caption{AR Model on Turkey Data}
+\label{Fig:arturkey}
+\rule{4in}{1pt}
+\end{figure}
+
+We will spend more time on ARIMA Models (includes both AR and MA), but here is a way to fit the best ARIMA model.
+
+\begin{figure}
+\centering
+\rule{4in}{1pt}
+<<cache=TRUE, fig.height=4>>=
+library(forecast)
+arima.model <- auto.arima(turkey.price.ts); arima.model
+ts.plot(turkey.price.ts, predict(arima.model, 
+                                 n.ahead = 24)$pred, lty=c(1:2))
+@
+\caption{Prediction Based on Auto Arima}
+\label{Fig:parcorr}
+\rule{4in}{1pt}
+\end{figure}
+
+We just predicted two years of turkey prices. 
+
+\section{ARIMA Models}
+
+ARIMA Models include three components:
+
+\begin{itemize}
+
+\item \textbf{Autoregressive Model - AR}: If the model has a lag of $p$ time periods, then its typically called an $AR(p)$ model.
+
+\item \textbf{Moving Average Model - MA}: If the model used moving average of $q$ terms, then its typically called an $MA(q)$ model.
+
+\item \textbf{Differencing}: Since ARIMA models are only applicable to stationary time series, typically we need to \emph{difference} a time series one or more times to get a stationary time series. Number of differencings (called order of differencing) is typically denoted as $d$
+\end{itemize}
+
+Taking all the three above together, an ARIMA model is specified as $ARIMA(p, d, q)$. Before we can fit an ARIMA model, we need to figure out what values of $p$, $d$ and $q$ would be optimal for the given time series data.
+
+\section{ARIMA Model Parameters}
+
+\subsection{How to select the order of differencing}
+
+Lets look at an example dataset. The link below provides data on annual diameter of women's skirts at the hem, from 1866 to 1911.
+
+\begin{figure}
+\centering
+\rule{4in}{1pt}
+<<cache=TRUE, fig.height=4>>=
+skirts <- scan("http://robjhyndman.com/tsdldata/roberts/skirts.dat",skip=5)
+skirtsseries <- ts(skirts,start=c(1866)) #Create a ts object
+plot.ts(skirtsseries) #plot the ts object
+@
+\caption{Plot of Skirts Data}
+\label{Fig:plotskirts}
+\rule{4in}{1pt}
+\end{figure}
+
+As we can see, this time series is not stationary. The mean value of the series changes significantly over time. We would want to do the first order differencing and see if that results in a stationary time series. We can use the \texttt{diff} function for differencing the time series, as we saw in last part.
+
+\begin{figure}
+\centering
+\rule{4in}{1pt}
+<<cache=TRUE, fig.height=4>>=
+skirtsseriesdiff1 <- diff(skirtsseries, differences=1)
+plot.ts(skirtsseriesdiff1)
+@
+\caption{Plot of Differenced Skirts Data}
+\label{Fig:diffskirts}
+\rule{4in}{1pt}
+\end{figure}
+
+Well, even this does not seem to be stationary. The series has a definite pattern in it. So we do the second order differencing.
+
+\begin{figure}
+\centering
+\rule{4in}{1pt}
+<<cache=TRUE, fig.height=4>>=
+skirtsseriesdiff2 <- diff(skirtsseries, differences=2)
+plot.ts(skirtsseriesdiff2)
+@
+\caption{Plot of Twice Differenced Skirts Data}
+\label{Fig:twicediffskirts}
+\rule{4in}{1pt}
+\end{figure}
+
+Now we have something. The time series of second differences does appear to be stationary with a constant mean and variance. So we can see that for fitting an ARIMA model on this data, we should use the order of differencing parameter $d = 2$. So, an $ARIMA(p, 2, q)$ model is appropriate. 
+
+Let's look at another example dataset. The link below provides the age of death of the successive kings of England.
+
+\begin{figure}
+\centering
+\rule{4in}{1pt}
+<<cache=TRUE, fig.height=4>>=
+kings <- scan("http://robjhyndman.com/tsdldata/misc/kings.dat",skip=3)
+kingstimeseries <- ts(kings) #Convert to ts object
+plot.ts(kingstimeseries) #plotting the time series
+@
+\caption{Plot of Kings Data}
+\label{Fig:plotking}
+\rule{4in}{1pt}
+\end{figure}
+
+Clearly the time series is not stationary. So we do first order differencing and check again.
+
+\begin{figure}
+\centering
+\rule{4in}{1pt}
+<<cache=TRUE, fig.height=4>>=
+kingtimeseriesdiff1 <- diff(kingstimeseries, differences=1)
+plot.ts(kingtimeseriesdiff1)
+@
+\caption{Plot of Differenced Kings Data}
+\label{Fig:plotdifking}
+\rule{4in}{1pt}
+\end{figure}
+
+There you go - a nice stationary looking time series. So we get $d = 1$ in this case and consequently, an $ARIMA(p, 1, q)$ model.
+
+\subsection{How to select MA parameter}
+
+The MA parameter is typically selected by observing the \emph{correlogram} that we generated before. As we also saw then, we can use the \texttt{acf} function for generating a correlogram.
+
+\begin{figure}
+\centering
+\rule{4in}{1pt}
+<<cache=TRUE, fig.height=4>>=
+acf(kingtimeseriesdiff1) #Get the correlogram chart
+acf(kingtimeseriesdiff1, plot=FALSE) #Get the data, not the chart
+@
+\caption{Correlogram of Kings Data}
+\label{Fig:corking}
+\rule{4in}{1pt}
+\end{figure}
+
+We see from the correlogram that the autocorrelation at lag 1 (-0.360) exceeds the significance bounds, but all other autocorrelations do not exceed the significance bounds. So in this case an $MA(1)$ model seems appropriate.
+
+Taking another example, the link below contains data on the volcanic dust veil index in the northern hemisphere, from 1500-1969. This is a measure of the impact of volcanic eruptions' release of dust and aerosols into the environment. 
+
+\begin{figure}
+\centering
+\rule{4in}{1pt}
+<<cache=TRUE, fig.height=4>>=
+volcanodust <- scan("http://robjhyndman.com/tsdldata/annual/dvi.dat", skip=1)
+volcanodustseries <- ts(volcanodust,start=c(1500))
+plot.ts(volcanodustseries)
+@
+\caption{Plot of Volcano Data}
+\label{Fig:voldata}
+\rule{4in}{1pt}
+\end{figure}
+
+This time series appears to be stationary in mean and variance, as its level and variance appear to be roughly constant over time. Therefore, we do not need to difference this series in order to fit an ARIMA model. We can fit an ARIMA model to the original series - hence the order of differencing $d = 0$ here. We can now look at a correlogram to explore further.
+
+\begin{figure}
+\centering
+\rule{4in}{1pt}
+<<cache=TRUE, fig.height=4>>=
+acf(volcanodustseries, lag.max=20)   
+acf(volcanodustseries, lag.max=20, plot=FALSE)   
+@
+\caption{Correlogram of Volcano Data}
+\label{Fig:corvol}
+\rule{4in}{1pt}
+\end{figure}
+
+We see from the correlogram that the autocorrelations for lags 1, 2 and 3 exceed the significance bounds, and that the autocorrelations tail off to zero after lag 3. The autocorrelations for lags 1, 2, 3 are positive, and decrease in magnitude with increasing lag (lag 1: 0.666, lag 2: 0.374, lag 3: 0.162).
+
+The autocorrelation for lags 19 and 20 exceed the significance bounds too, but it is likely that this is due to chance, since they just exceed the significance bounds (especially for lag 19), the autocorrelations for lags 4-18 do not exceed the signifiance bounds, and we would expect 1 in 20 lags to exceed the 95\% significance bounds by chance alone.
+
+As the first three lags seem to be most influential, an $MA(3)$ model, meaning $q = 3$ is appropriate here.
+
+\subsection{How to select AR parameter}
+
+The AR parameter is typically selected by observing the \emph{partial correlogram} that we generated before. As we saw then, we can use the \texttt{pacf} function for generating a partial correlogram. Looking at our first example dataset:
+
+\begin{figure}
+\centering
+\rule{4in}{1pt}
+<<cache=TRUE, fig.height=4>>=
+pacf(kingtimeseriesdiff1) #Get the correlogram chart
+pacf(kingtimeseriesdiff1, plot=FALSE) #Get the data, not the chart
+@
+\caption{Correlogram of Kings Data}
+\label{Fig:corkings}
+\rule{4in}{1pt}
+\end{figure}
+
+We can see that the first three lag values have significant auto-correlations. This implies than an $AR(3)$ model (so $p = 3$) will be suitable here.
+
+We do the same for the second example dataset:
+
+\begin{figure}
+\centering
+\rule{4in}{1pt}
+<<cache=TRUE, fig.height=4>>=
+pacf(volcanodustseries, lag.max=20)
+pacf(volcanodustseries, lag.max=20, plot=FALSE)
+@
+\caption{Partial Correlogram of Volcano Data}
+\label{Fig:parcorvol}
+\rule{4in}{1pt}
+\end{figure}
+
+From the partial autocorrelogram, we see that the partial autocorrelation at lag 1 is positive and exceeds the significance bounds (0.666), while the partial autocorrelation at lag 2 is negative and also exceeds the significance bounds (-0.126). The partial autocorrelations tail off to zero after lag 2.
+
+So it seens that an $AR(2)$ model, meaning $p = 2$, would be appropriate here.
+
+\subsection{Combining AR and MA parameters}
+
+As AR and MA parts of the ARIMA model can actually conflict with each other, it is not necessary to always have both AR and MA terms in the model. For example, in the kings dataset above, we found that $AR(3)$ model and $MA(1)$ model both are applicable. In such cases we use the principle of parsimony to decide which model is best: that is, we assume that the model with the fewest parameters is best. The $AR(3)$ model has 3 parameters, the $MA(1)$ model has 1 parameter. Therefore, the $ARMA(0,1)$ model is our best choice for a starting point.
+
+A MA (moving average) model is usually used to model a time series that shows short-term dependencies between successive observations. Intuitively, it makes good sense that a MA model can be used to describe the irregular component in the time series of ages at death of English kings, as we might expect the age at death of a particular English king to have some effect on the ages at death of the next king or two, but not much effect on the ages at death of kings that reign much longer after that.
+
+In case of Volcano dataset, we have options of $AR(2)$ or $MA(3)$ model. Again following the principle of parsimony, $AR(2)$ or $ARMA(2,0)$ would be our best best as the starting model.
+
+An AR (autoregressive) model is usually used to model a time series which shows longer term dependencies between successive observations. Intuitively, it makes sense that an AR model could be used to describe the time series of volcanic dust veil index, as we would expect volcanic dust and aerosol levels in one year to affect those in much later years, since the dust and aerosols are unlikely to disappear quickly.
+
+\section{Forecasting using ARIMA Model}
+
+Once we have selected the best candidate $ARIMA(p,d,q)$ model for our time series data, we can estimate the parameters of that ARIMA model, and use that as a predictive model for making forecasts for future values of your time series.
+
+We can estimate the parameters of an $ARIMA(p,d,q)$ model using the \texttt{arima} function in R. For the kings dataset, we found that we needed to do a first order differencing and then use an $MA(1)$ model. So we can model it using $ARIMA(0,1,1)$. We can specify the values of p, d and q in the ARIMA model by using the \emph{order} argument of the \texttt{arima} function in R. For example:
+
+<<cache=TRUE>>=
+# fit an ARIMA(0,1,1) model
+kingstimeseriesarima <- arima(kingstimeseries, order=c(0,1,1)) 
+kingstimeseriesarima
+@
+
+Now that we have a fitted model, we can use it to make forecasts.
+
+<<cache=TRUE>>=
+library(forecast)
+kingstimeseriesforecasts <- forecast.Arima(kingstimeseriesarima, h=5)
+kingstimeseriesforecasts
+@
+
+The original time series for the English kings includes the ages at death of 42 English kings. The \texttt{forecast.Arima} function gives us a forecast of the age of death of the next five English kings (kings 43-47), as well as 80\% and 95\% prediction intervals for those predictions. The age of death of the 42nd English king was 56 years (the last observed value in our time series), and the ARIMA model gives the forecasted age at death of the next five kings as 67.8 years.
+
+We can plot the observed ages of death for the first 42 kings, as well as the ages that would be predicted for these 42 kings and for the next 5 kings using our $ARIMA(0,1,1)$ model, by using the \texttt{plot.forecast} function.
+
+\begin{figure}
+\centering
+\rule{4in}{1pt}
+<<cache=TRUE, fig.height=4>>=
+plot.forecast(kingstimeseriesforecasts)
+@
+\caption{Correlogram of Forecast Errors}
+\label{Fig:correrrking}
+\rule{4in}{1pt}
+\end{figure}
+
+\section{ARIMA Forecast Diagonostics}
+
+It is a good idea to investigate whether the forecast errors of an ARIMA model are normally distributed with mean zero and constant variance, and whether the are correlations between successive forecast errors.
+
+For example, we can make a correlogram of the forecast errors for our $ARIMA(0,1,1)$ model for the ages at death of kings, and perform the Ljung-Box test for lags 1-20, as follows:
+
+\begin{figure}
+\centering
+\rule{4in}{1pt}
+<<cache=TRUE, fig.height=4>>=
+acf(kingstimeseriesforecasts$residuals, lag.max=20)
+Box.test(kingstimeseriesforecasts$residuals, lag=20, type="Ljung-Box")
+@
+\caption{Correlogram of Forecast Errors}
+\label{Fig:correrrforecast}
+\rule{4in}{1pt}
+\end{figure}
+
+Since the correlogram shows that none of the sample autocorrelations for lags 1-20 exceed the significance bounds, and the p-value for the \textbf{Ljung-Box test} is 0.9, we can conclude that there is very little evidence for non-zero autocorrelations in the forecast errors at lags 1-20.
+
+To investigate whether the forecast errors are normally distributed with mean zero and constant variance, we can make a time plot of the forecast errors:
+
+\begin{figure}
+\centering
+\rule{4in}{1pt}
+<<cache=TRUE, fig.height=4>>=
+# make time plot of forecast errors
+plot.ts(kingstimeseriesforecasts$residuals)   
+@
+\caption{Prediction Time Series Residuals}
+\label{Fig:tsres}
+\rule{4in}{1pt}
+\end{figure}
+
+
+The plot seems problem-free. Since successive forecast errors do not seem to be correlated, and the forecast errors seem to be normally distributed with mean zero and constant variance, the $ARIMA(0,1,1)$ does seem to provide an adequate predictive model for the ages at death of English kings.
+
+\subsubsection{Easy Way - Auto-Arima}
+
+We can let R do all the heavy lifting by using *auto-arima()* function.
+
+<<cache=TRUE>>=
+automodel <- auto.arima(kingstimeseries)
+automodel
+@
+
+With a sigh of relief we can note that the auto-arima reached the same conclusion as we did manually - an (0,1,1) ARIMA model. 
+
+Note that you can use different Information Criteria to be used by the auto-arima function to find the best model. For example:
+
+<<cache=TRUE>>=
+automodel.with.bic <- auto.arima(kingstimeseries, ic="bic")
+automodel.with.bic
+@
+
+In this case \textbf{BIC} reaches the same results as the default. However, BIC may give a different result as it penalizes the number of parameters more than other approaches.
+
+\chapterendsymbol
+
