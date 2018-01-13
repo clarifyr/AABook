@@ -1,0 +1,84 @@
+% !Rnw root = AABase.Rnw
+
+\chapter{Advanced Big Data Analytics}
+
+\begin{flushright}
+\texttt{In God We Trust; All Others Must Bring Data}
+
+\emph{-- Willian Edwards Deming}
+\end{flushright}
+
+\vspace{12pt}
+
+We live in a world awash in data. All this data can be incredibly useful - it can tell us a lot - help us be better. Consider the case of WalMart in Figure: \ref{fig:frances} \citep{WhatT45:online}. WalMart collects every bit of customer data it can find - and used this data to figure out what do people buy when a hurricane is about to hit an area. I often ask this question to my students - and you can guess the usual answers - water, canned food, board games. Good guesses - but wrong. These are anticipated needs and most people purchase these items days and weeks in advance. WalMart's analysis told them that the items people buy the most just before a hurricane hits are  pop-tarts and beer. This insight has tremendous implications for the bottomline. However, extracting clear insights like this from mountains of raw data is not easy - its quite difficult in fact. We need Advanced Data Analytics techniques to do so.  
+
+\begin{figure}
+\rule{4in}{1pt}
+\centering
+\includegraphics[height=5in]{images/NYTFrances.jpg}
+\caption{WalMart Figures What to Sell in a Hurricane}
+\label{fig:frances}
+\rule{4in}{1pt}
+\end{figure}
+
+Success of WalMart in extracting insights from data is being replicated by different companies in different industries. NetFlix is able to predict what movies you will like. Sprint is able to predict when a customer might start considering switching services to a competitor. In a now famous incident,\mnote{The popular notion that Target knew that the girl was pregnant before even \emph{she} did; is not accurate. Sadly.} Target even managed to deduce that a teenage girl was pregnant before the girl's family knew \citep{HowTarge71:online}.  In each of these cases, companies are using specific methodologies, that we refer in this book as \rconcept{Advanced Analytics}, to transform data into insights for making better decisions.\mnote{The terms Advanced Analytics, Data Analytics and Business Analytics are often used interchangeably. We will consider them synonymous in this book.}
+
+Our networked, connected, technology enabled world generates a lot of data that can be used for Analytics. Each time we use our credit cards, click on a web link, send a text message, even talk when your mobile phone is nearby with the Facebook app running - data is generated and stored \citep{Facebook45:online}. As you can imagine, all this data adds up. It adds up to so much that we can not hope to manage, process or analyze this much data with commonly available software in a reasonable amount of time - also known as \rconcept{Big Data}. So we need Advanced Analytics techniques that can handle Big Data.
+
+\section{What is the Big Deal with Big Data?}
+
+Big Data is obviously big - but size is only one aspect of Big Data that makes analyzing it difficult. Before we aanalyze Big Data, we need to first get familiar these roadblocks. They are usually referred to as the Four Vs: Volume, Velocity, Variety and Veracity \citep{Infograp69:online}.
+
+\subsection{Volume}
+
+The size of Big data is a constantly moving target\index{Key Concepts!Big Data!Volume} - this section will likely be obsolete by the time you get to reading it. Sure Big Data is Big - but most people do not understand just \emph{how} big it is. It is estiated that 90\% of all data that exists has been created in last two years \citep{IBMWhati26:online}. It is estimated that WalMart has collected more than 2.5  petabytes of customer data. A petabyte is $10 ^ {12}$ or one quadrillion bytes, or the equivalent of about 20 million filing cabinets' worth of text \citep{mcafee2012big}!
+
+This incredible size of Big Data means that such data is usually stored in muliple, distributed machines. It also means that commonly available software like MS-Excel are horribly inadequate to deal with Big Data. The volume issue is actually not fully resolved in R - our tool of choice in the book. How much data we can handle in a single installation of R is usually limited by the size of RAM memory of the machine. In later chapters, we will explore various approaches to enable R to handle larger volume of data.
+
+\subsection{Velocity}
+
+Velocity refers to the speed with which Big Data is growing.\index{Key Concepts!Big Data!Velocity} It is the classic drinking from the firehose situation. Our data analytics tools have been fast enough to accommodate this size of incoming traffic to analyze them in real time. Our models have to be robust enough to not get quickly outdated by the new data. However, high velocity also presents a tremendous opportunity as new incoming data provides potential for continuous learning and refinement of our models.
+
+As much of human interaction moves to social media and much of machine to machine interaction moves to Internet of Things (IoT), the velocity of Big Data will only keep growing. Again, our tool of choice - R, faces some problems in managing this deluge of data as R can comparatively slow. In later chapters, we will explore how to make R models faster to be able to handle the high velocity of Big Data.
+
+\subsection{Variety}
+
+Traditional statistical analysis works mainly with quantitative data; typically in the well recognized table format - columns for fields and rows for records. We do have large quantity of such data still - think WalMart transaction data or Nasdaq trading data. However, a large and growing part of today's Big Data is not in neat table format and often not even quantitative.\index{Key Concepts!Big Data!Variety} Such data may include text data (blog posts, tweets), rich media data (YouTube videos, Flickr images), sensor data (FitBit, Google Glass), location data (Google Maps, GPS data) etc. Our data analytics methodologies have to be able to make sense of all these different kinds of data.
+
+\subsection{Veracity}
+
+With the staggering volume, supersonic velocity and increasing variety of data come the issues of data veracity - uncertainity regarding the accuracy and trustworthiness of the data. All our data analytic models are not worth anything if they are based on suspect data. Hence, we must ensure data integrity and veracity before building data analytic models to analyze the data.
+
+\section{Business Data Analytics}
+
+Business analytics is the process of transforming data into insights for making better business decisions. Essentially, we want managers to no longer depend on the good old intuition, gut feel or rule of thumb. Instead we want managers to make decisions based on analyzing the available data - the so called Data Driven Decision Making.\mnote{The movie Moneyball is a good example of transitioning from an intuition/gut-feel based decision making to a data driven decision making.} Following are the three broad types of analytics that are performed as part of business data analytics. 
+
+
+\subsection{Descriptive Analytics}
+
+As the name suggests, Descriptive Analytics attempts to describe what has happened. This can take the form of descriptive statistics, data visualization or data dashboards. The focus is on explanation of an extant fact. We will cover a good part of Descriptive Analytics. Our approach will be focused on R though and will not cover specialized tools like Tableau.
+
+\subsection{Predictive Analytics}
+
+Predictive analytics uses models constructed from past data to predict the future or discover relationships between variables. Examples of such analytical techniques include regression, time series analytics and data mining. This is the major focus of this book - especially Regression and Data Mining.
+
+\subsection{Prescriptive Anaytics}
+
+Predictive analytics is concerned with finding the best course of action - including techniques such as optimization and simulation. This is NOT the main focus of this course
+
+\section{Data Scientist}
+
+Data Scientist is one of the fastest growing job descriptions today - the sexiest of job of 21st century according to \citet{patil2012data}.  However, being a good data scientist is a demanding job. Successful data scientists are knowledgable in statistics, programming, machine learning, data visualization and even the relevant industry domains \citep{8SkillsY88:online}.
+
+See the Figure: \ref{fig:datascientist} for typical requirements from a data scientist position. You would note that the requirements span multiple disciplines - math and statistics, programming and databases, and communication and visualization. We will cover a good portion of these requirements in this book and associated courses. I believe that this book is a pretty good start to your journey of becoming a successful data scientist.
+
+\begin{figure}
+\rule{4in}{1pt}
+\centering
+\includegraphics[height=5in]{images/datascientist.png}
+\caption{Modern Data Scientist}
+\label{fig:datascientist}
+\rule{4in}{1pt}
+\end{figure}
+
+\chapterendsymbol

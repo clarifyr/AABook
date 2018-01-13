@@ -1,0 +1,349 @@
+% !Rnw root = AABase.Rnw
+
+\chapter{Generalized Linear Models}
+
+\begin{flushright}
+
+\textbf{\texttt{In God We Trust; All Others Must Bring Data}}
+
+\emph{-- Willian Edwards Deming}
+
+\end{flushright}
+
+\vspace{12pt}
+
+
+The Multiple Regression model we explored in the last chapter assumed that the error terms were independently and identically distributed as Normal. Generalized linear models ("GLM") extend the traditional multiple regression model to include error terms following different distributions. R provides the function \texttt{glm()}\index{R Commands!glm} to estimate generalized linear models in similar ways as the previously studied \texttt{lm()} function. The only additional information required by the \texttt{glm()} command is the $family$ argument that specifies the distribution of the error term.
+
+We will begin our exploration of GLMs with most popular one - Logit Model or Logistic Regression for a binary response variable.
+
+\section{Logistic Regression}
+
+Logistic regression is used to model dichotomous outcome variables - variables that take binary values - True/False, Yes/No, 1/0 etc. Before we run a regression, the binary response variable needs to be transformed to a continuous variable of wide range. The standard approach is to calculate log odds - log of odds ratio. In the logit model the log odds of the outcome variable is modeled as the response to the linear combination of the predictor variables. Log-odds have the recognizable curve as shown in the Figure \ref{Fig:logodds}.
+
+\begin{figure}
+\centering
+\rule{4in}{1pt}
+<<cache=TRUE, fig.height=4>>=
+probs <- seq(0, 1, 0.01)
+odds = probs / (1 - probs); logodds = log(odds)
+plot(logodds, probs)
+@
+\caption{Plot of Log of Odds Ratio}
+\label{Fig:logodds}
+\rule{4in}{1pt}
+\end{figure}
+
+For illustrating logistic regression, we will use a dataset of 400 graduate school applications.
+<<cache=TRUE>>=
+admit.data <- read.csv("binary.csv")
+names(admit.data)
+@
+
+The dataset consists four columns - the outcome variable $admit$ is a binary variable. The predictor variables are $gre$ (the GRE score), $gpa$ (the undergrad GPA)  and $rank$ (a categorical variable from 1 to 4 indicating the status or prestige of the institution, with 1 denoting the highest prestige). 
+
+We will first convert $rank$ as a factor and then run a logistic regression.
+<<cache=TRUE>>=
+admit.data$rank <- factor(admit.data$rank)
+logit.model <- glm(admit ~ gre + gpa + rank, data = admit.data, 
+                   family = "binomial")
+summary(logit.model)
+@
+
+While interpreting the output, keep in mind that the response variable modeled here is not the variable $admit$ but the log-odds of $admit$. The output of the model is similar to linear regression - we see residuals, coefficients and p-value - all with similar interpretations as before. We see that both $gre$ and $gpa$ are statistically significant (p-value < 0.05). The $rank$ factor has been converted into three dummy variables - all statistically significant. 
+
+Looking at the coefficients, we can see that for 1 unit change in GRE score, log odds of admission increases by 0.002. Similarly, for 1 unit change in GPA, log odds of admission increases by 0.804. Attending an institution of rank 2 vs an institution of rank 1 reduces the log odds of admission by 0.6754.
+
+Given a logistic regression model, we can conduct further significance tests using the \texttt{wald test} in the package \texttt{aod}. For example, we can test whether the $rank$ factors taken together are statistically significant or not. As the output below shows, the three factors taken together have a statistically significant impact. 
+<<cache=TRUE, warning=FALSE>>=
+library(aod)
+wald.test(b = coef(logit.model), Sigma = vcov(logit.model), 
+          Terms = 4:6)
+@
+
+Similarly, we can test whether it makes a difference whether the students comes from an institution of rank 3 of rank 4. While both these ranks had a statistically significant coefficients in the logit model, the magnitude of the coefficients show little difference - so its a relevant question to ask. As we can see from the output below, the effects of rank 3 and rank4 are in fact not statistically distinguishable as far as their impact on log odds of admission.
+<<cache=TRUE>>=
+coefflist <- cbind(0,0,0,0,1,-1)
+wald.test(b = coef(logit.model), Sigma = vcov(logit.model), 
+          L = coefflist)
+@
+
+As log odds are not intuitive to interpret, we can calculate coefficients as odds ratios. We can then use our model to predict probability of admission for a given set of input values.
+<<cache=TRUE>>=
+exp(coef(logit.model))
+admitnew <- data.frame(gre = 700, gpa = 3.9, rank = 1)
+admitnew$rank = factor(admitnew$rank)
+predict(logit.model, newdata = admitnew, type = "response")
+@
+
+Now we can say that a unit change in GPA improves the odds of being admitted by a factor of 2.23.
+
+\section{Probit Model}
+
+A probit model is also suitable for binary response variables.  In the probit model, the inverse standard normal distribution of the probability is modeled as a linear combination of the predictors. Probit transformation has a similar shape as logistic transformation as can be seen in Figure: \ref{Fig:probit}.
+
+\begin{figure}
+\centering
+\rule{4in}{1pt}
+<<cache=TRUE, fig.height=4>>=
+library(VGAM)
+probs <- seq(0, 1, 0.01)
+probitdata <- probit(probs)
+plot(probs, probitdata)
+@
+\caption{Plot of Probit Transformation}
+\label{Fig:probit}
+\rule{4in}{1pt}
+\end{figure}
+
+We can use the same \texttt{glm()} command to run a probit model. We need to specify $link$ as $probit$ to ensure that the model is run on a probit transformed outcome variable.
+<<cache=TRUE>>=
+probit.model <- glm(admit ~ gre + gpa + rank, data = admit.data, 
+                    family = binomial(link="probit"))
+summary(probit.model)
+@
+
+Usually, logit and probit models are pretty much interchangeable. We can demonstrate the fact by calculating predicted probability for the same values as for logit before. As we can see from the output below, the predicted probabilities are nearly identical.
+<<cache=TRUE>>=
+predict(probit.model, newdata = admitnew,  type = "response")
+@
+
+Much of our discussion of logistic regression is also applicable to probit models as well. The actual logit and probit transformations show some difference only very close to the edges (near probability either 0 or 1). This leads to minor, non-significant differences in model fit.  However, logit models have the advantage of an easily interpretable result - log of odds ratio is easier to understand and interpret than the inverse of cumulative normal distribution. As a result, logistic regression is much more popular than probit regression.  
+
+\section{Survival Analysis}
+
+In last section we looked at modeling a binary response varioable. In this section, we extend out understanding to include the time taken for the event to happen. Essentially, we want to model the time duration for an event to occur. Examples of such models may include - time taken for a loan to default, time for a machine to fail, time until a stock market crash or time taken for seeds to getminate. Traditionally, survival models have been used to model time to death (hence the name survival). Survival analysis is often called Duration Analysis or Failure Time Analysis as well.
+
+We did not go into much theoretical details for Linear Regression and Logistic Regression as it was assumed that students have had prior exposure to those models (in the course pre-req TO301). As survival analysis is likely to be a new concept for most students, this writeup provides a deeper theoretical exploration than we did for previous topics.
+
+\subsection{Survival Data}
+
+Our main focus in survival analysis is survival time or "time to event". While time to event is a continuous variable, it is difficult to model it using linear regression because of non-normality and censoring. Non-normality occurs from the fact that time to event typically follows exponential distribution. The non-normality aspect of the data violates the normality assumption of OLS linear regression.  Time to event data is also typically right-censored - meaning that the information may be incomplete as the some observations do not get enough time to fail during the period under study. The most common context of survival analysis includes following subjects over time and observe at which point in time they experience the event of interest. It is typical that the study is not long enough to allow the event to occur for all the subjects in the study; resulting in a right censored data. Subjects also drop out of studies for various reasons leading to further right censoring. We use the name right censored because in this case the missing observations are further to the right end of the x-axis (if we plot time on x-axis).
+
+Our main purpose in doing survival analysis is to examine relationships between survival time and one or more predictors (usually called covariates in survival models). The most widely used modeling technique for the purpose is the Cox Proportional Hazard Regression Model. This will the focus of our discussion. 
+
+\subsection{Hazard Rate}
+
+We are primarily interested in the Survival Functiion $S(t) = Prob(T > t) = 1 - P(t)$ where $T$ is the survival time and $P(t)$ is the Cumulative Probability Density Function of $T$. We typically assume that $S(0) = 1$, $S(t) = 0$ as $t \rightarrow \infty $ and ${d S(t)}/{dt} <= 0$. 
+
+Key to survival analysis is the concept of hazard rate - also called hazard function. Hazard rate can be defined as the probability that an event will occur at time \texttt{t} assuming that the event has not already happened by then. Another way to think about it is to suppose that a subject has survived until time $t$ and then calculate the probability that it will not survive for an additional time $dt$ with $dt \rightarrow \infty$. Essentially, hazard rate at time $t$, often denoted as $h(t)$ is the rate at which events occur at time $t$. Hazard rate (most commonly log of hazard rate) is typically used as the response variable in survival analysis. 
+
+Mathematically, we can calculate that $h(t) = f(t) / S(t)$ where $f(t)$ is the probability density function of $T$ and $S(t)$, as we saw above, is the survival function. A constant hazard rate, $h(t) = k$ implies an exponential distribution of survival times with probability density function $p(t) = k e^{-kt}$. 
+
+Other common hazard function specifications include: $log(h(t)) = k + \rho t $ leading to Gompertz distribution of survival time, and $log(h(t)) = k + \rho log(t)$ leading to Weibull distribution of survival time. While several parametric regresison models exist for estimating specific functional form of hazard rate, we will focus on the \texttt{Cox Model}\index{Key Concepts!Cox Model} that leaves the baseline hazard function unspecified as the general form $log(h_0(t)) = \alpha(t)$. Including covariates $x_1$ through $x_n$, our model to be estimated becomes:
+
+$$log(h(t)) = \alpha(t) + \beta_1 x_1 + \beta_2 x_2 + ... + \beta_n x_n$$ or equivalently,
+
+$$h(t) = e^{\alpha(t)} e^{(\beta_1 x_1 + \beta_2 x_2 + ... + \beta_n x_n)}$$ which reduces to $$h(t) = e^{\alpha(t)} e^{\eta}$$ where $$\eta = (\beta_1 x_1 + \beta_2 x_2 + ... + \beta_n x_n)$$ is the linear predictor. We can see that if we have two observations $i$ and $j$ then the hazard ratio for these two observations $$\frac{h_i(t)}{h_j(t)} = \frac{e ^ {\eta_{i}}}{e ^ {\eta_{j}}}$$ is independent of time $t$. As the hazard rate is proportional to the the linear predictor, this model is also known as the \textbf{Cox Proportional Hazards Model}.  
+
+\subsection{Survival Analysis in R}
+
+We will use the \texttt{OIsurv}\index{Packages!OIsurv}\index{Packages!survival}\index{Packages!KMsurv} packages which loads the other two required packages \texttt{survival} (which has the required functions) and \texttt{KMsurv} (which has some useful datasets for survival analysis)
+<<cache=TRUE, warning=FALSE, echo=FALSE>>=
+library(OIsurv); library(survival)
+@
+
+<<cache=TRUE, warning=FALSE, eval=FALSE>>=
+#install.packages{"OIsurv} #Output suppressed for brevity
+library(OIsurv); library(survival)
+@
+
+Most functions in the $survival$ package need survival objects created by the \texttt{Surv()}\index{R Commands!Surv} function. For right censored data, survival objects can be created using two arguments to the $Surv$ function - the event time or the censoring time and a dummy variable coded 1 if the event occured or 0 of the observation is censored.  
+
+We will use a dataset on Recidivism to illustrate the process of survival analysis in R. The dataset contains observations for a year of make prisoners after being released from prison. The dataset has the following variables:
+\begin{itemize}
+\item \texttt{week}: Number of weeks to get arrested again, or censoring time in case the subject does not get arrested during study period
+\item \texttt{arrest}: dummy variable to indicate whether the subject was arrested during the study period; 1: Yes, 0: No.
+\item \texttt{fin}: Whether the subject received financial assistance; 1: Yes, 0: No.
+\item \texttt{age}: in years at the time of release from prison.
+\item \texttt{race}: 1 for African American, 0 for all others
+\item \texttt{wexp}: Full time work experience before incarneation; 1: Yes, 0: No
+\item \texttt{mar}: Whether the subject was married at the time of release; 1: Yes, 0: No.
+\item \texttt{paro}: Whether the subject was released on parole;  1: Yes, 0: No.
+\item \texttt{prio}: Number of prior convictions.
+\item \texttt{educ}: Education level; 2: grade 6 or less, 3: grades 6 through 9, 4: grades 10 and 11, 5: grade 12, or 6: some post-secondary.
+\item \texttt{emp1 - emp52}: Dummy variables; 1 if the subject was employed in the corresponding week of the study; 0 otherwise.
+\end{itemize}
+
+We will start by importing the data and taking a quick look inside.
+<<cache=TRUE>>=
+rossi <- read.table("Rossi.txt", header = TRUE)
+rossi[1:5, 1:15] #First five rows, first 15 columns
+@
+
+First two columns are most important here. First column is the time stamp of observation in number of weeks; second column is whether the subject was rearrested (\texttt{arrest} = 1) or not (\texttt{arrest} = 0) at that time. So the first subject was rearrested in week 20th. A \texttt{week} = 52 and \texttt{arrest} = 0 (like the fourth row) means that the subject was never arrested until the study ended with the censoring time of 52.
+
+Lets take a look at the structure of the data and make needed changes.
+<<cache=TRUE>>=
+str(rossi[,1:10])
+@
+
+Seems like several factors are coded as numbers. In contrast to how we approached them before, we will leave them as numbers (its a good exercise to change them to factors and see what breaks in following pages). We first build the survival object.
+<<cache=TRUE>>=
+rossi.surv <- Surv(rossi$week, rossi$arrest)
+@
+
+We can now use this survival object as the response variable in a Cox model. Cox models can be run using the \texttt{coxph()}\index{R Commands!coxph} in the $survival$ package. We will start by using all the variables except $emp1 - emp52$ dummy variables. The syntax of $coxph()$ is quite similar to the $lm()$ and $glm()$ syntax we have already seen.
+<<cache=TRUE>>=
+mod.first <- coxph(rossi.surv ~ fin + age + race + wexp
+                   + mar + paro + prio + educ, data=rossi)
+summary(mod.first)
+@
+
+Interpretation of the results is very similar to interpretation of linear regression output. The coefficients show the impact of unit change in predictor variable on the response variable (in this case log hazard ratio). Statistical significance can be checked with the p-value in the last column. So, we can say that the log hazard rate for subjects who were provided financial aid $(fin = 1)$ is 0.40 less than log hazard rate for subjects who were not provided financial aid $(fin = 0)$; and the effect is statistically significant. Predictors $age$ and $prio$ (prior convictions) were also found to be statistically significant. 
+
+As interpreting log hazard rates can be cumbersome, the output also provides exponentiated coefficients - which can be interpreted as multiplicative effects on the hazard rate. For example, $age$ has a coefficient $\beta = -0.05$ and exponentiated coefficient $e^\beta = 0.95$. That means that with increase of 1 in $age$, the hazard rate is 0.95 times the original value - a reduction of 5\%. Similarly, we can see that an increase of one in prior convictions leads to an increase in log hazard rate of 0.079 and the hazard rate is multiplied by a factor of 1.08 (i.e. an increase of 8\% in hazard rate).
+
+Model significance is shown by the Likelihood Ratio Test, Wald Test and Score Test which tests the null hypothesis that all the coefficients are zero. As the results show, the null hypothesis is rejected and the model is found significant. The R-Square value can be interpreted in a similar manner as in linear regression.
+
+Now that we have a suitable model, we can now examine the estimated distribution of survival times using the \texttt{survfit()}\index{R Commands!survfit} function that estimates the survival function $S(t)$ at the mean values of all predictors. Figure \ref{Fig:survfit} shows the survival function for our analysis including the 95\% confidence band.
+\begin{figure}
+\centering
+\rule{4in}{1pt}
+<<cache=TRUE, fig.height=4>>=
+plot(survfit(mod.first), ylim=c(0.75, 1), 
+     xlab = "Weeks of Observation", 
+     ylab="Proportion of Subject Not Rearrested")
+@
+\caption{Plot of Survival Function}
+\label{Fig:survfit}
+\rule{4in}{1pt}
+\end{figure}
+
+\subsection{Time Dependent Covariates}
+
+The previous model assumed that the effect of covariates on the survival object was independent of the the time parameter. The $coxph$ function allows for time dependent covariates as well. However, in such cases it requires that data for each time period for a subject appear as a separate record (or row) in the data set. For example - we have 52 weeks of employment data in our dataset - but each week is coded as a column. To include employment data (which is time dependent) we will need to first reshape the data in what is commonly known as the "long form".
+
+<<cache=TRUE>>=
+## Change to the long format
+rossi.long <- reshape(data = rossi, varying = paste0("emp", 1:52),
+                      v.names = "employed", timevar = "time", 
+                      idvar = "id", direction = "long", sep = "")
+
+## Sort by id and time
+library(doBy)
+rossi.long <- orderBy( ~  + id + time, data = rossi.long)
+
+## Drop rows where emp is NA (time after event/censoring)
+rossi.long <- rossi.long[!is.na(rossi.long$emp),]
+head(rossi.long)
+@
+
+For time varing covariates, we will need start and stop time for each time interval and the corresponding value of the time varying covariates for that time interval. We want to check for two such covariates: whether employed during current time period or whether employed during last (lagged by 1) time period. The following code calculated the values in the long form.
+<<cache=TRUE, warning=FALSE>>=
+library(plyr) # Load plyr package
+
+# Create time variables and various forms of exposure variables
+rossi.long <- ddply(
+  .data = rossi.long, .variables = c("id"), .drop = TRUE, .fun = function(DF) 
+  {
+  DF$start <- c(0, head(DF$time, -1)) # Start of each interval
+  DF$stop <- DF$time # End of each interval
+  DF$event <- 0 # Event indicator for each interval
+  DF[nrow(DF),"event"] <- DF[nrow(DF),"arrest"] # Arrest value 
+  DF$employed.lag1 <- c(rep(NA, 1), head(DF$employed, -1))
+  DF # Return DF 
+  })
+rossi.long[rossi.long$id == 2, c("id","start","stop","event","employed",
+                                 "employed.lag1")]
+@
+
+\index{Packages!plyr}The data for subject id = 2 shows the time dependent covariates in the long form. We can see that the subject was rearrested in the 17th week. We can also see that the subject was employed from 10th to 14th week. 
+
+We are now ready to run a cox model with time dependent covariates. We start by checking whether being employed in a week affects the chances of a subject getting arrested in that week.
+
+<<cache=TRUE>>=
+mod.timed <- coxph(Surv(start, stop, event) ~ fin + age 
+                   + race + wexp + mar + paro + prio 
+                   + employed, data = rossi.long)
+summary(mod.timed)
+@
+
+The result show that the time dependent covariate - $employed$ has a large effect on the hazaes of rearrest. The hazard rate for a time period is smaller by a factor of 0.2649 (i.e. 73.5\% less) when the subject is employed during the  said time period. This large effect is a bit misleading though as it may be a result of reverse causality - the subject can't work if he has been arrested. So a better model would be to check whether being employed in the previous time period has an impact on the hazard rate of getting rearrested in the next time period.
+
+<<cache=TRUE>>=
+mod.lagtimed <- coxph(Surv(start, stop, event) ~ fin + age 
+                      + race + wexp + mar + paro + prio + 
+                        employed.lag1, data  = rossi.long)
+summary(mod.lagtimed)
+@
+
+As the results above show, being employed in the previous week reduces the hazard rate of being rearrested by a factor of 0.455 (i.e. a reduction of 54.5\%). A large and statistically significant result (p-value < 0.05).
+
+\subsection{Model Diagnostics for Cox Regression}
+
+Just like for linear regression, it is essential that we check that the data fits the basic assumptions inherent in running a Cox regression model. We will do model disgnostics on a smaller model with only the significant coefficients.
+<<cache=TRUE>>=
+mod.small <- coxph(Surv(week, arrest) ~ fin + age + prio, 
+                   data=rossi)
+mod.small
+@
+
+
+\subsubsection{Assumption of Proportional Hazards}
+
+Tests for proportional hazards are based on residuals of the model (specifically Scaled Schoenfeld Residuals). The function \texttt{cox.zph()}\index{R Commands!cox.zph} function calculates tests of the proportional-hazards assumption for each covariate, by correlating
+the corresponding set of scaled Schoenfeld residuals with time.
+<<cache=TRUE>>=
+cox.zph(mod.small)
+@
+
+Results show a strong evidence of non-proportional hazards for age, while the global test is not fully statistically significant. These tests are exploring whether there is a linear trends in the hazard rate. We can get further clarity by plotting the scaled Schoenfeld residuals as shown in Figure: \ref{Fig:hazard}.
+\begin{figure}
+\centering
+\rule{4in}{1pt}
+<<cache=TRUE>>=
+par(mfrow=c(2,2)); plot(cox.zph(mod.small))
+@
+\caption{Diagnostic Plots for Proportional Hazard Assumption}
+\label{Fig:hazard}
+\rule{4in}{1pt}
+\end{figure}
+
+We are looking for systematic departures from the expected horizontal line. The plots confirm the result of the $cox.zph()$ function - we see string evidence of time dependent hazard for $age$ while the impact of $fin$ and $prio$ on the hazard rate seens more or less constant against time.
+
+One way to accommodate non-proportional hazards is to build explicitely include interaction terms between covariates and time into the Cox regression model. For example, based on the diagnostics test and the plot, we can include a linear interaction of time and age in the model. As these interactions need to be treated as time-dependent covariates, we will need to include them in the long form data.
+<<cache=TRUE>>=
+mod.int <- coxph(Surv(start, stop, event) ~ fin + age + prio
+                 + age:stop, data=rossi.long)
+mod.int
+@
+
+As the results show, the interaction between $age$ and $time$ is highly statistically significant with a negative coefficient. This means that the impact of $age$ on hazard rate reduces with passage of time. We can now check again whether including the interaction effect helped the model meet the assumption of proportional hazards. 
+
+<<cache=TRUE>>=
+cox.zph(mod.int)
+@
+
+All terms now show no statistically significant non-proportionality in hazards. Including the interaction term did help.
+
+\subsection{Outliers}
+
+Checking for outliers can be done using the \texttt{dfbeta} metric we have seen before in Linear Regression. Plot of $dfbeta$, as shown in Figure: \ref{Fig:outlier} can help us see any significant outliers. We can see that, compared to the coeficient values, corresponding dfbeta values are pretty small. We can, hence, conclude that the model does not suffer from significant outlier problem. 
+\begin{figure}
+\centering
+\rule{4in}{1pt}
+<<cache=TRUE>>=
+dfbeta <- residuals(mod.small, type="dfbeta"); par(mfrow=c(2,2))
+for (j in 1:3) {
+  plot(dfbeta[,j], ylab=names(coef(mod.small))[j])
+  abline(h=0, lty=2)
+  }
+@
+\caption{DFBeta Plots for Checking for Outliers}
+\label{Fig:outlier}
+\rule{4in}{1pt}
+\end{figure}
+
+
+\subsection{Acknowledgement}
+
+Much of the material for this section has been taken from John Fox's excellent article "Cox Proportional-Hazards Regression for Survival Data" available at:\\ 
+\small
+\verb|https://socserv.socsci.mcmaster.ca/jfox/Books/Companion-1E/| 
+
+\verb|appendix-cox-regression.pdf|. 
+\normalsize
+Code for converting data to long form has been taken from: \\ \verb|https://rpubs.com/kaz_yos/bio223-recidivism|. 
+
+\chapterendsymbol

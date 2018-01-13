@@ -1,0 +1,247 @@
+\documentclass[11pt, letterpaper, twoside]{memoir}
+\usepackage[top=1in, bottom=1in, left=1in, right=2.5in, marginparsep=0.1in]{geometry}
+\usepackage{setspace}
+\usepackage[T1]{fontenc}
+\usepackage{titlesec}  %needs recent version of »titlesec«
+\usepackage{xcolor}
+\usepackage{parskip}
+\usepackage{cancel}
+%\usepackage{fourier-orns}
+\usepackage{natbib}
+\setcitestyle{numbers,open={[},close={]}}
+
+\setlength{\topsep}{0pt} %To ensure that R output is not too spaced out vertically
+\setlength{\parskip}{0pt}
+\setlength{\partopsep}{0pt}
+
+\usepackage{makeidx}
+\makeindex
+\renewcommand{\indexname}{Index of R Commands, Packages and Key Concepts}
+\usepackage[columns=3]{idxlayout}
+
+\usepackage[hidelinks, pdftex, unicode, pdfproducer={Latex with hyperref}, pdfcreator={pdflatex}]{hyperref}
+
+\usepackage{enumitem}
+\setlist{nolistsep}
+
+\usepackage{marginfix}
+
+\newcommand\rcommand[1]{
+\colorbox{yellow}{\texttt{\color{red} #1}}
+%\sidebar{\textbf{\color{red} #1 \\}}
+\index{R Commands!#1}
+}
+
+\newcommand\rpackage[1]{
+\colorbox{yellow}{\texttt{\color{blue}#1}}
+%\sidebar{\textbf{\color{blue} #1 \\}}
+\index{Packages!#1}
+}
+
+\newcommand\rconcept[1]{
+\colorbox{yellow}{\textbf{#1}}
+%\sidebar{\textbf{\color{black} #1 \\}}
+\index{Key Concepts!#1}
+}
+
+\newcommand\mnote[1]{
+\marginpar{\color{black} \texttt{\small #1 \\}}
+}
+
+\newcommand{\chapterendsymbol}{
+    \vspace{24pt}
+    \Huge
+    %\hrulefill \hspace{0.1in} \floweroneleft\floweroneright \hspace{0.1in} \hrulefill
+    \hrulefill \hspace{0.1in} \hspace{0.1in} \hrulefill
+    \normalsize
+    }
+
+% \newlength{\fancyvrbtopsep}
+% \newlength{\fancyvrbpartopsep}
+% \makeatletter
+% \FV@AddToHook{\FV@ListParameterHook}{\topsep=\fancyvrbtopsep\partopsep=\fancyvrbpartopsep}
+% \makeatother
+
+\copypagestyle{myruled}{ruled}% Copy plain page syle to chapter page style
+\makeoddfoot{myruled}% Adjust odd footer for chapter page style
+  {}% Left odd footer
+  {\thepage}% Center odd footer
+  {}% Right odd footer
+\makeevenfoot{myruled}
+  {}% Left odd footer
+  {\thepage}% Center odd footer
+  {}% Right odd footer
+
+\makeatletter
+\renewcommand\part{%
+  \if@openright
+    \cleardoublepage
+  \else
+    \clearpage
+  \fi
+  \thispagestyle{empty}
+  \null\vfil
+  \secdef\@part\@spart
+  }
+\makeatother  
+
+\newlength\drop
+\newcommand*{\titleGM}{%
+\thispagestyle{empty}
+\begingroup% Gentle Madness
+%%\drop = 0.1\textheight
+\vspace*{\baselineskip}
+\vfill
+\hbox{%
+\hspace*{0.2\textwidth}%
+\rule{2pt}{\dimexpr\textheight-28pt\relax}%
+\hspace*{0.05\textwidth}%
+\parbox[b]{0.75\textwidth}{
+\vbox{%
+\vspace{\drop}
+{\noindent\HUGE\bfseries Advanced Analytics\\[0.5\baselineskip]
+Using R}\\[2\baselineskip]
+{\Large\itshape Navigating Business Big Data with R}\\[2\baselineskip]
+{\Large Dr. Sanjeev Kumar} \\ [2\baselineskip]
+{Technology \& Operations, Ross School of Business \\ University of Michigan}\par
+\vspace{0.2\textheight}
+{\noindent This book is developed for Advanced Analytics classes at Ross School of Business, Univ. of Michigan. Material updated for Fall 2016 Semester}\\[\baselineskip]
+}% end of vbox
+}% end of parbox
+}% end of hbox
+\vfill
+\null
+\endgroup}
+
+
+\begin{document}
+
+
+
+
+
+
+
+
+
+
+
+\pagestyle{empty}
+\titleGM
+
+
+\frontmatter
+\pagestyle{empty}
+\cleardoublepage
+\par\vspace*{.35\textheight}{\centering \texttt{dedicated to the one to whom I owe all} \par}
+
+
+\cleardoublepage
+\pagestyle{plain}
+\setcounter{page}{1}
+\setcounter{tocdepth}{0}
+\renewcommand\contentsname{Brief Contents}
+\tableofcontents
+\cleardoublepage
+\setcounter{tocdepth}{1}
+\renewcommand\contentsname{Contents}
+\tableofcontents
+\cleardoublepage
+\listoffigures
+
+
+
+
+% !Rnw root = AABase.Rnw
+
+\chapter*{Foreword}
+\addcontentsline{toc}{chapter}{Foreword}
+
+
+
+
+% !Rnw root = AABase.Rnw
+
+\chapter*{Preface}
+\addcontentsline{toc}{chapter}{Preface}
+
+We live in a world awash in data. Companies are increasingly turning to data analytics to
+extract a competitive edge from data, especially large, complex datasets often called "Big
+Data". However, companies are increasingly facing the challenge posed by the scarcity of
+analytical talent - people who can turn data into better decisions, people who can extract
+insights and information from data. There is growing demand for professionals with strong
+quantitative skills combined with an understanding of how data analytic techniques can be
+applied to business contexts and managerial decision making. To help my students succeed in
+this growing field, I teach classes in \textbf{Advanced Big Data Analytics} in Ross School of Business, Univ. of Michigan. In these courses I teache advanced analytical, statistical and data mining tools with an applied focus. This book is developed specifically for these classes.
+
+The main focus of this book (and the associated coures) is to prepare students to model and manage business decisions with data analytics and decision models using real life case contexts and datasets. By the end of this book students will have a better understanding of processes, methodologies and tools used to transform the large amount of business data available into useful information and support business decision making. The book will focus on extracting actionable business intelligence by analyzing traditional business data as well as more recently available datasets such as social media, crowdsourcing and recommendation engines. The book focuses on the powerful, open source (and hence free) data analysis environment R. 
+
+This book came out of my preparations for the following two courses:
+\begin{enumerate}
+\item \textbf{TO414: Advanced Analytics for Management Consulting} - Elective course for Senior and Junior BBA students. 
+\item \textbf{TO628: Advanced Big Data Analytics} - Elective course for second year MBA students.
+\end{enumerate}
+
+As I designed these courses, I realized that while there are a lot of references available for doing Advanced Analytics on Big Data using R, there isn't a good reference that approaches the topic from the perspective of business students and is accessible for students who do not have extensive background in statistics or computer programming. I designed my classes to have an applied nature with significant amount of hands-on work on real business Big Data with significant managerial implications. I emphasized aspects of the analytics process that are important for actual practice of data science but are not typically well covered in traditonal textbooks - like data cleaning, managing large datasets and building data dashboards. I ended up creating a significant amount of material for the classes - much of it collated from already available but widely dispersed sources. This book is a collection of these material.
+
+Business students have a unique mixture of tech savvy, super smarts and learning ability with a relative lack of computer programming or coding experience. They further have a great applied sense of statistics and data analysis but typically without the theoretical expertise of a Statistics student. This book is directed towards such students. This book assumes that business students are joining an Advanced Analytics course without any knowledge of computer programming and without any background in R. This book assumes that students are familiar with basic probability and statistics but their focus is on applied statistics - not on the theory. The book then builds up student's comfort level with R while at the same time makeing progress on key Advanced Analytics materials.
+
+Direct all feedback on this book to the author at email: \texttt{sankum at umich.edu} or twitter: \texttt{@a\_teachr}
+
+\vspace{12pt}
+
+\begin{flushright}
+\textbf{Dr. Sanjeev Kumar} \\
+Technology \& Operations \\
+Ross School of Business, Univ. of Michigan
+
+This document was processed on: \today \\ at \printtime
+\end{flushright}
+\chapterendsymbol
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

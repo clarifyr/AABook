@@ -1,0 +1,15 @@
+% !Rnw root = AABase.Rnw
+
+\chapter{Classification using Support Vector Machines}
+
+\begin{flushright}
+
+\textbf{\texttt{In God We Trust; All Others Must Bring Data}}
+
+\emph{-- Willian Edwards Deming}
+
+\end{flushright}
+
+\vspace{12pt}
+
+\chapterendsymbol

@@ -1,0 +1,17 @@
+% !Rnw root = AABase.Rnw
+
+\chapter{Principal Component and Factor Analysis}
+
+\begin{flushright}
+
+\textbf{\texttt{In God We Trust; All Others Must Bring Data}}
+
+\emph{-- Willian Edwards Deming}
+
+\end{flushright}
+
+\vspace{12pt}
+
+
+
+\chapterendsymbol

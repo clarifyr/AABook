@@ -6,7 +6,7 @@
 \usepackage{xcolor}
 \usepackage{parskip}
 \usepackage{cancel}
-\usepackage{fourier-orns}
+%\usepackage{fourier-orns}
 \usepackage{natbib}
 \setcitestyle{numbers,open={[},close={]}}
 
@@ -51,7 +51,8 @@
 \newcommand{\chapterendsymbol}{
     \vspace{24pt}
     \Huge
-    \hrulefill \hspace{0.1in} \floweroneleft\floweroneright \hspace{0.1in} \hrulefill
+    %\hrulefill \hspace{0.1in} \floweroneleft\floweroneright \hspace{0.1in} \hrulefill
+    \hrulefill \hspace{0.1in} \hspace{0.1in} \hrulefill
     \normalsize
     }
 
@@ -114,14 +115,21 @@ Using R}\\[2\baselineskip]
 
 
 \begin{document}
-\SweaveOpts{concordance=TRUE}
-%\SweaveOpts{concordance=TRUE}
 
 <<include=FALSE>>=
 library(knitr)
+opts_chunk$set(
+concordance=TRUE
+)
+@
+
+
+
+<<include=FALSE, echo = FALSE>>=
+library(knitr)
 opts_chunk$set(concordance=TRUE)
 opts_knit$set(self.contained=FALSE)
-#opts_chunk$set(tidy=TRUE)
+opts_chunk$set(tidy=TRUE)
 
 @
 
@@ -157,17 +165,18 @@ opts_chunk$set(concordance=TRUE)
 \listoffigures
 
 
-<<'child-Foreword.Rnw', child='chapters/Foreword.Rnw'>>=
+
+<<'child-Foreword.Rnw', child='Foreword.Rnw'>>=
 @
 
 
 
-<<'child-Preface.Rnw', child='chapters/Preface.Rnw'>>=
+<<'child-Preface.Rnw', child='Preface.Rnw'>>=
 @
 
 
 
-<<'child-Intro.Rnw', child='chapters/Intro.Rnw'>>=
+<<'child-Intro.Rnw', child='Intro.Rnw'>>=
 @
 
 
@@ -178,116 +187,129 @@ opts_chunk$set(concordance=TRUE)
 \part{Getting Started}
 
 
-<<'child-AdvancedBigDataAnalytics.Rnw', child='chapters/AdvancedBigDataAnalytics.Rnw'>>=
+<<'child-AdvancedBigDataAnalytics.Rnw', child='AdvancedBigDataAnalytics.Rnw'>>=
 @
 
 
 
-<<'child-OurTools.Rnw', child='chapters/OurTools.Rnw'>>=
+<<'child-OurTools.Rnw', child='OurTools.Rnw'>>=
 @
 
 
 
-<<'child-EssentialRElements.Rnw', child='chapters/EssentialRElements.Rnw'>>=
+<<'child-EssentialRElements.Rnw', child='EssentialRElements.Rnw'>>=
 @
+
 
 
 \part{Data Exploration and Visualization}
 
 
-<<'child-EssentialDataManagement.Rnw', child='chapters/EssentialDataManagement.Rnw'>>=
+<<'child-EssentialDataManagement.Rnw', child='EssentialDataManagement.Rnw'>>=
 @
 
 
 
-<<'child-DescriptiveStats.Rnw', child='chapters/DescriptiveStats.Rnw'>>=
+<<'child-DescriptiveStats.Rnw', child='DescriptiveStats.Rnw'>>=
 @
 
 
 
-<<'child-DataVisualization.Rnw', child='chapters/DataVisualization.Rnw'>>=
+<<'child-DataVisualization.Rnw', child='DataVisualization.Rnw'>>=
 @
+
 
 
 \part{Traditional Statistical Modeling}
 
 
-<<'child-LinearRegression.Rnw', child='chapters/LinearRegression.Rnw'>>=
+<<'child-LinearRegression.Rnw', child='LinearRegression.Rnw'>>=
 @
 
 
-<<'child-GeneralizedLinearModels.Rnw', child='chapters/GeneralizedLinearModels.Rnw'>>=
+
+<<'child-GeneralizedLinearModels.Rnw', child='GeneralizedLinearModels.Rnw'>>=
 @
 
 
-<<'child-TimeSeries.Rnw', child='chapters/TimeSeries.Rnw'>>=
-@
+%\SweaveInput{TimeSeries.Rnw}
 
-
-<<'child-PrinComp.Rnw', child='chapters/PrinComp.Rnw'>>=
-@
-
+%\SweaveInput{PrinComp.Rnw}
 
 \part{Machine Learning and Predictive Analytics}
 
 
-<<'child-IntroML.Rnw', child='chapters/IntroML.Rnw'>>=
+<<'child-IntroML.Rnw', child='IntroML.Rnw'>>=
 @
 
 
-<<'child-knn.Rnw', child='chapters/knn.Rnw'>>=
+
+<<'child-knn.Rnw', child='knn.Rnw'>>=
 @
 
 
-<<'child-kmeans.Rnw', child='chapters/kmeans.Rnw'>>=
+
+<<'child-kmeans.Rnw', child='kmeans.Rnw'>>=
 @
 
 
-<<'child-AssocRules.Rnw', child='chapters/AssocRules.Rnw'>>=
+
+<<'child-AssocRules.Rnw', child='AssocRules.Rnw'>>=
 @
 
 
-<<'child-SVM.Rnw', child='chapters/SVM.Rnw'>>=
+
+<<'child-SVM.Rnw', child='SVM.Rnw'>>=
 @
 
 
-<<'child-NeuralNet.Rnw', child='chapters/NeuralNet.Rnw'>>=
+
+<<'child-NeuralNet.Rnw', child='NeuralNet.Rnw'>>=
 @
 
 
-<<'child-decisiontrees.Rnw', child='chapters/decisiontrees.Rnw'>>=
+
+<<'child-decisiontrees.Rnw', child='decisiontrees.Rnw'>>=
 @
+
 
 
 \part{Putting It All Together}
 
-<<'child-ImproveModels.Rnw', child='chapters/ImproveModels.Rnw'>>=
+
+<<'child-ImproveModels.Rnw', child='ImproveModels.Rnw'>>=
 @
 
 
-<<'child-LastWords.Rnw', child='chapters/LastWords.Rnw'>>=
+
+<<'child-LastWords.Rnw', child='LastWords.Rnw'>>=
 @
+
+
 
 \part{Appendices, Bibliography and Index}
 
 \appendix
 
 
-<<'child-KeyRefs.Rnw', child='chapters/KeyRefs.Rnw'>>=
+<<'child-KeyRefs.Rnw', child='KeyRefs.Rnw'>>=
 @
 
 
 
-<<'child-DataExample.Rnw', child='chapters/DataExample.Rnw'>>=
+<<'child-DataExample.Rnw', child='DataExample.Rnw'>>=
 @
 
 
-<<'child-TO414.Rnw', child='chapters/TO414.Rnw'>>=
+
+<<'child-TO414.Rnw', child='TO414.Rnw'>>=
 @
 
 
-<<'child-TO628.Rnw', child='chapters/TO628.Rnw'>>=
+
+<<'child-TO628.Rnw', child='TO628.Rnw'>>=
 @
+
 
 
 \backmatter
@@ -296,7 +318,7 @@ opts_chunk$set(concordance=TRUE)
 
 \setlength{\bibsep}{5pt}
 \bibliographystyle{plainnat}
-\bibliography{chapters/AA}{}
+\bibliography{AA}{}
 
 
 

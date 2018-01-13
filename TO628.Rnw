@@ -1,0 +1,34 @@
+% !Rnw root = AABase.Rnw
+
+\chapter{Syllabus for TO628 Winter-B 2017}
+
+\begin{flushright}
+\texttt{In God We Trust; All Others Must Bring Data}
+
+\emph{-- Willian Edwards Deming}
+\end{flushright}
+
+\vspace{12pt}
+
+\section{Course Description}
+
+
+\section{Course Details}
+
+
+\section{Course Materials}
+
+
+\section{Course Grading}
+
+
+\section{Class Schedule}
+
+
+\section{Class Policies}
+
+
+\section{Frequently Asked Questions (FAQs)}
+
+
+%\chapterendsymbol

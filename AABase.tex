@@ -6,7 +6,7 @@
 \usepackage{xcolor}
 \usepackage{parskip}
 \usepackage{cancel}
-\usepackage{fourier-orns}
+%\usepackage{fourier-orns}
 \usepackage{natbib}
 \setcitestyle{numbers,open={[},close={]}}
 
@@ -51,7 +51,8 @@
 \newcommand{\chapterendsymbol}{
     \vspace{24pt}
     \Huge
-    \hrulefill \hspace{0.1in} \floweroneleft\floweroneright \hspace{0.1in} \hrulefill
+    %\hrulefill \hspace{0.1in} \floweroneleft\floweroneright \hspace{0.1in} \hrulefill
+    \hrulefill \hspace{0.1in} \hspace{0.1in} \hrulefill
     \normalsize
     }
 
@@ -113,8 +114,10 @@ Using R}\\[2\baselineskip]
 \endgroup}
 \IfFileExists{upquote.sty}{\usepackage{upquote}}{}
 \begin{document}
-\SweaveOpts{concordance=TRUE}
-%\SweaveOpts{concordance=TRUE}
+
+
+
+
 
 
 
@@ -144,6 +147,7 @@ Using R}\\[2\baselineskip]
 \tableofcontents
 \cleardoublepage
 \listoffigures
+
 
 
 
@@ -223,18 +227,14 @@ This is my first attempt at writing a book size document. I have had to develop 
 This book makes use of several data sources, custom developed R code, question sets, documentation and so on. All of these material are packaged together in an R package hosted on GitHub called \rpackage{clarifyR}.\mnote{I think the name is clever. I was pretty happy with myself when I found out that the clarifyR name was available. :-)} You can download all the material associated with the book by installing the clarifyR package in your R installation. For downloading and installing R packages from GitHub, you will need the \rpackage{devtools} package. Follow the code below that uses the following commands: \rcommand{install.packages} for installing a R package, \rcommand{library} for loading a package into memory and finally the \rcommand{install\_github} command that is part of the devtools package for installing a package from GitHub. Note that the install\_github command uses the name of the package and the GitHub username that the package belongs to. As most GitHub packages are public, we do not need a password.
 
 
-\begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
-\begin{alltt}
-\hlcom{#Code to be changed }
-\hlcom{#Installing clarifyR package from GitHub}
-\hlcom{#First get devtools package and load into memory}
-\hlkwd{install.packages}\hlstd{(}\hlstr{"devtools"}\hlstd{);}\hlkwd{library}\hlstd{(devtools)}
-\hlkwd{install_github}\hlstd{(}\hlstr{"clarifyr"}\hlstd{,} \hlkwc{username}\hlstd{=}\hlstr{"clarifyr"}\hlstd{)}
-\hlkwd{library}\hlstd{(clarifyr)}
-\end{alltt}
-\end{kframe}
-\end{knitrout}
+% <<cache=TRUE, warning=FALSE, eval=FALSE>>=
+% #Code to be changed 
+% #Installing clarifyR package from GitHub
+% #First get devtools package and load into memory
+% #install.packages("devtools");library(devtools)
+% #install_github("clarifyr", username="clarifyr")
+% #library(clarifyr)
+% @
 
 If you wish to access the book contents outside of the R ecosystem, then you can head on to \url{http://clarifyr.com}. The website has all the material available as part of the clarifyR package. The website also works as an interaction platform between the author and readers and students. Feel free to ask any questions related to the book content there - I will be happy to answer them. 
 
@@ -283,7 +283,7 @@ You would have noticed by now that this book integrates R code within its text. 
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{alltt}
-\hlcom{#This is a demo code block}
+\hlcom{# This is a demo code block}
 \hlkwd{print}\hlstd{(}\hlstr{"Hello World"}\hlstd{)}
 \end{alltt}
 \begin{verbatim}
@@ -493,10 +493,8 @@ R is smart enough to figure when the command is not finished and allows you to c
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{alltt}
-\hlcom{# This is a comment as it comes after #. }
-\hlcom{#You should put enough of these}
-\hlkwd{print}\hlstd{(}\hlstr{"This statement is incomplete"}
-      \hlstd{)} \hlcom{#R managed to figure that the command was incomplete}
+\hlcom{# This is a comment as it comes after #.  You should put enough of these}
+\hlkwd{print}\hlstd{(}\hlstr{"This statement is incomplete"}\hlstd{)}  \hlcom{#R managed to figure that the command was incomplete}
 \end{alltt}
 \begin{verbatim}
 ## [1] "This statement is incomplete"
@@ -591,10 +589,10 @@ BTW - the plot in Figure: \ref{fig:lcurve} was generated using R. Here is the co
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{alltt}
-\hlcom{#Code to generate the Learning Curve Plot}
-\hlkwd{curve}\hlstd{(x}\hlopt{^}\hlnum{2}\hlstd{,}\hlkwc{from} \hlstd{=} \hlnum{0}\hlstd{,}\hlkwc{to} \hlstd{=} \hlnum{3}\hlstd{,} \hlkwc{xlab} \hlstd{=} \hlstr{"Time"}\hlstd{,} \hlkwc{ylab}\hlstd{=}\hlstr{"Expertise"}\hlstd{,}
-      \hlkwc{col} \hlstd{=} \hlstr{"red"}\hlstd{,} \hlkwc{lwd}\hlstd{=}\hlnum{2}\hlstd{,} \hlkwc{xaxt} \hlstd{=} \hlstr{'n'}\hlstd{,} \hlkwc{yaxt} \hlstd{=} \hlstr{'n'}\hlstd{)}
-\hlkwd{abline}\hlstd{(}\hlkwc{a} \hlstd{=} \hlnum{2}\hlstd{,}\hlkwc{b} \hlstd{=} \hlnum{1}\hlstd{,} \hlkwc{col} \hlstd{=} \hlstr{"blue"}\hlstd{,} \hlkwc{lwd} \hlstd{=} \hlnum{2}\hlstd{)}
+\hlcom{# Code to generate the Learning Curve Plot}
+\hlkwd{curve}\hlstd{(x}\hlopt{^}\hlnum{2}\hlstd{,} \hlkwc{from} \hlstd{=} \hlnum{0}\hlstd{,} \hlkwc{to} \hlstd{=} \hlnum{3}\hlstd{,} \hlkwc{xlab} \hlstd{=} \hlstr{"Time"}\hlstd{,} \hlkwc{ylab} \hlstd{=} \hlstr{"Expertise"}\hlstd{,} \hlkwc{col} \hlstd{=} \hlstr{"red"}\hlstd{,}
+    \hlkwc{lwd} \hlstd{=} \hlnum{2}\hlstd{,} \hlkwc{xaxt} \hlstd{=} \hlstr{"n"}\hlstd{,} \hlkwc{yaxt} \hlstd{=} \hlstr{"n"}\hlstd{)}
+\hlkwd{abline}\hlstd{(}\hlkwc{a} \hlstd{=} \hlnum{2}\hlstd{,} \hlkwc{b} \hlstd{=} \hlnum{1}\hlstd{,} \hlkwc{col} \hlstd{=} \hlstr{"blue"}\hlstd{,} \hlkwc{lwd} \hlstd{=} \hlnum{2}\hlstd{)}
 \end{alltt}
 \end{kframe}
 \end{knitrout}
@@ -609,7 +607,7 @@ R community is a hard working one - they are continuously building new and lates
 \hlstd{version}\hlopt{$}\hlstd{nickname}
 \end{alltt}
 \begin{verbatim}
-## [1] "Supposedly Educational"
+## [1] "Kite-Eating Tree"
 \end{verbatim}
 \end{kframe}
 \end{knitrout}
@@ -627,11 +625,11 @@ You might have an old, not updated version of R in your machine. You can check t
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{alltt}
-\hlcom{#Sample code, not being evaluated here}
-\hlkwd{install.packages}\hlstd{(}\hlstr{"installr"}\hlstd{)} \hlcom{# install the installr package }
+\hlcom{# Sample code, not being evaluated here}
+\hlkwd{install.packages}\hlstd{(}\hlstr{"installr"}\hlstd{)}  \hlcom{# install the installr package }
 \hlkwd{library}\hlstd{(installr)}
-\hlkwd{updateR}\hlstd{()} \hlcom{# updating your R version}
-\hlstd{version} \hlcom{# command for checking your current R version}
+\hlkwd{updateR}\hlstd{()}  \hlcom{# updating your R version}
+\hlstd{version}  \hlcom{# command for checking your current R version}
 \end{alltt}
 \end{kframe}
 \end{knitrout}
@@ -650,16 +648,15 @@ Lastly, R may be attempting to install packages into a directory that it does no
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{alltt}
-\hlkwd{.libPaths}\hlstd{()} \hlcom{#Shows the current library path}
+\hlkwd{.libPaths}\hlstd{()}  \hlcom{#Shows the current library path}
 \end{alltt}
 \begin{verbatim}
-## [1] "C:/Home/R/win-library/3.3"         
-## [2] "C:/Program Files/R/R-3.3.0/library"
+## [1] "/Library/Frameworks/R.framework/Versions/3.4/Resources/library"
 \end{verbatim}
 \begin{alltt}
-\hlcom{# I have two folders in my library path currently}
-\hlcom{# You can add your own library folder to the path}
-\hlcom{#libPaths( c( .libPaths(), "C:/Whatever/Whatever...") )}
+\hlcom{# I have two folders in my library path currently You can add your own}
+\hlcom{# library folder to the path libPaths( c( .libPaths(),}
+\hlcom{# 'C:/Whatever/Whatever...') )}
 \end{alltt}
 \end{kframe}
 \end{knitrout}
@@ -686,7 +683,7 @@ You can use R as a glorified calculator. All arithmatic calculations can be easi
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{alltt}
-\hlnum{10}  \hlopt{+}    \hlnum{20}  \hlcom{#As you can see - spaces don't matter, mostly.}
+\hlnum{10} \hlopt{+} \hlnum{20}  \hlcom{#As you can see - spaces don't matter, mostly.}
 \end{alltt}
 \begin{verbatim}
 ## [1] 30
@@ -698,7 +695,7 @@ You can use R as a glorified calculator. All arithmatic calculations can be easi
 ## [1] 4
 \end{verbatim}
 \begin{alltt}
-\hlnum{16} \hlopt{^} \hlnum{0.5}  \hlcom{# Usual Arithmatic Operators: +, -, * , /, ^}
+\hlnum{16}\hlopt{^}\hlnum{0.5}  \hlcom{# Usual Arithmatic Operators: +, -, * , /, ^}
 \end{alltt}
 \begin{verbatim}
 ## [1] 4
@@ -710,14 +707,14 @@ When you have complicated Arithmatic Expressions, R follows usual \rconcept{Arit
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{alltt}
-\hlnum{5} \hlopt{+} \hlnum{8} \hlopt{/} \hlnum{2} \hlopt{*} \hlnum{4} \hlopt{-} \hlnum{3} \hlcom{# First * then / then + then - }
+\hlnum{5} \hlopt{+} \hlnum{8}\hlopt{/}\hlnum{2} \hlopt{*} \hlnum{4} \hlopt{-} \hlnum{3}  \hlcom{# First * then / then + then - }
 \end{alltt}
 \begin{verbatim}
 ## [1] 18
 \end{verbatim}
 \begin{alltt}
 \hlcom{# You should include enough parantheses}
-\hlstd{(}\hlnum{5} \hlopt{+} \hlnum{8}\hlstd{)} \hlopt{/}\hlstd{((}\hlnum{2} \hlopt{*} \hlnum{4}\hlstd{)} \hlopt{-} \hlnum{3}\hlstd{)}
+\hlstd{(}\hlnum{5} \hlopt{+} \hlnum{8}\hlstd{)}\hlopt{/}\hlstd{((}\hlnum{2} \hlopt{*} \hlnum{4}\hlstd{)} \hlopt{-} \hlnum{3}\hlstd{)}
 \end{alltt}
 \begin{verbatim}
 ## [1] 2.6
@@ -730,13 +727,13 @@ Two arithmatic operators that many are not familiar are: \rconcept{Integer Divis
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{alltt}
-\hlnum{10} \hlopt{%/%} \hlnum{3} \hlcom{# Integer division - only gives the quotient as the output}
+\hlnum{10}\hlopt{%/%}\hlnum{3}  \hlcom{# Integer division - only gives the quotient as the output}
 \end{alltt}
 \begin{verbatim}
 ## [1] 3
 \end{verbatim}
 \begin{alltt}
-\hlnum{10} \hlopt{%%} \hlnum{3} \hlcom{# The counterpart to %/%, gives remainder as the output}
+\hlnum{10}\hlopt{%%}\hlnum{3}  \hlcom{# The counterpart to %/%, gives remainder as the output}
 \end{alltt}
 \begin{verbatim}
 ## [1] 1
@@ -753,7 +750,7 @@ R includes many \texttt{functions}. \index{Key Concepts!Functions} Functions tak
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{alltt}
-\hlkwd{sqrt}\hlstd{(}\hlnum{100}\hlstd{)} \hlcom{#Calculate square root of 100}
+\hlkwd{sqrt}\hlstd{(}\hlnum{100}\hlstd{)}  \hlcom{#Calculate square root of 100}
 \end{alltt}
 \begin{verbatim}
 ## [1] 10
@@ -766,21 +763,21 @@ R includes perhaps thousands of functions for different tasks. Some functions ca
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{alltt}
-\hlcom{#Calling functions with name arguments}
+\hlcom{# Calling functions with name arguments}
 \hlkwd{round}\hlstd{(}\hlkwc{x} \hlstd{=} \hlnum{1.23456789}\hlstd{,} \hlkwc{digits} \hlstd{=} \hlnum{4}\hlstd{)}
 \end{alltt}
 \begin{verbatim}
 ## [1] 1.2346
 \end{verbatim}
 \begin{alltt}
-\hlcom{#Arguments passed in order, withour names}
+\hlcom{# Arguments passed in order, withour names}
 \hlkwd{round}\hlstd{(}\hlnum{1.23456789}\hlstd{,} \hlnum{4}\hlstd{)}
 \end{alltt}
 \begin{verbatim}
 ## [1] 1.2346
 \end{verbatim}
 \begin{alltt}
-\hlcom{#Using default values for optional arguments}
+\hlcom{# Using default values for optional arguments}
 \hlkwd{round}\hlstd{(}\hlnum{1.23456789}\hlstd{)}
 \end{alltt}
 \begin{verbatim}
@@ -807,10 +804,6 @@ Installing is only the first step - that brings the package to your local machin
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{alltt}
 \hlkwd{library}\hlstd{(ggplot2)}
-\end{alltt}
-
-
-{\ttfamily\noindent\color{warningcolor}{\#\# Warning: package 'ggplot2' was built under R version 3.3.1}}\begin{alltt}
 \hlkwd{detach}\hlstd{(package}\hlopt{:}\hlstd{ggplot2)}
 \end{alltt}
 \end{kframe}
@@ -824,7 +817,7 @@ When setting working directory to the desired location, in Windows use \verb|/| 
 \hlkwd{getwd}\hlstd{()}
 \end{alltt}
 \begin{verbatim}
-## [1] "C:/Box Sync/5AABook/chapters"
+## [1] "/Users/sankum/Documents/5AABook"
 \end{verbatim}
 \end{kframe}
 \end{knitrout}
@@ -843,7 +836,7 @@ You usually have a \textbf{home directory} defined for your R installation. When
 \hlkwd{path.expand}\hlstd{(}\hlstr{"~"}\hlstd{)}
 \end{alltt}
 \begin{verbatim}
-## [1] "C:/Home"
+## [1] "/Users/sankum"
 \end{verbatim}
 \end{kframe}
 \end{knitrout}
@@ -852,10 +845,11 @@ First thing - how to get help when you need it. For example: What the hell is a 
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{alltt}
-\hlcom{#Output supressed for brevity}
-\hlkwd{help}\hlstd{(}\hlstr{"vector"}\hlstd{)} \hlcom{#default approach, note the quote marks}
-\hlopt{?}\hlstr{"vector"} \hlcom{#or this simple command works too}
-\hlkwd{example}\hlstd{(}\hlstr{"barplot"}\hlstd{)} \hlcom{#You can also look up examples}
+\hlcom{# Output supressed for brevity}
+\hlkwd{help}\hlstd{(}\hlstr{"vector"}\hlstd{)}  \hlcom{#default approach, note the quote marks}
+\hlkwd{`?`}\hlstd{(}\hlstr{"vector"}  \hlcom{#or this simple command works too}
+\hlstd{)}
+\hlkwd{example}\hlstd{(}\hlstr{"barplot"}\hlstd{)}  \hlcom{#You can also look up examples}
 \end{alltt}
 \end{kframe}
 \end{knitrout}
@@ -871,7 +865,7 @@ As you work with R, you will create Objects. You can get a list of current objec
 ## character(0)
 \end{verbatim}
 \begin{alltt}
-\hlcom{#Don't like a cluttered workspace, delete all objects by}
+\hlcom{# Don't like a cluttered workspace, delete all objects by}
 \hlkwd{rm}\hlstd{(}\hlkwc{list} \hlstd{=} \hlkwd{ls}\hlstd{())}  \hlcom{#ls() gives a list of all the objects}
 \end{alltt}
 \end{kframe}
@@ -882,7 +876,7 @@ When you are done with your current R session, you can quit using the \texttt{q}
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{alltt}
-\hlcom{#Commands only for demo, not evaluated.}
+\hlcom{# Commands only for demo, not evaluated.}
 \hlkwd{save.image}\hlstd{(}\hlkwc{file} \hlstd{=} \hlstr{"FileName.RData"}\hlstd{)}
 \hlkwd{q}\hlstd{()}
 \end{alltt}
@@ -906,7 +900,7 @@ You would often want to calculate how much it takes for R to do something. You c
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{alltt}
-\hlcom{#Time taken to delete all objects in memory}
+\hlcom{# Time taken to delete all objects in memory}
 \hlkwd{system.time}\hlstd{(}\hlkwd{rm}\hlstd{(}\hlkwc{list} \hlstd{=} \hlkwd{ls}\hlstd{()))}
 \end{alltt}
 \begin{verbatim}
@@ -926,20 +920,20 @@ You can check the current version of R that you are running by using the \rcomma
 \end{alltt}
 \begin{verbatim}
 ##                _                           
-## platform       x86_64-w64-mingw32          
+## platform       x86_64-apple-darwin15.6.0   
 ## arch           x86_64                      
-## os             mingw32                     
-## system         x86_64, mingw32             
+## os             darwin15.6.0                
+## system         x86_64, darwin15.6.0        
 ## status                                     
 ## major          3                           
-## minor          3.0                         
-## year           2016                        
-## month          05                          
-## day            03                          
-## svn rev        70573                       
+## minor          4.3                         
+## year           2017                        
+## month          11                          
+## day            30                          
+## svn rev        73796                       
 ## language       R                           
-## version.string R version 3.3.0 (2016-05-03)
-## nickname       Supposedly Educational
+## version.string R version 3.4.3 (2017-11-30)
+## nickname       Kite-Eating Tree
 \end{verbatim}
 \end{kframe}
 \end{knitrout}
@@ -948,14 +942,16 @@ If your version is not up-to-date then updating to the most current version of R
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{alltt}
-\hlcom{#Output suppressed as this book is writtn in a Linux machine}
-\hlkwd{install.packages}\hlstd{(}\hlstr{"installr"}\hlstd{);} \hlkwd{library}\hlstd{(installr)}
+\hlcom{# Output suppressed as this book is writtn in a Linux machine}
+\hlkwd{install.packages}\hlstd{(}\hlstr{"installr"}\hlstd{)}
+\hlkwd{library}\hlstd{(installr)}
 \hlkwd{installr}\hlstd{()}
 \end{alltt}
 \end{kframe}
 \end{knitrout}
 
 \chapterendsymbol
+
 
 
 \part{Data Exploration and Visualization}
@@ -985,12 +981,12 @@ R keeps all data in \texttt{Variables}. \index{Key Concepts!Variables}Variables 
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{alltt}
-\hlstd{revenue} \hlkwb{<-} \hlnum{100} \hlcom{#Typical way of creating a variable and assigning value}
+\hlstd{revenue} \hlkwb{<-} \hlnum{100}  \hlcom{#Typical way of creating a variable and assigning value}
 \hlcom{# Above is the recommended approach}
-\hlstd{revenue} \hlkwb{=} \hlnum{100} \hlcom{#Alternate way of doing same as above}
-\hlnum{100} \hlkwb{->} \hlstd{revenue} \hlcom{#Reverse direction assignment}
-\hlstd{revenue} \hlkwb{<-} \hlstd{revenue} \hlopt{+} \hlnum{300} \hlcom{#Performing calculations}
-\hlkwd{print}\hlstd{(revenue)} \hlcom{#Printing/showing the value inside the variable}
+\hlstd{revenue} \hlkwb{=} \hlnum{100}  \hlcom{#Alternate way of doing same as above}
+\hlcom{# 100 -> revenue #Reverse direction assignment}
+\hlstd{revenue} \hlkwb{<-} \hlstd{revenue} \hlopt{+} \hlnum{300}  \hlcom{#Performing calculations}
+\hlkwd{print}\hlstd{(revenue)}  \hlcom{#Printing/showing the value inside the variable}
 \end{alltt}
 \begin{verbatim}
 ## [1] 400
@@ -1013,8 +1009,8 @@ String data is written within quote marks (\texttt{" "}) to differentiate them f
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{alltt}
-\hlstd{day.name} \hlkwb{<-} \hlstr{"Sunday"} \hlcom{#Assigns the string Sunday to variable day.name}
-\hlstd{someday} \hlkwb{<-} \hlstr{""} \hlcom{#Empty string assigned to variable someday}
+\hlstd{day.name} \hlkwb{<-} \hlstr{"Sunday"}  \hlcom{#Assigns the string Sunday to variable day.name}
+\hlstd{someday} \hlkwb{<-} \hlstr{""}  \hlcom{#Empty string assigned to variable someday}
 \end{alltt}
 \end{kframe}
 \end{knitrout}
@@ -1023,10 +1019,15 @@ We can calculate the number of characters in a string using the \texttt{nchar()}
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{alltt}
-\hlkwd{nchar}\hlstd{(day.name);} \hlkwd{nchar}\hlstd{(someday)}
+\hlkwd{nchar}\hlstd{(day.name)}
 \end{alltt}
 \begin{verbatim}
 ## [1] 6
+\end{verbatim}
+\begin{alltt}
+\hlkwd{nchar}\hlstd{(someday)}
+\end{alltt}
+\begin{verbatim}
 ## [1] 0
 \end{verbatim}
 \end{kframe}
@@ -1039,13 +1040,13 @@ Variablec can hold logical values using the two keywords \texttt{TRUE} and \text
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{alltt}
-\hlnum{4} \hlopt{==} \hlnum{6} \hlcom{#Is 4 equal to 6, result FALSE}
+\hlnum{4} \hlopt{==} \hlnum{6}  \hlcom{#Is 4 equal to 6, result FALSE}
 \end{alltt}
 \begin{verbatim}
 ## [1] FALSE
 \end{verbatim}
 \begin{alltt}
-\hlstd{someday} \hlopt{==} \hlstr{"Tuesday"} \hlcom{#Again result shoukd be FALSE}
+\hlstd{someday} \hlopt{==} \hlstr{"Tuesday"}  \hlcom{#Again result shoukd be FALSE}
 \end{alltt}
 \begin{verbatim}
 ## [1] FALSE
@@ -1073,20 +1074,20 @@ The code above created a vector named $sleep.per.day$ with 7 \texttt{elements}. 
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{alltt}
-\hlstd{sleep.per.day[}\hlnum{2}\hlstd{]} \hlcom{#Gets the second element of the vector}
+\hlstd{sleep.per.day[}\hlnum{2}\hlstd{]}  \hlcom{#Gets the second element of the vector}
 \end{alltt}
 \begin{verbatim}
 ## [1] 4
 \end{verbatim}
 \begin{alltt}
-\hlstd{sleep.per.day[}\hlnum{4}\hlstd{]} \hlkwb{<-} \hlnum{3} \hlcom{#Changes 4th element of the vector to 3}
-\hlkwd{length}\hlstd{(sleep.per.day)} \hlcom{#Gets the length (number of elements) of the vector}
+\hlstd{sleep.per.day[}\hlnum{4}\hlstd{]} \hlkwb{<-} \hlnum{3}  \hlcom{#Changes 4th element of the vector to 3}
+\hlkwd{length}\hlstd{(sleep.per.day)}  \hlcom{#Gets the length (number of elements) of the vector}
 \end{alltt}
 \begin{verbatim}
 ## [1] 7
 \end{verbatim}
 \begin{alltt}
-\hlstd{sleep.per.day} \hlopt{+} \hlnum{2} \hlcom{#Adds 2 to *each* element of the vector }
+\hlstd{sleep.per.day} \hlopt{+} \hlnum{2}  \hlcom{#Adds 2 to *each* element of the vector }
 \end{alltt}
 \begin{verbatim}
 ## [1]  8  6  8  5  9 11 12
@@ -1099,10 +1100,10 @@ Vectors are also useful for doing element-by-element calculations. For example, 
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{alltt}
-\hlstd{work.per.day} \hlkwb{<-} \hlkwd{c}\hlstd{(}\hlnum{9}\hlstd{,} \hlnum{11}\hlstd{,} \hlnum{10}\hlstd{,} \hlnum{8}\hlstd{,} \hlnum{6}\hlstd{,} \hlnum{3}\hlstd{,} \hlnum{2}\hlstd{)} \hlcom{#Create new vector}
+\hlstd{work.per.day} \hlkwb{<-} \hlkwd{c}\hlstd{(}\hlnum{9}\hlstd{,} \hlnum{11}\hlstd{,} \hlnum{10}\hlstd{,} \hlnum{8}\hlstd{,} \hlnum{6}\hlstd{,} \hlnum{3}\hlstd{,} \hlnum{2}\hlstd{)}  \hlcom{#Create new vector}
 \hlstd{work.and.sleep} \hlkwb{<-} \hlstd{sleep.per.day} \hlopt{+} \hlstd{work.per.day}
-\hlcom{#Added two vectors element by element}
-\hlkwd{print}\hlstd{(work.and.sleep)} \hlcom{#Show added values}
+\hlcom{# Added two vectors element by element}
+\hlkwd{print}\hlstd{(work.and.sleep)}  \hlcom{#Show added values}
 \end{alltt}
 \begin{verbatim}
 ## [1] 15 15 16 11 13 12 12
@@ -1115,8 +1116,8 @@ It is easy to access data elements inside a vector. All elements are assigned an
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{alltt}
-\hlstd{wed.hours} \hlkwb{<-} \hlstd{work.per.day[}\hlnum{3}\hlstd{]} \hlcom{#Extracts third element}
-\hlstd{work.per.day[}\hlnum{7}\hlstd{]} \hlkwb{<-} \hlnum{6} \hlcom{#Changes 7th element of the vector}
+\hlstd{wed.hours} \hlkwb{<-} \hlstd{work.per.day[}\hlnum{3}\hlstd{]}  \hlcom{#Extracts third element}
+\hlstd{work.per.day[}\hlnum{7}\hlstd{]} \hlkwb{<-} \hlnum{6}  \hlcom{#Changes 7th element of the vector}
 \end{alltt}
 \end{kframe}
 \end{knitrout}
@@ -1201,6 +1202,7 @@ Functions \texttt{edit()}\index{R Commands!edit} and \texttt{fix}\index{R Comman
 \chapterendsymbol
 
 
+
 \part{Traditional Statistical Modeling}
 
 
@@ -1245,7 +1247,7 @@ Lets start with a simple case of two variables - the departure delay and arrival
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{alltt}
-\hlkwd{cor}\hlstd{(arr_delay, dep_delay,} \hlkwc{use}\hlstd{=}\hlstr{"complete.obs"}\hlstd{)}
+\hlkwd{cor}\hlstd{(arr_delay, dep_delay,} \hlkwc{use} \hlstd{=} \hlstr{"complete.obs"}\hlstd{)}
 \end{alltt}
 \begin{verbatim}
 ## [1] 0.9163321
@@ -1261,8 +1263,8 @@ Lets start with a simple case of two variables - the departure delay and arrival
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{alltt}
-\hlkwd{plot}\hlstd{(}\hlkwc{x}\hlstd{=dep_delay[dep_delay} \hlopt{<} \hlnum{400}\hlstd{],} \hlkwc{y}\hlstd{=arr_delay[dep_delay} \hlopt{<} \hlnum{400}\hlstd{],}
-     \hlkwc{xlab}\hlstd{=}\hlstr{"Departure Delay"}\hlstd{,} \hlkwc{ylab}\hlstd{=}\hlstr{"Arrival Delay"}\hlstd{)}
+\hlkwd{plot}\hlstd{(}\hlkwc{x} \hlstd{= dep_delay[dep_delay} \hlopt{<} \hlnum{400}\hlstd{],} \hlkwc{y} \hlstd{= arr_delay[dep_delay} \hlopt{<} \hlnum{400}\hlstd{],} \hlkwc{xlab} \hlstd{=} \hlstr{"Departure Delay"}\hlstd{,}
+    \hlkwc{ylab} \hlstd{=} \hlstr{"Arrival Delay"}\hlstd{)}
 \end{alltt}
 \end{kframe}
 \includegraphics[width=\maxwidth]{figure/unnamed-chunk-39-1} 
@@ -1295,14 +1297,14 @@ We have saved the result of the model in the object \texttt{m}. We can now extra
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{alltt}
-\hlkwd{coef}\hlstd{(m)} \hlcom{#provides coefficients}
+\hlkwd{coef}\hlstd{(m)}  \hlcom{#provides coefficients}
 \end{alltt}
 \begin{verbatim}
 ## (Intercept)   dep_delay 
 ##   -4.057010    1.020178
 \end{verbatim}
 \begin{alltt}
-\hlkwd{confint}\hlstd{(m)} \hlcom{#provides confidence interval for the coefficients}
+\hlkwd{confint}\hlstd{(m)}  \hlcom{#provides confidence interval for the coefficients}
 \end{alltt}
 \begin{verbatim}
 ##                 2.5 %    97.5 %
@@ -1320,9 +1322,9 @@ Now that we know the coefficients, we can now draw the fitted line that models t
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{alltt}
-\hlkwd{plot}\hlstd{(}\hlkwc{x}\hlstd{=dep_delay[dep_delay} \hlopt{<} \hlnum{400}\hlstd{],} \hlkwc{y}\hlstd{=arr_delay[dep_delay} \hlopt{<} \hlnum{400}\hlstd{],}
-     \hlkwc{xlab}\hlstd{=}\hlstr{"Departure Delay"}\hlstd{,} \hlkwc{ylab}\hlstd{=}\hlstr{"Arrival Delay"}\hlstd{)}
-\hlkwd{abline}\hlstd{(}\hlkwd{coef}\hlstd{(m),} \hlkwc{lwd}\hlstd{=}\hlnum{2}\hlstd{,} \hlkwc{col}\hlstd{=}\hlstr{"red"}\hlstd{)}
+\hlkwd{plot}\hlstd{(}\hlkwc{x} \hlstd{= dep_delay[dep_delay} \hlopt{<} \hlnum{400}\hlstd{],} \hlkwc{y} \hlstd{= arr_delay[dep_delay} \hlopt{<} \hlnum{400}\hlstd{],} \hlkwc{xlab} \hlstd{=} \hlstr{"Departure Delay"}\hlstd{,}
+    \hlkwc{ylab} \hlstd{=} \hlstr{"Arrival Delay"}\hlstd{)}
+\hlkwd{abline}\hlstd{(}\hlkwd{coef}\hlstd{(m),} \hlkwc{lwd} \hlstd{=} \hlnum{2}\hlstd{,} \hlkwc{col} \hlstd{=} \hlstr{"red"}\hlstd{)}
 \end{alltt}
 \end{kframe}
 \includegraphics[width=\maxwidth]{figure/unnamed-chunk-42-1} 
@@ -1387,7 +1389,7 @@ We can consider that Blood Pressure of a patient is a function of Age of patient
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{alltt}
-\hlstd{bpmodel} \hlkwb{<-} \hlkwd{lm}\hlstd{(bp} \hlopt{~} \hlstd{age} \hlopt{+} \hlstd{weight,} \hlkwc{data}\hlstd{=bp)}
+\hlstd{bpmodel} \hlkwb{<-} \hlkwd{lm}\hlstd{(bp} \hlopt{~} \hlstd{age} \hlopt{+} \hlstd{weight,} \hlkwc{data} \hlstd{= bp)}
 \hlkwd{summary}\hlstd{(bpmodel)}
 \end{alltt}
 \begin{verbatim}
@@ -1423,25 +1425,25 @@ Once we have a model, we can use the model to predict new values. If, for exampl
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{alltt}
-\hlstd{newvalue} \hlkwb{<-} \hlkwd{data.frame}\hlstd{(}\hlkwc{age}\hlstd{=}\hlnum{50}\hlstd{,} \hlkwc{weight}\hlstd{=}\hlnum{150}\hlstd{)}
-\hlcom{#A Point Prediction}
-\hlkwd{predict}\hlstd{(bpmodel,} \hlkwc{newdata}\hlstd{=newvalue)}
+\hlstd{newvalue} \hlkwb{<-} \hlkwd{data.frame}\hlstd{(}\hlkwc{age} \hlstd{=} \hlnum{50}\hlstd{,} \hlkwc{weight} \hlstd{=} \hlnum{150}\hlstd{)}
+\hlcom{# A Point Prediction}
+\hlkwd{predict}\hlstd{(bpmodel,} \hlkwc{newdata} \hlstd{= newvalue)}
 \end{alltt}
 \begin{verbatim}
 ##        1 
 ## 127.1567
 \end{verbatim}
 \begin{alltt}
-\hlcom{#Confidence Interval}
-\hlkwd{predict}\hlstd{(bpmodel,} \hlkwc{newdata}\hlstd{=newvalue,} \hlkwc{interval}\hlstd{=}\hlstr{"confidence"}\hlstd{)}
+\hlcom{# Confidence Interval}
+\hlkwd{predict}\hlstd{(bpmodel,} \hlkwc{newdata} \hlstd{= newvalue,} \hlkwc{interval} \hlstd{=} \hlstr{"confidence"}\hlstd{)}
 \end{alltt}
 \begin{verbatim}
 ##        fit      lwr      upr
 ## 1 127.1567 124.7148 129.5985
 \end{verbatim}
 \begin{alltt}
-\hlcom{#Prediction Interval}
-\hlkwd{predict}\hlstd{(bpmodel,} \hlkwc{newdata}\hlstd{=newvalue,} \hlkwc{interval}\hlstd{=}\hlstr{"prediction"}\hlstd{)}
+\hlcom{# Prediction Interval}
+\hlkwd{predict}\hlstd{(bpmodel,} \hlkwc{newdata} \hlstd{= newvalue,} \hlkwc{interval} \hlstd{=} \hlstr{"prediction"}\hlstd{)}
 \end{alltt}
 \begin{verbatim}
 ##        fit      lwr      upr
@@ -1468,11 +1470,11 @@ We can plot residuals to check their normality. See Figure: \ref{Fig:residuals} 
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{alltt}
-\hlkwd{par}\hlstd{(}\hlkwc{mfrow}\hlstd{=}\hlkwd{c}\hlstd{(}\hlnum{2}\hlstd{,}\hlnum{2}\hlstd{))}
-\hlkwd{hist}\hlstd{(}\hlkwc{x} \hlstd{=} \hlkwd{residuals}\hlstd{(bpmodel),} \hlkwc{xlab} \hlstd{=} \hlstr{"Value of residual"}\hlstd{,} \hlkwc{main}\hlstd{=}\hlstr{""}\hlstd{)}
-\hlkwd{plot}\hlstd{(}\hlkwc{x}\hlstd{=bpmodel,} \hlkwc{which}\hlstd{=}\hlnum{2}\hlstd{)} \hlcom{#QQ Plot}
-\hlkwd{plot}\hlstd{(}\hlkwc{x}\hlstd{=bpmodel,} \hlkwc{which}\hlstd{=}\hlnum{1}\hlstd{)} \hlcom{#Residuals vs Fitted}
-\hlkwd{plot}\hlstd{(}\hlkwc{x}\hlstd{=bpmodel,} \hlkwc{which}\hlstd{=}\hlnum{4}\hlstd{)} \hlcom{#Cook's Distance}
+\hlkwd{par}\hlstd{(}\hlkwc{mfrow} \hlstd{=} \hlkwd{c}\hlstd{(}\hlnum{2}\hlstd{,} \hlnum{2}\hlstd{))}
+\hlkwd{hist}\hlstd{(}\hlkwc{x} \hlstd{=} \hlkwd{residuals}\hlstd{(bpmodel),} \hlkwc{xlab} \hlstd{=} \hlstr{"Value of residual"}\hlstd{,} \hlkwc{main} \hlstd{=} \hlstr{""}\hlstd{)}
+\hlkwd{plot}\hlstd{(}\hlkwc{x} \hlstd{= bpmodel,} \hlkwc{which} \hlstd{=} \hlnum{2}\hlstd{)}  \hlcom{#QQ Plot}
+\hlkwd{plot}\hlstd{(}\hlkwc{x} \hlstd{= bpmodel,} \hlkwc{which} \hlstd{=} \hlnum{1}\hlstd{)}  \hlcom{#Residuals vs Fitted}
+\hlkwd{plot}\hlstd{(}\hlkwc{x} \hlstd{= bpmodel,} \hlkwc{which} \hlstd{=} \hlnum{4}\hlstd{)}  \hlcom{#Cook's Distance}
 \end{alltt}
 \end{kframe}
 \includegraphics[width=\maxwidth]{figure/unnamed-chunk-47-1} 
@@ -1536,7 +1538,7 @@ It is important to note that OLS only needs residuals to be normal. Predictor va
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{alltt}
-\hlstd{newbp} \hlkwb{<-} \hlkwd{lm}\hlstd{(bp} \hlopt{~} \hlkwd{log}\hlstd{(age)} \hlopt{+} \hlkwd{log}\hlstd{(weight),} \hlkwc{data}\hlstd{=bp)}
+\hlstd{newbp} \hlkwb{<-} \hlkwd{lm}\hlstd{(bp} \hlopt{~} \hlkwd{log}\hlstd{(age)} \hlopt{+} \hlkwd{log}\hlstd{(weight),} \hlkwc{data} \hlstd{= bp)}
 \hlkwd{summary}\hlstd{(newbp)}
 \end{alltt}
 \begin{verbatim}
@@ -1575,7 +1577,7 @@ The OLS model assumes that all the residuals have a constant variance. It is con
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{alltt}
-\hlkwd{plot}\hlstd{(}\hlkwc{x}\hlstd{=bpmodel,} \hlkwc{which}\hlstd{=}\hlnum{3}\hlstd{)}
+\hlkwd{plot}\hlstd{(}\hlkwc{x} \hlstd{= bpmodel,} \hlkwc{which} \hlstd{=} \hlnum{3}\hlstd{)}
 \end{alltt}
 \end{kframe}
 \includegraphics[width=\maxwidth]{figure/unnamed-chunk-52-1} 
@@ -1722,7 +1724,7 @@ This function identifies significant outliers. As we can see, our current datase
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{alltt}
-\hlkwd{influence.measures}\hlstd{(bpmodel)} \hlcom{#Output removed to save space}
+\hlkwd{influence.measures}\hlstd{(bpmodel)}  \hlcom{#Output removed to save space}
 \end{alltt}
 \end{kframe}
 \end{knitrout}
@@ -1851,8 +1853,8 @@ Our $trees$ dataset does not have any categorical variables - but we can create 
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{alltt}
-\hlstd{trees}\hlopt{$}\hlstd{is.tall} \hlkwb{<-} \hlkwd{cut}\hlstd{(trees}\hlopt{$}\hlstd{Height,} \hlkwc{breaks} \hlstd{=} \hlkwd{c}\hlstd{(}\hlopt{-}\hlnum{Inf}\hlstd{,} \hlnum{80}\hlstd{,} \hlnum{Inf}\hlstd{),}
-                     \hlkwc{labels} \hlstd{=} \hlkwd{c}\hlstd{(}\hlstr{"no"}\hlstd{,} \hlstr{"yes"}\hlstd{))}
+\hlstd{trees}\hlopt{$}\hlstd{is.tall} \hlkwb{<-} \hlkwd{cut}\hlstd{(trees}\hlopt{$}\hlstd{Height,} \hlkwc{breaks} \hlstd{=} \hlkwd{c}\hlstd{(}\hlopt{-}\hlnum{Inf}\hlstd{,} \hlnum{80}\hlstd{,} \hlnum{Inf}\hlstd{),} \hlkwc{labels} \hlstd{=} \hlkwd{c}\hlstd{(}\hlstr{"no"}\hlstd{,}
+    \hlstr{"yes"}\hlstd{))}
 \hlkwd{class}\hlstd{(trees}\hlopt{$}\hlstd{is.tall)}
 \end{alltt}
 \begin{verbatim}
@@ -1865,7 +1867,7 @@ Now we want to include $is.tall$ variable in our regression model. R handles suc
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{alltt}
-\hlstd{treesdummy} \hlkwb{<-} \hlkwd{lm}\hlstd{(Volume} \hlopt{~} \hlstd{Girth} \hlopt{+} \hlstd{is.tall,} \hlkwc{data}\hlstd{=trees)}
+\hlstd{treesdummy} \hlkwb{<-} \hlkwd{lm}\hlstd{(Volume} \hlopt{~} \hlstd{Girth} \hlopt{+} \hlstd{is.tall,} \hlkwc{data} \hlstd{= trees)}
 \hlkwd{summary}\hlstd{(treesdummy)}
 \end{alltt}
 \begin{verbatim}
@@ -1906,7 +1908,7 @@ Regression results show that the model is significant and all coefficient estima
 \hlkwd{plot}\hlstd{(Volume} \hlopt{~} \hlstd{Girth,} \hlkwc{data} \hlstd{= trees,} \hlkwc{type} \hlstd{=} \hlstr{"n"}\hlstd{)}
 \hlkwd{points}\hlstd{(Volume} \hlopt{~} \hlstd{Girth,} \hlkwc{data} \hlstd{= treestall[[}\hlstr{"yes"}\hlstd{]],} \hlkwc{pch} \hlstd{=} \hlnum{1}\hlstd{)}
 \hlkwd{points}\hlstd{(Volume} \hlopt{~} \hlstd{Girth,} \hlkwc{data} \hlstd{= treestall[[}\hlstr{"no"}\hlstd{]],} \hlkwc{pch} \hlstd{=} \hlnum{2}\hlstd{)}
-\hlkwd{lines}\hlstd{(fit} \hlopt{~} \hlstd{Girth,} \hlkwc{data} \hlstd{= treestall[[}\hlstr{"yes"}\hlstd{]] )}
+\hlkwd{lines}\hlstd{(fit} \hlopt{~} \hlstd{Girth,} \hlkwc{data} \hlstd{= treestall[[}\hlstr{"yes"}\hlstd{]])}
 \hlkwd{lines}\hlstd{(fit} \hlopt{~} \hlstd{Girth,} \hlkwc{data} \hlstd{= treestall[[}\hlstr{"no"}\hlstd{]])}
 \end{alltt}
 \end{kframe}
@@ -1994,9 +1996,9 @@ We can also run the stepwise regression using \texttt{forward selection}. In thi
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{alltt}
-\hlstd{emptymodel} \hlkwb{<-} \hlkwd{lm}\hlstd{(}\hlkwd{log}\hlstd{(Volume)} \hlopt{~} \hlnum{1}\hlstd{,} \hlkwc{data}\hlstd{=trees)} \hlcom{#Start with an empty model}
-\hlkwd{step}\hlstd{(}\hlkwc{object} \hlstd{= emptymodel,} \hlkwc{direction} \hlstd{=} \hlstr{"forward"}\hlstd{,}
-     \hlkwc{scope} \hlstd{=} \hlkwd{log}\hlstd{(Volume)} \hlopt{~} \hlkwd{log}\hlstd{(Girth)} \hlopt{+} \hlkwd{log}\hlstd{(Height))}
+\hlstd{emptymodel} \hlkwb{<-} \hlkwd{lm}\hlstd{(}\hlkwd{log}\hlstd{(Volume)} \hlopt{~} \hlnum{1}\hlstd{,} \hlkwc{data} \hlstd{= trees)}  \hlcom{#Start with an empty model}
+\hlkwd{step}\hlstd{(}\hlkwc{object} \hlstd{= emptymodel,} \hlkwc{direction} \hlstd{=} \hlstr{"forward"}\hlstd{,} \hlkwc{scope} \hlstd{=} \hlkwd{log}\hlstd{(Volume)} \hlopt{~} \hlkwd{log}\hlstd{(Girth)} \hlopt{+}
+    \hlkwd{log}\hlstd{(Height))}
 \end{alltt}
 \begin{verbatim}
 ## Start:  AIC=-38.82
@@ -2036,11 +2038,9 @@ We can directly compare two models as well. We will create a new model first for
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{alltt}
-\hlstd{trees}\hlopt{$}\hlstd{random} \hlkwb{<-} \hlkwd{rnorm}\hlstd{(}\hlkwd{nrow}\hlstd{(trees))} \hlcom{#Random variable}
-\hlstd{model.A} \hlkwb{<-} \hlkwd{lm}\hlstd{(}\hlkwd{log}\hlstd{(Volume)} \hlopt{~} \hlkwd{log}\hlstd{(Girth)} \hlopt{+} \hlkwd{log}\hlstd{(Height),}
-              \hlkwc{data} \hlstd{= trees)}
-\hlstd{model.B} \hlkwb{<-} \hlkwd{lm}\hlstd{(}\hlkwd{log}\hlstd{(Volume)} \hlopt{~} \hlkwd{log}\hlstd{(Girth)} \hlopt{+} \hlkwd{log}\hlstd{(Height)}
-              \hlopt{+} \hlstd{trees}\hlopt{$}\hlstd{random,} \hlkwc{data} \hlstd{= trees)}
+\hlstd{trees}\hlopt{$}\hlstd{random} \hlkwb{<-} \hlkwd{rnorm}\hlstd{(}\hlkwd{nrow}\hlstd{(trees))}  \hlcom{#Random variable}
+\hlstd{model.A} \hlkwb{<-} \hlkwd{lm}\hlstd{(}\hlkwd{log}\hlstd{(Volume)} \hlopt{~} \hlkwd{log}\hlstd{(Girth)} \hlopt{+} \hlkwd{log}\hlstd{(Height),} \hlkwc{data} \hlstd{= trees)}
+\hlstd{model.B} \hlkwb{<-} \hlkwd{lm}\hlstd{(}\hlkwd{log}\hlstd{(Volume)} \hlopt{~} \hlkwd{log}\hlstd{(Girth)} \hlopt{+} \hlkwd{log}\hlstd{(Height)} \hlopt{+} \hlstd{trees}\hlopt{$}\hlstd{random,} \hlkwc{data} \hlstd{= trees)}
 \end{alltt}
 \end{kframe}
 \end{knitrout}
@@ -2050,11 +2050,16 @@ Clearly model.B should not be better than model.A as the only difference is a ra
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{alltt}
-\hlkwd{AIC}\hlstd{(model.A);} \hlkwd{AIC}\hlstd{(model.B)}
+\hlkwd{AIC}\hlstd{(model.A)}
 \end{alltt}
 \begin{verbatim}
 ## [1] -62.71125
-## [1] -66.69933
+\end{verbatim}
+\begin{alltt}
+\hlkwd{AIC}\hlstd{(model.B)}
+\end{alltt}
+\begin{verbatim}
+## [1] -61.31507
 \end{verbatim}
 \end{kframe}
 \end{knitrout}
@@ -2064,7 +2069,7 @@ We can also consider the subset model (model.A) as the null hypothesis, the supe
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{alltt}
-\hlcom{#Null hypothesis first, then alternate hypothesis}
+\hlcom{# Null hypothesis first, then alternate hypothesis}
 \hlkwd{anova}\hlstd{(model.A, model.B)}
 \end{alltt}
 \begin{verbatim}
@@ -2072,11 +2077,9 @@ We can also consider the subset model (model.A) as the null hypothesis, the supe
 ## 
 ## Model 1: log(Volume) ~ log(Girth) + log(Height)
 ## Model 2: log(Volume) ~ log(Girth) + log(Height) + trees$random
-##   Res.Df     RSS Df Sum of Sq      F  Pr(>F)  
-## 1     28 0.18546                              
-## 2     27 0.15289  1  0.032577 5.7532 0.02363 *
-## ---
-## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+##   Res.Df     RSS Df Sum of Sq      F Pr(>F)
+## 1     28 0.18546                           
+## 2     27 0.18189  1 0.0035775 0.5311 0.4724
 \end{verbatim}
 \end{kframe}
 \end{knitrout}
@@ -2095,6 +2098,7 @@ Linear regression is extremely popular. Modern statistical software has made bui
 Linear regression is a specific tool valid only for specific contexts that meet its requirement. The regression analysis is going to be only as useful as the model it tries to estimate. Hence, utmost case must be taken in first designing a theoretically consistent model before the model is evaluated using regression analysis.
 
 \chapterendsymbol
+
 
 
 
@@ -2129,7 +2133,8 @@ Logistic regression is used to model dichotomous outcome variables - variables t
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{alltt}
 \hlstd{probs} \hlkwb{<-} \hlkwd{seq}\hlstd{(}\hlnum{0}\hlstd{,} \hlnum{1}\hlstd{,} \hlnum{0.01}\hlstd{)}
-\hlstd{odds} \hlkwb{=} \hlstd{probs} \hlopt{/} \hlstd{(}\hlnum{1} \hlopt{-} \hlstd{probs); logodds} \hlkwb{=} \hlkwd{log}\hlstd{(odds)}
+\hlstd{odds} \hlkwb{=} \hlstd{probs}\hlopt{/}\hlstd{(}\hlnum{1} \hlopt{-} \hlstd{probs)}
+\hlstd{logodds} \hlkwb{=} \hlkwd{log}\hlstd{(odds)}
 \hlkwd{plot}\hlstd{(logodds, probs)}
 \end{alltt}
 \end{kframe}
@@ -2161,8 +2166,7 @@ We will first convert $rank$ as a factor and then run a logistic regression.
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{alltt}
 \hlstd{admit.data}\hlopt{$}\hlstd{rank} \hlkwb{<-} \hlkwd{factor}\hlstd{(admit.data}\hlopt{$}\hlstd{rank)}
-\hlstd{logit.model} \hlkwb{<-} \hlkwd{glm}\hlstd{(admit} \hlopt{~} \hlstd{gre} \hlopt{+} \hlstd{gpa} \hlopt{+} \hlstd{rank,} \hlkwc{data} \hlstd{= admit.data,}
-                   \hlkwc{family} \hlstd{=} \hlstr{"binomial"}\hlstd{)}
+\hlstd{logit.model} \hlkwb{<-} \hlkwd{glm}\hlstd{(admit} \hlopt{~} \hlstd{gre} \hlopt{+} \hlstd{gpa} \hlopt{+} \hlstd{rank,} \hlkwc{data} \hlstd{= admit.data,} \hlkwc{family} \hlstd{=} \hlstr{"binomial"}\hlstd{)}
 \hlkwd{summary}\hlstd{(logit.model)}
 \end{alltt}
 \begin{verbatim}
@@ -2206,8 +2210,7 @@ Given a logistic regression model, we can conduct further significance tests usi
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{alltt}
 \hlkwd{library}\hlstd{(aod)}
-\hlkwd{wald.test}\hlstd{(}\hlkwc{b} \hlstd{=} \hlkwd{coef}\hlstd{(logit.model),} \hlkwc{Sigma} \hlstd{=} \hlkwd{vcov}\hlstd{(logit.model),}
-          \hlkwc{Terms} \hlstd{=} \hlnum{4}\hlopt{:}\hlnum{6}\hlstd{)}
+\hlkwd{wald.test}\hlstd{(}\hlkwc{b} \hlstd{=} \hlkwd{coef}\hlstd{(logit.model),} \hlkwc{Sigma} \hlstd{=} \hlkwd{vcov}\hlstd{(logit.model),} \hlkwc{Terms} \hlstd{=} \hlnum{4}\hlopt{:}\hlnum{6}\hlstd{)}
 \end{alltt}
 \begin{verbatim}
 ## Wald test:
@@ -2223,9 +2226,8 @@ Similarly, we can test whether it makes a difference whether the students comes 
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{alltt}
-\hlstd{coefflist} \hlkwb{<-} \hlkwd{cbind}\hlstd{(}\hlnum{0}\hlstd{,}\hlnum{0}\hlstd{,}\hlnum{0}\hlstd{,}\hlnum{0}\hlstd{,}\hlnum{1}\hlstd{,}\hlopt{-}\hlnum{1}\hlstd{)}
-\hlkwd{wald.test}\hlstd{(}\hlkwc{b} \hlstd{=} \hlkwd{coef}\hlstd{(logit.model),} \hlkwc{Sigma} \hlstd{=} \hlkwd{vcov}\hlstd{(logit.model),}
-          \hlkwc{L} \hlstd{= coefflist)}
+\hlstd{coefflist} \hlkwb{<-} \hlkwd{cbind}\hlstd{(}\hlnum{0}\hlstd{,} \hlnum{0}\hlstd{,} \hlnum{0}\hlstd{,} \hlnum{0}\hlstd{,} \hlnum{1}\hlstd{,} \hlopt{-}\hlnum{1}\hlstd{)}
+\hlkwd{wald.test}\hlstd{(}\hlkwc{b} \hlstd{=} \hlkwd{coef}\hlstd{(logit.model),} \hlkwc{Sigma} \hlstd{=} \hlkwd{vcov}\hlstd{(logit.model),} \hlkwc{L} \hlstd{= coefflist)}
 \end{alltt}
 \begin{verbatim}
 ## Wald test:
@@ -2289,8 +2291,7 @@ We can use the same \texttt{glm()} command to run a probit model. We need to spe
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{alltt}
-\hlstd{probit.model} \hlkwb{<-} \hlkwd{glm}\hlstd{(admit} \hlopt{~} \hlstd{gre} \hlopt{+} \hlstd{gpa} \hlopt{+} \hlstd{rank,} \hlkwc{data} \hlstd{= admit.data,}
-                    \hlkwc{family} \hlstd{=} \hlkwd{binomial}\hlstd{(}\hlkwc{link}\hlstd{=}\hlstr{"probit"}\hlstd{))}
+\hlstd{probit.model} \hlkwb{<-} \hlkwd{glm}\hlstd{(admit} \hlopt{~} \hlstd{gre} \hlopt{+} \hlstd{gpa} \hlopt{+} \hlstd{rank,} \hlkwc{data} \hlstd{= admit.data,} \hlkwc{family} \hlstd{=} \hlkwd{binomial}\hlstd{(}\hlkwc{link} \hlstd{=} \hlstr{"probit"}\hlstd{))}
 \hlkwd{summary}\hlstd{(probit.model)}
 \end{alltt}
 \begin{verbatim}
@@ -2329,7 +2330,7 @@ Usually, logit and probit models are pretty much interchangeable. We can demonst
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{alltt}
-\hlkwd{predict}\hlstd{(probit.model,} \hlkwc{newdata} \hlstd{= admitnew,}  \hlkwc{type} \hlstd{=} \hlstr{"response"}\hlstd{)}
+\hlkwd{predict}\hlstd{(probit.model,} \hlkwc{newdata} \hlstd{= admitnew,} \hlkwc{type} \hlstd{=} \hlstr{"response"}\hlstd{)}
 \end{alltt}
 \begin{verbatim}
 ##         1 
@@ -2374,8 +2375,9 @@ We will use the \texttt{OIsurv}\index{Packages!OIsurv}\index{Packages!survival}\
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{alltt}
-\hlcom{#install.packages\{"OIsurv\} #Output suppressed for brevity}
-\hlkwd{library}\hlstd{(OIsurv);} \hlkwd{library}\hlstd{(survival)}
+\hlcom{# install.packages\{'OIsurv\} #Output suppressed for brevity}
+\hlkwd{library}\hlstd{(OIsurv)}
+\hlkwd{library}\hlstd{(survival)}
 \end{alltt}
 \end{kframe}
 \end{knitrout}
@@ -2402,7 +2404,7 @@ We will start by importing the data and taking a quick look inside.
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{alltt}
 \hlstd{rossi} \hlkwb{<-} \hlkwd{read.table}\hlstd{(}\hlstr{"Rossi.txt"}\hlstd{,} \hlkwc{header} \hlstd{=} \hlnum{TRUE}\hlstd{)}
-\hlstd{rossi[}\hlnum{1}\hlopt{:}\hlnum{5}\hlstd{,} \hlnum{1}\hlopt{:}\hlnum{15}\hlstd{]} \hlcom{#First five rows, first 15 columns}
+\hlstd{rossi[}\hlnum{1}\hlopt{:}\hlnum{5}\hlstd{,} \hlnum{1}\hlopt{:}\hlnum{15}\hlstd{]}  \hlcom{#First five rows, first 15 columns}
 \end{alltt}
 \begin{verbatim}
 ##   week arrest fin age race wexp mar paro prio educ emp1 emp2 emp3 emp4
@@ -2427,7 +2429,7 @@ Lets take a look at the structure of the data and make needed changes.
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{alltt}
-\hlkwd{str}\hlstd{(rossi[,}\hlnum{1}\hlopt{:}\hlnum{10}\hlstd{])}
+\hlkwd{str}\hlstd{(rossi[,} \hlnum{1}\hlopt{:}\hlnum{10}\hlstd{])}
 \end{alltt}
 \begin{verbatim}
 ## 'data.frame':	432 obs. of  10 variables:
@@ -2458,8 +2460,8 @@ We can now use this survival object as the response variable in a Cox model. Cox
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{alltt}
-\hlstd{mod.first} \hlkwb{<-} \hlkwd{coxph}\hlstd{(rossi.surv} \hlopt{~} \hlstd{fin} \hlopt{+} \hlstd{age} \hlopt{+} \hlstd{race} \hlopt{+} \hlstd{wexp}
-                   \hlopt{+} \hlstd{mar} \hlopt{+} \hlstd{paro} \hlopt{+} \hlstd{prio} \hlopt{+} \hlstd{educ,} \hlkwc{data}\hlstd{=rossi)}
+\hlstd{mod.first} \hlkwb{<-} \hlkwd{coxph}\hlstd{(rossi.surv} \hlopt{~} \hlstd{fin} \hlopt{+} \hlstd{age} \hlopt{+} \hlstd{race} \hlopt{+} \hlstd{wexp} \hlopt{+} \hlstd{mar} \hlopt{+} \hlstd{paro} \hlopt{+} \hlstd{prio} \hlopt{+}
+    \hlstd{educ,} \hlkwc{data} \hlstd{= rossi)}
 \hlkwd{summary}\hlstd{(mod.first)}
 \end{alltt}
 \begin{verbatim}
@@ -2513,9 +2515,7 @@ Now that we have a suitable model, we can now examine the estimated distribution
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{alltt}
-\hlkwd{plot}\hlstd{(}\hlkwd{survfit}\hlstd{(mod.first),} \hlkwc{ylim}\hlstd{=}\hlkwd{c}\hlstd{(}\hlnum{0.75}\hlstd{,} \hlnum{1}\hlstd{),}
-     \hlkwc{xlab} \hlstd{=} \hlstr{"Weeks of Observation"}\hlstd{,}
-     \hlkwc{ylab}\hlstd{=}\hlstr{"Proportion of Subject Not Rearrested"}\hlstd{)}
+\hlkwd{plot}\hlstd{(}\hlkwd{survfit}\hlstd{(mod.first),} \hlkwc{ylim} \hlstd{=} \hlkwd{c}\hlstd{(}\hlnum{0.75}\hlstd{,} \hlnum{1}\hlstd{),} \hlkwc{xlab} \hlstd{=} \hlstr{"Weeks of Observation"}\hlstd{,} \hlkwc{ylab} \hlstd{=} \hlstr{"Proportion of Subject Not Rearrested"}\hlstd{)}
 \end{alltt}
 \end{kframe}
 \includegraphics[width=\maxwidth]{figure/unnamed-chunk-90-1} 
@@ -2534,16 +2534,15 @@ The previous model assumed that the effect of covariates on the survival object 
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{alltt}
 \hlcom{## Change to the long format}
-\hlstd{rossi.long} \hlkwb{<-} \hlkwd{reshape}\hlstd{(}\hlkwc{data} \hlstd{= rossi,} \hlkwc{varying} \hlstd{=} \hlkwd{paste0}\hlstd{(}\hlstr{"emp"}\hlstd{,} \hlnum{1}\hlopt{:}\hlnum{52}\hlstd{),}
-                      \hlkwc{v.names} \hlstd{=} \hlstr{"employed"}\hlstd{,} \hlkwc{timevar} \hlstd{=} \hlstr{"time"}\hlstd{,}
-                      \hlkwc{idvar} \hlstd{=} \hlstr{"id"}\hlstd{,} \hlkwc{direction} \hlstd{=} \hlstr{"long"}\hlstd{,} \hlkwc{sep} \hlstd{=} \hlstr{""}\hlstd{)}
+\hlstd{rossi.long} \hlkwb{<-} \hlkwd{reshape}\hlstd{(}\hlkwc{data} \hlstd{= rossi,} \hlkwc{varying} \hlstd{=} \hlkwd{paste0}\hlstd{(}\hlstr{"emp"}\hlstd{,} \hlnum{1}\hlopt{:}\hlnum{52}\hlstd{),} \hlkwc{v.names} \hlstd{=} \hlstr{"employed"}\hlstd{,}
+    \hlkwc{timevar} \hlstd{=} \hlstr{"time"}\hlstd{,} \hlkwc{idvar} \hlstd{=} \hlstr{"id"}\hlstd{,} \hlkwc{direction} \hlstd{=} \hlstr{"long"}\hlstd{,} \hlkwc{sep} \hlstd{=} \hlstr{""}\hlstd{)}
 
 \hlcom{## Sort by id and time}
 \hlkwd{library}\hlstd{(doBy)}
-\hlstd{rossi.long} \hlkwb{<-} \hlkwd{orderBy}\hlstd{(} \hlopt{~  +} \hlstd{id} \hlopt{+} \hlstd{time,} \hlkwc{data} \hlstd{= rossi.long)}
+\hlstd{rossi.long} \hlkwb{<-} \hlkwd{orderBy}\hlstd{(}\hlopt{~+}\hlstd{id} \hlopt{+} \hlstd{time,} \hlkwc{data} \hlstd{= rossi.long)}
 
 \hlcom{## Drop rows where emp is NA (time after event/censoring)}
-\hlstd{rossi.long} \hlkwb{<-} \hlstd{rossi.long[}\hlopt{!}\hlkwd{is.na}\hlstd{(rossi.long}\hlopt{$}\hlstd{emp),]}
+\hlstd{rossi.long} \hlkwb{<-} \hlstd{rossi.long[}\hlopt{!}\hlkwd{is.na}\hlstd{(rossi.long}\hlopt{$}\hlstd{emp), ]}
 \hlkwd{head}\hlstd{(rossi.long)}
 \end{alltt}
 \begin{verbatim}
@@ -2562,21 +2561,20 @@ For time varing covariates, we will need start and stop time for each time inter
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{alltt}
-\hlkwd{library}\hlstd{(plyr)} \hlcom{# Load plyr package}
+\hlkwd{library}\hlstd{(plyr)}  \hlcom{# Load plyr package}
 
 \hlcom{# Create time variables and various forms of exposure variables}
-\hlstd{rossi.long} \hlkwb{<-} \hlkwd{ddply}\hlstd{(}
-  \hlkwc{.data} \hlstd{= rossi.long,} \hlkwc{.variables} \hlstd{=} \hlkwd{c}\hlstd{(}\hlstr{"id"}\hlstd{),} \hlkwc{.drop} \hlstd{=} \hlnum{TRUE}\hlstd{,} \hlkwc{.fun} \hlstd{=} \hlkwa{function}\hlstd{(}\hlkwc{DF}\hlstd{)}
-  \hlstd{\{}
-  \hlstd{DF}\hlopt{$}\hlstd{start} \hlkwb{<-} \hlkwd{c}\hlstd{(}\hlnum{0}\hlstd{,} \hlkwd{head}\hlstd{(DF}\hlopt{$}\hlstd{time,} \hlopt{-}\hlnum{1}\hlstd{))} \hlcom{# Start of each interval}
-  \hlstd{DF}\hlopt{$}\hlstd{stop} \hlkwb{<-} \hlstd{DF}\hlopt{$}\hlstd{time} \hlcom{# End of each interval}
-  \hlstd{DF}\hlopt{$}\hlstd{event} \hlkwb{<-} \hlnum{0} \hlcom{# Event indicator for each interval}
-  \hlstd{DF[}\hlkwd{nrow}\hlstd{(DF),}\hlstr{"event"}\hlstd{]} \hlkwb{<-} \hlstd{DF[}\hlkwd{nrow}\hlstd{(DF),}\hlstr{"arrest"}\hlstd{]} \hlcom{# Arrest value }
-  \hlstd{DF}\hlopt{$}\hlstd{employed.lag1} \hlkwb{<-} \hlkwd{c}\hlstd{(}\hlkwd{rep}\hlstd{(}\hlnum{NA}\hlstd{,} \hlnum{1}\hlstd{),} \hlkwd{head}\hlstd{(DF}\hlopt{$}\hlstd{employed,} \hlopt{-}\hlnum{1}\hlstd{))}
-  \hlstd{DF} \hlcom{# Return DF }
-  \hlstd{\})}
-\hlstd{rossi.long[rossi.long}\hlopt{$}\hlstd{id} \hlopt{==} \hlnum{2}\hlstd{,} \hlkwd{c}\hlstd{(}\hlstr{"id"}\hlstd{,}\hlstr{"start"}\hlstd{,}\hlstr{"stop"}\hlstd{,}\hlstr{"event"}\hlstd{,}\hlstr{"employed"}\hlstd{,}
-                                 \hlstr{"employed.lag1"}\hlstd{)]}
+\hlstd{rossi.long} \hlkwb{<-} \hlkwd{ddply}\hlstd{(}\hlkwc{.data} \hlstd{= rossi.long,} \hlkwc{.variables} \hlstd{=} \hlkwd{c}\hlstd{(}\hlstr{"id"}\hlstd{),} \hlkwc{.drop} \hlstd{=} \hlnum{TRUE}\hlstd{,}
+    \hlkwc{.fun} \hlstd{=} \hlkwa{function}\hlstd{(}\hlkwc{DF}\hlstd{) \{}
+        \hlstd{DF}\hlopt{$}\hlstd{start} \hlkwb{<-} \hlkwd{c}\hlstd{(}\hlnum{0}\hlstd{,} \hlkwd{head}\hlstd{(DF}\hlopt{$}\hlstd{time,} \hlopt{-}\hlnum{1}\hlstd{))}  \hlcom{# Start of each interval}
+        \hlstd{DF}\hlopt{$}\hlstd{stop} \hlkwb{<-} \hlstd{DF}\hlopt{$}\hlstd{time}  \hlcom{# End of each interval}
+        \hlstd{DF}\hlopt{$}\hlstd{event} \hlkwb{<-} \hlnum{0}  \hlcom{# Event indicator for each interval}
+        \hlstd{DF[}\hlkwd{nrow}\hlstd{(DF),} \hlstr{"event"}\hlstd{]} \hlkwb{<-} \hlstd{DF[}\hlkwd{nrow}\hlstd{(DF),} \hlstr{"arrest"}\hlstd{]}  \hlcom{# Arrest value }
+        \hlstd{DF}\hlopt{$}\hlstd{employed.lag1} \hlkwb{<-} \hlkwd{c}\hlstd{(}\hlkwd{rep}\hlstd{(}\hlnum{NA}\hlstd{,} \hlnum{1}\hlstd{),} \hlkwd{head}\hlstd{(DF}\hlopt{$}\hlstd{employed,} \hlopt{-}\hlnum{1}\hlstd{))}
+        \hlstd{DF}  \hlcom{# Return DF }
+    \hlstd{\})}
+\hlstd{rossi.long[rossi.long}\hlopt{$}\hlstd{id} \hlopt{==} \hlnum{2}\hlstd{,} \hlkwd{c}\hlstd{(}\hlstr{"id"}\hlstd{,} \hlstr{"start"}\hlstd{,} \hlstr{"stop"}\hlstd{,} \hlstr{"event"}\hlstd{,} \hlstr{"employed"}\hlstd{,}
+    \hlstr{"employed.lag1"}\hlstd{)]}
 \end{alltt}
 \begin{verbatim}
 ##    id start stop event employed employed.lag1
@@ -2608,9 +2606,8 @@ We are now ready to run a cox model with time dependent covariates. We start by 
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{alltt}
-\hlstd{mod.timed} \hlkwb{<-} \hlkwd{coxph}\hlstd{(}\hlkwd{Surv}\hlstd{(start, stop, event)} \hlopt{~} \hlstd{fin} \hlopt{+} \hlstd{age}
-                   \hlopt{+} \hlstd{race} \hlopt{+} \hlstd{wexp} \hlopt{+} \hlstd{mar} \hlopt{+} \hlstd{paro} \hlopt{+} \hlstd{prio}
-                   \hlopt{+} \hlstd{employed,} \hlkwc{data} \hlstd{= rossi.long)}
+\hlstd{mod.timed} \hlkwb{<-} \hlkwd{coxph}\hlstd{(}\hlkwd{Surv}\hlstd{(start, stop, event)} \hlopt{~} \hlstd{fin} \hlopt{+} \hlstd{age} \hlopt{+} \hlstd{race} \hlopt{+} \hlstd{wexp} \hlopt{+} \hlstd{mar} \hlopt{+}
+    \hlstd{paro} \hlopt{+} \hlstd{prio} \hlopt{+} \hlstd{employed,} \hlkwc{data} \hlstd{= rossi.long)}
 \hlkwd{summary}\hlstd{(mod.timed)}
 \end{alltt}
 \begin{verbatim}
@@ -2656,9 +2653,8 @@ The result show that the time dependent covariate - $employed$ has a large effec
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{alltt}
-\hlstd{mod.lagtimed} \hlkwb{<-} \hlkwd{coxph}\hlstd{(}\hlkwd{Surv}\hlstd{(start, stop, event)} \hlopt{~} \hlstd{fin} \hlopt{+} \hlstd{age}
-                      \hlopt{+} \hlstd{race} \hlopt{+} \hlstd{wexp} \hlopt{+} \hlstd{mar} \hlopt{+} \hlstd{paro} \hlopt{+} \hlstd{prio} \hlopt{+}
-                        \hlstd{employed.lag1,} \hlkwc{data}  \hlstd{= rossi.long)}
+\hlstd{mod.lagtimed} \hlkwb{<-} \hlkwd{coxph}\hlstd{(}\hlkwd{Surv}\hlstd{(start, stop, event)} \hlopt{~} \hlstd{fin} \hlopt{+} \hlstd{age} \hlopt{+} \hlstd{race} \hlopt{+} \hlstd{wexp} \hlopt{+} \hlstd{mar} \hlopt{+}
+    \hlstd{paro} \hlopt{+} \hlstd{prio} \hlopt{+} \hlstd{employed.lag1,} \hlkwc{data} \hlstd{= rossi.long)}
 \hlkwd{summary}\hlstd{(mod.lagtimed)}
 \end{alltt}
 \begin{verbatim}
@@ -2708,8 +2704,7 @@ Just like for linear regression, it is essential that we check that the data fit
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{alltt}
-\hlstd{mod.small} \hlkwb{<-} \hlkwd{coxph}\hlstd{(}\hlkwd{Surv}\hlstd{(week, arrest)} \hlopt{~} \hlstd{fin} \hlopt{+} \hlstd{age} \hlopt{+} \hlstd{prio,}
-                   \hlkwc{data}\hlstd{=rossi)}
+\hlstd{mod.small} \hlkwb{<-} \hlkwd{coxph}\hlstd{(}\hlkwd{Surv}\hlstd{(week, arrest)} \hlopt{~} \hlstd{fin} \hlopt{+} \hlstd{age} \hlopt{+} \hlstd{prio,} \hlkwc{data} \hlstd{= rossi)}
 \hlstd{mod.small}
 \end{alltt}
 \begin{verbatim}
@@ -2754,7 +2749,8 @@ Results show a strong evidence of non-proportional hazards for age, while the gl
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{alltt}
-\hlkwd{par}\hlstd{(}\hlkwc{mfrow}\hlstd{=}\hlkwd{c}\hlstd{(}\hlnum{2}\hlstd{,}\hlnum{2}\hlstd{));} \hlkwd{plot}\hlstd{(}\hlkwd{cox.zph}\hlstd{(mod.small))}
+\hlkwd{par}\hlstd{(}\hlkwc{mfrow} \hlstd{=} \hlkwd{c}\hlstd{(}\hlnum{2}\hlstd{,} \hlnum{2}\hlstd{))}
+\hlkwd{plot}\hlstd{(}\hlkwd{cox.zph}\hlstd{(mod.small))}
 \end{alltt}
 \end{kframe}
 \includegraphics[width=\maxwidth]{figure/unnamed-chunk-97-1} 
@@ -2771,8 +2767,7 @@ One way to accommodate non-proportional hazards is to build explicitely include 
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{alltt}
-\hlstd{mod.int} \hlkwb{<-} \hlkwd{coxph}\hlstd{(}\hlkwd{Surv}\hlstd{(start, stop, event)} \hlopt{~} \hlstd{fin} \hlopt{+} \hlstd{age} \hlopt{+} \hlstd{prio}
-                 \hlopt{+} \hlstd{age}\hlopt{:}\hlstd{stop,} \hlkwc{data}\hlstd{=rossi.long)}
+\hlstd{mod.int} \hlkwb{<-} \hlkwd{coxph}\hlstd{(}\hlkwd{Surv}\hlstd{(start, stop, event)} \hlopt{~} \hlstd{fin} \hlopt{+} \hlstd{age} \hlopt{+} \hlstd{prio} \hlopt{+} \hlstd{age}\hlopt{:}\hlstd{stop,} \hlkwc{data} \hlstd{= rossi.long)}
 \hlstd{mod.int}
 \end{alltt}
 \begin{verbatim}
@@ -2821,11 +2816,12 @@ Checking for outliers can be done using the \texttt{dfbeta} metric we have seen 
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{alltt}
-\hlstd{dfbeta} \hlkwb{<-} \hlkwd{residuals}\hlstd{(mod.small,} \hlkwc{type}\hlstd{=}\hlstr{"dfbeta"}\hlstd{);} \hlkwd{par}\hlstd{(}\hlkwc{mfrow}\hlstd{=}\hlkwd{c}\hlstd{(}\hlnum{2}\hlstd{,}\hlnum{2}\hlstd{))}
+\hlstd{dfbeta} \hlkwb{<-} \hlkwd{residuals}\hlstd{(mod.small,} \hlkwc{type} \hlstd{=} \hlstr{"dfbeta"}\hlstd{)}
+\hlkwd{par}\hlstd{(}\hlkwc{mfrow} \hlstd{=} \hlkwd{c}\hlstd{(}\hlnum{2}\hlstd{,} \hlnum{2}\hlstd{))}
 \hlkwa{for} \hlstd{(j} \hlkwa{in} \hlnum{1}\hlopt{:}\hlnum{3}\hlstd{) \{}
-  \hlkwd{plot}\hlstd{(dfbeta[,j],} \hlkwc{ylab}\hlstd{=}\hlkwd{names}\hlstd{(}\hlkwd{coef}\hlstd{(mod.small))[j])}
-  \hlkwd{abline}\hlstd{(}\hlkwc{h}\hlstd{=}\hlnum{0}\hlstd{,} \hlkwc{lty}\hlstd{=}\hlnum{2}\hlstd{)}
-  \hlstd{\}}
+    \hlkwd{plot}\hlstd{(dfbeta[, j],} \hlkwc{ylab} \hlstd{=} \hlkwd{names}\hlstd{(}\hlkwd{coef}\hlstd{(mod.small))[j])}
+    \hlkwd{abline}\hlstd{(}\hlkwc{h} \hlstd{=} \hlnum{0}\hlstd{,} \hlkwc{lty} \hlstd{=} \hlnum{2}\hlstd{)}
+\hlstd{\}}
 \end{alltt}
 \end{kframe}
 \includegraphics[width=\maxwidth]{figure/unnamed-chunk-100-1} 
@@ -2850,919 +2846,9 @@ Code for converting data to long form has been taken from: \\ \verb|https://rpub
 \chapterendsymbol
 
 
+%\SweaveInput{TimeSeries.Rnw}
 
-% !Rnw root = AABase.Rnw
-
-\chapter{Time Series Analysis}
-
-\begin{flushright}
-
-\textbf{\texttt{In God We Trust; All Others Must Bring Data}}
-
-\emph{-- Willian Edwards Deming}
-
-\end{flushright}
-
-\vspace{12pt}
-
-\section{Time Series Data}
-
-Lets take a quick look at basic time series data.
-\begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
-\begin{alltt}
-\hlcom{#Number of International Passenger bookings (in '000s) for PanAm}
-\hlkwd{data}\hlstd{(}\hlstr{"AirPassengers"}\hlstd{)}
-\hlkwd{class}\hlstd{(AirPassengers)}
-\end{alltt}
-\begin{verbatim}
-## [1] "ts"
-\end{verbatim}
-\end{kframe}
-\end{knitrout}
-
-\texttt{ts} stands for time series. Time series data needs to be stored in specially designed classes like ts. These classes lend themselves well to plotting.
-
-\begin{figure}
-\centering
-\rule{4in}{1pt}
-\begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
-\begin{alltt}
-\hlkwd{plot}\hlstd{(AirPassengers,} \hlkwc{ylab}\hlstd{=}\hlstr{"Passengers"}\hlstd{,} \hlkwc{xlab}\hlstd{=}\hlstr{"Years"}\hlstd{,}
-     \hlkwc{main}\hlstd{=}\hlstr{"Passenger Bookings"}\hlstd{)}
-\end{alltt}
-\end{kframe}
-\includegraphics[width=\maxwidth]{figure/unnamed-chunk-102-1} 
-
-\end{knitrout}
-\caption{Plot of Passenger Bookings}
-\label{Fig:passbook }
-\rule{4in}{1pt}
-\end{figure}
-
-Can you see the seasonality of the time series? A trend in the time series?
-
-\begin{figure}
-\centering
-\rule{4in}{1pt}
-\begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
-\begin{alltt}
-\hlkwd{data}\hlstd{(}\hlstr{"lynx"}\hlstd{)} \hlcom{#Number of Lynx trappings}
-\hlkwd{plot}\hlstd{(lynx,} \hlkwc{ylab}\hlstd{=}\hlstr{"Number of Lynx Trapped"}\hlstd{,} \hlkwc{main}\hlstd{=}\hlstr{"Lynx Trappings"}\hlstd{)}
-\end{alltt}
-\end{kframe}
-\includegraphics[width=\maxwidth]{figure/unnamed-chunk-103-1} 
-
-\end{knitrout}
-\caption{Plot of Lynx Trapped}
-\label{Fig:lynx}
-\rule{4in}{1pt}
-\end{figure}
-
-Can you see a pattern? Is there a deterministic periodicity or a random stocastic one?
-
-\begin{figure}
-\centering
-\rule{4in}{1pt}
-\begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
-\begin{alltt}
-\hlkwd{data}\hlstd{(}\hlstr{"lh"}\hlstd{)} \hlcom{#LH levels every 10 mins}
-\hlkwd{plot}\hlstd{(lh,} \hlkwc{ylab}\hlstd{=}\hlstr{"LH Level"}\hlstd{,} \hlkwc{main}\hlstd{=}\hlstr{"Luteinizing Hormone"}\hlstd{)}
-\end{alltt}
-\end{kframe}
-\includegraphics[width=\maxwidth]{figure/unnamed-chunk-104-1} 
-\begin{kframe}\begin{alltt}
-\hlkwd{plot}\hlstd{(lh[}\hlnum{1}\hlopt{:}\hlnum{47}\hlstd{], lh[}\hlnum{2}\hlopt{:}\hlnum{48}\hlstd{],} \hlkwc{pch}\hlstd{=}\hlnum{20}\hlstd{)}
-\hlkwd{title}\hlstd{(}\hlstr{"Scatterplot with Lag 1"}\hlstd{)}
-\end{alltt}
-\end{kframe}
-\includegraphics[width=\maxwidth]{figure/unnamed-chunk-104-2} 
-\begin{kframe}\begin{alltt}
-\hlkwd{cor}\hlstd{(lh[}\hlnum{1}\hlopt{:}\hlnum{47}\hlstd{], lh[}\hlnum{2}\hlopt{:}\hlnum{48}\hlstd{])}
-\end{alltt}
-\begin{verbatim}
-## [1] 0.5807322
-\end{verbatim}
-\end{kframe}
-\end{knitrout}
-\caption{Plot of Luteinizing Hormone}
-\label{Fig:lute}
-\rule{4in}{1pt}
-\end{figure}
-
-Is there correlation between successive data points? Auto-Correlation?
-
-Much of Time Series Analysis is focused on \textbf{stationary time series} meaning that the probabilistic character of the time series does not change with time. Most commonly, we use a \emph{weak stationarity} definition which asks for a constant mean and variance and the dependency structure only depends on the lag.
-
-\section{Time Series Classes}
-
-\textbf{ts} is the most basic class. Other, more flexible, classes include \textbf{zoo} and \textbf{xts}.
-
-Managing dates in R is commonly done using \texttt{as.Date} function. Dates and times togethes can ve handled using \emph{chron}. For control over time zones, \textbf{POSIX} classes are recommended.
-
-\begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
-\begin{alltt}
-\hlcom{#Default is yyyy-mm-dd}
-\hlkwd{as.Date}\hlstd{(}\hlstr{"2016-02-29"}\hlstd{);} \hlkwd{as.Date}\hlstd{(}\hlstr{"2016/02/29"}\hlstd{)}
-\end{alltt}
-\begin{verbatim}
-## [1] "2016-02-29"
-## [1] "2016-02-29"
-\end{verbatim}
-\begin{alltt}
-\hlkwd{as.Date}\hlstd{(}\hlstr{"29.02.16"}\hlstd{,} \hlkwc{format}\hlstd{=}\hlstr{"%d.%m.%y"}\hlstd{)}
-\end{alltt}
-\begin{verbatim}
-## [1] "2016-02-29"
-\end{verbatim}
-\begin{alltt}
-\hlkwd{as.Date}\hlstd{(}\hlstr{"29. Feb, 2016"}\hlstd{,} \hlkwc{format}\hlstd{=}\hlstr{"%d. %b, %Y"}\hlstd{)}
-\end{alltt}
-\begin{verbatim}
-## [1] "2016-02-29"
-\end{verbatim}
-\end{kframe}
-\end{knitrout}
-
-Date values are stored as number of days passed since Jan 01, 1970. Earlier dates are assigned a negative value. We can extract various useful information from date values.
-
-\begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
-\begin{alltt}
-\hlstd{mydat} \hlkwb{<-} \hlkwd{as.Date}\hlstd{(}\hlstr{"2016-02-29"}\hlstd{)}
-\hlkwd{weekdays}\hlstd{(mydat);} \hlkwd{months}\hlstd{(mydat);} \hlkwd{quarters}\hlstd{(mydat)}
-\end{alltt}
-\begin{verbatim}
-## [1] "Monday"
-## [1] "February"
-## [1] "Q1"
-\end{verbatim}
-\begin{alltt}
-\hlstd{currentdate} \hlkwb{<-} \hlkwd{Sys.Date}\hlstd{()} \hlcom{#Gives current date}
-\hlstd{currentdate} \hlopt{-} \hlstd{mydat}
-\end{alltt}
-\begin{verbatim}
-## Time difference of 209 days
-\end{verbatim}
-\end{kframe}
-\end{knitrout}
-
-\section{Decomposition of Time Series Data}
-
-As stationarity is an important pre-requisite for statistical analysis of time series data, it is often useful to \emph{decompose} a non-stattionary time series into a combination of trend, seasonality and a stationary time series process.
-
-A popular approah to decomposition of time series is \textbf{differencing}
-
-\begin{figure}
-\centering
-\rule{4in}{1pt}
-\begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
-\begin{alltt}
-\hlkwd{data}\hlstd{(}\hlstr{"co2"}\hlstd{);} \hlkwd{plot}\hlstd{(co2,} \hlkwc{main}\hlstd{=}\hlstr{"CO2 Concentrations"}\hlstd{)}
-\end{alltt}
-\end{kframe}
-\includegraphics[width=\maxwidth]{figure/unnamed-chunk-107-1} 
-\begin{kframe}\begin{alltt}
-\hlstd{sd.co2} \hlkwb{<-} \hlkwd{diff}\hlstd{(co2,} \hlkwc{lag} \hlstd{=} \hlnum{12}\hlstd{)}
-\hlkwd{plot}\hlstd{(sd.co2,} \hlkwc{main}\hlstd{=}\hlstr{"Differenced with Lag 12 months"}\hlstd{)}
-\end{alltt}
-\end{kframe}
-\includegraphics[width=\maxwidth]{figure/unnamed-chunk-107-2} 
-
-\end{knitrout}
-\caption{Plot of CO2 Concentrations}
-\label{Fig:CO2}
-\rule{4in}{1pt}
-\end{figure}
-
-We can use the convenient \texttt{decompose} function as well.
-
-\begin{figure}
-\centering
-\rule{4in}{1pt}
-\begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
-\begin{alltt}
-\hlstd{co2.dec} \hlkwb{<-} \hlkwd{decompose}\hlstd{(co2)}
-\hlkwd{plot}\hlstd{(co2.dec)}
-\end{alltt}
-\end{kframe}
-\includegraphics[width=\maxwidth]{figure/unnamed-chunk-108-1} 
-
-\end{knitrout}
-\caption{Decomposition of CO2 Time Series}
-\label{Fig:CO2Decom}
-\rule{4in}{1pt}
-\end{figure}
-
-An effective alternative function for decomposing is \texttt{stl} which uses local, weighted regression to reduce the impact of outliers.
-
-\begin{figure}
-\centering
-\rule{4in}{1pt}
-\begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
-\begin{alltt}
-\hlstd{co2.stl} \hlkwb{<-} \hlkwd{stl}\hlstd{(co2,} \hlkwc{s.window} \hlstd{=} \hlstr{"periodic"}\hlstd{)}
-\hlkwd{plot}\hlstd{(co2.stl,} \hlkwc{main}\hlstd{=}\hlstr{"STL Decomposition"}\hlstd{)}
-\end{alltt}
-\end{kframe}
-\includegraphics[width=\maxwidth]{figure/unnamed-chunk-109-1} 
-
-\end{knitrout}
-\caption{STL Decomposition of CO2 Time Series}
-\label{Fig:STLCO2Decom}
-\rule{4in}{1pt}
-\end{figure}
-
-\begin{figure}
-\centering
-\rule{4in}{1pt}
-\begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
-\begin{alltt}
-\hlstd{wave} \hlkwb{<-} \hlkwd{ts}\hlstd{(}\hlkwd{read.table}\hlstd{(}\hlstr{"http://staff.elena.aut.ac.nz/Paul-Cowpertwait/ts/wave.dat"}\hlstd{,}
-                      \hlkwc{header}\hlstd{=}\hlnum{TRUE}\hlstd{))}
-\end{alltt}
-
-
-{\ttfamily\noindent\color{warningcolor}{\#\# Warning in file(file, "{}rt"{}): InternetOpenUrl failed: 'The server name or address could not be resolved'}}
-
-{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in file(file, "{}rt"{}): cannot open the connection}}\begin{alltt}
-\hlkwd{plot}\hlstd{(}\hlkwd{window}\hlstd{(wave,} \hlnum{1}\hlstd{,} \hlnum{60}\hlstd{),} \hlkwc{ylab}\hlstd{=}\hlstr{"Height"}\hlstd{,} \hlkwc{main}\hlstd{=}\hlstr{"Wave Tank Data"}\hlstd{)}
-\end{alltt}
-
-
-{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in window(wave, 1, 60): object 'wave' not found}}\end{kframe}
-\end{knitrout}
-\caption{Plot of Wave Height}
-\label{Fig:wave}
-\rule{4in}{1pt}
-\end{figure}
-
-It is a stationary series but shows strong cyclicity. Autocorrelations for various lag values can be computed using the \texttt{acf} function which creates the chart below known as the \textbf{Correlogram}.
-
-\begin{figure}
-\centering
-\rule{4in}{1pt}
-\begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
-\begin{alltt}
-\hlkwd{acf}\hlstd{(wave)}
-\end{alltt}
-
-
-{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in as.ts(x): object 'wave' not found}}\begin{alltt}
-\hlkwd{acf}\hlstd{(}\hlkwd{log}\hlstd{(AirPassengers))}
-\end{alltt}
-\end{kframe}
-\includegraphics[width=\maxwidth]{figure/unnamed-chunk-111-1} 
-
-\end{knitrout}
-\caption{Correlogram of Wave and Passenger Data}
-\label{Fig:correlogram}
-\rule{4in}{1pt}
-\end{figure}
-
-Correlogram should only be created for stationary time series. When applied on a non-stationary time series, it can also be used for detecting trend and seasonality. The Air Passengers Correlogram clearly shows both a trend and a seasonality.
-
-We can generate partial autocorrelation for different lag values using the \texttt{pacf} function.
-
-\begin{figure}
-\centering
-\rule{4in}{1pt}
-\begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
-\begin{alltt}
-\hlkwd{pacf}\hlstd{(wave,} \hlkwc{main}\hlstd{=}\hlstr{"Partial Autocorrelation of Wave Tank Data"}\hlstd{)}
-\end{alltt}
-
-
-{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in pacf(wave, main = "{}Partial Autocorrelation of Wave Tank Data"{}): object 'wave' not found}}\end{kframe}
-\end{knitrout}
-\caption{Partial Correlogram of Wave Data}
-\label{Fig:parcorrwave}
-\rule{4in}{1pt}
-\end{figure}
-
-The chart shows that the first two lag values are most prominent in their serial correlation. This implies that the time series would be best studied using an $AR(2)$ model.
-
-There are several tests for autocorrelation as well. A popular one is the Box-Pierce test.
-\begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
-\begin{alltt}
-\hlkwd{Box.test}\hlstd{(wave)}
-\end{alltt}
-
-
-{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in NCOL(x): object 'wave' not found}}\end{kframe}
-\end{knitrout}
-
-As the output shows the p-value is less than 0.05, allowing us to reject the null hypothsis of no autocorrelation.
-
-\section{AR Models, MA Models, ARIMA Models}
-
-Lets first begin with the simples AR models.
-
-\begin{figure}
-\centering
-\rule{4in}{1pt}
-\begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
-\begin{alltt}
-\hlkwd{library}\hlstd{(nutshell);} \hlkwd{data}\hlstd{(turkey.price.ts)} \hlcom{#Get the data}
-\hlstd{armodel} \hlkwb{<-} \hlkwd{ar}\hlstd{(turkey.price.ts); armodel} \hlcom{#Fit an AR model}
-\end{alltt}
-\begin{verbatim}
-## 
-## Call:
-## ar(x = turkey.price.ts)
-## 
-## Coefficients:
-##       1        2        3        4        5        6        7        8  
-##  0.3353  -0.1868  -0.0024   0.0571  -0.1554  -0.0208   0.0914  -0.0658  
-##       9       10       11       12  
-## -0.0952   0.0649   0.0099   0.5714  
-## 
-## Order selected 12  sigma^2 estimated as  0.05182
-\end{verbatim}
-\begin{alltt}
-\hlkwd{predict}\hlstd{(armodel,} \hlkwc{n.ahead}\hlstd{=}\hlnum{12}\hlstd{)} \hlcom{#Predict future values, plot below}
-\end{alltt}
-\begin{verbatim}
-## $pred
-##            Jan       Feb       Mar       Apr       May       Jun       Jul
-## 2008                                         1.8827277 1.7209182 1.7715016
-## 2009 1.5439290 1.6971933 1.5849406 1.7800358                              
-##            Aug       Sep       Oct       Nov       Dec
-## 2008 1.9416776 1.7791961 1.4822070 0.9894343 1.1588863
-## 2009                                                  
-## 
-## $se
-##            Jan       Feb       Mar       Apr       May       Jun       Jul
-## 2008                                         0.2276439 0.2400967 0.2406938
-## 2009 0.2450732 0.2470678 0.2470864 0.2480176                              
-##            Aug       Sep       Oct       Nov       Dec
-## 2008 0.2415644 0.2417360 0.2429339 0.2444610 0.2449850
-## 2009
-\end{verbatim}
-\begin{alltt}
-\hlkwd{ts.plot}\hlstd{(turkey.price.ts,} \hlkwd{predict}\hlstd{(armodel,} \hlkwc{n.ahead} \hlstd{=} \hlnum{24}\hlstd{)}\hlopt{$}\hlstd{pred,} \hlkwc{lty}\hlstd{=}\hlkwd{c}\hlstd{(}\hlnum{1}\hlopt{:}\hlnum{2}\hlstd{))}
-\end{alltt}
-\end{kframe}
-\includegraphics[width=\maxwidth]{figure/unnamed-chunk-114-1} 
-
-\end{knitrout}
-\caption{AR Model on Turkey Data}
-\label{Fig:arturkey}
-\rule{4in}{1pt}
-\end{figure}
-
-We will spend more time on ARIMA Models (includes both AR and MA), but here is a way to fit the best ARIMA model.
-
-\begin{figure}
-\centering
-\rule{4in}{1pt}
-\begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
-\begin{alltt}
-\hlkwd{library}\hlstd{(forecast)}
-\hlstd{arima.model} \hlkwb{<-} \hlkwd{auto.arima}\hlstd{(turkey.price.ts); arima.model}
-\end{alltt}
-\begin{verbatim}
-## Series: turkey.price.ts 
-## ARIMA(2,1,1)(2,1,0)[12]                    
-## 
-## Coefficients:
-##           ar1      ar2      ma1     sar1     sar2
-##       -0.2800  -0.3377  -0.4937  -0.8111  -0.5834
-## s.e.   0.2034   0.1566   0.2088   0.1188   0.1030
-## 
-## sigma^2 estimated as 0.0145:  log likelihood=47.61
-## AIC=-83.23   AICc=-81.99   BIC=-69.32
-\end{verbatim}
-\begin{alltt}
-\hlkwd{ts.plot}\hlstd{(turkey.price.ts,} \hlkwd{predict}\hlstd{(arima.model,}
-                                 \hlkwc{n.ahead} \hlstd{=} \hlnum{24}\hlstd{)}\hlopt{$}\hlstd{pred,} \hlkwc{lty}\hlstd{=}\hlkwd{c}\hlstd{(}\hlnum{1}\hlopt{:}\hlnum{2}\hlstd{))}
-\end{alltt}
-\end{kframe}
-\includegraphics[width=\maxwidth]{figure/unnamed-chunk-115-1} 
-
-\end{knitrout}
-\caption{Prediction Based on Auto Arima}
-\label{Fig:parcorr}
-\rule{4in}{1pt}
-\end{figure}
-
-We just predicted two years of turkey prices. 
-
-\section{ARIMA Models}
-
-ARIMA Models include three components:
-
-\begin{itemize}
-
-\item \textbf{Autoregressive Model - AR}: If the model has a lag of $p$ time periods, then its typically called an $AR(p)$ model.
-
-\item \textbf{Moving Average Model - MA}: If the model used moving average of $q$ terms, then its typically called an $MA(q)$ model.
-
-\item \textbf{Differencing}: Since ARIMA models are only applicable to stationary time series, typically we need to \emph{difference} a time series one or more times to get a stationary time series. Number of differencings (called order of differencing) is typically denoted as $d$
-\end{itemize}
-
-Taking all the three above together, an ARIMA model is specified as $ARIMA(p, d, q)$. Before we can fit an ARIMA model, we need to figure out what values of $p$, $d$ and $q$ would be optimal for the given time series data.
-
-\section{ARIMA Model Parameters}
-
-\subsection{How to select the order of differencing}
-
-Lets look at an example dataset. The link below provides data on annual diameter of women's skirts at the hem, from 1866 to 1911.
-
-\begin{figure}
-\centering
-\rule{4in}{1pt}
-\begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
-\begin{alltt}
-\hlstd{skirts} \hlkwb{<-} \hlkwd{scan}\hlstd{(}\hlstr{"http://robjhyndman.com/tsdldata/roberts/skirts.dat"}\hlstd{,}\hlkwc{skip}\hlstd{=}\hlnum{5}\hlstd{)}
-\hlstd{skirtsseries} \hlkwb{<-} \hlkwd{ts}\hlstd{(skirts,}\hlkwc{start}\hlstd{=}\hlkwd{c}\hlstd{(}\hlnum{1866}\hlstd{))} \hlcom{#Create a ts object}
-\hlkwd{plot.ts}\hlstd{(skirtsseries)} \hlcom{#plot the ts object}
-\end{alltt}
-\end{kframe}
-\includegraphics[width=\maxwidth]{figure/unnamed-chunk-116-1} 
-
-\end{knitrout}
-\caption{Plot of Skirts Data}
-\label{Fig:plotskirts}
-\rule{4in}{1pt}
-\end{figure}
-
-As we can see, this time series is not stationary. The mean value of the series changes significantly over time. We would want to do the first order differencing and see if that results in a stationary time series. We can use the \texttt{diff} function for differencing the time series, as we saw in last part.
-
-\begin{figure}
-\centering
-\rule{4in}{1pt}
-\begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
-\begin{alltt}
-\hlstd{skirtsseriesdiff1} \hlkwb{<-} \hlkwd{diff}\hlstd{(skirtsseries,} \hlkwc{differences}\hlstd{=}\hlnum{1}\hlstd{)}
-\hlkwd{plot.ts}\hlstd{(skirtsseriesdiff1)}
-\end{alltt}
-\end{kframe}
-\includegraphics[width=\maxwidth]{figure/unnamed-chunk-117-1} 
-
-\end{knitrout}
-\caption{Plot of Differenced Skirts Data}
-\label{Fig:diffskirts}
-\rule{4in}{1pt}
-\end{figure}
-
-Well, even this does not seem to be stationary. The series has a definite pattern in it. So we do the second order differencing.
-
-\begin{figure}
-\centering
-\rule{4in}{1pt}
-\begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
-\begin{alltt}
-\hlstd{skirtsseriesdiff2} \hlkwb{<-} \hlkwd{diff}\hlstd{(skirtsseries,} \hlkwc{differences}\hlstd{=}\hlnum{2}\hlstd{)}
-\hlkwd{plot.ts}\hlstd{(skirtsseriesdiff2)}
-\end{alltt}
-\end{kframe}
-\includegraphics[width=\maxwidth]{figure/unnamed-chunk-118-1} 
-
-\end{knitrout}
-\caption{Plot of Twice Differenced Skirts Data}
-\label{Fig:twicediffskirts}
-\rule{4in}{1pt}
-\end{figure}
-
-Now we have something. The time series of second differences does appear to be stationary with a constant mean and variance. So we can see that for fitting an ARIMA model on this data, we should use the order of differencing parameter $d = 2$. So, an $ARIMA(p, 2, q)$ model is appropriate. 
-
-Let's look at another example dataset. The link below provides the age of death of the successive kings of England.
-
-\begin{figure}
-\centering
-\rule{4in}{1pt}
-\begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
-\begin{alltt}
-\hlstd{kings} \hlkwb{<-} \hlkwd{scan}\hlstd{(}\hlstr{"http://robjhyndman.com/tsdldata/misc/kings.dat"}\hlstd{,}\hlkwc{skip}\hlstd{=}\hlnum{3}\hlstd{)}
-\hlstd{kingstimeseries} \hlkwb{<-} \hlkwd{ts}\hlstd{(kings)} \hlcom{#Convert to ts object}
-\hlkwd{plot.ts}\hlstd{(kingstimeseries)} \hlcom{#plotting the time series}
-\end{alltt}
-\end{kframe}
-\includegraphics[width=\maxwidth]{figure/unnamed-chunk-119-1} 
-
-\end{knitrout}
-\caption{Plot of Kings Data}
-\label{Fig:plotking}
-\rule{4in}{1pt}
-\end{figure}
-
-Clearly the time series is not stationary. So we do first order differencing and check again.
-
-\begin{figure}
-\centering
-\rule{4in}{1pt}
-\begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
-\begin{alltt}
-\hlstd{kingtimeseriesdiff1} \hlkwb{<-} \hlkwd{diff}\hlstd{(kingstimeseries,} \hlkwc{differences}\hlstd{=}\hlnum{1}\hlstd{)}
-\hlkwd{plot.ts}\hlstd{(kingtimeseriesdiff1)}
-\end{alltt}
-\end{kframe}
-\includegraphics[width=\maxwidth]{figure/unnamed-chunk-120-1} 
-
-\end{knitrout}
-\caption{Plot of Differenced Kings Data}
-\label{Fig:plotdifking}
-\rule{4in}{1pt}
-\end{figure}
-
-There you go - a nice stationary looking time series. So we get $d = 1$ in this case and consequently, an $ARIMA(p, 1, q)$ model.
-
-\subsection{How to select MA parameter}
-
-The MA parameter is typically selected by observing the \emph{correlogram} that we generated before. As we also saw then, we can use the \texttt{acf} function for generating a correlogram.
-
-\begin{figure}
-\centering
-\rule{4in}{1pt}
-\begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
-\begin{alltt}
-\hlkwd{acf}\hlstd{(kingtimeseriesdiff1)} \hlcom{#Get the correlogram chart}
-\end{alltt}
-\end{kframe}
-\includegraphics[width=\maxwidth]{figure/unnamed-chunk-121-1} 
-\begin{kframe}\begin{alltt}
-\hlkwd{acf}\hlstd{(kingtimeseriesdiff1,} \hlkwc{plot}\hlstd{=}\hlnum{FALSE}\hlstd{)} \hlcom{#Get the data, not the chart}
-\end{alltt}
-\begin{verbatim}
-## 
-## Autocorrelations of series 'kingtimeseriesdiff1', by lag
-## 
-##      0      1      2      3      4      5      6      7      8      9 
-##  1.000 -0.360 -0.162 -0.050  0.227 -0.042 -0.181  0.095  0.064 -0.116 
-##     10     11     12     13     14     15     16 
-## -0.071  0.206 -0.017 -0.212  0.130  0.114 -0.009
-\end{verbatim}
-\end{kframe}
-\end{knitrout}
-\caption{Correlogram of Kings Data}
-\label{Fig:corking}
-\rule{4in}{1pt}
-\end{figure}
-
-We see from the correlogram that the autocorrelation at lag 1 (-0.360) exceeds the significance bounds, but all other autocorrelations do not exceed the significance bounds. So in this case an $MA(1)$ model seems appropriate.
-
-Taking another example, the link below contains data on the volcanic dust veil index in the northern hemisphere, from 1500-1969. This is a measure of the impact of volcanic eruptions' release of dust and aerosols into the environment. 
-
-\begin{figure}
-\centering
-\rule{4in}{1pt}
-\begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
-\begin{alltt}
-\hlstd{volcanodust} \hlkwb{<-} \hlkwd{scan}\hlstd{(}\hlstr{"http://robjhyndman.com/tsdldata/annual/dvi.dat"}\hlstd{,} \hlkwc{skip}\hlstd{=}\hlnum{1}\hlstd{)}
-\hlstd{volcanodustseries} \hlkwb{<-} \hlkwd{ts}\hlstd{(volcanodust,}\hlkwc{start}\hlstd{=}\hlkwd{c}\hlstd{(}\hlnum{1500}\hlstd{))}
-\hlkwd{plot.ts}\hlstd{(volcanodustseries)}
-\end{alltt}
-\end{kframe}
-\includegraphics[width=\maxwidth]{figure/unnamed-chunk-122-1} 
-
-\end{knitrout}
-\caption{Plot of Volcano Data}
-\label{Fig:voldata}
-\rule{4in}{1pt}
-\end{figure}
-
-This time series appears to be stationary in mean and variance, as its level and variance appear to be roughly constant over time. Therefore, we do not need to difference this series in order to fit an ARIMA model. We can fit an ARIMA model to the original series - hence the order of differencing $d = 0$ here. We can now look at a correlogram to explore further.
-
-\begin{figure}
-\centering
-\rule{4in}{1pt}
-\begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
-\begin{alltt}
-\hlkwd{acf}\hlstd{(volcanodustseries,} \hlkwc{lag.max}\hlstd{=}\hlnum{20}\hlstd{)}
-\end{alltt}
-\end{kframe}
-\includegraphics[width=\maxwidth]{figure/unnamed-chunk-123-1} 
-\begin{kframe}\begin{alltt}
-\hlkwd{acf}\hlstd{(volcanodustseries,} \hlkwc{lag.max}\hlstd{=}\hlnum{20}\hlstd{,} \hlkwc{plot}\hlstd{=}\hlnum{FALSE}\hlstd{)}
-\end{alltt}
-\begin{verbatim}
-## 
-## Autocorrelations of series 'volcanodustseries', by lag
-## 
-##      0      1      2      3      4      5      6      7      8      9 
-##  1.000  0.666  0.374  0.162  0.046  0.017 -0.007  0.016  0.021  0.006 
-##     10     11     12     13     14     15     16     17     18     19 
-##  0.010  0.004  0.024  0.075  0.082  0.064  0.039  0.005  0.028  0.108 
-##     20 
-##  0.182
-\end{verbatim}
-\end{kframe}
-\end{knitrout}
-\caption{Correlogram of Volcano Data}
-\label{Fig:corvol}
-\rule{4in}{1pt}
-\end{figure}
-
-We see from the correlogram that the autocorrelations for lags 1, 2 and 3 exceed the significance bounds, and that the autocorrelations tail off to zero after lag 3. The autocorrelations for lags 1, 2, 3 are positive, and decrease in magnitude with increasing lag (lag 1: 0.666, lag 2: 0.374, lag 3: 0.162).
-
-The autocorrelation for lags 19 and 20 exceed the significance bounds too, but it is likely that this is due to chance, since they just exceed the significance bounds (especially for lag 19), the autocorrelations for lags 4-18 do not exceed the signifiance bounds, and we would expect 1 in 20 lags to exceed the 95\% significance bounds by chance alone.
-
-As the first three lags seem to be most influential, an $MA(3)$ model, meaning $q = 3$ is appropriate here.
-
-\subsection{How to select AR parameter}
-
-The AR parameter is typically selected by observing the \emph{partial correlogram} that we generated before. As we saw then, we can use the \texttt{pacf} function for generating a partial correlogram. Looking at our first example dataset:
-
-\begin{figure}
-\centering
-\rule{4in}{1pt}
-\begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
-\begin{alltt}
-\hlkwd{pacf}\hlstd{(kingtimeseriesdiff1)} \hlcom{#Get the correlogram chart}
-\end{alltt}
-\end{kframe}
-\includegraphics[width=\maxwidth]{figure/unnamed-chunk-124-1} 
-\begin{kframe}\begin{alltt}
-\hlkwd{pacf}\hlstd{(kingtimeseriesdiff1,} \hlkwc{plot}\hlstd{=}\hlnum{FALSE}\hlstd{)} \hlcom{#Get the data, not the chart}
-\end{alltt}
-\begin{verbatim}
-## 
-## Partial autocorrelations of series 'kingtimeseriesdiff1', by lag
-## 
-##      1      2      3      4      5      6      7      8      9     10 
-## -0.360 -0.335 -0.321  0.005  0.025 -0.144 -0.022 -0.007 -0.143 -0.167 
-##     11     12     13     14     15     16 
-##  0.065  0.034 -0.161  0.036  0.066  0.081
-\end{verbatim}
-\end{kframe}
-\end{knitrout}
-\caption{Correlogram of Kings Data}
-\label{Fig:corkings}
-\rule{4in}{1pt}
-\end{figure}
-
-We can see that the first three lag values have significant auto-correlations. This implies than an $AR(3)$ model (so $p = 3$) will be suitable here.
-
-We do the same for the second example dataset:
-
-\begin{figure}
-\centering
-\rule{4in}{1pt}
-\begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
-\begin{alltt}
-\hlkwd{pacf}\hlstd{(volcanodustseries,} \hlkwc{lag.max}\hlstd{=}\hlnum{20}\hlstd{)}
-\end{alltt}
-\end{kframe}
-\includegraphics[width=\maxwidth]{figure/unnamed-chunk-125-1} 
-\begin{kframe}\begin{alltt}
-\hlkwd{pacf}\hlstd{(volcanodustseries,} \hlkwc{lag.max}\hlstd{=}\hlnum{20}\hlstd{,} \hlkwc{plot}\hlstd{=}\hlnum{FALSE}\hlstd{)}
-\end{alltt}
-\begin{verbatim}
-## 
-## Partial autocorrelations of series 'volcanodustseries', by lag
-## 
-##      1      2      3      4      5      6      7      8      9     10 
-##  0.666 -0.126 -0.064 -0.005  0.040 -0.039  0.058 -0.016 -0.025  0.028 
-##     11     12     13     14     15     16     17     18     19     20 
-## -0.008  0.036  0.082 -0.025 -0.014  0.008 -0.025  0.073  0.131  0.063
-\end{verbatim}
-\end{kframe}
-\end{knitrout}
-\caption{Partial Correlogram of Volcano Data}
-\label{Fig:parcorvol}
-\rule{4in}{1pt}
-\end{figure}
-
-From the partial autocorrelogram, we see that the partial autocorrelation at lag 1 is positive and exceeds the significance bounds (0.666), while the partial autocorrelation at lag 2 is negative and also exceeds the significance bounds (-0.126). The partial autocorrelations tail off to zero after lag 2.
-
-So it seens that an $AR(2)$ model, meaning $p = 2$, would be appropriate here.
-
-\subsection{Combining AR and MA parameters}
-
-As AR and MA parts of the ARIMA model can actually conflict with each other, it is not necessary to always have both AR and MA terms in the model. For example, in the kings dataset above, we found that $AR(3)$ model and $MA(1)$ model both are applicable. In such cases we use the principle of parsimony to decide which model is best: that is, we assume that the model with the fewest parameters is best. The $AR(3)$ model has 3 parameters, the $MA(1)$ model has 1 parameter. Therefore, the $ARMA(0,1)$ model is our best choice for a starting point.
-
-A MA (moving average) model is usually used to model a time series that shows short-term dependencies between successive observations. Intuitively, it makes good sense that a MA model can be used to describe the irregular component in the time series of ages at death of English kings, as we might expect the age at death of a particular English king to have some effect on the ages at death of the next king or two, but not much effect on the ages at death of kings that reign much longer after that.
-
-In case of Volcano dataset, we have options of $AR(2)$ or $MA(3)$ model. Again following the principle of parsimony, $AR(2)$ or $ARMA(2,0)$ would be our best best as the starting model.
-
-An AR (autoregressive) model is usually used to model a time series which shows longer term dependencies between successive observations. Intuitively, it makes sense that an AR model could be used to describe the time series of volcanic dust veil index, as we would expect volcanic dust and aerosol levels in one year to affect those in much later years, since the dust and aerosols are unlikely to disappear quickly.
-
-\section{Forecasting using ARIMA Model}
-
-Once we have selected the best candidate $ARIMA(p,d,q)$ model for our time series data, we can estimate the parameters of that ARIMA model, and use that as a predictive model for making forecasts for future values of your time series.
-
-We can estimate the parameters of an $ARIMA(p,d,q)$ model using the \texttt{arima} function in R. For the kings dataset, we found that we needed to do a first order differencing and then use an $MA(1)$ model. So we can model it using $ARIMA(0,1,1)$. We can specify the values of p, d and q in the ARIMA model by using the \emph{order} argument of the \texttt{arima} function in R. For example:
-
-\begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
-\begin{alltt}
-\hlcom{# fit an ARIMA(0,1,1) model}
-\hlstd{kingstimeseriesarima} \hlkwb{<-} \hlkwd{arima}\hlstd{(kingstimeseries,} \hlkwc{order}\hlstd{=}\hlkwd{c}\hlstd{(}\hlnum{0}\hlstd{,}\hlnum{1}\hlstd{,}\hlnum{1}\hlstd{))}
-\hlstd{kingstimeseriesarima}
-\end{alltt}
-\begin{verbatim}
-## 
-## Call:
-## arima(x = kingstimeseries, order = c(0, 1, 1))
-## 
-## Coefficients:
-##           ma1
-##       -0.7218
-## s.e.   0.1208
-## 
-## sigma^2 estimated as 230.4:  log likelihood = -170.06,  aic = 344.13
-\end{verbatim}
-\end{kframe}
-\end{knitrout}
-
-Now that we have a fitted model, we can use it to make forecasts.
-
-\begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
-\begin{alltt}
-\hlkwd{library}\hlstd{(forecast)}
-\hlstd{kingstimeseriesforecasts} \hlkwb{<-} \hlkwd{forecast.Arima}\hlstd{(kingstimeseriesarima,} \hlkwc{h}\hlstd{=}\hlnum{5}\hlstd{)}
-\hlstd{kingstimeseriesforecasts}
-\end{alltt}
-\begin{verbatim}
-##    Point Forecast    Lo 80    Hi 80    Lo 95     Hi 95
-## 43       67.75063 48.29647 87.20479 37.99806  97.50319
-## 44       67.75063 47.55748 87.94377 36.86788  98.63338
-## 45       67.75063 46.84460 88.65665 35.77762  99.72363
-## 46       67.75063 46.15524 89.34601 34.72333 100.77792
-## 47       67.75063 45.48722 90.01404 33.70168 101.79958
-\end{verbatim}
-\end{kframe}
-\end{knitrout}
-
-The original time series for the English kings includes the ages at death of 42 English kings. The \texttt{forecast.Arima} function gives us a forecast of the age of death of the next five English kings (kings 43-47), as well as 80\% and 95\% prediction intervals for those predictions. The age of death of the 42nd English king was 56 years (the last observed value in our time series), and the ARIMA model gives the forecasted age at death of the next five kings as 67.8 years.
-
-We can plot the observed ages of death for the first 42 kings, as well as the ages that would be predicted for these 42 kings and for the next 5 kings using our $ARIMA(0,1,1)$ model, by using the \texttt{plot.forecast} function.
-
-\begin{figure}
-\centering
-\rule{4in}{1pt}
-\begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
-\begin{alltt}
-\hlkwd{plot.forecast}\hlstd{(kingstimeseriesforecasts)}
-\end{alltt}
-\end{kframe}
-\includegraphics[width=\maxwidth]{figure/unnamed-chunk-128-1} 
-
-\end{knitrout}
-\caption{Correlogram of Forecast Errors}
-\label{Fig:correrrking}
-\rule{4in}{1pt}
-\end{figure}
-
-\section{ARIMA Forecast Diagonostics}
-
-It is a good idea to investigate whether the forecast errors of an ARIMA model are normally distributed with mean zero and constant variance, and whether the are correlations between successive forecast errors.
-
-For example, we can make a correlogram of the forecast errors for our $ARIMA(0,1,1)$ model for the ages at death of kings, and perform the Ljung-Box test for lags 1-20, as follows:
-
-\begin{figure}
-\centering
-\rule{4in}{1pt}
-\begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
-\begin{alltt}
-\hlkwd{acf}\hlstd{(kingstimeseriesforecasts}\hlopt{$}\hlstd{residuals,} \hlkwc{lag.max}\hlstd{=}\hlnum{20}\hlstd{)}
-\end{alltt}
-\end{kframe}
-\includegraphics[width=\maxwidth]{figure/unnamed-chunk-129-1} 
-\begin{kframe}\begin{alltt}
-\hlkwd{Box.test}\hlstd{(kingstimeseriesforecasts}\hlopt{$}\hlstd{residuals,} \hlkwc{lag}\hlstd{=}\hlnum{20}\hlstd{,} \hlkwc{type}\hlstd{=}\hlstr{"Ljung-Box"}\hlstd{)}
-\end{alltt}
-\begin{verbatim}
-## 
-## 	Box-Ljung test
-## 
-## data:  kingstimeseriesforecasts$residuals
-## X-squared = 13.584, df = 20, p-value = 0.8509
-\end{verbatim}
-\end{kframe}
-\end{knitrout}
-\caption{Correlogram of Forecast Errors}
-\label{Fig:correrrforecast}
-\rule{4in}{1pt}
-\end{figure}
-
-Since the correlogram shows that none of the sample autocorrelations for lags 1-20 exceed the significance bounds, and the p-value for the \textbf{Ljung-Box test} is 0.9, we can conclude that there is very little evidence for non-zero autocorrelations in the forecast errors at lags 1-20.
-
-To investigate whether the forecast errors are normally distributed with mean zero and constant variance, we can make a time plot of the forecast errors:
-
-\begin{figure}
-\centering
-\rule{4in}{1pt}
-\begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
-\begin{alltt}
-\hlcom{# make time plot of forecast errors}
-\hlkwd{plot.ts}\hlstd{(kingstimeseriesforecasts}\hlopt{$}\hlstd{residuals)}
-\end{alltt}
-\end{kframe}
-\includegraphics[width=\maxwidth]{figure/unnamed-chunk-130-1} 
-
-\end{knitrout}
-\caption{Prediction Time Series Residuals}
-\label{Fig:tsres}
-\rule{4in}{1pt}
-\end{figure}
-
-
-The plot seems problem-free. Since successive forecast errors do not seem to be correlated, and the forecast errors seem to be normally distributed with mean zero and constant variance, the $ARIMA(0,1,1)$ does seem to provide an adequate predictive model for the ages at death of English kings.
-
-\subsubsection{Easy Way - Auto-Arima}
-
-We can let R do all the heavy lifting by using *auto-arima()* function.
-
-\begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
-\begin{alltt}
-\hlstd{automodel} \hlkwb{<-} \hlkwd{auto.arima}\hlstd{(kingstimeseries)}
-\hlstd{automodel}
-\end{alltt}
-\begin{verbatim}
-## Series: kingstimeseries 
-## ARIMA(0,1,1)                    
-## 
-## Coefficients:
-##           ma1
-##       -0.7218
-## s.e.   0.1208
-## 
-## sigma^2 estimated as 236.2:  log likelihood=-170.06
-## AIC=344.13   AICc=344.44   BIC=347.56
-\end{verbatim}
-\end{kframe}
-\end{knitrout}
-
-With a sigh of relief we can note that the auto-arima reached the same conclusion as we did manually - an (0,1,1) ARIMA model. 
-
-Note that you can use different Information Criteria to be used by the auto-arima function to find the best model. For example:
-
-\begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
-\begin{alltt}
-\hlstd{automodel.with.bic} \hlkwb{<-} \hlkwd{auto.arima}\hlstd{(kingstimeseries,} \hlkwc{ic}\hlstd{=}\hlstr{"bic"}\hlstd{)}
-\hlstd{automodel.with.bic}
-\end{alltt}
-\begin{verbatim}
-## Series: kingstimeseries 
-## ARIMA(0,1,1)                    
-## 
-## Coefficients:
-##           ma1
-##       -0.7218
-## s.e.   0.1208
-## 
-## sigma^2 estimated as 236.2:  log likelihood=-170.06
-## AIC=344.13   AICc=344.44   BIC=347.56
-\end{verbatim}
-\end{kframe}
-\end{knitrout}
-
-In this case \textbf{BIC} reaches the same results as the default. However, BIC may give a different result as it penalizes the number of parameters more than other approaches.
-
-\chapterendsymbol
-
-
-
-
-% !Rnw root = AABase.Rnw
-
-\chapter{Principal Component and Factor Analysis}
-
-\begin{flushright}
-
-\textbf{\texttt{In God We Trust; All Others Must Bring Data}}
-
-\emph{-- Willian Edwards Deming}
-
-\end{flushright}
-
-\vspace{12pt}
-
-
-
-\chapterendsymbol
-
+%\SweaveInput{PrinComp.Rnw}
 
 \part{Machine Learning and Predictive Analytics}
 
@@ -3784,6 +2870,7 @@ In this case \textbf{BIC} reaches the same results as the default. However, BIC 
 \vspace{12pt}
 
 \chapterendsymbol
+
 
 
 
@@ -3850,10 +2937,10 @@ We will illustrate kNN using "Breast Cancer Wisconsin Diagnostic" dataset from t
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{alltt}
-\hlcom{#Import Data}
+\hlcom{# Import Data}
 \hlstd{wbcd} \hlkwb{<-} \hlkwd{read.csv}\hlstd{(}\hlstr{"wisc_bc_data.csv"}\hlstd{,} \hlkwc{stringsAsFactors} \hlstd{=} \hlnum{FALSE}\hlstd{)}
-\hlcom{#str(wbcd) # Lets check what we have in this dataset}
-\hlcom{# Str command commented for brevity in output}
+\hlcom{# str(wbcd) # Lets check what we have in this dataset Str command commented}
+\hlcom{# for brevity in output}
 \end{alltt}
 \end{kframe}
 \end{knitrout}
@@ -3879,8 +2966,8 @@ The second variable, $diagnosis$ is of significant interest as this is the targe
 ## 357 212
 \end{verbatim}
 \begin{alltt}
-\hlstd{wbcd}\hlopt{$}\hlstd{diagnosis} \hlkwb{<-} \hlkwd{factor}\hlstd{(wbcd}\hlopt{$}\hlstd{diagnosis,} \hlkwc{levels} \hlstd{=} \hlkwd{c}\hlstd{(}\hlstr{"B"}\hlstd{,} \hlstr{"M"}\hlstd{),}
-                         \hlkwc{labels} \hlstd{=} \hlkwd{c}\hlstd{(}\hlstr{"Benign"}\hlstd{,} \hlstr{"Malignant"}\hlstd{))}
+\hlstd{wbcd}\hlopt{$}\hlstd{diagnosis} \hlkwb{<-} \hlkwd{factor}\hlstd{(wbcd}\hlopt{$}\hlstd{diagnosis,} \hlkwc{levels} \hlstd{=} \hlkwd{c}\hlstd{(}\hlstr{"B"}\hlstd{,} \hlstr{"M"}\hlstd{),} \hlkwc{labels} \hlstd{=} \hlkwd{c}\hlstd{(}\hlstr{"Benign"}\hlstd{,}
+    \hlstr{"Malignant"}\hlstd{))}
 \hlkwd{round}\hlstd{(}\hlkwd{prop.table}\hlstd{(}\hlkwd{table}\hlstd{(wbcd}\hlopt{$}\hlstd{diagnosis))} \hlopt{*} \hlnum{100}\hlstd{,} \hlnum{1}\hlstd{)}
 \end{alltt}
 \begin{verbatim}
@@ -3917,7 +3004,7 @@ We can clearly see that different variables differ significantly in their scale.
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{alltt}
 \hlstd{normalize} \hlkwb{<-} \hlkwa{function}\hlstd{(}\hlkwc{x}\hlstd{) \{}
-  \hlkwd{return} \hlstd{((x} \hlopt{-} \hlkwd{min}\hlstd{(x))} \hlopt{/} \hlstd{(}\hlkwd{max}\hlstd{(x)} \hlopt{-} \hlkwd{min}\hlstd{(x)))}
+    \hlkwd{return}\hlstd{((x} \hlopt{-} \hlkwd{min}\hlstd{(x))}\hlopt{/}\hlstd{(}\hlkwd{max}\hlstd{(x)} \hlopt{-} \hlkwd{min}\hlstd{(x)))}
 \hlstd{\}}
 \hlstd{wbcd_n} \hlkwb{<-} \hlkwd{as.data.frame}\hlstd{(}\hlkwd{lapply}\hlstd{(wbcd[}\hlnum{2}\hlopt{:}\hlnum{31}\hlstd{], normalize))}
 \hlkwd{summary}\hlstd{(wbcd_n[}\hlkwd{c}\hlstd{(}\hlstr{"radius_mean"}\hlstd{,} \hlstr{"area_mean"}\hlstd{,} \hlstr{"smoothness_mean"}\hlstd{)])}
@@ -3964,12 +3051,10 @@ Now is the time to train our model on the training data. We will need a package 
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{alltt}
-\hlcom{#install.packages("class") #Commented}
+\hlcom{# install.packages('class') #Commented}
 \hlkwd{library}\hlstd{(class)}
 \end{alltt}
-
-
-{\ttfamily\noindent\color{warningcolor}{\#\# Warning: package 'class' was built under R version 3.3.1}}\end{kframe}
+\end{kframe}
 \end{knitrout}
 
 We will use the $knn()$ function. The function call is pretty simple. It needs a training dataset, a testing dataset, a factor vector with the classification for each row in training data and an integer value corresponding to the number of nearest neighbors $k$. Since we have 469 observations in the training data, we might want to start with $k = 21$ as it is closest odd number to square root of 469. The function returns a factor vector of predicted values for each record in the test dataset.
@@ -3977,8 +3062,8 @@ We will use the $knn()$ function. The function call is pretty simple. It needs a
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{alltt}
-\hlstd{wbcd_test_pred} \hlkwb{<-} \hlkwd{knn}\hlstd{(}\hlkwc{train} \hlstd{= wbcd_train,} \hlkwc{test} \hlstd{= wbcd_test,}
-                      \hlkwc{cl} \hlstd{= wbcd_train_labels,} \hlkwc{k}\hlstd{=}\hlnum{21}\hlstd{)}
+\hlstd{wbcd_test_pred} \hlkwb{<-} \hlkwd{knn}\hlstd{(}\hlkwc{train} \hlstd{= wbcd_train,} \hlkwc{test} \hlstd{= wbcd_test,} \hlkwc{cl} \hlstd{= wbcd_train_labels,}
+    \hlkwc{k} \hlstd{=} \hlnum{21}\hlstd{)}
 \end{alltt}
 \end{kframe}
 \end{knitrout}
@@ -3989,14 +3074,9 @@ Alright - so we have run a model - is it any good? We should evaluate model perf
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{alltt}
-\hlcom{#install.packages("gmodels") #Comments}
+\hlcom{# install.packages('gmodels') #Comments}
 \hlkwd{library}\hlstd{(gmodels)}
-\end{alltt}
-
-
-{\ttfamily\noindent\color{warningcolor}{\#\# Warning: package 'gmodels' was built under R version 3.3.1}}\begin{alltt}
-\hlkwd{CrossTable}\hlstd{(}\hlkwc{x} \hlstd{= wbcd_test_labels,} \hlkwc{y} \hlstd{= wbcd_test_pred,}
-           \hlkwc{prop.chisq}\hlstd{=}\hlnum{FALSE}\hlstd{)}
+\hlkwd{CrossTable}\hlstd{(}\hlkwc{x} \hlstd{= wbcd_test_labels,} \hlkwc{y} \hlstd{= wbcd_test_pred,} \hlkwc{prop.chisq} \hlstd{=} \hlnum{FALSE}\hlstd{)}
 \end{alltt}
 \begin{verbatim}
 ## 
@@ -4052,7 +3132,8 @@ We follow the same process as before for creating training and testing data.
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{alltt}
-\hlstd{wbcd_train} \hlkwb{<-} \hlstd{wbcd_z[}\hlnum{1}\hlopt{:}\hlnum{469}\hlstd{, ]; wbcd_test} \hlkwb{<-} \hlstd{wbcd_z[}\hlnum{470}\hlopt{:}\hlnum{569}\hlstd{, ]}
+\hlstd{wbcd_train} \hlkwb{<-} \hlstd{wbcd_z[}\hlnum{1}\hlopt{:}\hlnum{469}\hlstd{, ]}
+\hlstd{wbcd_test} \hlkwb{<-} \hlstd{wbcd_z[}\hlnum{470}\hlopt{:}\hlnum{569}\hlstd{, ]}
 \end{alltt}
 \end{kframe}
 \end{knitrout}
@@ -4061,8 +3142,8 @@ We are ready to run a new model now.
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{alltt}
-\hlstd{wbcd_test_pred} \hlkwb{<-} \hlkwd{knn}\hlstd{(}\hlkwc{train} \hlstd{= wbcd_train,} \hlkwc{test} \hlstd{= wbcd_test,}
-                      \hlkwc{cl} \hlstd{= wbcd_train_labels,} \hlkwc{k}\hlstd{=}\hlnum{21}\hlstd{)}
+\hlstd{wbcd_test_pred} \hlkwb{<-} \hlkwd{knn}\hlstd{(}\hlkwc{train} \hlstd{= wbcd_train,} \hlkwc{test} \hlstd{= wbcd_test,} \hlkwc{cl} \hlstd{= wbcd_train_labels,}
+    \hlkwc{k} \hlstd{=} \hlnum{21}\hlstd{)}
 \end{alltt}
 \end{kframe}
 \end{knitrout}
@@ -4071,8 +3152,7 @@ Let us see how we did this time.
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{alltt}
-\hlkwd{CrossTable}\hlstd{(}\hlkwc{x} \hlstd{= wbcd_test_labels,} \hlkwc{y} \hlstd{= wbcd_test_pred,}
-           \hlkwc{prop.chisq}\hlstd{=}\hlnum{FALSE}\hlstd{)}
+\hlkwd{CrossTable}\hlstd{(}\hlkwc{x} \hlstd{= wbcd_test_labels,} \hlkwc{y} \hlstd{= wbcd_test_pred,} \hlkwc{prop.chisq} \hlstd{=} \hlnum{FALSE}\hlstd{)}
 \end{alltt}
 \begin{verbatim}
 ## 
@@ -4142,6 +3222,7 @@ What do you think is the best model. $k = 1$ is better for avoiding false negati
 
 
 
+
 % !Rnw root = AABase.Rnw
 
 \chapter{k-Means Clustering}
@@ -4157,6 +3238,7 @@ What do you think is the best model. $k = 1$ is better for avoiding false negati
 \vspace{12pt}
 
 \chapterendsymbol
+
 
 
 
@@ -4178,6 +3260,7 @@ What do you think is the best model. $k = 1$ is better for avoiding false negati
 
 
 
+
 % !Rnw root = AABase.Rnw
 
 \chapter{Classification using Support Vector Machines}
@@ -4193,6 +3276,7 @@ What do you think is the best model. $k = 1$ is better for avoiding false negati
 \vspace{12pt}
 
 \chapterendsymbol
+
 
 
 
@@ -4214,6 +3298,7 @@ What do you think is the best model. $k = 1$ is better for avoiding false negati
 
 
 
+
 % !Rnw root = AABase.Rnw
 
 \chapter{Decision Trees and Random Forests}
@@ -4231,7 +3316,9 @@ What do you think is the best model. $k = 1$ is better for avoiding false negati
 \chapterendsymbol
 
 
+
 \part{Putting It All Together}
+
 
 
 % !Rnw root = AABase.Rnw
@@ -4252,6 +3339,7 @@ What do you think is the best model. $k = 1$ is better for avoiding false negati
 
 
 
+
 % !Rnw root = AABase.Rnw
 
 \chapter{Some Last Words}
@@ -4268,6 +3356,8 @@ What do you think is the best model. $k = 1$ is better for avoiding false negati
 
 
 \chapterendsymbol
+
+
 
 \part{Appendices, Bibliography and Index}
 
@@ -4315,7 +3405,7 @@ First, lets make sure that we have R/RStudio set up to work in the right directo
 \hlkwd{getwd}\hlstd{()}
 \end{alltt}
 \begin{verbatim}
-## [1] "C:/Box Sync/5AABook/chapters"
+## [1] "/Users/sankum/Documents/5AABook"
 \end{verbatim}
 \end{kframe}
 \end{knitrout}
@@ -4325,7 +3415,7 @@ If you wish to change the directory you want to work in (remember this is the di
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{alltt}
-\hlcom{#setwd("c:/users/sankum") #Command disabled}
+\hlcom{# setwd('c:/users/sankum') #Command disabled}
 \end{alltt}
 \end{kframe}
 \end{knitrout}
@@ -4382,10 +3472,15 @@ If we want to know how many rows and columns there are in our data frame, then w
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{alltt}
-\hlkwd{nrow}\hlstd{(nycdata);} \hlkwd{ncol}\hlstd{(nycdata)}
+\hlkwd{nrow}\hlstd{(nycdata)}
 \end{alltt}
 \begin{verbatim}
 ## [1] 27004
+\end{verbatim}
+\begin{alltt}
+\hlkwd{ncol}\hlstd{(nycdata)}
+\end{alltt}
+\begin{verbatim}
 ## [1] 17
 \end{verbatim}
 \end{kframe}
@@ -4396,7 +3491,7 @@ We can calculate average arrival delay using the \texttt{mean()} \index{R Comman
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{alltt}
-\hlkwd{mean}\hlstd{(nycdata}\hlopt{$}\hlstd{arr_delay,} \hlkwc{na.rm}\hlstd{=}\hlnum{TRUE}\hlstd{)}
+\hlkwd{mean}\hlstd{(nycdata}\hlopt{$}\hlstd{arr_delay,} \hlkwc{na.rm} \hlstd{=} \hlnum{TRUE}\hlstd{)}
 \end{alltt}
 \begin{verbatim}
 ## [1] 6.129972
@@ -4411,10 +3506,15 @@ Similar to the example above, we can calculate other descriptive statistics such
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{alltt}
-\hlkwd{median}\hlstd{(nycdata}\hlopt{$}\hlstd{arr_delay,} \hlkwc{na.rm}\hlstd{=}\hlnum{TRUE}\hlstd{);} \hlkwd{IQR}\hlstd{(nycdata}\hlopt{$}\hlstd{arr_delay,} \hlkwc{na.rm}\hlstd{=}\hlnum{TRUE}\hlstd{)}
+\hlkwd{median}\hlstd{(nycdata}\hlopt{$}\hlstd{arr_delay,} \hlkwc{na.rm} \hlstd{=} \hlnum{TRUE}\hlstd{)}
 \end{alltt}
 \begin{verbatim}
 ## [1] -3
+\end{verbatim}
+\begin{alltt}
+\hlkwd{IQR}\hlstd{(nycdata}\hlopt{$}\hlstd{arr_delay,} \hlkwc{na.rm} \hlstd{=} \hlnum{TRUE}\hlstd{)}
+\end{alltt}
+\begin{verbatim}
 ## [1] 28
 \end{verbatim}
 \end{kframe}
@@ -4429,7 +3529,7 @@ Similar to the example above, we can calculate other descriptive statistics such
 \hlkwd{hist}\hlstd{(nycdata}\hlopt{$}\hlstd{arr_delay[nycdata}\hlopt{$}\hlstd{arr_delay} \hlopt{<} \hlnum{300}\hlstd{])}
 \end{alltt}
 \end{kframe}
-\includegraphics[width=\maxwidth]{figure/unnamed-chunk-154-1} 
+\includegraphics[width=\maxwidth]{figure/unnamed-chunk-122-1} 
 
 \end{knitrout}
 \caption{Example of a Histogram}
@@ -4444,8 +3544,7 @@ The plot shows that most of the flights that departed from NYC in Jan 2013 reach
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{alltt}
-\hlstd{delaybycarrier} \hlkwb{<-} \hlkwd{tapply}\hlstd{(nycdata}\hlopt{$}\hlstd{arr_delay, nycdata}\hlopt{$}\hlstd{carrier,}
-                         \hlstd{mean,} \hlkwc{na.rm} \hlstd{=} \hlnum{TRUE}\hlstd{)}
+\hlstd{delaybycarrier} \hlkwb{<-} \hlkwd{tapply}\hlstd{(nycdata}\hlopt{$}\hlstd{arr_delay, nycdata}\hlopt{$}\hlstd{carrier, mean,} \hlkwc{na.rm} \hlstd{=} \hlnum{TRUE}\hlstd{)}
 \hlstd{delaybycarrier}
 \end{alltt}
 \begin{verbatim}
@@ -4472,7 +3571,7 @@ To illustrate the point further, we can make a barplot using the \texttt{barplot
 \hlkwd{barplot}\hlstd{(delaybycarrier)}
 \end{alltt}
 \end{kframe}
-\includegraphics[width=\maxwidth]{figure/unnamed-chunk-156-1} 
+\includegraphics[width=\maxwidth]{figure/unnamed-chunk-124-1} 
 
 \end{knitrout}
 \caption{Barplot of NYC Flights Data}
@@ -4485,8 +3584,9 @@ We will end our data analysis example with an example of loading a new package a
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{alltt}
-\hlcom{#install.packages("dplyr", repos="https://cran.rstudio.com/")}
-\hlkwd{library}\hlstd{(plyr);} \hlkwd{library}\hlstd{(dplyr)}
+\hlcom{# install.packages('dplyr', repos='https://cran.rstudio.com/')}
+\hlkwd{library}\hlstd{(plyr)}
+\hlkwd{library}\hlstd{(dplyr)}
 \end{alltt}
 \end{kframe}
 \end{knitrout}
@@ -4496,7 +3596,7 @@ Let's say we want to calculate the speed of all the flights in the NYC Flights d
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{alltt}
-\hlstd{nycdata} \hlkwb{<-} \hlkwd{mutate}\hlstd{(nycdata,} \hlkwc{avgspeed} \hlstd{= distance} \hlopt{/} \hlstd{air_time)}
+\hlstd{nycdata} \hlkwb{<-} \hlkwd{mutate}\hlstd{(nycdata,} \hlkwc{avgspeed} \hlstd{= distance}\hlopt{/}\hlstd{air_time)}
 \end{alltt}
 \end{kframe}
 \end{knitrout}
@@ -4506,12 +3606,13 @@ You can use the \texttt{head()} function we used earlier to check whether the ne
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{alltt}
-\hlstd{nycdata}\hlopt{$}\hlstd{newspeed} \hlkwb{=} \hlstd{nycdata}\hlopt{$}\hlstd{distance} \hlopt{/} \hlstd{nycdata}\hlopt{$}\hlstd{air_time}
+\hlstd{nycdata}\hlopt{$}\hlstd{newspeed} \hlkwb{=} \hlstd{nycdata}\hlopt{$}\hlstd{distance}\hlopt{/}\hlstd{nycdata}\hlopt{$}\hlstd{air_time}
 \end{alltt}
 \end{kframe}
 \end{knitrout}
 
 You can use either of the above two approach - all depends upon your preference. This brings us to our concluding thought of this demo. There are several (sometimes hundreds) of different ways to doing a task in R. Some are more suitable to the given context than others. However, it is up to you choose which to become expert on, which to know peripherally and which to ignore. Each person's interaction and experience with R is unique to that person and his/her choices. I hope this demo has given you an idea of the power, depth and versatility of R and has made you interested in the deep dives into different aspects of R that are about to come in following chapter.  
+
 
 
 
@@ -4737,6 +3838,7 @@ Experience in any kind of computer programming - even something as elementary as
 
 
 
+
 % !Rnw root = AABase.Rnw
 
 \chapter{Syllabus for TO628 Winter-B 2017}
@@ -4770,7 +3872,8 @@ Experience in any kind of computer programming - even something as elementary as
 \section{Frequently Asked Questions (FAQs)}
 
 
-\chapterendsymbol
+%\chapterendsymbol
+
 
 
 \backmatter
@@ -4779,7 +3882,7 @@ Experience in any kind of computer programming - even something as elementary as
 
 \setlength{\bibsep}{5pt}
 \bibliographystyle{plainnat}
-\bibliography{chapters/AA}{}
+\bibliography{AA}{}
 
 
 

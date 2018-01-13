@@ -1,4 +1,0 @@
-% !Rnw root = AABase.Rnw
-
-\chapter*{Foreword}
-\addcontentsline{toc}{chapter}{Foreword}

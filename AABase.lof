@@ -1,4 +1,4 @@
-\contentsline {figure}{\numberline {1}{\ignorespaces Woodson is a Super Human}}{xviii}{figure.0.1}
+\contentsline {figure}{\numberline {1}{\ignorespaces Woodson is a Super Human}}{xvii}{figure.0.1}
 \addvspace {10pt}
 \contentsline {figure}{\numberline {1.1}{\ignorespaces WalMart Figures What to Sell in a Hurricane}}{4}{figure.1.1}
 \contentsline {figure}{\numberline {1.2}{\ignorespaces Modern Data Scientist}}{7}{figure.1.2}
@@ -11,49 +11,23 @@
 \addvspace {10pt}
 \addvspace {10pt}
 \addvspace {10pt}
-\contentsline {figure}{\numberline {7.1}{\ignorespaces Scatter plot of Arrival Delay vs Departure Delay}}{38}{figure.7.1}
-\contentsline {figure}{\numberline {7.2}{\ignorespaces Plotting Fitted Values of Regression Model}}{39}{figure.7.2}
-\contentsline {figure}{\numberline {7.3}{\ignorespaces Histogram of Residuals}}{43}{figure.7.3}
-\contentsline {figure}{\numberline {7.4}{\ignorespaces Plots to Check Linearity}}{44}{figure.7.4}
-\contentsline {figure}{\numberline {7.5}{\ignorespaces Plot to Check for Heteroscedasticity}}{46}{figure.7.5}
-\contentsline {figure}{\numberline {7.6}{\ignorespaces Volume vs Girth of Tree Trunks}}{49}{figure.7.6}
-\contentsline {figure}{\numberline {7.7}{\ignorespaces Quadratic Model of Volume vs Girth of Tree Trunks}}{50}{figure.7.7}
-\contentsline {figure}{\numberline {7.8}{\ignorespaces Impact of Dummy Variable}}{52}{figure.7.8}
+\contentsline {figure}{\numberline {7.1}{\ignorespaces Scatter plot of Arrival Delay vs Departure Delay}}{36}{figure.7.1}
+\contentsline {figure}{\numberline {7.2}{\ignorespaces Plotting Fitted Values of Regression Model}}{37}{figure.7.2}
+\contentsline {figure}{\numberline {7.3}{\ignorespaces Histogram of Residuals}}{41}{figure.7.3}
+\contentsline {figure}{\numberline {7.4}{\ignorespaces Plots to Check Linearity}}{42}{figure.7.4}
+\contentsline {figure}{\numberline {7.5}{\ignorespaces Plot to Check for Heteroscedasticity}}{44}{figure.7.5}
+\contentsline {figure}{\numberline {7.6}{\ignorespaces Volume vs Girth of Tree Trunks}}{47}{figure.7.6}
+\contentsline {figure}{\numberline {7.7}{\ignorespaces Quadratic Model of Volume vs Girth of Tree Trunks}}{48}{figure.7.7}
+\contentsline {figure}{\numberline {7.8}{\ignorespaces Impact of Dummy Variable}}{50}{figure.7.8}
 \addvspace {10pt}
-\contentsline {figure}{\numberline {8.1}{\ignorespaces Plot of Log of Odds Ratio}}{58}{figure.8.1}
-\contentsline {figure}{\numberline {8.2}{\ignorespaces Plot of Probit Transformation}}{61}{figure.8.2}
-\contentsline {figure}{\numberline {8.3}{\ignorespaces Plot of Survival Function}}{67}{figure.8.3}
-\contentsline {figure}{\numberline {8.4}{\ignorespaces Diagnostic Plots for Proportional Hazard Assumption}}{72}{figure.8.4}
-\contentsline {figure}{\numberline {8.5}{\ignorespaces DFBeta Plots for Checking for Outliers}}{74}{figure.8.5}
-\addvspace {10pt}
-\contentsline {figure}{\numberline {9.1}{\ignorespaces Plot of Passenger Bookings}}{76}{figure.9.1}
-\contentsline {figure}{\numberline {9.2}{\ignorespaces Plot of Lynx Trapped}}{76}{figure.9.2}
-\contentsline {figure}{\numberline {9.3}{\ignorespaces Plot of Luteinizing Hormone}}{77}{figure.9.3}
-\contentsline {figure}{\numberline {9.4}{\ignorespaces Plot of CO2 Concentrations}}{79}{figure.9.4}
-\contentsline {figure}{\numberline {9.5}{\ignorespaces Decomposition of CO2 Time Series}}{80}{figure.9.5}
-\contentsline {figure}{\numberline {9.6}{\ignorespaces STL Decomposition of CO2 Time Series}}{80}{figure.9.6}
-\contentsline {figure}{\numberline {9.7}{\ignorespaces Plot of Wave Height}}{81}{figure.9.7}
-\contentsline {figure}{\numberline {9.8}{\ignorespaces Correlogram of Wave and Passenger Data}}{81}{figure.9.8}
-\contentsline {figure}{\numberline {9.9}{\ignorespaces Partial Correlogram of Wave Data}}{81}{figure.9.9}
-\contentsline {figure}{\numberline {9.10}{\ignorespaces AR Model on Turkey Data}}{83}{figure.9.10}
-\contentsline {figure}{\numberline {9.11}{\ignorespaces Prediction Based on Auto Arima}}{84}{figure.9.11}
-\contentsline {figure}{\numberline {9.12}{\ignorespaces Plot of Skirts Data}}{85}{figure.9.12}
-\contentsline {figure}{\numberline {9.13}{\ignorespaces Plot of Differenced Skirts Data}}{85}{figure.9.13}
-\contentsline {figure}{\numberline {9.14}{\ignorespaces Plot of Twice Differenced Skirts Data}}{86}{figure.9.14}
-\contentsline {figure}{\numberline {9.15}{\ignorespaces Plot of Kings Data}}{86}{figure.9.15}
-\contentsline {figure}{\numberline {9.16}{\ignorespaces Plot of Differenced Kings Data}}{87}{figure.9.16}
-\contentsline {figure}{\numberline {9.17}{\ignorespaces Correlogram of Kings Data}}{88}{figure.9.17}
-\contentsline {figure}{\numberline {9.18}{\ignorespaces Plot of Volcano Data}}{89}{figure.9.18}
-\contentsline {figure}{\numberline {9.19}{\ignorespaces Correlogram of Volcano Data}}{90}{figure.9.19}
-\contentsline {figure}{\numberline {9.20}{\ignorespaces Correlogram of Kings Data}}{91}{figure.9.20}
-\contentsline {figure}{\numberline {9.21}{\ignorespaces Partial Correlogram of Volcano Data}}{92}{figure.9.21}
-\contentsline {figure}{\numberline {9.22}{\ignorespaces Correlogram of Forecast Errors}}{93}{figure.9.22}
-\contentsline {figure}{\numberline {9.23}{\ignorespaces Correlogram of Forecast Errors}}{93}{figure.9.23}
-\contentsline {figure}{\numberline {9.24}{\ignorespaces Prediction Time Series Residuals}}{94}{figure.9.24}
+\contentsline {figure}{\numberline {8.1}{\ignorespaces Plot of Log of Odds Ratio}}{56}{figure.8.1}
+\contentsline {figure}{\numberline {8.2}{\ignorespaces Plot of Probit Transformation}}{58}{figure.8.2}
+\contentsline {figure}{\numberline {8.3}{\ignorespaces Plot of Survival Function}}{65}{figure.8.3}
+\contentsline {figure}{\numberline {8.4}{\ignorespaces Diagnostic Plots for Proportional Hazard Assumption}}{70}{figure.8.4}
+\contentsline {figure}{\numberline {8.5}{\ignorespaces DFBeta Plots for Checking for Outliers}}{71}{figure.8.5}
 \addvspace {10pt}
 \addvspace {10pt}
-\addvspace {10pt}
-\contentsline {figure}{\numberline {12.1}{\ignorespaces Different k Values}}{109}{figure.12.1}
+\contentsline {figure}{\numberline {10.1}{\ignorespaces Different k Values}}{83}{figure.10.1}
 \addvspace {10pt}
 \addvspace {10pt}
 \addvspace {10pt}
@@ -63,7 +37,7 @@
 \addvspace {10pt}
 \addvspace {10pt}
 \addvspace {10pt}
-\contentsline {figure}{\numberline {B.1}{\ignorespaces Example of a Histogram}}{133}{figure.B.1}
-\contentsline {figure}{\numberline {B.2}{\ignorespaces Barplot of NYC Flights Data}}{134}{figure.B.2}
+\contentsline {figure}{\numberline {B.1}{\ignorespaces Example of a Histogram}}{107}{figure.B.1}
+\contentsline {figure}{\numberline {B.2}{\ignorespaces Barplot of NYC Flights Data}}{108}{figure.B.2}
 \addvspace {10pt}
 \addvspace {10pt}
