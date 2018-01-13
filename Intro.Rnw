@@ -3,7 +3,7 @@
 \chapter*{Introduction}
 \addcontentsline{toc}{chapter}{Introduction}
 
-Welcome to \textbf{Advanced Analytics Using R}: Navingating Business Big Data with R. Let's get started.
+Welcome to \textbf{Advanced Big Data Analytics Using R}: Navingating Business Big Data with R. Let's get started.
 
 \section*{Who Is This Book For?}
 

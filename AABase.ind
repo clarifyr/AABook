@@ -1,105 +1,105 @@
 \begin{theindex}
 
   \item Key Concepts
-    \subitem Adjusted R-Square, \hyperpage{38}
+    \subitem Adjusted R-Square, \hyperpage{34}
     \subitem Advanced Analytics, \hyperpage{3}
-    \subitem AIC, \hyperpage{51}
-    \subitem Arithmatic Operator Precedance, \hyperpage{17}
-    \subitem Arithmatic Operators, \hyperpage{17}
-    \subitem Assignment Operator, \hyperpage{105}
+    \subitem AIC, \hyperpage{45}
+    \subitem Arithmatic Operator Precedance, \hyperpage{15}
+    \subitem Arithmatic Operators, \hyperpage{15}
+    \subitem Assignment Operator, \hyperpage{95}
     \subitem Big Data, \hyperpage{3}
       \subsubitem Variety, \hyperpage{5}
-      \subsubitem Velocity, \hyperpage{5}
-      \subsubitem Volume, \hyperpage{4}
-    \subitem Cox Model, \hyperpage{61}
-    \subitem Dummy Variable, \hyperpage{49}
-    \subitem Functions, \hyperpage{18}
-    \subitem Integer Division, \hyperpage{17}
-    \subitem Logical Operators, \hyperpage{18}
-    \subitem Multicollinearity, \hyperpage{44}
+      \subsubitem Velocity, \hyperpage{4}
+      \subsubitem Volume, \hyperpage{3}
+    \subitem Cox Model, \hyperpage{54}
+    \subitem Dummy Variable, \hyperpage{43}
+    \subitem Functions, \hyperpage{16}
+    \subitem Integer Division, \hyperpage{15}
+    \subitem Logical Operators, \hyperpage{16}
+    \subitem Multicollinearity, \hyperpage{38}
     \subitem Open Source, \hyperpage{xvi}
-    \subitem p-value, \hyperpage{38}
-    \subitem Parsimony, \hyperpage{47}
-    \subitem R-Square, \hyperpage{37}
-    \subitem Remainder, \hyperpage{17}
-    \subitem Residuals, \hyperpage{35}
-    \subitem Statistical Significance, \hyperpage{36}
-    \subitem Variables, \hyperpage{25}
-    \subitem Vectors, \hyperpage{26}
+    \subitem p-value, \hyperpage{33}
+    \subitem Parsimony, \hyperpage{42}
+    \subitem R-Square, \hyperpage{32}
+    \subitem Remainder, \hyperpage{15}
+    \subitem Residuals, \hyperpage{31}
+    \subitem Statistical Significance, \hyperpage{31}
+    \subitem Variables, \hyperpage{21}
+    \subitem Vectors, \hyperpage{22}
 
   \indexspace
 
   \item Packages
-    \subitem car, \hyperpage{40}
-    \subitem clarifyR, \hyperpage{xiv}
-    \subitem devtools, \hyperpage{xiv}
-    \subitem dplyr, \hyperpage{108}
-    \subitem installr, \hyperpage{15}
-    \subitem KMsurv, \hyperpage{61}
+    \subitem car, \hyperpage{35}
+    \subitem clarifyR, \hyperpage{xiii}
+    \subitem devtools, \hyperpage{xiii}
+    \subitem dplyr, \hyperpage{97}
+    \subitem installr, \hyperpage{13}
+    \subitem KMsurv, \hyperpage{54}
     \subitem knitr, \hyperpage{xiii}
-    \subitem lmtest, \hyperpage{43}
-    \subitem OIsurv, \hyperpage{61}
-    \subitem plyr, \hyperpage{66}
-    \subitem survival, \hyperpage{61}
+    \subitem lmtest, \hyperpage{38}
+    \subitem OIsurv, \hyperpage{54}
+    \subitem plyr, \hyperpage{58}
+    \subitem survival, \hyperpage{54}
     \subitem Sweave, \hyperpage{xiii}
 
   \indexspace
 
   \item R Commands
-    \subitem .libPaths, \hyperpage{16}
-    \subitem abline, \hyperpage{36}
-    \subitem AIC, \hyperpage{53}
-    \subitem anova, \hyperpage{51}, \hyperpage{53}
-    \subitem attach, \hyperpage{35}
-    \subitem barplot, \hyperpage{108}
-    \subitem bptest, \hyperpage{43}
-    \subitem c, \hyperpage{26}
-    \subitem coef, \hyperpage{36}
-    \subitem confint, \hyperpage{36}
-    \subitem cooks.distance, \hyperpage{45}
-    \subitem cor, \hyperpage{35}
-    \subitem cox.zph, \hyperpage{69}
-    \subitem coxph, \hyperpage{63}
-    \subitem dfbetas, \hyperpage{45}
-    \subitem dffits, \hyperpage{45}
-    \subitem edit, \hyperpage{16}, \hyperpage{27}
-    \subitem fix, \hyperpage{16}, \hyperpage{27}
-    \subitem getwd, \hyperpage{105}
-    \subitem glm, \hyperpage{55}
-    \subitem head, \hyperpage{106}
-    \subitem hist, \hyperpage{107}
-    \subitem influence.measure, \hyperpage{46}
-    \subitem install.packages, \hyperpage{xiv}, \hyperpage{108}
+    \subitem .libPaths, \hyperpage{13}
+    \subitem abline, \hyperpage{32}
+    \subitem AIC, \hyperpage{47}
+    \subitem anova, \hyperpage{45}, \hyperpage{47}
+    \subitem attach, \hyperpage{31}
+    \subitem barplot, \hyperpage{97}
+    \subitem bptest, \hyperpage{38}
+    \subitem c, \hyperpage{22}
+    \subitem coef, \hyperpage{32}
+    \subitem confint, \hyperpage{32}
+    \subitem cooks.distance, \hyperpage{40}
+    \subitem cor, \hyperpage{31}
+    \subitem cox.zph, \hyperpage{61}
+    \subitem coxph, \hyperpage{56}
+    \subitem dfbetas, \hyperpage{40}
+    \subitem dffits, \hyperpage{40}
+    \subitem edit, \hyperpage{14}, \hyperpage{23}
+    \subitem fix, \hyperpage{14}, \hyperpage{23}
+    \subitem getwd, \hyperpage{95}
+    \subitem glm, \hyperpage{49}
+    \subitem head, \hyperpage{96}
+    \subitem hist, \hyperpage{96}
+    \subitem influence.measure, \hyperpage{40}
+    \subitem install.packages, \hyperpage{xiv}, \hyperpage{97}
     \subitem install\_github, \hyperpage{xiv}
-    \subitem installr, \hyperpage{20}
-    \subitem IQR, \hyperpage{107}
-    \subitem length, \hyperpage{27}
-    \subitem library, \hyperpage{xiv}, \hyperpage{108}
-    \subitem lm, \hyperpage{36}
-    \subitem mean, \hyperpage{106}
-    \subitem median, \hyperpage{107}
-    \subitem mutate, \hyperpage{109}
-    \subitem nchar, \hyperpage{26}
-    \subitem ncol, \hyperpage{106}
-    \subitem nrow, \hyperpage{106}
-    \subitem outlierTest, \hyperpage{45}
-    \subitem plot, \hyperpage{35}
-    \subitem print, \hyperpage{xvi}
-    \subitem read.csv, \hyperpage{105}
-    \subitem residualPlots, \hyperpage{40}
-    \subitem round, \hyperpage{18}
-    \subitem setwd, \hyperpage{105}
-    \subitem shapiro.test, \hyperpage{40}
-    \subitem sqrt, \hyperpage{18}
-    \subitem step, \hyperpage{51}
-    \subitem summary, \hyperpage{37}
-    \subitem Surv, \hyperpage{61}
-    \subitem survfit, \hyperpage{64}
-    \subitem system.time, \hyperpage{20}
-    \subitem tapply, \hyperpage{108}
-    \subitem updateR, \hyperpage{15}
-    \subitem version, \hyperpage{15}, \hyperpage{20}
-    \subitem View, \hyperpage{16}
-    \subitem vif, \hyperpage{44}
+    \subitem installr, \hyperpage{18}
+    \subitem IQR, \hyperpage{96}
+    \subitem length, \hyperpage{23}
+    \subitem library, \hyperpage{xiv}, \hyperpage{97}
+    \subitem lm, \hyperpage{31}
+    \subitem mean, \hyperpage{96}
+    \subitem median, \hyperpage{96}
+    \subitem mutate, \hyperpage{97}
+    \subitem nchar, \hyperpage{22}
+    \subitem ncol, \hyperpage{96}
+    \subitem nrow, \hyperpage{96}
+    \subitem outlierTest, \hyperpage{40}
+    \subitem plot, \hyperpage{31}
+    \subitem print, \hyperpage{xv}
+    \subitem read.csv, \hyperpage{95}
+    \subitem residualPlots, \hyperpage{35}
+    \subitem round, \hyperpage{16}
+    \subitem setwd, \hyperpage{95}
+    \subitem shapiro.test, \hyperpage{35}
+    \subitem sqrt, \hyperpage{16}
+    \subitem step, \hyperpage{45}
+    \subitem summary, \hyperpage{32}
+    \subitem Surv, \hyperpage{54}
+    \subitem survfit, \hyperpage{57}
+    \subitem system.time, \hyperpage{17}
+    \subitem tapply, \hyperpage{97}
+    \subitem updateR, \hyperpage{13}
+    \subitem version, \hyperpage{13}, \hyperpage{18}
+    \subitem View, \hyperpage{14}
+    \subitem vif, \hyperpage{38}
 
 \end{theindex}

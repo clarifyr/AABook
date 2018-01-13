@@ -14,7 +14,7 @@ R is awesome. R is also considered pretty difficult to learn. In my opinion, tha
 
 \section{Introduction to R and RStudio}
 
-For the purpose of this course, R is a Statistical Computing Environment. \mnote{R is a pretty awful name for anything - try googling "R" and see how relevant the search results are! It is called R after the first name of the two authors of R: Robert and Ross. The name kinda makes sense when you consider that R is based on another programming language named S.} It provides us with an underlying computer language, analysis tools and software platform for us to work with data. While R is pretty powerful, it is built by geeks for geeks. As a result, it lacks the user-friendliness needed by beginners and casual users. To help mitigate this problem, we do not directly interface with R and instead use the user friendly RStudio software as a wrapper around R.
+For the purpose of this course, R is a Statistical Computing Environment. \mnote{R is a pretty awful name for anything - try googling "R" and see how relevant the search results are! It is called R after the first name of the two authors of R: Robert and Ross. The name kinda makes sense when you consider that R is based on another programming language named S.} It provides us with an underlying computer language, analysis tools and software platform for us to work with data. While R is pretty powerful, it is built by geeks for geeks. As a result, it lacks the user-friendliness needed by beginners and casual users. To help mitigate this problem, we do not directly interface with R and instead use the user friendly RStudio software as a wrapper around R. RStudio is often considered an IDE (Integrated Development Environment) for R.
 
 \subsection{Download and Install R and RStudio} \label{sec:rinstall}
 
@@ -49,6 +49,19 @@ Now that we have both R and RStudio set up, it is time for us to get started in 
 
 \section{Useful Features of RStudio}
 
+\subsection{Environment}
+
+\subsection{History}
+
+\subsection{Files Panes}
+
+\subsection{Plots}
+
+\subsection{Packages}
+
+\subsection{Help}
+
+\section{Helpful Menu Items and Keyboard Shortcuts}
 
 \section{Essential R Tips \& Tricks}
 
@@ -74,7 +87,6 @@ print("This statement is incomplete"
 Object names in R can consist of any combination of alphanumeric characters (\texttt{a-z}, \texttt{A-Z}, \texttt{0-9}) as well as underscore \texttt{-} and period \texttt{.} characters. Object names should not include special characters such as \texttt{?} or space. Object names must start with a letter or a period. Special care should be taken to not include one of the reserved keywords (like $function$ or $help$) as object names.
 
 
-
 \section{RMarkdown (RMD) Files}
 
 We will use extensive ise of RMarkdown files in the class. Markdown is a simple formatting syntax for authoring documents. RMarkdown allows you to create Markdown documents with embedded R code in them. RMarkdown documents can then be rendered in variety of output formats such as HTML, PDF, and MS Word documents. 
@@ -91,7 +103,7 @@ Once you say OK, you will be taken to the default start page. This page has some
 ```
 title: "Untitled"
 author: "Dr. Sanjeev Kumar"
-date: "May 5, 2016"
+date: "May 5, 2018"
 output: html_document
 ```
 \end{verbatim}
@@ -113,6 +125,24 @@ output:
 Now you can go ahead and add content to your document. When you want to create the output,  click the \emph{Knit} button and a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. We will see later in the document how to embed R code in RMD files.
 
 It is easy to format RMarkdown files and embed R code in them. For more details on using R Markdown see http://rmarkdown.rstudio.com.
+
+\section{Embedding R Code Blocks in RMD Files}
+
+\subsection{Embedding Options}
+
+\begin{description}
+  \item[echo]
+  \item[eval]
+  \item[cache]
+  \item[label]
+  \item[fig.height/width]
+\end{description}
+
+\subsection{Embedding Code Blocks of Other Languages }
+
+
+\subsection{Embedding in-line R Code}
+
 
 \section{Reproducibility of Data Analysis}
 

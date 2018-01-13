@@ -2,7 +2,15 @@
 
 \chapter{Essential R Language Elements}
 
-In this chapter we will start playing with some basic R functionalities and start getting comfortable with typing commands in the R console.
+\begin{flushright}
+\textbf{\texttt{In God We Trust; All Others Must Bring Data}}
+
+\emph{-- Willian Edwards Deming}
+\end{flushright}
+
+\vspace{12pt}
+
+In this chapter we will start playing with some basic R functionalities and start getting comfortable with typing commands in the R console. All code examples you see in the chapter are opportunities for you to type them in R Console yourself and see whether you get the same output. There is no better way to find your way around R than to get your hands dirty - and no better time than now. So lets get started.
 
 \subsection{Basic Arithmatic and Logical Operators}
 

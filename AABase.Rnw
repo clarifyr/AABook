@@ -1,5 +1,5 @@
-\documentclass[11pt, letterpaper, twoside]{memoir}
-\usepackage[top=1in, bottom=1in, left=1in, right=2.5in, marginparsep=0.1in]{geometry}
+\documentclass[10pt, letterpaper, twoside]{memoir}
+\usepackage[top=1in, bottom=1in, left=1in, right=2in, marginparsep=0.1in]{geometry}
 \usepackage{setspace}
 \usepackage[T1]{fontenc}
 \usepackage{titlesec}  %needs recent version of »titlesec«
@@ -99,13 +99,13 @@
 \parbox[b]{0.75\textwidth}{
 \vbox{%
 \vspace{\drop}
-{\noindent\HUGE\bfseries Advanced Analytics\\[0.5\baselineskip]
-Using R}\\[2\baselineskip]
+{\noindent\HUGE\bfseries Advanced Big Data\\[0.5\baselineskip]
+Analytics Using R}\\[2\baselineskip]
 {\Large\itshape Navigating Business Big Data with R}\\[2\baselineskip]
-{\Large Dr. Sanjeev Kumar} \\ [2\baselineskip]
+{\Large Sanjeev Kumar} \\ [2\baselineskip]
 {Technology \& Operations, Ross School of Business \\ University of Michigan}\par
 \vspace{0.2\textheight}
-{\noindent This book is developed for Advanced Analytics classes at Ross School of Business, Univ. of Michigan. Material updated for Fall 2016 Semester}\\[\baselineskip]
+{\noindent This book is developed for Advanced Analytics classes at Ross School of Business, Univ. of Michigan. Material updated for Fall 2018 Semester}\\[\baselineskip]
 }% end of vbox
 }% end of parbox
 }% end of hbox

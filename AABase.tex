@@ -1,5 +1,5 @@
-\documentclass[11pt, letterpaper, twoside]{memoir}\usepackage{knitr}
-\usepackage[top=1in, bottom=1in, left=1in, right=2.5in, marginparsep=0.1in]{geometry}
+\documentclass[10pt, letterpaper, twoside]{memoir}\usepackage{knitr}
+\usepackage[top=1in, bottom=1in, left=1in, right=2in, marginparsep=0.1in]{geometry}
 \usepackage{setspace}
 \usepackage[T1]{fontenc}
 \usepackage{titlesec}  %needs recent version of »titlesec«
@@ -99,13 +99,13 @@
 \parbox[b]{0.75\textwidth}{
 \vbox{%
 \vspace{\drop}
-{\noindent\HUGE\bfseries Advanced Analytics\\[0.5\baselineskip]
-Using R}\\[2\baselineskip]
+{\noindent\HUGE\bfseries Advanced Big Data\\[0.5\baselineskip]
+Analytics Using R}\\[2\baselineskip]
 {\Large\itshape Navigating Business Big Data with R}\\[2\baselineskip]
-{\Large Dr. Sanjeev Kumar} \\ [2\baselineskip]
+{\Large Sanjeev Kumar} \\ [2\baselineskip]
 {Technology \& Operations, Ross School of Business \\ University of Michigan}\par
 \vspace{0.2\textheight}
-{\noindent This book is developed for Advanced Analytics classes at Ross School of Business, Univ. of Michigan. Material updated for Fall 2016 Semester}\\[\baselineskip]
+{\noindent This book is developed for Advanced Analytics classes at Ross School of Business, Univ. of Michigan. Material updated for Fall 2018 Semester}\\[\baselineskip]
 }% end of vbox
 }% end of parbox
 }% end of hbox
@@ -206,7 +206,7 @@ This document was processed on: \today \\ at \printtime
 \chapter*{Introduction}
 \addcontentsline{toc}{chapter}{Introduction}
 
-Welcome to \textbf{Advanced Analytics Using R}: Navingating Business Big Data with R. Let's get started.
+Welcome to \textbf{Advanced Big Data Analytics Using R}: Navingating Business Big Data with R. Let's get started.
 
 \section*{Who Is This Book For?}
 
@@ -442,7 +442,7 @@ R is awesome. R is also considered pretty difficult to learn. In my opinion, tha
 
 \section{Introduction to R and RStudio}
 
-For the purpose of this course, R is a Statistical Computing Environment. \mnote{R is a pretty awful name for anything - try googling "R" and see how relevant the search results are! It is called R after the first name of the two authors of R: Robert and Ross. The name kinda makes sense when you consider that R is based on another programming language named S.} It provides us with an underlying computer language, analysis tools and software platform for us to work with data. While R is pretty powerful, it is built by geeks for geeks. As a result, it lacks the user-friendliness needed by beginners and casual users. To help mitigate this problem, we do not directly interface with R and instead use the user friendly RStudio software as a wrapper around R.
+For the purpose of this course, R is a Statistical Computing Environment. \mnote{R is a pretty awful name for anything - try googling "R" and see how relevant the search results are! It is called R after the first name of the two authors of R: Robert and Ross. The name kinda makes sense when you consider that R is based on another programming language named S.} It provides us with an underlying computer language, analysis tools and software platform for us to work with data. While R is pretty powerful, it is built by geeks for geeks. As a result, it lacks the user-friendliness needed by beginners and casual users. To help mitigate this problem, we do not directly interface with R and instead use the user friendly RStudio software as a wrapper around R. RStudio is often considered an IDE (Integrated Development Environment) for R.
 
 \subsection{Download and Install R and RStudio} \label{sec:rinstall}
 
@@ -477,6 +477,19 @@ Now that we have both R and RStudio set up, it is time for us to get started in 
 
 \section{Useful Features of RStudio}
 
+\subsection{Environment}
+
+\subsection{History}
+
+\subsection{Files Panes}
+
+\subsection{Plots}
+
+\subsection{Packages}
+
+\subsection{Help}
+
+\section{Helpful Menu Items and Keyboard Shortcuts}
 
 \section{Essential R Tips \& Tricks}
 
@@ -507,7 +520,6 @@ R is smart enough to figure when the command is not finished and allows you to c
 Object names in R can consist of any combination of alphanumeric characters (\texttt{a-z}, \texttt{A-Z}, \texttt{0-9}) as well as underscore \texttt{-} and period \texttt{.} characters. Object names should not include special characters such as \texttt{?} or space. Object names must start with a letter or a period. Special care should be taken to not include one of the reserved keywords (like $function$ or $help$) as object names.
 
 
-
 \section{RMarkdown (RMD) Files}
 
 We will use extensive ise of RMarkdown files in the class. Markdown is a simple formatting syntax for authoring documents. RMarkdown allows you to create Markdown documents with embedded R code in them. RMarkdown documents can then be rendered in variety of output formats such as HTML, PDF, and MS Word documents. 
@@ -524,7 +536,7 @@ Once you say OK, you will be taken to the default start page. This page has some
 ```
 title: "Untitled"
 author: "Dr. Sanjeev Kumar"
-date: "May 5, 2016"
+date: "May 5, 2018"
 output: html_document
 ```
 \end{verbatim}
@@ -546,6 +558,24 @@ output:
 Now you can go ahead and add content to your document. When you want to create the output,  click the \emph{Knit} button and a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. We will see later in the document how to embed R code in RMD files.
 
 It is easy to format RMarkdown files and embed R code in them. For more details on using R Markdown see http://rmarkdown.rstudio.com.
+
+\section{Embedding R Code Blocks in RMD Files}
+
+\subsection{Embedding Options}
+
+\begin{description}
+  \item[echo]
+  \item[eval]
+  \item[cache]
+  \item[label]
+  \item[fig.height/width]
+\end{description}
+
+\subsection{Embedding Code Blocks of Other Languages }
+
+
+\subsection{Embedding in-line R Code}
+
 
 \section{Reproducibility of Data Analysis}
 
@@ -675,7 +705,15 @@ One of the first R commands that gives trouble is the \rcommand{edit} command. A
 
 \chapter{Essential R Language Elements}
 
-In this chapter we will start playing with some basic R functionalities and start getting comfortable with typing commands in the R console.
+\begin{flushright}
+\textbf{\texttt{In God We Trust; All Others Must Bring Data}}
+
+\emph{-- Willian Edwards Deming}
+\end{flushright}
+
+\vspace{12pt}
+
+In this chapter we will start playing with some basic R functionalities and start getting comfortable with typing commands in the R console. All code examples you see in the chapter are opportunities for you to type them in R Console yourself and see whether you get the same output. There is no better way to find your way around R than to get your hands dirty - and no better time than now. So lets get started.
 
 \subsection{Basic Arithmatic and Logical Operators}
 
@@ -905,7 +943,7 @@ You would often want to calculate how much it takes for R to do something. You c
 \end{alltt}
 \begin{verbatim}
 ##    user  system elapsed 
-##       0       0       0
+##   0.000   0.000   0.001
 \end{verbatim}
 \end{kframe}
 \end{knitrout}
