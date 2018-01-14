@@ -144,13 +144,15 @@ It is easy to format RMarkdown files and embed R code in them. For more details 
 \subsection{Embedding in-line R Code}
 
 
-\section{Reproducibility of Data Analysis}
+\subsection{Reproducibility of Data Analysis}
 
 A key advantage of using an RMD file is that the output contains both the R code and the output. That allows for a precise matching of what steps were performed to reach a specific output. Consider the example of a complex chart made in MS-Excel - you would be hard pressed to figure out what exactly was done to create that chart. Whether the chart has some data manipulation in it, whether the chart inadvertently includes a mistake - there is no transparency - and hence you are likely to not have much trust in the chart. In the case of RMD files on the other hand, the entire process of creating the chart is right there in the form of R commands. Anybody else with the same data and the same commands will reach exactly the same output. Your analysis can be reproduced by anybody else - imporving the reliability and trustworthiness of your analysis.
 
-We discussed "veracity" as one of the four Vs of Big Data. Doing data analytics in a way that is reproducible (e.g through an RMD file) goes a long way towards establishing confidence in the results of the analysis/
+We discussed "veracity" as one of the four Vs of Big Data. Doing data analytics in a way that is reproducible (e.g through an RMD file) goes a long way towards establishing confidence in the results of the analysis.
 
-\section{Open Source Software}
+\section{Key Features of R/RStudio Ecosystem}
+
+\subsection{Open Source Software}
 
 Open Source Software is a broad term for software that is developed by a community of volunteers and is available free of charge for you and I to use. R is open source with a strong and dedicated community that takes the stewardship of R very very seriously. 
 As R is open source, the underlying computer code (the source code) is available for anyone to view and modify. All these extra eyes looking at the code usually means a more reliable, error free and malware resistant software. 
@@ -190,6 +192,11 @@ curve(x^2,from = 0,to = 3, xlab = "Time", ylab="Expertise",
 abline(a = 2,b = 1, col = "blue", lwd = 2)
 @
 
+\subsection{R is NOT Verbose}
+
+In fact R is very very concise. It will not give you an output until you ask for it. This is very different than most statistical software that tend to overwhelm the user with every possible output possible. R allows you the flexibility to specifically request the levek of detail you need. By default, R will provide only the minimal amount of output.
+
+\subsection{Object Oriented Programming}
 
 \subsection{R Community's Sense of Humor}
 

@@ -11,7 +11,7 @@
 \setcitestyle{numbers,open={[},close={]}}
 
 \setlength{\topsep}{0pt} %To ensure that R output is not too spaced out vertically
-\setlength{\parskip}{0pt}
+\setlength{\parskip}{3pt}
 \setlength{\partopsep}{0pt}
 
 \usepackage{makeidx}
@@ -577,13 +577,15 @@ It is easy to format RMarkdown files and embed R code in them. For more details 
 \subsection{Embedding in-line R Code}
 
 
-\section{Reproducibility of Data Analysis}
+\subsection{Reproducibility of Data Analysis}
 
 A key advantage of using an RMD file is that the output contains both the R code and the output. That allows for a precise matching of what steps were performed to reach a specific output. Consider the example of a complex chart made in MS-Excel - you would be hard pressed to figure out what exactly was done to create that chart. Whether the chart has some data manipulation in it, whether the chart inadvertently includes a mistake - there is no transparency - and hence you are likely to not have much trust in the chart. In the case of RMD files on the other hand, the entire process of creating the chart is right there in the form of R commands. Anybody else with the same data and the same commands will reach exactly the same output. Your analysis can be reproduced by anybody else - imporving the reliability and trustworthiness of your analysis.
 
-We discussed "veracity" as one of the four Vs of Big Data. Doing data analytics in a way that is reproducible (e.g through an RMD file) goes a long way towards establishing confidence in the results of the analysis/
+We discussed "veracity" as one of the four Vs of Big Data. Doing data analytics in a way that is reproducible (e.g through an RMD file) goes a long way towards establishing confidence in the results of the analysis.
 
-\section{Open Source Software}
+\section{Key Features of R/RStudio Ecosystem}
+
+\subsection{Open Source Software}
 
 Open Source Software is a broad term for software that is developed by a community of volunteers and is available free of charge for you and I to use. R is open source with a strong and dedicated community that takes the stewardship of R very very seriously. 
 As R is open source, the underlying computer code (the source code) is available for anyone to view and modify. All these extra eyes looking at the code usually means a more reliable, error free and malware resistant software. 
@@ -627,6 +629,11 @@ BTW - the plot in Figure: \ref{fig:lcurve} was generated using R. Here is the co
 \end{kframe}
 \end{knitrout}
 
+\subsection{R is NOT Verbose}
+
+In fact R is very very concise. It will not give you an output until you ask for it. This is very different than most statistical software that tend to overwhelm the user with every possible output possible. R allows you the flexibility to specifically request the levek of detail you need. By default, R will provide only the minimal amount of output.
+
+\subsection{Object Oriented Programming}
 
 \subsection{R Community's Sense of Humor}
 
@@ -715,7 +722,7 @@ One of the first R commands that gives trouble is the \rcommand{edit} command. A
 
 In this chapter we will start playing with some basic R functionalities and start getting comfortable with typing commands in the R console. All code examples you see in the chapter are opportunities for you to type them in R Console yourself and see whether you get the same output. There is no better way to find your way around R than to get your hands dirty - and no better time than now. So lets get started.
 
-\subsection{Basic Arithmatic and Logical Operators}
+\section{Arithmatic Operators}
 
 You can use R as a glorified calculator. All arithmatic calculations can be easily performed using \rconcept{Arithmatic Operators} like + (addition), - (subtraction), * (multiplication), / (division) and \verb|^| (exponent).
 \begin{knitrout}
@@ -741,6 +748,8 @@ You can use R as a glorified calculator. All arithmatic calculations can be easi
 \end{kframe}
 \end{knitrout}
 
+You would note that the outputs to the commands have this \verb|[1]| before them. The number indicates how many values there are in the output. Since the commands above lead to a single output value - you see the \verb|[1]| there.
+
 When you have complicated Arithmatic Expressions, R follows usual \rconcept{Arithmatic Operator Precedance}: Brackets, Exponent, Division and Multiplication, Addition and Subtraction - in that order. Go Left to Right for the same precedance. Of course it is preferable to put in enough paratheses so that you are not relying on R's operator precedance for accurate execution of your commands. 
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
@@ -760,7 +769,7 @@ When you have complicated Arithmatic Expressions, R follows usual \rconcept{Arit
 \end{kframe}
 \end{knitrout}
 
-Two arithmatic operators that many are not familiar are: \rconcept{Integer Division} and \rconcept{Remainder} operators. The \texttt{Integer Division} operator: \verb|%/%|, provides just the quotient for a division operation while the \texttt{remainder operator}: \verb|%%|, provides just the remainder for a division operation.
+Two arithmatic operators that many are not familiar with are: \rconcept{Integer Division} and \rconcept{Remainder} operators. The \texttt{Integer Division} operator: \verb|%/%|, provides just the quotient for a division operation while the \texttt{remainder operator}: \verb|%%|, provides just the remainder for a division operation.
 
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
@@ -779,9 +788,259 @@ Two arithmatic operators that many are not familiar are: \rconcept{Integer Divis
 \end{kframe}
 \end{knitrout}
 
-Just as arithmatic expressions evaluate to a numerical result, logical expressions evaluate to a logical result - either \texttt{TRUE} or \texttt{FALSE}. \mnote{Note the upper case format for the two keywords.} Logical expressions can be created using \rconcept{Logical Operators}: equal to (==), greate than (>), less than (<), greater than or equal to (>=), less than or equal to (<=) and finally, not equal to (!=).
+\section{Logical Operators}
 
-\subsection{Using Built-In Functions}
+Just as arithmatic expressions evaluate to a numerical result, logical expressions evaluate to a logical result - either \texttt{TRUE} or \texttt{FALSE}. \mnote{Note the upper case format for the two keywords. The letters T and F are also acceptable values as shorthand for TRUE and FALSE} Logical expressions can be created using \rconcept{Logical Operators}: equal to (==), greate than (>), less than (<), greater than or equal to (>=), less than or equal to (<=) and finally, not equal to (!=).
+
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlnum{10} \hlopt{>} \hlnum{20}  \hlcom{#Should evaluate to FALSE}
+\end{alltt}
+\begin{verbatim}
+## [1] FALSE
+\end{verbatim}
+\begin{alltt}
+\hlnum{12.37} \hlopt{<=} \hlnum{23.66}  \hlcom{#Should evaluate to TRUE}
+\end{alltt}
+\begin{verbatim}
+## [1] TRUE
+\end{verbatim}
+\begin{alltt}
+\hlstd{(}\hlnum{10}\hlopt{/}\hlnum{3}\hlstd{)} \hlopt{==} \hlstd{(}\hlnum{30}\hlopt{/}\hlnum{9}\hlstd{)}  \hlcom{#Should evaluate to TRUE}
+\end{alltt}
+\begin{verbatim}
+## [1] TRUE
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
+
+Logical values can be combined using \rconcept{AND} and \rconcept{OR} constructs. When combining two logical values using \texttt{OR}, the resulting value is \texttt{TRUE} if any of the two values are \texttt{TRUE}. When combining two logical values using \texttt{AND}, the resulting value is \texttt{TRUE} only of both the values are \texttt{TRUE}. The command for \texttt{AND} is \rcommand{\&} while the command for \texttt{OR} is the \texttt{|} character.
+
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlstd{(}\hlnum{10} \hlopt{>} \hlnum{20}\hlstd{)} \hlopt{|} \hlstd{(}\hlnum{12.37} \hlopt{<=} \hlnum{23.66}\hlstd{)}  \hlcom{#Should evaluate to TRUE}
+\end{alltt}
+\begin{verbatim}
+## [1] TRUE
+\end{verbatim}
+\begin{alltt}
+\hlstd{(}\hlnum{10} \hlopt{>} \hlnum{20}\hlstd{)} \hlopt{&} \hlstd{(}\hlnum{12.37} \hlopt{<=} \hlnum{23.66}\hlstd{)}  \hlcom{#Should evaluate to FALSE}
+\end{alltt}
+\begin{verbatim}
+## [1] FALSE
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
+
+You can use \rconcept{NOT} operator to convert a \texttt{TRUE} value to \texttt{FALSE} and vice versa - the corresponding command is \texttt{!} character. You can use logical operators to compare non-numeric values as well.
+
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlopt{!}\hlnum{TRUE}  \hlcom{#Should evaluate to FALSE}
+\end{alltt}
+\begin{verbatim}
+## [1] FALSE
+\end{verbatim}
+\begin{alltt}
+\hlstr{"Dog"} \hlopt{>} \hlstr{"Cat"}  \hlcom{#As everybody know, this is TRUE}
+\end{alltt}
+\begin{verbatim}
+## [1] TRUE
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
+
+As the example above shows, comparing non-numeric values \mnote{We have not discussed different data types yet. Values enclosed in quote marks are text values, typically called Strings} can result in interesting results. When two strings are compared, they are essentially compared one character at a time. In the example above, the character C is compared with character D. The comparison is based on the Unicode number associated with the characters. As D has a higher Unicode number than C, "Dog" is considered higher than "Cat". \mnote{Interesting thought experiment: \\ 1000 > 50: True or False? \\ "1000" > "50": True or False?}
+
+\section{Variables}
+
+R keeps all data in \rconcept{Variables}. Variables can be thought of as a space in computer's memory where R can store data. Once we have created a variable, we can then use the variable name to access, manipulate and work with the data kept in the variable. Variables are created using the \rconcept{Assignment Operator} written as \rcommand{<-}. The arrow indicates the direction of assignment. Operators also exist to do assignment in the opposite direction (\texttt{->}) and do the same operation as assignment operator. R also supports the assignment operator command used by many other programming languages (\texttt{=}) but it is customary to use the right-to-left version of assignment operator. \mnote{I find the R version of assignment operator to be much more intuitive as the direction of value assignment is clearly specified. The = charater usually confuses beginners into thinking that we are "equating" values instead of the correct interpretation of "assigning" value from one side to the other.}
+
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlstd{revenue} \hlkwb{<-} \hlnum{100}  \hlcom{#Typical way of creating a variable and assigning value}
+\hlcom{# Above is the recommended approach}
+\hlstd{revenue} \hlkwb{=} \hlnum{100}  \hlcom{#Alternate way of doing same as above}
+\hlcom{# 100 -> revenue #Reverse direction assignment}
+\hlstd{revenue} \hlkwb{<-} \hlstd{revenue} \hlopt{+} \hlnum{300}  \hlcom{#Performing calculations}
+\hlkwd{print}\hlstd{(revenue)}  \hlcom{#Printing/showing the value inside the variable}
+\end{alltt}
+\begin{verbatim}
+## [1] 400
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
+
+The first three line of the code above should be read as the value 100 is assigned to the variable \emph{revenue}. In the fourth line, we add 300 to the current value of variable \emph{revenue} and the resulting value (in this case 400) is then assigned to the variable \emph{revenue}. So the value in the variable \emph{revenue} is now 400, which is shown as output in the last line.
+
+A numeric variable like \emph{revenue} above can be used just like a number to perform all usual arithmetic operations.
+
+\section{Variable Data Types}
+
+Variables can store  different types of data. We saw integer numerical data in the examples above. Other common data types include floating point numbers (fractional numbers), characters data (i.e. a single character), text data (called strings - as in string of characters) and logical data (true or false). We can find the data type of a variable by using the \rcommand{class} command.
+
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlstd{numvalue} \hlkwb{<-} \hlnum{20.56}  \hlcom{#Creating a numeric variable}
+\hlkwd{class}\hlstd{(numvalue)}  \hlcom{#Finding data type of numvalue variable}
+\end{alltt}
+\begin{verbatim}
+## [1] "numeric"
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
+
+\subsection{Numeric Data}
+
+Variables of numeric data type can store both integers and floating point values. Unlike many programming languages, R does not have various different kinds of integers and floating point numbers defined to optimize memory usage. 
+
+\subsection{String Data}
+
+\rconcept{String} or text data \mnote{Text is nothing but a string of characters, hence the name String} is written within quote marks (\texttt{" "}) to differentiate them from text that represent things like object names. An empty string (a text data with no characters) is usually represented by two quote marks with nothing within - like \texttt{""}.
+
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlstd{day.name} \hlkwb{<-} \hlstr{"Sunday"}  \hlcom{#Assigns the string Sunday to variable day.name}
+\hlstd{someday} \hlkwb{<-} \hlstr{""}  \hlcom{#Empty string assigned to variable someday}
+\end{alltt}
+\end{kframe}
+\end{knitrout}
+
+String is a very useful data type as all other types of data can be saved as a string. For example - we can save numeric data ("23.37"), date data ("12/27/1976"), logical data ("TRUE") etc. all as string. R has several useful commands for working with string data. You can connect two strings together using the \rconcept{String Concatenation} function \rcommand{paste}. You can calculate the number of characters in a string using the \rcommand{nchar} function.\mnote{Many other strings related commands are discussed later} 
+
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlkwd{nchar}\hlstd{(day.name)}
+\end{alltt}
+\begin{verbatim}
+## [1] 6
+\end{verbatim}
+\begin{alltt}
+\hlkwd{nchar}\hlstd{(someday)}
+\end{alltt}
+\begin{verbatim}
+## [1] 0
+\end{verbatim}
+\begin{alltt}
+\hlstd{message} \hlkwb{<-} \hlkwd{paste}\hlstd{(day.name,} \hlstr{" is a great day!"}\hlstd{)}
+\hlstd{message}
+\end{alltt}
+\begin{verbatim}
+## [1] "Sunday  is a great day!"
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
+
+\subsection{Logical Data}
+
+Variables can hold logical values using the two keywords \texttt{TRUE} and \texttt{FALSE}.  Logical values typically result from the use of logical operators such as the equality operator \texttt{==}. Note the two = signs there which differetiates it from the version of assignment operator we saw before.
+
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlnum{4} \hlopt{==} \hlnum{6}  \hlcom{#Is 4 equal to 6, result FALSE}
+\end{alltt}
+\begin{verbatim}
+## [1] FALSE
+\end{verbatim}
+\begin{alltt}
+\hlstd{someday} \hlopt{==} \hlstr{"Tuesday"}  \hlcom{#Again result shoukd be FALSE}
+\end{alltt}
+\begin{verbatim}
+## [1] FALSE
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
+
+\subsection{Converting Between Data Types}
+
+\section{Vectors}
+
+Variables store a single value. If you need to store multiple values then you need a \texttt{vector}\index{Key Concepts!Vectors}. Vectors can be created in the same was a variables are created, except that we need to assign multiple values to a vector. A handy function for combining multiple values in one vector is \texttt{c()} the \texttt{combine} function. \index{R Commands!c}
+
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlstd{sleep.per.day} \hlkwb{<-} \hlkwd{c}\hlstd{(}\hlnum{6}\hlstd{,} \hlnum{4}\hlstd{,} \hlnum{6}\hlstd{,} \hlnum{8}\hlstd{,} \hlnum{7}\hlstd{,} \hlnum{9}\hlstd{,} \hlnum{10}\hlstd{)}
+\end{alltt}
+\end{kframe}
+\end{knitrout}
+
+The code above created a vector named $sleep.per.day$ with 7 \texttt{elements}. Vectors are very useful because R provides several easy ways to interact with different elements of a vector.
+
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlstd{sleep.per.day[}\hlnum{2}\hlstd{]}  \hlcom{#Gets the second element of the vector}
+\end{alltt}
+\begin{verbatim}
+## [1] 4
+\end{verbatim}
+\begin{alltt}
+\hlstd{sleep.per.day[}\hlnum{4}\hlstd{]} \hlkwb{<-} \hlnum{3}  \hlcom{#Changes 4th element of the vector to 3}
+\hlkwd{length}\hlstd{(sleep.per.day)}  \hlcom{#Gets the length (number of elements) of the vector}
+\end{alltt}
+\begin{verbatim}
+## [1] 7
+\end{verbatim}
+\begin{alltt}
+\hlstd{sleep.per.day} \hlopt{+} \hlnum{2}  \hlcom{#Adds 2 to *each* element of the vector }
+\end{alltt}
+\begin{verbatim}
+## [1]  8  6  8  5  9 11 12
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
+
+Vectors are also useful for doing element-by-element calculations. For example, if we have another vector for number of hours of work for the week, we can calculate number of hours used for work and sleep as follows:
+
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlstd{work.per.day} \hlkwb{<-} \hlkwd{c}\hlstd{(}\hlnum{9}\hlstd{,} \hlnum{11}\hlstd{,} \hlnum{10}\hlstd{,} \hlnum{8}\hlstd{,} \hlnum{6}\hlstd{,} \hlnum{3}\hlstd{,} \hlnum{2}\hlstd{)}  \hlcom{#Create new vector}
+\hlstd{work.and.sleep} \hlkwb{<-} \hlstd{sleep.per.day} \hlopt{+} \hlstd{work.per.day}
+\hlcom{# Added two vectors element by element}
+\hlkwd{print}\hlstd{(work.and.sleep)}  \hlcom{#Show added values}
+\end{alltt}
+\begin{verbatim}
+## [1] 15 15 16 11 13 12 12
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
+
+It is easy to access data elements inside a vector. All elements are assigned an index number - unlike many programming languages, R starts counting with 1 rather than 0. 
+
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlstd{wed.hours} \hlkwb{<-} \hlstd{work.per.day[}\hlnum{3}\hlstd{]}  \hlcom{#Extracts third element}
+\hlstd{work.per.day[}\hlnum{7}\hlstd{]} \hlkwb{<-} \hlnum{6}  \hlcom{#Changes 7th element of the vector}
+\end{alltt}
+\end{kframe}
+\end{knitrout}
+
+Functions \texttt{edit()}\index{R Commands!edit} and \texttt{fix}\index{R Commands!fix} can be used to edit existing vectors. Number of elements in a vector can be calculated using the \texttt{length()}\index{R Commands!length} function.
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlkwd{length}\hlstd{(work.per.day)}
+\end{alltt}
+\begin{verbatim}
+## [1] 7
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
+
+\section{Factors}
+
+\section{Using Built-In Functions}
 
 R includes many \texttt{functions}. \index{Key Concepts!Functions} Functions take some values as inputs (often called \texttt{arguments}), perform some calculation and return the result. For example $sqrt()$,\index{R Commands!sqrt} the \texttt{square root function} takes a value and returns its square root.
 
@@ -900,7 +1159,8 @@ As you work with R, you will create Objects. You can get a list of current objec
 \hlkwd{objects}\hlstd{()}
 \end{alltt}
 \begin{verbatim}
-## character(0)
+## [1] "day.name"       "numvalue"       "revenue"        "sleep.per.day" 
+## [5] "someday"        "wed.hours"      "work.and.sleep" "work.per.day"
 \end{verbatim}
 \begin{alltt}
 \hlcom{# Don't like a cluttered workspace, delete all objects by}
@@ -943,50 +1203,11 @@ You would often want to calculate how much it takes for R to do something. You c
 \end{alltt}
 \begin{verbatim}
 ##    user  system elapsed 
-##   0.000   0.000   0.001
+##       0       0       0
 \end{verbatim}
 \end{kframe}
 \end{knitrout}
 
-\subsection{Updating R Version}
-
-You can check the current version of R that you are running by using the \rcommand{version} command.
-\begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
-\begin{alltt}
-\hlstd{version}
-\end{alltt}
-\begin{verbatim}
-##                _                           
-## platform       x86_64-apple-darwin15.6.0   
-## arch           x86_64                      
-## os             darwin15.6.0                
-## system         x86_64, darwin15.6.0        
-## status                                     
-## major          3                           
-## minor          4.3                         
-## year           2017                        
-## month          11                          
-## day            30                          
-## svn rev        73796                       
-## language       R                           
-## version.string R version 3.4.3 (2017-11-30)
-## nickname       Kite-Eating Tree
-\end{verbatim}
-\end{kframe}
-\end{knitrout}
-
-If your version is not up-to-date then updating to the most current version of R is a charm (if you are in a Windows setup) using the \rcommand{installr} command. 
-\begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
-\begin{alltt}
-\hlcom{# Output suppressed as this book is writtn in a Linux machine}
-\hlkwd{install.packages}\hlstd{(}\hlstr{"installr"}\hlstd{)}
-\hlkwd{library}\hlstd{(installr)}
-\hlkwd{installr}\hlstd{()}
-\end{alltt}
-\end{kframe}
-\end{knitrout}
 
 \chapterendsymbol
 
@@ -1012,165 +1233,6 @@ If your version is not up-to-date then updating to the most current version of R
 
 In this chapter we will look at how to store and work with diffrent types of data.
 
-\section{Variables}
-
-R keeps all data in \texttt{Variables}. \index{Key Concepts!Variables}Variables can be thought of as a space in computer's memory where R can store data. Once we have created a variable, we can then use the variable name to access, manipulate and work with the data kept in the variable. Variables are created using the Assignment Operator \texttt{<-}. The arrow indicates the direction of assignment. Operators also exist to do assignment in the opposite direction (\texttt{->}) and do the same operation as assignment operator but using the operator used by many other programming languages (\texttt{=}).
-
-\begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
-\begin{alltt}
-\hlstd{revenue} \hlkwb{<-} \hlnum{100}  \hlcom{#Typical way of creating a variable and assigning value}
-\hlcom{# Above is the recommended approach}
-\hlstd{revenue} \hlkwb{=} \hlnum{100}  \hlcom{#Alternate way of doing same as above}
-\hlcom{# 100 -> revenue #Reverse direction assignment}
-\hlstd{revenue} \hlkwb{<-} \hlstd{revenue} \hlopt{+} \hlnum{300}  \hlcom{#Performing calculations}
-\hlkwd{print}\hlstd{(revenue)}  \hlcom{#Printing/showing the value inside the variable}
-\end{alltt}
-\begin{verbatim}
-## [1] 400
-\end{verbatim}
-\end{kframe}
-\end{knitrout}
-
-The first three line of the code above should be read as the value 100 is assigned to the variable $revenue$. In the fourth line, we add 300 to the current value of variable $revenue$ and the resulting value (in this case 400) is then assigned to the variable $revenue$. So the value in the variable $revenue$ is now 400, which is shown as output in the last line.
-
-Variables can be used to perform all usual arithmetic operations. Arithmetic operations are conducted using \verb|Arithmetic Operators|. We have already used on such operator $+$ before. Other arithmetic operators include subtraction $-$, multiplication $*$, division \verb|/| and exponentiation \verb|^|.
-
-\section{Variable Data Types}
-
-Variables can store and work with many different types of data. We saw integer numerical data in the examples above. Other common data types include floating point numbers (fractional numbers), characters data (i.e. a single character), text data (called strings - as in string of charactersVariables can store text data (called \texttt{strings} as in string of characters) and logical data (true or false).
-
-\subsection{String Data}
-
-String data is written within quote marks (\texttt{" "}) to differentiate them from text that represent things like object names. An empty string (a text data with no characters) is usually represented by two quote marks with nothing within - like \texttt{""}.
-
-\begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
-\begin{alltt}
-\hlstd{day.name} \hlkwb{<-} \hlstr{"Sunday"}  \hlcom{#Assigns the string Sunday to variable day.name}
-\hlstd{someday} \hlkwb{<-} \hlstr{""}  \hlcom{#Empty string assigned to variable someday}
-\end{alltt}
-\end{kframe}
-\end{knitrout}
-
-We can calculate the number of characters in a string using the \texttt{nchar()}\index{R Commands!nchar} function. 
-\begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
-\begin{alltt}
-\hlkwd{nchar}\hlstd{(day.name)}
-\end{alltt}
-\begin{verbatim}
-## [1] 6
-\end{verbatim}
-\begin{alltt}
-\hlkwd{nchar}\hlstd{(someday)}
-\end{alltt}
-\begin{verbatim}
-## [1] 0
-\end{verbatim}
-\end{kframe}
-\end{knitrout}
-
-\subsection{Logical Data}
-
-Variablec can hold logical values using the two keywords \texttt{TRUE} and \texttt{FALSE}.  Logical values typically result from the use of logical operators such as the equality operator \texttt{==}. Note the two = signs there which differetiates it from the version of assignment operator we saw before.
-
-\begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
-\begin{alltt}
-\hlnum{4} \hlopt{==} \hlnum{6}  \hlcom{#Is 4 equal to 6, result FALSE}
-\end{alltt}
-\begin{verbatim}
-## [1] FALSE
-\end{verbatim}
-\begin{alltt}
-\hlstd{someday} \hlopt{==} \hlstr{"Tuesday"}  \hlcom{#Again result shoukd be FALSE}
-\end{alltt}
-\begin{verbatim}
-## [1] FALSE
-\end{verbatim}
-\end{kframe}
-\end{knitrout}
-
-Other similar logical operators include less than (\texttt{<}), greater than (\texttt{>}), less than or equal to (\texttt{<=}), greater than or equal to (\texttt{>=}) and lastly, not equal to (\texttt{!=}). There are additional logical operators that combine logical values: AND (\verb|&|), OR (\texttt{|}) and NOT (\texttt{!}).
-
-
-\section{Vectors}
-
-Variables store a single value. If you need to store multiple values then you need a \texttt{vector}\index{Key Concepts!Vectors}. Vectors can be created in the same was a variables are created, except that we need to assign multiple values to a vector. A handy function for combining multiple values in one vector is \texttt{c()} the \texttt{combine} function. \index{R Commands!c}
-
-\begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
-\begin{alltt}
-\hlstd{sleep.per.day} \hlkwb{<-} \hlkwd{c}\hlstd{(}\hlnum{6}\hlstd{,} \hlnum{4}\hlstd{,} \hlnum{6}\hlstd{,} \hlnum{8}\hlstd{,} \hlnum{7}\hlstd{,} \hlnum{9}\hlstd{,} \hlnum{10}\hlstd{)}
-\end{alltt}
-\end{kframe}
-\end{knitrout}
-
-The code above created a vector named $sleep.per.day$ with 7 \texttt{elements}. Vectors are very useful because R provides several easy ways to interact with different elements of a vector.
-
-\begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
-\begin{alltt}
-\hlstd{sleep.per.day[}\hlnum{2}\hlstd{]}  \hlcom{#Gets the second element of the vector}
-\end{alltt}
-\begin{verbatim}
-## [1] 4
-\end{verbatim}
-\begin{alltt}
-\hlstd{sleep.per.day[}\hlnum{4}\hlstd{]} \hlkwb{<-} \hlnum{3}  \hlcom{#Changes 4th element of the vector to 3}
-\hlkwd{length}\hlstd{(sleep.per.day)}  \hlcom{#Gets the length (number of elements) of the vector}
-\end{alltt}
-\begin{verbatim}
-## [1] 7
-\end{verbatim}
-\begin{alltt}
-\hlstd{sleep.per.day} \hlopt{+} \hlnum{2}  \hlcom{#Adds 2 to *each* element of the vector }
-\end{alltt}
-\begin{verbatim}
-## [1]  8  6  8  5  9 11 12
-\end{verbatim}
-\end{kframe}
-\end{knitrout}
-
-Vectors are also useful for doing element-by-element calculations. For example, if we have another vector for number of hours of work for the week, we can calculate number of hours used for work and sleep as follows:
-
-\begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
-\begin{alltt}
-\hlstd{work.per.day} \hlkwb{<-} \hlkwd{c}\hlstd{(}\hlnum{9}\hlstd{,} \hlnum{11}\hlstd{,} \hlnum{10}\hlstd{,} \hlnum{8}\hlstd{,} \hlnum{6}\hlstd{,} \hlnum{3}\hlstd{,} \hlnum{2}\hlstd{)}  \hlcom{#Create new vector}
-\hlstd{work.and.sleep} \hlkwb{<-} \hlstd{sleep.per.day} \hlopt{+} \hlstd{work.per.day}
-\hlcom{# Added two vectors element by element}
-\hlkwd{print}\hlstd{(work.and.sleep)}  \hlcom{#Show added values}
-\end{alltt}
-\begin{verbatim}
-## [1] 15 15 16 11 13 12 12
-\end{verbatim}
-\end{kframe}
-\end{knitrout}
-
-It is easy to access data elements inside a vector. All elements are assigned an index number - unlike many programming languages, R starts counting with 1 rather than 0. 
-
-\begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
-\begin{alltt}
-\hlstd{wed.hours} \hlkwb{<-} \hlstd{work.per.day[}\hlnum{3}\hlstd{]}  \hlcom{#Extracts third element}
-\hlstd{work.per.day[}\hlnum{7}\hlstd{]} \hlkwb{<-} \hlnum{6}  \hlcom{#Changes 7th element of the vector}
-\end{alltt}
-\end{kframe}
-\end{knitrout}
-
-Functions \texttt{edit()}\index{R Commands!edit} and \texttt{fix}\index{R Commands!fix} can be used to edit existing vectors. Number of elements in a vector can be calculated using the \texttt{length()}\index{R Commands!length} function.
-\begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
-\begin{alltt}
-\hlkwd{length}\hlstd{(work.per.day)}
-\end{alltt}
-\begin{verbatim}
-## [1] 7
-\end{verbatim}
-\end{kframe}
-\end{knitrout}
 
 \section{Importing Data into R}
 
@@ -1305,7 +1367,7 @@ Lets start with a simple case of two variables - the departure delay and arrival
     \hlkwc{ylab} \hlstd{=} \hlstr{"Arrival Delay"}\hlstd{)}
 \end{alltt}
 \end{kframe}
-\includegraphics[width=\maxwidth]{figure/unnamed-chunk-39-1} 
+\includegraphics[width=\maxwidth]{figure/unnamed-chunk-41-1} 
 \begin{kframe}\begin{alltt}
 \hlcom{# Focusing only on departure delay < 400 mins for more readable plot}
 \end{alltt}
@@ -1365,7 +1427,7 @@ Now that we know the coefficients, we can now draw the fitted line that models t
 \hlkwd{abline}\hlstd{(}\hlkwd{coef}\hlstd{(m),} \hlkwc{lwd} \hlstd{=} \hlnum{2}\hlstd{,} \hlkwc{col} \hlstd{=} \hlstr{"red"}\hlstd{)}
 \end{alltt}
 \end{kframe}
-\includegraphics[width=\maxwidth]{figure/unnamed-chunk-42-1} 
+\includegraphics[width=\maxwidth]{figure/unnamed-chunk-44-1} 
 
 \end{knitrout}
 \caption{Plotting Fitted Values of Regression Model}
@@ -1515,7 +1577,7 @@ We can plot residuals to check their normality. See Figure: \ref{Fig:residuals} 
 \hlkwd{plot}\hlstd{(}\hlkwc{x} \hlstd{= bpmodel,} \hlkwc{which} \hlstd{=} \hlnum{4}\hlstd{)}  \hlcom{#Cook's Distance}
 \end{alltt}
 \end{kframe}
-\includegraphics[width=\maxwidth]{figure/unnamed-chunk-47-1} 
+\includegraphics[width=\maxwidth]{figure/unnamed-chunk-49-1} 
 
 \end{knitrout}
 \caption{Histogram of Residuals}
@@ -1557,7 +1619,7 @@ As the name suggests, we are only exploring linear relationships between predict
 \hlkwd{residualPlots}\hlstd{(bpmodel)}
 \end{alltt}
 \end{kframe}
-\includegraphics[width=\maxwidth]{figure/unnamed-chunk-50-1} 
+\includegraphics[width=\maxwidth]{figure/unnamed-chunk-52-1} 
 \begin{kframe}\begin{verbatim}
 ##            Test stat Pr(>|t|)
 ## age           -3.251    0.001
@@ -1618,7 +1680,7 @@ The OLS model assumes that all the residuals have a constant variance. It is con
 \hlkwd{plot}\hlstd{(}\hlkwc{x} \hlstd{= bpmodel,} \hlkwc{which} \hlstd{=} \hlnum{3}\hlstd{)}
 \end{alltt}
 \end{kframe}
-\includegraphics[width=\maxwidth]{figure/unnamed-chunk-52-1} 
+\includegraphics[width=\maxwidth]{figure/unnamed-chunk-54-1} 
 
 \end{knitrout}
 \caption{Plot to Check for Heteroscedasticity}
@@ -1785,7 +1847,7 @@ We will consider a new dataset called $trees$ for this portion. The dataset has 
 \hlkwd{plot}\hlstd{(Girth, Volume)}
 \end{alltt}
 \end{kframe}
-\includegraphics[width=\maxwidth]{figure/unnamed-chunk-62-1} 
+\includegraphics[width=\maxwidth]{figure/unnamed-chunk-64-1} 
 
 \end{knitrout}
 \caption{Volume vs Girth of Tree Trunks}
@@ -1836,7 +1898,7 @@ Results show that both $Girth$ and $Girth^2$ have significant coefficients. The 
 \hlkwd{lines}\hlstd{(}\hlkwd{fitted}\hlstd{(treemodel)} \hlopt{~} \hlkwd{scale}\hlstd{(Girth))}
 \end{alltt}
 \end{kframe}
-\includegraphics[width=\maxwidth]{figure/unnamed-chunk-64-1} 
+\includegraphics[width=\maxwidth]{figure/unnamed-chunk-66-1} 
 
 \end{knitrout}
 \caption{Quadratic Model of Volume vs Girth of Tree Trunks}
@@ -1950,7 +2012,7 @@ Regression results show that the model is significant and all coefficient estima
 \hlkwd{lines}\hlstd{(fit} \hlopt{~} \hlstd{Girth,} \hlkwc{data} \hlstd{= treestall[[}\hlstr{"no"}\hlstd{]])}
 \end{alltt}
 \end{kframe}
-\includegraphics[width=\maxwidth]{figure/unnamed-chunk-68-1} 
+\includegraphics[width=\maxwidth]{figure/unnamed-chunk-70-1} 
 
 \end{knitrout}
 \caption{Impact of Dummy Variable}
@@ -2097,7 +2159,7 @@ Clearly model.B should not be better than model.A as the only difference is a ra
 \hlkwd{AIC}\hlstd{(model.B)}
 \end{alltt}
 \begin{verbatim}
-## [1] -61.31507
+## [1] -60.71737
 \end{verbatim}
 \end{kframe}
 \end{knitrout}
@@ -2115,9 +2177,9 @@ We can also consider the subset model (model.A) as the null hypothesis, the supe
 ## 
 ## Model 1: log(Volume) ~ log(Girth) + log(Height)
 ## Model 2: log(Volume) ~ log(Girth) + log(Height) + trees$random
-##   Res.Df     RSS Df Sum of Sq      F Pr(>F)
-## 1     28 0.18546                           
-## 2     27 0.18189  1 0.0035775 0.5311 0.4724
+##   Res.Df     RSS Df  Sum of Sq      F Pr(>F)
+## 1     28 0.18546                            
+## 2     27 0.18543  1 3.6611e-05 0.0053 0.9423
 \end{verbatim}
 \end{kframe}
 \end{knitrout}
@@ -2176,7 +2238,7 @@ Logistic regression is used to model dichotomous outcome variables - variables t
 \hlkwd{plot}\hlstd{(logodds, probs)}
 \end{alltt}
 \end{kframe}
-\includegraphics[width=\maxwidth]{figure/unnamed-chunk-75-1} 
+\includegraphics[width=\maxwidth]{figure/unnamed-chunk-77-1} 
 
 \end{knitrout}
 \caption{Plot of Log of Odds Ratio}
@@ -2317,7 +2379,7 @@ A probit model is also suitable for binary response variables.  In the probit mo
 \hlkwd{plot}\hlstd{(probs, probitdata)}
 \end{alltt}
 \end{kframe}
-\includegraphics[width=\maxwidth]{figure/unnamed-chunk-81-1} 
+\includegraphics[width=\maxwidth]{figure/unnamed-chunk-83-1} 
 
 \end{knitrout}
 \caption{Plot of Probit Transformation}
@@ -2556,7 +2618,7 @@ Now that we have a suitable model, we can now examine the estimated distribution
 \hlkwd{plot}\hlstd{(}\hlkwd{survfit}\hlstd{(mod.first),} \hlkwc{ylim} \hlstd{=} \hlkwd{c}\hlstd{(}\hlnum{0.75}\hlstd{,} \hlnum{1}\hlstd{),} \hlkwc{xlab} \hlstd{=} \hlstr{"Weeks of Observation"}\hlstd{,} \hlkwc{ylab} \hlstd{=} \hlstr{"Proportion of Subject Not Rearrested"}\hlstd{)}
 \end{alltt}
 \end{kframe}
-\includegraphics[width=\maxwidth]{figure/unnamed-chunk-90-1} 
+\includegraphics[width=\maxwidth]{figure/unnamed-chunk-92-1} 
 
 \end{knitrout}
 \caption{Plot of Survival Function}
@@ -2791,7 +2853,7 @@ Results show a strong evidence of non-proportional hazards for age, while the gl
 \hlkwd{plot}\hlstd{(}\hlkwd{cox.zph}\hlstd{(mod.small))}
 \end{alltt}
 \end{kframe}
-\includegraphics[width=\maxwidth]{figure/unnamed-chunk-97-1} 
+\includegraphics[width=\maxwidth]{figure/unnamed-chunk-99-1} 
 
 \end{knitrout}
 \caption{Diagnostic Plots for Proportional Hazard Assumption}
@@ -2862,7 +2924,7 @@ Checking for outliers can be done using the \texttt{dfbeta} metric we have seen 
 \hlstd{\}}
 \end{alltt}
 \end{kframe}
-\includegraphics[width=\maxwidth]{figure/unnamed-chunk-100-1} 
+\includegraphics[width=\maxwidth]{figure/unnamed-chunk-102-1} 
 
 \end{knitrout}
 \caption{DFBeta Plots for Checking for Outliers}
@@ -3567,7 +3629,7 @@ Similar to the example above, we can calculate other descriptive statistics such
 \hlkwd{hist}\hlstd{(nycdata}\hlopt{$}\hlstd{arr_delay[nycdata}\hlopt{$}\hlstd{arr_delay} \hlopt{<} \hlnum{300}\hlstd{])}
 \end{alltt}
 \end{kframe}
-\includegraphics[width=\maxwidth]{figure/unnamed-chunk-122-1} 
+\includegraphics[width=\maxwidth]{figure/unnamed-chunk-124-1} 
 
 \end{knitrout}
 \caption{Example of a Histogram}
@@ -3609,7 +3671,7 @@ To illustrate the point further, we can make a barplot using the \texttt{barplot
 \hlkwd{barplot}\hlstd{(delaybycarrier)}
 \end{alltt}
 \end{kframe}
-\includegraphics[width=\maxwidth]{figure/unnamed-chunk-124-1} 
+\includegraphics[width=\maxwidth]{figure/unnamed-chunk-126-1} 
 
 \end{knitrout}
 \caption{Barplot of NYC Flights Data}

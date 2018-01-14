@@ -11,7 +11,7 @@
 \setcitestyle{numbers,open={[},close={]}}
 
 \setlength{\topsep}{0pt} %To ensure that R output is not too spaced out vertically
-\setlength{\parskip}{0pt}
+\setlength{\parskip}{3pt}
 \setlength{\partopsep}{0pt}
 
 \usepackage{makeidx}

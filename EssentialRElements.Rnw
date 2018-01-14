@@ -12,32 +12,155 @@
 
 In this chapter we will start playing with some basic R functionalities and start getting comfortable with typing commands in the R console. All code examples you see in the chapter are opportunities for you to type them in R Console yourself and see whether you get the same output. There is no better way to find your way around R than to get your hands dirty - and no better time than now. So lets get started.
 
-\subsection{Basic Arithmatic and Logical Operators}
+\section{Arithmatic Operators}
 
 You can use R as a glorified calculator. All arithmatic calculations can be easily performed using \rconcept{Arithmatic Operators} like + (addition), - (subtraction), * (multiplication), / (division) and \verb|^| (exponent).
-<<>>=
+<<cache=TRUE>>=
 10  +    20  #As you can see - spaces don't matter, mostly.
 20/5
 16 ^ 0.5  # Usual Arithmatic Operators: +, -, * , /, ^
 @
 
+You would note that the outputs to the commands have this \verb|[1]| before them. The number indicates how many values there are in the output. Since the commands above lead to a single output value - you see the \verb|[1]| there.
+
 When you have complicated Arithmatic Expressions, R follows usual \rconcept{Arithmatic Operator Precedance}: Brackets, Exponent, Division and Multiplication, Addition and Subtraction - in that order. Go Left to Right for the same precedance. Of course it is preferable to put in enough paratheses so that you are not relying on R's operator precedance for accurate execution of your commands. 
-<<>>=
+<<cache=TRUE>>=
 5 + 8 / 2 * 4 - 3 # First * then / then + then - 
 # You should include enough parantheses
 (5 + 8) /((2 * 4) - 3)
 @
 
-Two arithmatic operators that many are not familiar are: \rconcept{Integer Division} and \rconcept{Remainder} operators. The \texttt{Integer Division} operator: \verb|%/%|, provides just the quotient for a division operation while the \texttt{remainder operator}: \verb|%%|, provides just the remainder for a division operation.
+Two arithmatic operators that many are not familiar with are: \rconcept{Integer Division} and \rconcept{Remainder} operators. The \texttt{Integer Division} operator: \verb|%/%|, provides just the quotient for a division operation while the \texttt{remainder operator}: \verb|%%|, provides just the remainder for a division operation.
 
-<<>>=
+<<cache=TRUE>>=
 10 %/% 3 # Integer division - only gives the quotient as the output
 10 %% 3 # The counterpart to %/%, gives remainder as the output
 @
 
-Just as arithmatic expressions evaluate to a numerical result, logical expressions evaluate to a logical result - either \texttt{TRUE} or \texttt{FALSE}. \mnote{Note the upper case format for the two keywords.} Logical expressions can be created using \rconcept{Logical Operators}: equal to (==), greate than (>), less than (<), greater than or equal to (>=), less than or equal to (<=) and finally, not equal to (!=).
+\section{Logical Operators}
 
-\subsection{Using Built-In Functions}
+Just as arithmatic expressions evaluate to a numerical result, logical expressions evaluate to a logical result - either \texttt{TRUE} or \texttt{FALSE}. \mnote{Note the upper case format for the two keywords. The letters T and F are also acceptable values as shorthand for TRUE and FALSE} Logical expressions can be created using \rconcept{Logical Operators}: equal to (==), greate than (>), less than (<), greater than or equal to (>=), less than or equal to (<=) and finally, not equal to (!=).
+
+<<cache=TRUE>>=
+10 > 20 #Should evaluate to FALSE
+12.37 <= 23.66 #Should evaluate to TRUE
+(10/3) == (30/9) #Should evaluate to TRUE
+@
+
+Logical values can be combined using \rconcept{AND} and \rconcept{OR} constructs. When combining two logical values using \texttt{OR}, the resulting value is \texttt{TRUE} if any of the two values are \texttt{TRUE}. When combining two logical values using \texttt{AND}, the resulting value is \texttt{TRUE} only of both the values are \texttt{TRUE}. The command for \texttt{AND} is \rcommand{\&} while the command for \texttt{OR} is the \texttt{|} character.
+
+<<>>=
+(10 > 20) | (12.37 <= 23.66) #Should evaluate to TRUE
+(10 > 20) & (12.37 <= 23.66) #Should evaluate to FALSE
+@
+
+You can use \rconcept{NOT} operator to convert a \texttt{TRUE} value to \texttt{FALSE} and vice versa - the corresponding command is \texttt{!} character. You can use logical operators to compare non-numeric values as well.
+
+<<cache=TRUE>>=
+!TRUE #Should evaluate to FALSE
+"Dog" > "Cat" #As everybody know, this is TRUE
+@
+
+As the example above shows, comparing non-numeric values \mnote{We have not discussed different data types yet. Values enclosed in quote marks are text values, typically called Strings} can result in interesting results. When two strings are compared, they are essentially compared one character at a time. In the example above, the character C is compared with character D. The comparison is based on the Unicode number associated with the characters. As D has a higher Unicode number than C, "Dog" is considered higher than "Cat". \mnote{Interesting thought experiment: \\ 1000 > 50: True or False? \\ "1000" > "50": True or False?}
+
+\section{Variables}
+
+R keeps all data in \rconcept{Variables}. Variables can be thought of as a space in computer's memory where R can store data. Once we have created a variable, we can then use the variable name to access, manipulate and work with the data kept in the variable. Variables are created using the \rconcept{Assignment Operator} written as \rcommand{<-}. The arrow indicates the direction of assignment. Operators also exist to do assignment in the opposite direction (\texttt{->}) and do the same operation as assignment operator. R also supports the assignment operator command used by many other programming languages (\texttt{=}) but it is customary to use the right-to-left version of assignment operator. \mnote{I find the R version of assignment operator to be much more intuitive as the direction of value assignment is clearly specified. The = charater usually confuses beginners into thinking that we are "equating" values instead of the correct interpretation of "assigning" value from one side to the other.}
+
+<<cache=TRUE>>=
+revenue <- 100 #Typical way of creating a variable and assigning value
+# Above is the recommended approach
+revenue = 100 #Alternate way of doing same as above
+#100 -> revenue #Reverse direction assignment
+revenue <- revenue + 300 #Performing calculations
+print(revenue) #Printing/showing the value inside the variable
+@
+
+The first three line of the code above should be read as the value 100 is assigned to the variable \emph{revenue}. In the fourth line, we add 300 to the current value of variable \emph{revenue} and the resulting value (in this case 400) is then assigned to the variable \emph{revenue}. So the value in the variable \emph{revenue} is now 400, which is shown as output in the last line.
+
+A numeric variable like \emph{revenue} above can be used just like a number to perform all usual arithmetic operations.
+
+\section{Variable Data Types}
+
+Variables can store  different types of data. We saw integer numerical data in the examples above. Other common data types include floating point numbers (fractional numbers), characters data (i.e. a single character), text data (called strings - as in string of characters) and logical data (true or false). We can find the data type of a variable by using the \rcommand{class} command.
+
+<<cache=TRUE>>=
+numvalue <- 20.56 #Creating a numeric variable
+class(numvalue) #Finding data type of numvalue variable
+@
+
+\subsection{Numeric Data}
+
+Variables of numeric data type can store both integers and floating point values. Unlike many programming languages, R does not have various different kinds of integers and floating point numbers defined to optimize memory usage. 
+
+\subsection{String Data}
+
+\rconcept{String} or text data \mnote{Text is nothing but a string of characters, hence the name String} is written within quote marks (\texttt{" "}) to differentiate them from text that represent things like object names. An empty string (a text data with no characters) is usually represented by two quote marks with nothing within - like \texttt{""}.
+
+<<cache=TRUE>>=
+day.name <- "Sunday" #Assigns the string Sunday to variable day.name
+someday <- "" #Empty string assigned to variable someday
+@
+
+String is a very useful data type as all other types of data can be saved as a string. For example - we can save numeric data ("23.37"), date data ("12/27/1976"), logical data ("TRUE") etc. all as string. R has several useful commands for working with string data. You can connect two strings together using the \rconcept{String Concatenation} function \rcommand{paste}. You can calculate the number of characters in a string using the \rcommand{nchar} function.\mnote{Many other strings related commands are discussed later} 
+
+<<cache=TRUE>>=
+nchar(day.name); nchar(someday)
+message <- paste(day.name, " is a great day!"); message
+@
+
+\subsection{Logical Data}
+
+Variables can hold logical values using the two keywords \texttt{TRUE} and \texttt{FALSE}.  Logical values typically result from the use of logical operators such as the equality operator \texttt{==}. Note the two = signs there which differetiates it from the version of assignment operator we saw before.
+
+<<cache=TRUE>>=
+4 == 6 #Is 4 equal to 6, result FALSE
+someday == "Tuesday" #Again result shoukd be FALSE
+@
+
+\subsection{Converting Between Data Types}
+
+\section{Vectors}
+
+Variables store a single value. If you need to store multiple values then you need a \texttt{vector}\index{Key Concepts!Vectors}. Vectors can be created in the same was a variables are created, except that we need to assign multiple values to a vector. A handy function for combining multiple values in one vector is \texttt{c()} the \texttt{combine} function. \index{R Commands!c}
+
+<<cache=TRUE>>=
+sleep.per.day <- c(6, 4, 6, 8, 7, 9, 10)
+@
+
+The code above created a vector named $sleep.per.day$ with 7 \texttt{elements}. Vectors are very useful because R provides several easy ways to interact with different elements of a vector.
+
+<<cache=TRUE>>=
+sleep.per.day[2] #Gets the second element of the vector
+sleep.per.day[4] <- 3 #Changes 4th element of the vector to 3
+length(sleep.per.day) #Gets the length (number of elements) of the vector
+sleep.per.day + 2 #Adds 2 to *each* element of the vector 
+@
+
+Vectors are also useful for doing element-by-element calculations. For example, if we have another vector for number of hours of work for the week, we can calculate number of hours used for work and sleep as follows:
+
+<<cache=TRUE>>=
+work.per.day <- c(9, 11, 10, 8, 6, 3, 2) #Create new vector
+work.and.sleep <- sleep.per.day + work.per.day 
+#Added two vectors element by element
+print(work.and.sleep) #Show added values
+@
+
+It is easy to access data elements inside a vector. All elements are assigned an index number - unlike many programming languages, R starts counting with 1 rather than 0. 
+
+<<cache=TRUE>>=
+wed.hours <- work.per.day[3] #Extracts third element
+work.per.day[7] <- 6 #Changes 7th element of the vector
+@
+
+Functions \texttt{edit()}\index{R Commands!edit} and \texttt{fix}\index{R Commands!fix} can be used to edit existing vectors. Number of elements in a vector can be calculated using the \texttt{length()}\index{R Commands!length} function.
+<<cache=TRUE>>=
+length(work.per.day)
+@
+
+\section{Factors}
+
+\section{Using Built-In Functions}
 
 R includes many \texttt{functions}. \index{Key Concepts!Functions} Functions take some values as inputs (often called \texttt{arguments}), perform some calculation and return the result. For example $sqrt()$,\index{R Commands!sqrt} the \texttt{square root function} takes a value and returns its square root.
 
@@ -128,18 +251,5 @@ You would often want to calculate how much it takes for R to do something. You c
 system.time(rm(list = ls()))
 @
 
-\subsection{Updating R Version}
-
-You can check the current version of R that you are running by using the \rcommand{version} command.
-<<>>=
-version
-@
-
-If your version is not up-to-date then updating to the most current version of R is a charm (if you are in a Windows setup) using the \rcommand{installr} command. 
-<<eval=FALSE>>=
-#Output suppressed as this book is writtn in a Linux machine
-install.packages("installr"); library(installr)
-installr()
-@
 
 \chapterendsymbol
