@@ -202,6 +202,10 @@ opts_chunk$set(concordance=TRUE)
 
 
 
+<<'child-AdvancedRElements.Rnw', child='AdvancedRElements.Rnw'>>=
+@
+
+
 \part{Data Exploration and Visualization}
 
 

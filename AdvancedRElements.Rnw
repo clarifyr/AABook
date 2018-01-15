@@ -1,0 +1,34 @@
+% !Rnw root = AABase.Rnw
+
+\chapter{Advanced R Language Elements}
+
+\begin{flushright}
+
+\textbf{\texttt{In God We Trust; All Others Must Bring Data}}
+
+\emph{-- Willian Edwards Deming}
+
+\end{flushright}
+
+\vspace{12pt}
+
+\section{apply functions}
+
+\section{If Statements}
+
+\section{Loops}
+
+\section{R Utilities}
+
+In this section, I am collecting all the random R stuff that is useful but not easily categorizable.
+
+\subsection{Calculating Execution Time}
+
+You would often want to calculate how much it takes for R to do something. You can do so by using the command \rcommand{system.time}, which returns the time takesn by R to execute the argument to the function.
+<<>>=
+#Time taken to delete all objects in memory
+system.time(rm(list = ls()))
+@
+
+
+\chapterendsymbol

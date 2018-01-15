@@ -120,42 +120,51 @@ someday == "Tuesday" #Again result shoukd be FALSE
 
 \subsection{Converting Between Data Types}
 
-\section{Vectors}
-
-Variables store a single value. If you need to store multiple values then you need a \texttt{vector}\index{Key Concepts!Vectors}. Vectors can be created in the same was a variables are created, except that we need to assign multiple values to a vector. A handy function for combining multiple values in one vector is \texttt{c()} the \texttt{combine} function. \index{R Commands!c}
+Its easy to convert variables from one data type to another. Conversion functions usually take the form of \texttt{as.xxx} where \texttt{xxx} is the desired datatype. For example: \rcommand{as.string} converts to a String, \rcommand{as.numeric} converts to a numeric data type and so on.
 
 <<cache=TRUE>>=
-sleep.per.day <- c(6, 4, 6, 8, 7, 9, 10)
+x <- "12.36" #Creating a String variable
+y <- as.numeric(x); y #Converting to a numeric value and displaying
 @
 
-The code above created a vector named $sleep.per.day$ with 7 \texttt{elements}. Vectors are very useful because R provides several easy ways to interact with different elements of a vector.
+\section{Vectors}
+
+Variables store a single value. If you need to store multiple values then you need a \rconcept{Vector}. Vectors can be created in the same was a variables are created, except that we need to assign multiple values to a vector. A handy function for combining multiple values in one vector is the \texttt{combine} function written as \rcommand{c}.
 
 <<cache=TRUE>>=
-sleep.per.day[2] #Gets the second element of the vector
-sleep.per.day[4] <- 3 #Changes 4th element of the vector to 3
-length(sleep.per.day) #Gets the length (number of elements) of the vector
-sleep.per.day + 2 #Adds 2 to *each* element of the vector 
+grades <- c(3.2, 3,1, 2.7, 3.9, 4.0) #Grades of five students
+class(grades) #A vector with numeric values
+@
+
+The code above created a vector named \texttt{grades} that has 5 \texttt{elements}. Vectors are very useful because R provides several easy ways to interact with different elements of a vector. We can access individual elements of a vector using the \texttt{[ ]} notation - called \rconcept{Logical Indexing}. We can use the \rcommand{length} function to find out how many elements there are in the vector.
+
+<<cache=TRUE>>=
+grades[2] #Gets the second element of the vector
+grades[4] <- 3 #Changes 4th element of the vector to 3
+length(grades) #Gets the length (number of elements) of the vector
+grades - 0.1 #Adds 2 to *each* element of the vector 
+grades #Displays current elements of the vector
 @
 
 Vectors are also useful for doing element-by-element calculations. For example, if we have another vector for number of hours of work for the week, we can calculate number of hours used for work and sleep as follows:
 
 <<cache=TRUE>>=
 work.per.day <- c(9, 11, 10, 8, 6, 3, 2) #Create new vector
-work.and.sleep <- sleep.per.day + work.per.day 
+#work.and.sleep <- sleep.per.day + work.per.day 
 #Added two vectors element by element
-print(work.and.sleep) #Show added values
+#print(work.and.sleep) #Show added values
 @
 
 It is easy to access data elements inside a vector. All elements are assigned an index number - unlike many programming languages, R starts counting with 1 rather than 0. 
 
 <<cache=TRUE>>=
-wed.hours <- work.per.day[3] #Extracts third element
-work.per.day[7] <- 6 #Changes 7th element of the vector
+#wed.hours <- work.per.day[3] #Extracts third element
+#work.per.day[7] <- 6 #Changes 7th element of the vector
 @
 
 Functions \texttt{edit()}\index{R Commands!edit} and \texttt{fix}\index{R Commands!fix} can be used to edit existing vectors. Number of elements in a vector can be calculated using the \texttt{length()}\index{R Commands!length} function.
 <<cache=TRUE>>=
-length(work.per.day)
+#length(work.per.day)
 @
 
 \section{Factors}
@@ -232,24 +241,6 @@ save.image(file = "FileName.RData")
 q()
 @
 
-
-\section{apply functions}
-
-\section{If Statements}
-
-\section{Loops}
-
-\section{R Utilities}
-
-In this section, I am collecting all the random R stuff that is useful but not easily categorizable.
-
-\subsection{Calculating Execution Time}
-
-You would often want to calculate how much it takes for R to do something. You can do so by using the command \rcommand{system.time}, which returns the time takesn by R to execute the argument to the function.
-<<>>=
-#Time taken to delete all objects in memory
-system.time(rm(list = ls()))
-@
 
 
 \chapterendsymbol

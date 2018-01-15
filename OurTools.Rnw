@@ -25,7 +25,7 @@ Even though we will not use a bare R installtion - lets take a look at it anyway
 \begin{figure}
 \rule{4in}{1pt}
 \centering
-\includegraphics[height=3in]{images/rbase.png}
+\includegraphics[height=2in]{images/rbase.png}
 \caption{Staring Window of Base R Installation}
 \label{fig:rbase}
 \rule{4in}{1pt}
@@ -37,7 +37,7 @@ Once you have finished installing R, you can download and install RStudio from: 
 \begin{figure}
 \rule{4in}{1pt}
 \centering
-\includegraphics[height=3in]{images/rstudio.png}
+\includegraphics[height=2in]{images/rstudio.png}
 \caption{Staring Window of RStudio}
 \label{fig:rstudio}
 \rule{4in}{1pt}
@@ -49,17 +49,94 @@ Now that we have both R and RStudio set up, it is time for us to get started in 
 
 \section{Useful Features of RStudio}
 
+\subsection{Console}
+
+The console is where you can interact directly with the R system. You can write one line at a time and immediately execute it there by pressing enter. If you wish to write more than one command in one line then you can separate the commands using the semi-colon character. The console is essentially an R session running inside RStudio. The console shows a command prompt (usually the \texttt{>}) character to indicate that you can type there. You can change the prompt by changing the options setting.\mnote{I once thought it was very clever to have this as my prompt "Sanjeev Says: ". I no longer think so.}
+
+<<eval=FALSE>>=
+options(prompt = "R> ") 
+@
+
+\subsection{Editor}
+
+The editor is where you can work on and edit all of your files. This is a pure text editor - so no formatting of any kind. You will mostly be working with RMD files here. The tab panel at the top of the editor allows you to work on multiple files at once. The editor window is hidden when you start RStudio as you usually don't have a file to edit when you begin. Once you create/open a new file then they will open in the editor window and you can edit them. The editor window helpfully shows you the line numbers in left column and the cursor positioning in the line at the bottom left corner. The bottom right corner shows you the file type that you are working on. There are usual icons for saving a file, finding, spell check etc on the top bar. See Figure: \ref{fig:editor} for an example.
+
+\begin{figure}
+\rule{4in}{1pt}
+\centering
+\includegraphics[width=5in]{images/editor.png}
+\caption{Editor Window}
+\label{fig:editor}
+\rule{4in}{1pt}
+\end{figure}
+
 \subsection{Environment}
+
+The Environment tab shows you all of the variables currently stored in memory and what their values are.\mnote{We haven't said what variables are as yet. Hold on - its coming in the next chapter.} The tab in fact shows all the objects that currently exist in your R session.\mnote{Objects will be discussed very soon, later in this chapter} Environment tab is a very useful place to have a quick look at the state of your current R session. The environment tab has a handy broom icon for deleting all the objects that exist and clearning your environment. You can, of course, do that using a command as well - \rcommand{rm} for remove or delete. The command \rcommand{ls} generates a list of all the objects in the environment.
+
+<<>>=
+rm(list = ls()) #Delete every object in the environment
+@
 
 \subsection{History}
 
-\subsection{Files Panes}
+The History tab shows you the history of all the commands you have entered in the Console window. You can use available icons on top to search through the history or delete items from the history. Two very useful icons are for transferring commands to the console and to the source. See details in Figure: \ref{fig:history}. The \texttt{To Console} allows you to select one or more commands from the history and transfers them to the Console window where you can run them by pressing Enter. The \texttt{To Source} sends the selected commands to the Editor window, to the currently open and active file.
+
+\begin{figure}
+\rule{4in}{1pt}
+\centering
+\includegraphics[height=1.5in]{images/history.png}
+\caption{History Window}
+\label{fig:history}
+\rule{4in}{1pt}
+\end{figure}
+
+\subsection{Files}
+
+The Files tab allows you to navigate through your filesystem, making it easy to load files into Rstudio. It shows the content of the current working directory when RStudio starts. You can navigate through the file system of your machine using the available options. The top icons provide ability to create a new folder, delete selected files, rename selected files and refresh file listings. The \texttt{More} option reveals further functionalities including two useful ones: the ability to set the currently displayed directory as the working directory and the ability to get the Files tab to display the contents of the current working directory. Figure: \ref{fig:files} shows the options.
+
+\begin{figure}
+\rule{4in}{1pt}
+\centering
+\includegraphics[height=1.5in]{images/files.png}
+\caption{Files Window}
+\label{fig:files}
+\rule{4in}{1pt}
+\end{figure}
 
 \subsection{Plots}
 
+the Plots tab shows the plots generated by the commands typed in the Console. Figure: \ref{fig:plots} show the plot generated by the command \texttt{plot(cars)} command in the Plots tab. As you can see, you can use options to zoom in/out and export the plot image as an image file or a PDF document.\mnote{Plots made by R are Vector graphics and hence should be saved in vector formats like PNG and not bitmap formats like JPG}
+
+\begin{figure}
+\rule{4in}{1pt}
+\centering
+\includegraphics[height=2in]{images/plots.png}
+\caption{Plots Window with a Demo Plot}
+\label{fig:plots}
+\rule{4in}{1pt}
+\end{figure}
+
 \subsection{Packages}
 
+The Packages tab shows you a list of all the packages installed on your system and their version number. You can check the checkbox next to the package name to manually load packages during your R session. You will also find icons for installing and updating packages. A search icon allows for searching among installed packages. 
+
 \subsection{Help}
+
+As the name suggests, the Help tab can be used to find Help documentation on specific keywords. You can search for a keyword in the search field for looking at corresponding help documentation. If you write a help command in the console, then the output of that will also show in the Help tab. For example, if you type the command below (looking for help on "help"), you will get the help documentation as shown in Figure: \ref{fig:help}.
+
+<<>>=
+help("help")
+@
+
+\begin{figure}
+\rule{4in}{1pt}
+\centering
+\includegraphics[height=2in]{images/help.png}
+\caption{Help Windown when looking for help on "help"}
+\label{fig:help}
+\rule{4in}{1pt}
+\end{figure}
 
 \section{Helpful Menu Items and Keyboard Shortcuts}
 
@@ -73,14 +150,16 @@ Everything in R is case specific. In R, upper case letters are considered comple
 
 You can add your comments/remarks in your R code by inserting the \verb|#| character. Any text after the \verb|#| character will be ignored by R during execution. It is essential that sufficient comments are added to your R code so that the code remains understandable and if you share your code with somebody else then they have a way of figuring out what you are trying to do, why and how.
 
-R is smart enough to figure when the command is not finished and allows you to continue typing on the next line. This usually works well when there are un-finished parentheses or operators at the end. R indicates that it is expecting further inputs by showing the character \texttt{+} at the beginning of the next line. 
+R is smart enough to figure when the command is not finished and allows you to continue typing on the next line. This usually works well when there are un-finished parentheses or operators at the end. R indicates that it is expecting further inputs by showing the character \texttt{+} at the beginning of the next line. See Figure: \ref{fig:incomplete} for an example.
 
-<<cache=TRUE>>=
-# This is a comment as it comes after #. 
-#You should put enough of these
-print("This statement is incomplete"
-      ) #R managed to figure that the command was incomplete
-@
+\begin{figure}
+\rule{4in}{1pt}
+\centering
+\includegraphics[height=0.5in]{images/incomplete.png}
+\caption{Line Continuation for Incomplete Commands}
+\label{fig:incomplete}
+\rule{4in}{1pt}
+\end{figure}
 
 \subsection{Naming Conventions}
 
@@ -174,7 +253,7 @@ While R can be considered to have a steep learning curve, it should be noted tha
 \begin{figure}
 \centering
 \rule{4in}{1pt}
-<<cache=TRUE, fig=TRUE, fig.height=5, echo=FALSE>>=
+<<cache=TRUE, fig=TRUE, fig.height=4, echo=FALSE>>=
 curve(x^2,from = 0,to = 3, xlab = "Time", ylab="Expertise", 
       col = "red", lwd=2, xaxt = 'n', yaxt = 'n')
 abline(a = 2,b = 1, col = "blue", lwd = 2)
@@ -200,7 +279,7 @@ In fact R is very very concise. It will not give you an output until you ask for
 
 \subsection{R Community's Sense of Humor}
 
-R community is a hard working one - they are continuously building new and latest packages - making the R ecosystem even better. R community is also a fun one - a clever one at the very least. For example - look at the nickname for the version 3.3.0:
+R community is a hard working one - they are continuously building new and latest packages - making the R ecosystem even better. R community is also a fun one - a clever one at the very least. For example - look at the nickname for the current version:
 <<>>=
 version$nickname
 @

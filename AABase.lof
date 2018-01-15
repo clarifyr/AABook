@@ -5,39 +5,46 @@
 \addvspace {10pt}
 \contentsline {figure}{\numberline {2.1}{\ignorespaces Staring Window of Base R Installation}}{10}{figure.2.1}
 \contentsline {figure}{\numberline {2.2}{\ignorespaces Staring Window of RStudio}}{10}{figure.2.2}
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Learning Curves for R (red) and alternatives (blue)}}{15}{figure.2.3}
-\addvspace {10pt}
-\addvspace {10pt}
-\addvspace {10pt}
-\addvspace {10pt}
-\addvspace {10pt}
-\contentsline {figure}{\numberline {7.1}{\ignorespaces Scatter plot of Arrival Delay vs Departure Delay}}{36}{figure.7.1}
-\contentsline {figure}{\numberline {7.2}{\ignorespaces Plotting Fitted Values of Regression Model}}{37}{figure.7.2}
-\contentsline {figure}{\numberline {7.3}{\ignorespaces Histogram of Residuals}}{40}{figure.7.3}
-\contentsline {figure}{\numberline {7.4}{\ignorespaces Plots to Check Linearity}}{42}{figure.7.4}
-\contentsline {figure}{\numberline {7.5}{\ignorespaces Plot to Check for Heteroscedasticity}}{43}{figure.7.5}
-\contentsline {figure}{\numberline {7.6}{\ignorespaces Volume vs Girth of Tree Trunks}}{45}{figure.7.6}
-\contentsline {figure}{\numberline {7.7}{\ignorespaces Quadratic Model of Volume vs Girth of Tree Trunks}}{47}{figure.7.7}
-\contentsline {figure}{\numberline {7.8}{\ignorespaces Impact of Dummy Variable}}{49}{figure.7.8}
-\addvspace {10pt}
-\contentsline {figure}{\numberline {8.1}{\ignorespaces Plot of Log of Odds Ratio}}{54}{figure.8.1}
-\contentsline {figure}{\numberline {8.2}{\ignorespaces Plot of Probit Transformation}}{56}{figure.8.2}
-\contentsline {figure}{\numberline {8.3}{\ignorespaces Plot of Survival Function}}{62}{figure.8.3}
-\contentsline {figure}{\numberline {8.4}{\ignorespaces Diagnostic Plots for Proportional Hazard Assumption}}{66}{figure.8.4}
-\contentsline {figure}{\numberline {8.5}{\ignorespaces DFBeta Plots for Checking for Outliers}}{68}{figure.8.5}
-\addvspace {10pt}
-\addvspace {10pt}
-\contentsline {figure}{\numberline {10.1}{\ignorespaces Different k Values}}{78}{figure.10.1}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Editor Window}}{11}{figure.2.3}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces History Window}}{12}{figure.2.4}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Files Window}}{12}{figure.2.5}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Plots Window with a Demo Plot}}{13}{figure.2.6}
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Help Windown when looking for help on "help"}}{13}{figure.2.7}
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Line Continuation for Incomplete Commands}}{14}{figure.2.8}
+\contentsline {figure}{\numberline {2.9}{\ignorespaces Learning Curves for R (red) and alternatives (blue)}}{17}{figure.2.9}
 \addvspace {10pt}
 \addvspace {10pt}
 \addvspace {10pt}
 \addvspace {10pt}
 \addvspace {10pt}
 \addvspace {10pt}
+\contentsline {figure}{\numberline {8.1}{\ignorespaces Scatter plot of Arrival Delay vs Departure Delay}}{42}{figure.8.1}
+\contentsline {figure}{\numberline {8.2}{\ignorespaces Plotting Fitted Values of Regression Model}}{43}{figure.8.2}
+\contentsline {figure}{\numberline {8.3}{\ignorespaces Histogram of Residuals}}{46}{figure.8.3}
+\contentsline {figure}{\numberline {8.4}{\ignorespaces Plots to Check Linearity}}{48}{figure.8.4}
+\contentsline {figure}{\numberline {8.5}{\ignorespaces Plot to Check for Heteroscedasticity}}{49}{figure.8.5}
+\contentsline {figure}{\numberline {8.6}{\ignorespaces Volume vs Girth of Tree Trunks}}{51}{figure.8.6}
+\contentsline {figure}{\numberline {8.7}{\ignorespaces Quadratic Model of Volume vs Girth of Tree Trunks}}{53}{figure.8.7}
+\contentsline {figure}{\numberline {8.8}{\ignorespaces Impact of Dummy Variable}}{55}{figure.8.8}
+\addvspace {10pt}
+\contentsline {figure}{\numberline {9.1}{\ignorespaces Plot of Log of Odds Ratio}}{60}{figure.9.1}
+\contentsline {figure}{\numberline {9.2}{\ignorespaces Plot of Probit Transformation}}{62}{figure.9.2}
+\contentsline {figure}{\numberline {9.3}{\ignorespaces Plot of Survival Function}}{68}{figure.9.3}
+\contentsline {figure}{\numberline {9.4}{\ignorespaces Diagnostic Plots for Proportional Hazard Assumption}}{72}{figure.9.4}
+\contentsline {figure}{\numberline {9.5}{\ignorespaces DFBeta Plots for Checking for Outliers}}{74}{figure.9.5}
+\addvspace {10pt}
+\addvspace {10pt}
+\contentsline {figure}{\numberline {11.1}{\ignorespaces Different k Values}}{84}{figure.11.1}
 \addvspace {10pt}
 \addvspace {10pt}
 \addvspace {10pt}
-\contentsline {figure}{\numberline {B.1}{\ignorespaces Example of a Histogram}}{101}{figure.B.1}
-\contentsline {figure}{\numberline {B.2}{\ignorespaces Barplot of NYC Flights Data}}{102}{figure.B.2}
+\addvspace {10pt}
+\addvspace {10pt}
+\addvspace {10pt}
+\addvspace {10pt}
+\addvspace {10pt}
+\addvspace {10pt}
+\contentsline {figure}{\numberline {B.1}{\ignorespaces Example of a Histogram}}{107}{figure.B.1}
+\contentsline {figure}{\numberline {B.2}{\ignorespaces Barplot of NYC Flights Data}}{108}{figure.B.2}
 \addvspace {10pt}
 \addvspace {10pt}

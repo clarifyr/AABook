@@ -453,7 +453,7 @@ Even though we will not use a bare R installtion - lets take a look at it anyway
 \begin{figure}
 \rule{4in}{1pt}
 \centering
-\includegraphics[height=3in]{images/rbase.png}
+\includegraphics[height=2in]{images/rbase.png}
 \caption{Staring Window of Base R Installation}
 \label{fig:rbase}
 \rule{4in}{1pt}
@@ -465,7 +465,7 @@ Once you have finished installing R, you can download and install RStudio from: 
 \begin{figure}
 \rule{4in}{1pt}
 \centering
-\includegraphics[height=3in]{images/rstudio.png}
+\includegraphics[height=2in]{images/rstudio.png}
 \caption{Staring Window of RStudio}
 \label{fig:rstudio}
 \rule{4in}{1pt}
@@ -477,17 +477,106 @@ Now that we have both R and RStudio set up, it is time for us to get started in 
 
 \section{Useful Features of RStudio}
 
+\subsection{Console}
+
+The console is where you can interact directly with the R system. You can write one line at a time and immediately execute it there by pressing enter. If you wish to write more than one command in one line then you can separate the commands using the semi-colon character. The console is essentially an R session running inside RStudio. The console shows a command prompt (usually the \texttt{>}) character to indicate that you can type there. You can change the prompt by changing the options setting.\mnote{I once thought it was very clever to have this as my prompt "Sanjeev Says: ". I no longer think so.}
+
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlkwd{options}\hlstd{(}\hlkwc{prompt} \hlstd{=} \hlstr{"R> "}\hlstd{)}
+\end{alltt}
+\end{kframe}
+\end{knitrout}
+
+\subsection{Editor}
+
+The editor is where you can work on and edit all of your files. This is a pure text editor - so no formatting of any kind. You will mostly be working with RMD files here. The tab panel at the top of the editor allows you to work on multiple files at once. The editor window is hidden when you start RStudio as you usually don't have a file to edit when you begin. Once you create/open a new file then they will open in the editor window and you can edit them. The editor window helpfully shows you the line numbers in left column and the cursor positioning in the line at the bottom left corner. The bottom right corner shows you the file type that you are working on. There are usual icons for saving a file, finding, spell check etc on the top bar. See Figure: \ref{fig:editor} for an example.
+
+\begin{figure}
+\rule{4in}{1pt}
+\centering
+\includegraphics[width=5in]{images/editor.png}
+\caption{Editor Window}
+\label{fig:editor}
+\rule{4in}{1pt}
+\end{figure}
+
 \subsection{Environment}
+
+The Environment tab shows you all of the variables currently stored in memory and what their values are.\mnote{We haven't said what variables are as yet. Hold on - its coming in the next chapter.} The tab in fact shows all the objects that currently exist in your R session.\mnote{Objects will be discussed very soon, later in this chapter} Environment tab is a very useful place to have a quick look at the state of your current R session. The environment tab has a handy broom icon for deleting all the objects that exist and clearning your environment. You can, of course, do that using a command as well - \rcommand{rm} for remove or delete. The command \rcommand{ls} generates a list of all the objects in the environment.
+
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlkwd{rm}\hlstd{(}\hlkwc{list} \hlstd{=} \hlkwd{ls}\hlstd{())}  \hlcom{#Delete every object in the environment}
+\end{alltt}
+\end{kframe}
+\end{knitrout}
 
 \subsection{History}
 
-\subsection{Files Panes}
+The History tab shows you the history of all the commands you have entered in the Console window. You can use available icons on top to search through the history or delete items from the history. Two very useful icons are for transferring commands to the console and to the source. See details in Figure: \ref{fig:history}. The \texttt{To Console} allows you to select one or more commands from the history and transfers them to the Console window where you can run them by pressing Enter. The \texttt{To Source} sends the selected commands to the Editor window, to the currently open and active file.
+
+\begin{figure}
+\rule{4in}{1pt}
+\centering
+\includegraphics[height=1.5in]{images/history.png}
+\caption{History Window}
+\label{fig:history}
+\rule{4in}{1pt}
+\end{figure}
+
+\subsection{Files}
+
+The Files tab allows you to navigate through your filesystem, making it easy to load files into Rstudio. It shows the content of the current working directory when RStudio starts. You can navigate through the file system of your machine using the available options. The top icons provide ability to create a new folder, delete selected files, rename selected files and refresh file listings. The \texttt{More} option reveals further functionalities including two useful ones: the ability to set the currently displayed directory as the working directory and the ability to get the Files tab to display the contents of the current working directory. Figure: \ref{fig:files} shows the options.
+
+\begin{figure}
+\rule{4in}{1pt}
+\centering
+\includegraphics[height=1.5in]{images/files.png}
+\caption{Files Window}
+\label{fig:files}
+\rule{4in}{1pt}
+\end{figure}
 
 \subsection{Plots}
 
+the Plots tab shows the plots generated by the commands typed in the Console. Figure: \ref{fig:plots} show the plot generated by the command \texttt{plot(cars)} command in the Plots tab. As you can see, you can use options to zoom in/out and export the plot image as an image file or a PDF document.\mnote{Plots made by R are Vector graphics and hence should be saved in vector formats like PNG and not bitmap formats like JPG}
+
+\begin{figure}
+\rule{4in}{1pt}
+\centering
+\includegraphics[height=2in]{images/plots.png}
+\caption{Plots Window with a Demo Plot}
+\label{fig:plots}
+\rule{4in}{1pt}
+\end{figure}
+
 \subsection{Packages}
 
+The Packages tab shows you a list of all the packages installed on your system and their version number. You can check the checkbox next to the package name to manually load packages during your R session. You will also find icons for installing and updating packages. A search icon allows for searching among installed packages. 
+
 \subsection{Help}
+
+As the name suggests, the Help tab can be used to find Help documentation on specific keywords. You can search for a keyword in the search field for looking at corresponding help documentation. If you write a help command in the console, then the output of that will also show in the Help tab. For example, if you type the command below (looking for help on "help"), you will get the help documentation as shown in Figure: \ref{fig:help}.
+
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlkwd{help}\hlstd{(}\hlstr{"help"}\hlstd{)}
+\end{alltt}
+\end{kframe}
+\end{knitrout}
+
+\begin{figure}
+\rule{4in}{1pt}
+\centering
+\includegraphics[height=2in]{images/help.png}
+\caption{Help Windown when looking for help on "help"}
+\label{fig:help}
+\rule{4in}{1pt}
+\end{figure}
 
 \section{Helpful Menu Items and Keyboard Shortcuts}
 
@@ -501,19 +590,16 @@ Everything in R is case specific. In R, upper case letters are considered comple
 
 You can add your comments/remarks in your R code by inserting the \verb|#| character. Any text after the \verb|#| character will be ignored by R during execution. It is essential that sufficient comments are added to your R code so that the code remains understandable and if you share your code with somebody else then they have a way of figuring out what you are trying to do, why and how.
 
-R is smart enough to figure when the command is not finished and allows you to continue typing on the next line. This usually works well when there are un-finished parentheses or operators at the end. R indicates that it is expecting further inputs by showing the character \texttt{+} at the beginning of the next line. 
+R is smart enough to figure when the command is not finished and allows you to continue typing on the next line. This usually works well when there are un-finished parentheses or operators at the end. R indicates that it is expecting further inputs by showing the character \texttt{+} at the beginning of the next line. See Figure: \ref{fig:incomplete} for an example.
 
-\begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
-\begin{alltt}
-\hlcom{# This is a comment as it comes after #.  You should put enough of these}
-\hlkwd{print}\hlstd{(}\hlstr{"This statement is incomplete"}\hlstd{)}  \hlcom{#R managed to figure that the command was incomplete}
-\end{alltt}
-\begin{verbatim}
-## [1] "This statement is incomplete"
-\end{verbatim}
-\end{kframe}
-\end{knitrout}
+\begin{figure}
+\rule{4in}{1pt}
+\centering
+\includegraphics[height=0.5in]{images/incomplete.png}
+\caption{Line Continuation for Incomplete Commands}
+\label{fig:incomplete}
+\rule{4in}{1pt}
+\end{figure}
 
 \subsection{Naming Conventions}
 
@@ -609,7 +695,7 @@ While R can be considered to have a steep learning curve, it should be noted tha
 \rule{4in}{1pt}
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}
-\includegraphics[width=\maxwidth]{figure/unnamed-chunk-6-1} 
+\includegraphics[width=\maxwidth]{figure/unnamed-chunk-8-1} 
 
 \end{knitrout}
 \caption{Learning Curves for R (red) and alternatives (blue)}
@@ -637,7 +723,7 @@ In fact R is very very concise. It will not give you an output until you ask for
 
 \subsection{R Community's Sense of Humor}
 
-R community is a hard working one - they are continuously building new and latest packages - making the R ecosystem even better. R community is also a fun one - a clever one at the very least. For example - look at the nickname for the version 3.3.0:
+R community is a hard working one - they are continuously building new and latest packages - making the R ecosystem even better. R community is also a fun one - a clever one at the very least. For example - look at the nickname for the current version:
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{alltt}
@@ -961,40 +1047,65 @@ Variables can hold logical values using the two keywords \texttt{TRUE} and \text
 
 \subsection{Converting Between Data Types}
 
-\section{Vectors}
-
-Variables store a single value. If you need to store multiple values then you need a \texttt{vector}\index{Key Concepts!Vectors}. Vectors can be created in the same was a variables are created, except that we need to assign multiple values to a vector. A handy function for combining multiple values in one vector is \texttt{c()} the \texttt{combine} function. \index{R Commands!c}
+Its easy to convert variables from one data type to another. Conversion functions usually take the form of \texttt{as.xxx} where \texttt{xxx} is the desired datatype. For example: \rcommand{as.string} converts to a String, \rcommand{as.numeric} converts to a numeric data type and so on.
 
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{alltt}
-\hlstd{sleep.per.day} \hlkwb{<-} \hlkwd{c}\hlstd{(}\hlnum{6}\hlstd{,} \hlnum{4}\hlstd{,} \hlnum{6}\hlstd{,} \hlnum{8}\hlstd{,} \hlnum{7}\hlstd{,} \hlnum{9}\hlstd{,} \hlnum{10}\hlstd{)}
+\hlstd{x} \hlkwb{<-} \hlstr{"12.36"}  \hlcom{#Creating a String variable}
+\hlstd{y} \hlkwb{<-} \hlkwd{as.numeric}\hlstd{(x)}
+\hlstd{y}  \hlcom{#Converting to a numeric value and displaying}
 \end{alltt}
+\begin{verbatim}
+## [1] 12.36
+\end{verbatim}
 \end{kframe}
 \end{knitrout}
 
-The code above created a vector named $sleep.per.day$ with 7 \texttt{elements}. Vectors are very useful because R provides several easy ways to interact with different elements of a vector.
+\section{Vectors}
+
+Variables store a single value. If you need to store multiple values then you need a \rconcept{Vector}. Vectors can be created in the same was a variables are created, except that we need to assign multiple values to a vector. A handy function for combining multiple values in one vector is the \texttt{combine} function written as \rcommand{c}.
 
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{alltt}
-\hlstd{sleep.per.day[}\hlnum{2}\hlstd{]}  \hlcom{#Gets the second element of the vector}
+\hlstd{grades} \hlkwb{<-} \hlkwd{c}\hlstd{(}\hlnum{3.2}\hlstd{,} \hlnum{3}\hlstd{,} \hlnum{1}\hlstd{,} \hlnum{2.7}\hlstd{,} \hlnum{3.9}\hlstd{,} \hlnum{4}\hlstd{)}  \hlcom{#Grades of five students}
+\hlkwd{class}\hlstd{(grades)}  \hlcom{#A vector with numeric values}
 \end{alltt}
 \begin{verbatim}
-## [1] 4
+## [1] "numeric"
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
+
+The code above created a vector named \texttt{grades} that has 5 \texttt{elements}. Vectors are very useful because R provides several easy ways to interact with different elements of a vector. We can access individual elements of a vector using the \texttt{[ ]} notation - called \rconcept{Logical Indexing}. We can use the \rcommand{length} function to find out how many elements there are in the vector.
+
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlstd{grades[}\hlnum{2}\hlstd{]}  \hlcom{#Gets the second element of the vector}
+\end{alltt}
+\begin{verbatim}
+## [1] 3
 \end{verbatim}
 \begin{alltt}
-\hlstd{sleep.per.day[}\hlnum{4}\hlstd{]} \hlkwb{<-} \hlnum{3}  \hlcom{#Changes 4th element of the vector to 3}
-\hlkwd{length}\hlstd{(sleep.per.day)}  \hlcom{#Gets the length (number of elements) of the vector}
+\hlstd{grades[}\hlnum{4}\hlstd{]} \hlkwb{<-} \hlnum{3}  \hlcom{#Changes 4th element of the vector to 3}
+\hlkwd{length}\hlstd{(grades)}  \hlcom{#Gets the length (number of elements) of the vector}
 \end{alltt}
 \begin{verbatim}
-## [1] 7
+## [1] 6
 \end{verbatim}
 \begin{alltt}
-\hlstd{sleep.per.day} \hlopt{+} \hlnum{2}  \hlcom{#Adds 2 to *each* element of the vector }
+\hlstd{grades} \hlopt{-} \hlnum{0.1}  \hlcom{#Adds 2 to *each* element of the vector }
 \end{alltt}
 \begin{verbatim}
-## [1]  8  6  8  5  9 11 12
+## [1] 3.1 2.9 0.9 2.9 3.8 3.9
+\end{verbatim}
+\begin{alltt}
+\hlstd{grades}  \hlcom{#Displays current elements of the vector}
+\end{alltt}
+\begin{verbatim}
+## [1] 3.2 3.0 1.0 3.0 3.9 4.0
 \end{verbatim}
 \end{kframe}
 \end{knitrout}
@@ -1005,13 +1116,9 @@ Vectors are also useful for doing element-by-element calculations. For example, 
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{alltt}
 \hlstd{work.per.day} \hlkwb{<-} \hlkwd{c}\hlstd{(}\hlnum{9}\hlstd{,} \hlnum{11}\hlstd{,} \hlnum{10}\hlstd{,} \hlnum{8}\hlstd{,} \hlnum{6}\hlstd{,} \hlnum{3}\hlstd{,} \hlnum{2}\hlstd{)}  \hlcom{#Create new vector}
-\hlstd{work.and.sleep} \hlkwb{<-} \hlstd{sleep.per.day} \hlopt{+} \hlstd{work.per.day}
-\hlcom{# Added two vectors element by element}
-\hlkwd{print}\hlstd{(work.and.sleep)}  \hlcom{#Show added values}
+\hlcom{# work.and.sleep <- sleep.per.day + work.per.day Added two vectors element}
+\hlcom{# by element print(work.and.sleep) #Show added values}
 \end{alltt}
-\begin{verbatim}
-## [1] 15 15 16 11 13 12 12
-\end{verbatim}
 \end{kframe}
 \end{knitrout}
 
@@ -1020,8 +1127,8 @@ It is easy to access data elements inside a vector. All elements are assigned an
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{alltt}
-\hlstd{wed.hours} \hlkwb{<-} \hlstd{work.per.day[}\hlnum{3}\hlstd{]}  \hlcom{#Extracts third element}
-\hlstd{work.per.day[}\hlnum{7}\hlstd{]} \hlkwb{<-} \hlnum{6}  \hlcom{#Changes 7th element of the vector}
+\hlcom{# wed.hours <- work.per.day[3] #Extracts third element work.per.day[7] <- 6}
+\hlcom{# #Changes 7th element of the vector}
 \end{alltt}
 \end{kframe}
 \end{knitrout}
@@ -1030,11 +1137,8 @@ Functions \texttt{edit()}\index{R Commands!edit} and \texttt{fix}\index{R Comman
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{alltt}
-\hlkwd{length}\hlstd{(work.per.day)}
+\hlcom{# length(work.per.day)}
 \end{alltt}
-\begin{verbatim}
-## [1] 7
-\end{verbatim}
 \end{kframe}
 \end{knitrout}
 
@@ -1159,8 +1263,9 @@ As you work with R, you will create Objects. You can get a list of current objec
 \hlkwd{objects}\hlstd{()}
 \end{alltt}
 \begin{verbatim}
-## [1] "day.name"       "numvalue"       "revenue"        "sleep.per.day" 
-## [5] "someday"        "wed.hours"      "work.and.sleep" "work.per.day"
+## [1] "day.name"     "grades"       "message"      "numvalue"    
+## [5] "revenue"      "someday"      "work.per.day" "x"           
+## [9] "y"
 \end{verbatim}
 \begin{alltt}
 \hlcom{# Don't like a cluttered workspace, delete all objects by}
@@ -1181,6 +1286,26 @@ When you are done with your current R session, you can quit using the \texttt{q}
 \end{kframe}
 \end{knitrout}
 
+
+
+\chapterendsymbol
+
+
+
+
+% !Rnw root = AABase.Rnw
+
+\chapter{Advanced R Language Elements}
+
+\begin{flushright}
+
+\textbf{\texttt{In God We Trust; All Others Must Bring Data}}
+
+\emph{-- Willian Edwards Deming}
+
+\end{flushright}
+
+\vspace{12pt}
 
 \section{apply functions}
 
@@ -1210,7 +1335,6 @@ You would often want to calculate how much it takes for R to do something. You c
 
 
 \chapterendsymbol
-
 
 
 \part{Data Exploration and Visualization}
@@ -1367,7 +1491,7 @@ Lets start with a simple case of two variables - the departure delay and arrival
     \hlkwc{ylab} \hlstd{=} \hlstr{"Arrival Delay"}\hlstd{)}
 \end{alltt}
 \end{kframe}
-\includegraphics[width=\maxwidth]{figure/unnamed-chunk-41-1} 
+\includegraphics[width=\maxwidth]{figure/unnamed-chunk-44-1} 
 \begin{kframe}\begin{alltt}
 \hlcom{# Focusing only on departure delay < 400 mins for more readable plot}
 \end{alltt}
@@ -1427,7 +1551,7 @@ Now that we know the coefficients, we can now draw the fitted line that models t
 \hlkwd{abline}\hlstd{(}\hlkwd{coef}\hlstd{(m),} \hlkwc{lwd} \hlstd{=} \hlnum{2}\hlstd{,} \hlkwc{col} \hlstd{=} \hlstr{"red"}\hlstd{)}
 \end{alltt}
 \end{kframe}
-\includegraphics[width=\maxwidth]{figure/unnamed-chunk-44-1} 
+\includegraphics[width=\maxwidth]{figure/unnamed-chunk-47-1} 
 
 \end{knitrout}
 \caption{Plotting Fitted Values of Regression Model}
@@ -1577,7 +1701,7 @@ We can plot residuals to check their normality. See Figure: \ref{Fig:residuals} 
 \hlkwd{plot}\hlstd{(}\hlkwc{x} \hlstd{= bpmodel,} \hlkwc{which} \hlstd{=} \hlnum{4}\hlstd{)}  \hlcom{#Cook's Distance}
 \end{alltt}
 \end{kframe}
-\includegraphics[width=\maxwidth]{figure/unnamed-chunk-49-1} 
+\includegraphics[width=\maxwidth]{figure/unnamed-chunk-52-1} 
 
 \end{knitrout}
 \caption{Histogram of Residuals}
@@ -1619,7 +1743,7 @@ As the name suggests, we are only exploring linear relationships between predict
 \hlkwd{residualPlots}\hlstd{(bpmodel)}
 \end{alltt}
 \end{kframe}
-\includegraphics[width=\maxwidth]{figure/unnamed-chunk-52-1} 
+\includegraphics[width=\maxwidth]{figure/unnamed-chunk-55-1} 
 \begin{kframe}\begin{verbatim}
 ##            Test stat Pr(>|t|)
 ## age           -3.251    0.001
@@ -1680,7 +1804,7 @@ The OLS model assumes that all the residuals have a constant variance. It is con
 \hlkwd{plot}\hlstd{(}\hlkwc{x} \hlstd{= bpmodel,} \hlkwc{which} \hlstd{=} \hlnum{3}\hlstd{)}
 \end{alltt}
 \end{kframe}
-\includegraphics[width=\maxwidth]{figure/unnamed-chunk-54-1} 
+\includegraphics[width=\maxwidth]{figure/unnamed-chunk-57-1} 
 
 \end{knitrout}
 \caption{Plot to Check for Heteroscedasticity}
@@ -1847,7 +1971,7 @@ We will consider a new dataset called $trees$ for this portion. The dataset has 
 \hlkwd{plot}\hlstd{(Girth, Volume)}
 \end{alltt}
 \end{kframe}
-\includegraphics[width=\maxwidth]{figure/unnamed-chunk-64-1} 
+\includegraphics[width=\maxwidth]{figure/unnamed-chunk-67-1} 
 
 \end{knitrout}
 \caption{Volume vs Girth of Tree Trunks}
@@ -1898,7 +2022,7 @@ Results show that both $Girth$ and $Girth^2$ have significant coefficients. The 
 \hlkwd{lines}\hlstd{(}\hlkwd{fitted}\hlstd{(treemodel)} \hlopt{~} \hlkwd{scale}\hlstd{(Girth))}
 \end{alltt}
 \end{kframe}
-\includegraphics[width=\maxwidth]{figure/unnamed-chunk-66-1} 
+\includegraphics[width=\maxwidth]{figure/unnamed-chunk-69-1} 
 
 \end{knitrout}
 \caption{Quadratic Model of Volume vs Girth of Tree Trunks}
@@ -2012,7 +2136,7 @@ Regression results show that the model is significant and all coefficient estima
 \hlkwd{lines}\hlstd{(fit} \hlopt{~} \hlstd{Girth,} \hlkwc{data} \hlstd{= treestall[[}\hlstr{"no"}\hlstd{]])}
 \end{alltt}
 \end{kframe}
-\includegraphics[width=\maxwidth]{figure/unnamed-chunk-70-1} 
+\includegraphics[width=\maxwidth]{figure/unnamed-chunk-73-1} 
 
 \end{knitrout}
 \caption{Impact of Dummy Variable}
@@ -2159,7 +2283,7 @@ Clearly model.B should not be better than model.A as the only difference is a ra
 \hlkwd{AIC}\hlstd{(model.B)}
 \end{alltt}
 \begin{verbatim}
-## [1] -60.71737
+## [1] -60.74817
 \end{verbatim}
 \end{kframe}
 \end{knitrout}
@@ -2179,7 +2303,7 @@ We can also consider the subset model (model.A) as the null hypothesis, the supe
 ## Model 2: log(Volume) ~ log(Girth) + log(Height) + trees$random
 ##   Res.Df     RSS Df  Sum of Sq      F Pr(>F)
 ## 1     28 0.18546                            
-## 2     27 0.18543  1 3.6611e-05 0.0053 0.9423
+## 2     27 0.18524  1 0.00022076 0.0322  0.859
 \end{verbatim}
 \end{kframe}
 \end{knitrout}
@@ -2238,7 +2362,7 @@ Logistic regression is used to model dichotomous outcome variables - variables t
 \hlkwd{plot}\hlstd{(logodds, probs)}
 \end{alltt}
 \end{kframe}
-\includegraphics[width=\maxwidth]{figure/unnamed-chunk-77-1} 
+\includegraphics[width=\maxwidth]{figure/unnamed-chunk-80-1} 
 
 \end{knitrout}
 \caption{Plot of Log of Odds Ratio}
@@ -2379,7 +2503,7 @@ A probit model is also suitable for binary response variables.  In the probit mo
 \hlkwd{plot}\hlstd{(probs, probitdata)}
 \end{alltt}
 \end{kframe}
-\includegraphics[width=\maxwidth]{figure/unnamed-chunk-83-1} 
+\includegraphics[width=\maxwidth]{figure/unnamed-chunk-86-1} 
 
 \end{knitrout}
 \caption{Plot of Probit Transformation}
@@ -2618,7 +2742,7 @@ Now that we have a suitable model, we can now examine the estimated distribution
 \hlkwd{plot}\hlstd{(}\hlkwd{survfit}\hlstd{(mod.first),} \hlkwc{ylim} \hlstd{=} \hlkwd{c}\hlstd{(}\hlnum{0.75}\hlstd{,} \hlnum{1}\hlstd{),} \hlkwc{xlab} \hlstd{=} \hlstr{"Weeks of Observation"}\hlstd{,} \hlkwc{ylab} \hlstd{=} \hlstr{"Proportion of Subject Not Rearrested"}\hlstd{)}
 \end{alltt}
 \end{kframe}
-\includegraphics[width=\maxwidth]{figure/unnamed-chunk-92-1} 
+\includegraphics[width=\maxwidth]{figure/unnamed-chunk-95-1} 
 
 \end{knitrout}
 \caption{Plot of Survival Function}
@@ -2853,7 +2977,7 @@ Results show a strong evidence of non-proportional hazards for age, while the gl
 \hlkwd{plot}\hlstd{(}\hlkwd{cox.zph}\hlstd{(mod.small))}
 \end{alltt}
 \end{kframe}
-\includegraphics[width=\maxwidth]{figure/unnamed-chunk-99-1} 
+\includegraphics[width=\maxwidth]{figure/unnamed-chunk-102-1} 
 
 \end{knitrout}
 \caption{Diagnostic Plots for Proportional Hazard Assumption}
@@ -2924,7 +3048,7 @@ Checking for outliers can be done using the \texttt{dfbeta} metric we have seen 
 \hlstd{\}}
 \end{alltt}
 \end{kframe}
-\includegraphics[width=\maxwidth]{figure/unnamed-chunk-102-1} 
+\includegraphics[width=\maxwidth]{figure/unnamed-chunk-105-1} 
 
 \end{knitrout}
 \caption{DFBeta Plots for Checking for Outliers}
@@ -3629,7 +3753,7 @@ Similar to the example above, we can calculate other descriptive statistics such
 \hlkwd{hist}\hlstd{(nycdata}\hlopt{$}\hlstd{arr_delay[nycdata}\hlopt{$}\hlstd{arr_delay} \hlopt{<} \hlnum{300}\hlstd{])}
 \end{alltt}
 \end{kframe}
-\includegraphics[width=\maxwidth]{figure/unnamed-chunk-124-1} 
+\includegraphics[width=\maxwidth]{figure/unnamed-chunk-127-1} 
 
 \end{knitrout}
 \caption{Example of a Histogram}
@@ -3671,7 +3795,7 @@ To illustrate the point further, we can make a barplot using the \texttt{barplot
 \hlkwd{barplot}\hlstd{(delaybycarrier)}
 \end{alltt}
 \end{kframe}
-\includegraphics[width=\maxwidth]{figure/unnamed-chunk-126-1} 
+\includegraphics[width=\maxwidth]{figure/unnamed-chunk-129-1} 
 
 \end{knitrout}
 \caption{Barplot of NYC Flights Data}
